@@ -1,0 +1,90 @@
+{
+  "name": "cc-inputs-outputs",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/chapter01/cc-inputs-outputs/src",
+  "prefix": "final",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/chapter01/cc-inputs-outputs",
+        "index": "apps/chapter01/cc-inputs-outputs/src/index.html",
+        "main": "apps/chapter01/cc-inputs-outputs/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/chapter01/cc-inputs-outputs/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/chapter01/cc-inputs-outputs/src/favicon.ico",
+          "apps/chapter01/cc-inputs-outputs/src/assets"
+        ],
+        "styles": ["apps/chapter01/cc-inputs-outputs/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "cc-inputs-outputs:build:production"
+        },
+        "development": {
+          "browserTarget": "cc-inputs-outputs:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "cc-inputs-outputs:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/chapter01/cc-inputs-outputs/**/*.ts",
+          "apps/chapter01/cc-inputs-outputs/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/chapter01/cc-inputs-outputs/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
