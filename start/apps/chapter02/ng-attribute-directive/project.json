@@ -1,25 +1,31 @@
 {
-  "name": "cc-standalone-components",
+  "name": "ng-attribute-directive",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/chapter01/cc-standalone-components/src",
+  "sourceRoot": "apps/chapter02/ng-attribute-directive/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/chapter01/cc-standalone-components",
-        "index": "apps/chapter01/cc-standalone-components/src/index.html",
-        "main": "apps/chapter01/cc-standalone-components/src/main.ts",
-        "polyfills": ["zone.js"],
-        "tsConfig": "apps/chapter01/cc-standalone-components/tsconfig.app.json",
+        "outputPath": "dist/apps/chapter02/ng-attribute-directive",
+        "index": "apps/chapter02/ng-attribute-directive/src/index.html",
+        "main": "apps/chapter02/ng-attribute-directive/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/chapter02/ng-attribute-directive/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/chapter01/cc-standalone-components/src/favicon.ico",
-          "apps/chapter01/cc-standalone-components/src/assets"
+          "apps/chapter02/ng-attribute-directive/src/favicon.ico",
+          "apps/chapter02/ng-attribute-directive/src/assets"
         ],
-        "styles": ["apps/chapter01/cc-standalone-components/src/styles.scss"],
+        "styles": [
+          "apps/chapter02/ng-attribute-directive/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -53,10 +59,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "cc-standalone-components:build:production"
+          "browserTarget": "ng-attribute-directive:build:production"
         },
         "development": {
-          "browserTarget": "cc-standalone-components:build:development"
+          "browserTarget": "ng-attribute-directive:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -64,32 +70,36 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "cc-standalone-components:build"
+        "browserTarget": "ng-attribute-directive:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
-          "apps/chapter01/cc-standalone-components/**/*.ts",
-          "apps/chapter01/cc-standalone-components/**/*.html"
+          "apps/chapter02/ng-attribute-directive/**/*.ts",
+          "apps/chapter02/ng-attribute-directive/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "apps/chapter01/cc-standalone-components/jest.config.ts",
+        "jestConfig": "apps/chapter02/ng-attribute-directive/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "rename": {
       "executor": "@codewithahsan/ng-cookbook-recipe:rename",
       "options": {
-        "chapter": "chapter01",
-        "app": "cc-standalone-components"
+        "chapter": "chapter02",
+        "app": "ng-attribute-directive"
       }
     }
   },
