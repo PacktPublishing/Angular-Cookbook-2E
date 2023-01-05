@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "concurrently \"cd start && npm i\"  \"cd final && npm i\""
+    "postinstall": "concurrently \"cd start && npm i --legacy-peer-deps\"  \"cd final && npm i --legacy-peer-deps\" \"cd codewithahsan && npm i --legacy-peer-deps\"",
+    "serve": "sh scripts/serve-projects.sh",
+    "create": "sh scripts/create-projects.sh",
+    "remove": "sh scripts/remove-projects.sh",
+    "copy": "sh scripts/copy-start-to-final.sh"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^29.2.4",
     "concurrently": "^7.6.0"
   }
 }
-

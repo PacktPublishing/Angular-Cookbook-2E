@@ -3,7 +3,7 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "apps/chapter01/cc-inputs-outputs/src",
-  "prefix": "start",
+  "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
@@ -83,6 +83,13 @@
       "options": {
         "jestConfig": "apps/chapter01/cc-inputs-outputs/jest.config.ts",
         "passWithNoTests": true
+      }
+    },
+    "rename": {
+      "executor": "@codewithahsan/ng-cookbook-recipe:rename",
+      "options": {
+        "chapter": "chapter01",
+        "app": "cc-inputs-outputs"
       }
     }
   },

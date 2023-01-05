@@ -3,29 +3,23 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "apps/chapter01/cc-ng-on-changes/src",
-  "prefix": "final",
+  "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter01/cc-ng-on-changes",
         "index": "apps/chapter01/cc-ng-on-changes/src/index.html",
         "main": "apps/chapter01/cc-ng-on-changes/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter01/cc-ng-on-changes/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/chapter01/cc-ng-on-changes/src/favicon.ico",
           "apps/chapter01/cc-ng-on-changes/src/assets"
         ],
-        "styles": [
-          "apps/chapter01/cc-ng-on-changes/src/styles.scss"
-        ],
+        "styles": ["apps/chapter01/cc-ng-on-changes/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -75,9 +69,7 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/chapter01/cc-ng-on-changes/**/*.ts",
@@ -87,12 +79,17 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "apps/chapter01/cc-ng-on-changes/jest.config.ts",
         "passWithNoTests": true
+      }
+    },
+    "rename": {
+      "executor": "@codewithahsan/ng-cookbook-recipe:rename",
+      "options": {
+        "chapter": "chapter01",
+        "app": "cc-ng-on-changes"
       }
     }
   },

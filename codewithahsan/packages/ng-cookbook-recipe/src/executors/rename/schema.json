@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "version": 2,
+  "cli": "nx",
+  "title": "Build executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "chapter": {
+      "type": "string",
+      "x-prompt": "What chapter is it? Examples: 01, 02, 10 etc"
+    },
+    "app": {
+      "type": "string",
+      "x-prompt": "What app name is it? Example: cc-inputs-outputs"
+    }
+  },
+  "required": ["chapter", "app"]
+}

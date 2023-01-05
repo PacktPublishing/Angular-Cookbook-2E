@@ -1,0 +1,21 @@
+.notif-manager {
+  &__count {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__button {
+      margin-right: 10px;
+      padding: 10px 20px;
+    }
+    button {
+      @apply rounded-md bg-white border-purple-500 border duration-200;
+      &:hover {
+        @apply bg-purple-700 text-white;
+      }
+    }
+  }
+}

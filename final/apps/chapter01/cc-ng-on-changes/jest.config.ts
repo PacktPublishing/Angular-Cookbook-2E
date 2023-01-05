@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'chapter01-cc-ng-on-changes',
+  displayName: 'cc-ng-on-changes',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {

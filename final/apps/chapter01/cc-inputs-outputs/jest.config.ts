@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'chapter01-cc-inputs-outputs',
+  displayName: 'cc-inputs-outputs',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {

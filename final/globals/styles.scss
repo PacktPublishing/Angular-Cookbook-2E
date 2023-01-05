@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  @apply text-slate-900;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
+
+p {
+  margin: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbar {
+  @apply absolute top-0 left-0 right-0 bg-purple-700 flex items-center h-14 text-white font-bold px-4;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.toolbar .notif-bell {
+  margin: 0 20px 0 16px;
+}
+
+.content {
+  display: flex;
+  margin: 120px auto 32px;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+svg.material-icons {
+  height: 24px;
+  width: auto;
+}
+
+svg.material-icons:not(:last-child) {
+  margin-right: 8px;
+}
+
+
+input {
+  &[type="text"] {
+    @apply appearance-none w-full text-sm bg-transparent text-purple-900 placeholder:text-purple-400 rounded-md py-2 ring-1 ring-purple-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 ;
+  }
+}
+
+button {
+  @apply rounded-md px-3 py-1.5 bg-white border-purple-500 border duration-200;
+  &:hover {
+    @apply bg-purple-700 text-white;
+  }
+  &.btn-primary {
+    @apply bg-purple-700 text-white hover:bg-purple-600;
+  }
+  &.btn-danger {
+    @apply bg-red-700 text-white hover:bg-red-600;
+  }
+}

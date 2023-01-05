@@ -1,0 +1,11 @@
+<ng-container *ngIf="user$ | async as user">
+  <div class="flex gap-4 items-center">
+    <a routerLink="/" class="hover:text-slate-500">
+      <span class="material-symbols-outlined"> arrow_back </span>
+    </a>
+    <article routerLink="/{{ user.uuid }}">
+      <img src="{{ user.picture.thumbnail }}" />
+      <h4>{{ user.name.first }} {{ user.name.last }}</h4>
+    </article>
+  </div>
+</ng-container>
