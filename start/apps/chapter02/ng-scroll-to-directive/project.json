@@ -1,25 +1,31 @@
 {
-  "name": "ng-read-time-directive",
+  "name": "ng-scroll-to-directive",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/chapter02/ng-read-time-directive/src",
+  "sourceRoot": "apps/chapter02/ng-scroll-to-directive/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/chapter02/ng-read-time-directive",
-        "index": "apps/chapter02/ng-read-time-directive/src/index.html",
-        "main": "apps/chapter02/ng-read-time-directive/src/main.ts",
-        "polyfills": ["zone.js"],
-        "tsConfig": "apps/chapter02/ng-read-time-directive/tsconfig.app.json",
+        "outputPath": "dist/apps/chapter02/ng-scroll-to-directive",
+        "index": "apps/chapter02/ng-scroll-to-directive/src/index.html",
+        "main": "apps/chapter02/ng-scroll-to-directive/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/chapter02/ng-scroll-to-directive/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/chapter02/ng-read-time-directive/src/favicon.ico",
-          "apps/chapter02/ng-read-time-directive/src/assets"
+          "apps/chapter02/ng-scroll-to-directive/src/favicon.ico",
+          "apps/chapter02/ng-scroll-to-directive/src/assets"
         ],
-        "styles": ["apps/chapter02/ng-read-time-directive/src/styles.scss"],
+        "styles": [
+          "apps/chapter02/ng-scroll-to-directive/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -53,10 +59,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-read-time-directive:build:production"
+          "browserTarget": "ng-scroll-to-directive:build:production"
         },
         "development": {
-          "browserTarget": "ng-read-time-directive:build:development"
+          "browserTarget": "ng-scroll-to-directive:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -64,24 +70,28 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-read-time-directive:build"
+        "browserTarget": "ng-scroll-to-directive:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
-          "apps/chapter02/ng-read-time-directive/**/*.ts",
-          "apps/chapter02/ng-read-time-directive/**/*.html"
+          "apps/chapter02/ng-scroll-to-directive/**/*.ts",
+          "apps/chapter02/ng-scroll-to-directive/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "apps/chapter02/ng-read-time-directive/jest.config.ts",
+        "jestConfig": "apps/chapter02/ng-scroll-to-directive/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -89,7 +99,7 @@
       "executor": "@codewithahsan/ng-cookbook-recipe:rename",
       "options": {
         "chapter": "chapter02",
-        "app": "ng-read-time-directive"
+        "app": "ng-scroll-to-directive"
       }
     }
   },
