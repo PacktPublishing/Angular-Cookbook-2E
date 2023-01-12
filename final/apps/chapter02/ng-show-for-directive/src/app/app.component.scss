@@ -1,0 +1,8 @@
+.dialog {
+  @apply fixed top-0 left-0 bottom-0 right-0 p-4;
+  @apply bg-white max-w-md m-auto max-h-32 shadow-lg;
+  @apply border-dashed border border-black;
+  &__heading {
+    @apply text-3xl mb-4;
+  }
+}
