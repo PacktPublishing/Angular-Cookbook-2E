@@ -1,25 +1,31 @@
 {
-  "name": "ng-show-for-directive",
+  "name": "ng-multi-struc-directives",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/chapter02/ng-show-for-directive/src",
+  "sourceRoot": "apps/chapter02/ng-multi-struc-directives/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/chapter02/ng-show-for-directive",
-        "index": "apps/chapter02/ng-show-for-directive/src/index.html",
-        "main": "apps/chapter02/ng-show-for-directive/src/main.ts",
-        "polyfills": ["zone.js"],
-        "tsConfig": "apps/chapter02/ng-show-for-directive/tsconfig.app.json",
+        "outputPath": "dist/apps/chapter02/ng-multi-struc-directives",
+        "index": "apps/chapter02/ng-multi-struc-directives/src/index.html",
+        "main": "apps/chapter02/ng-multi-struc-directives/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/chapter02/ng-multi-struc-directives/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/chapter02/ng-show-for-directive/src/favicon.ico",
-          "apps/chapter02/ng-show-for-directive/src/assets"
+          "apps/chapter02/ng-multi-struc-directives/src/favicon.ico",
+          "apps/chapter02/ng-multi-struc-directives/src/assets"
         ],
-        "styles": ["apps/chapter02/ng-show-for-directive/src/styles.scss"],
+        "styles": [
+          "apps/chapter02/ng-multi-struc-directives/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -53,10 +59,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-show-for-directive:build:production"
+          "browserTarget": "ng-multi-struc-directives:build:production"
         },
         "development": {
-          "browserTarget": "ng-show-for-directive:build:development"
+          "browserTarget": "ng-multi-struc-directives:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -64,24 +70,28 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-show-for-directive:build"
+        "browserTarget": "ng-multi-struc-directives:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
-          "apps/chapter02/ng-show-for-directive/**/*.ts",
-          "apps/chapter02/ng-show-for-directive/**/*.html"
+          "apps/chapter02/ng-multi-struc-directives/**/*.ts",
+          "apps/chapter02/ng-multi-struc-directives/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "apps/chapter02/ng-show-for-directive/jest.config.ts",
+        "jestConfig": "apps/chapter02/ng-multi-struc-directives/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -89,7 +99,7 @@
       "executor": "@codewithahsan/ng-cookbook-recipe:rename",
       "options": {
         "chapter": "chapter02",
-        "app": "ng-show-for-directive"
+        "app": "ng-multi-struc-directives"
       }
     }
   },

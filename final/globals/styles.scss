@@ -68,9 +68,12 @@ input {
 }
 
 button {
-  @apply rounded-md px-3 py-1.5 bg-white border-purple-500 border duration-200;
-  &:hover {
+  @apply rounded-md px-3 py-1.5 bg-white border-purple-500 border duration-200 cursor-pointer;
+  &:hover:not(:disabled) {
     @apply bg-purple-700 text-white;
+  }
+  &:disabled {
+    @apply bg-slate-200 border-transparent opacity-75;
   }
   &.btn-primary {
     @apply bg-purple-700 text-white hover:bg-purple-600;
