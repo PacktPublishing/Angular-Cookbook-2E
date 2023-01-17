@@ -1,0 +1,10 @@
+$buttonColors: blue, purple, yellow;
+
+@each $color in $buttonColors {
+  [appButton][color=#{$color}] {
+    @apply bg-#{$color}-600 text-white rounded-md hover:bg-#{$color}-700;
+    &[fill='outlined'] {
+      @apply bg-white text-#{$color}-600 border-#{$color}-600 hover:text-black hover:border-black border
+    }
+  }
+}
