@@ -18,14 +18,29 @@
 
 <main class="content" role="main">
   <!-- Your code here -->
-  <div class="grid grid-cols-2 gap-4">
-    <h4 class="text-lg">Common Button:</h4>
-    <button appTooltip="test" appButton color="yellow">Click Me</button>
-    <h4 class="text-lg">Purple Button:</h4>
-    <button appTooltip="test" appButton color="purple">Click Me</button>
-    <h4 class="text-lg">Blue Button:</h4>
-    <button appTooltip="test" fill="outlined" appButton color="blue">
-      Click Me
-    </button>
-  </div>
+  <ul class="flex flex-col">
+    <li class="flex gap-4 items-center border-b justify-between border-slate-300 py-3">
+      <h4 class="text-lg">Default Button:</h4>
+      <button>Click Me</button>
+    </li>
+    <li class="flex gap-4 items-center border-b justify-between border-slate-300 py-3">
+      <h4 class="text-lg">Filled Button:</h4>
+      <button appButton color="yellow" fill="filled">Click Me</button>
+    </li>
+    <li class="flex gap-4 items-center border-b justify-between border-slate-300 py-3">
+      <h4 class="text-lg">Outlined Button:</h4>
+      <button appButton fill="outlined">Click Me</button>
+    </li>
+    <li class="flex gap-4 items-center border-b justify-between border-slate-300 py-3">
+      <h4 class="text-lg">Button with Tooltip:</h4>
+      <div class="flex flex-col gap-4">
+        <button appTooltip="test" fill="outlined" appButton color="blue">
+          Click Me
+        </button>
+        <button appTooltip="test" fill="filled" appButton color="blue">
+          Click Me
+        </button>
+      </div>
+    </li>
+  </ul>
 </main>
