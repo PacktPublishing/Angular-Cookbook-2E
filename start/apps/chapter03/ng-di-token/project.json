@@ -1,25 +1,31 @@
 {
-  "name": "ng-directive-comp-api",
+  "name": "ng-di-token",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/chapter02/ng-directive-comp-api/src",
+  "sourceRoot": "apps/chapter03/ng-di-token/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/chapter02/ng-directive-comp-api",
-        "index": "apps/chapter02/ng-directive-comp-api/src/index.html",
-        "main": "apps/chapter02/ng-directive-comp-api/src/main.ts",
-        "polyfills": ["zone.js"],
-        "tsConfig": "apps/chapter02/ng-directive-comp-api/tsconfig.app.json",
+        "outputPath": "dist/apps/chapter03/ng-di-token",
+        "index": "apps/chapter03/ng-di-token/src/index.html",
+        "main": "apps/chapter03/ng-di-token/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/chapter03/ng-di-token/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/chapter02/ng-directive-comp-api/src/favicon.ico",
-          "apps/chapter02/ng-directive-comp-api/src/assets"
+          "apps/chapter03/ng-di-token/src/favicon.ico",
+          "apps/chapter03/ng-di-token/src/assets"
         ],
-        "styles": ["apps/chapter02/ng-directive-comp-api/src/styles.scss"],
+        "styles": [
+          "apps/chapter03/ng-di-token/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -53,10 +59,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-directive-comp-api:build:production"
+          "browserTarget": "ng-di-token:build:production"
         },
         "development": {
-          "browserTarget": "ng-directive-comp-api:build:development"
+          "browserTarget": "ng-di-token:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -64,32 +70,36 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-directive-comp-api:build"
+        "browserTarget": "ng-di-token:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
-          "apps/chapter02/ng-directive-comp-api/**/*.ts",
-          "apps/chapter02/ng-directive-comp-api/**/*.html"
+          "apps/chapter03/ng-di-token/**/*.ts",
+          "apps/chapter03/ng-di-token/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "apps/chapter02/ng-directive-comp-api/jest.config.ts",
+        "jestConfig": "apps/chapter03/ng-di-token/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "rename": {
       "executor": "@codewithahsan/ng-cookbook-recipe:rename",
       "options": {
-        "chapter": "chapter02",
-        "app": "ng-directive-comp-api"
+        "chapter": "chapter03",
+        "app": "ng-di-token"
       }
     }
   },
