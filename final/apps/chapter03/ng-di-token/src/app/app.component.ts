@@ -1,5 +1,5 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import Jokes, { JOKES } from './classes/jokes.class';
+import { Component, inject, OnInit } from '@angular/core';
+import { JOKES } from './classes/jokes.class';
 import { IJoke } from './interfaces/joke.interface';
 
 @Component({
@@ -9,8 +9,7 @@ import { IJoke } from './interfaces/joke.interface';
 })
 export class AppComponent implements OnInit {
   joke!: IJoke;
-
-  constructor(@Inject(JOKES) private jokes: Jokes) {}
+  jokes = inject(JOKES);
 
   ngOnInit() {
     this.getJokes();
