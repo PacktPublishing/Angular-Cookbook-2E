@@ -1,0 +1,16 @@
+<div class="notif-manager">
+  <h4 class="notif-manager__count text-2xl font-bold">
+    Notifications Count: {{notificationsCount$ | async}}
+  </h4>
+  <div class="notif-manager__actions mt-4">
+    <button (click)="addNotification()" class="notif-manager__actions__button">
+      Add Notification
+    </button>
+    <button (click)="removeNotification()" class="notif-manager__actions__button">
+      Remove Notification
+    </button>
+    <button (click)="resetCount()" class="notif-manager__actions__button">
+      Reset Count
+    </button>
+  </div>
+</div>
