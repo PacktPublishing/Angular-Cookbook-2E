@@ -78,6 +78,9 @@ button {
   &.btn-primary {
     @apply bg-purple-700 text-white hover:bg-purple-600;
   }
+  &.btn-light {
+    @apply bg-white text-purple-700 hover:bg-purple-700 hover:text-white;
+  }
   &.btn-danger {
     @apply bg-red-700 text-white hover:bg-red-600;
   }
