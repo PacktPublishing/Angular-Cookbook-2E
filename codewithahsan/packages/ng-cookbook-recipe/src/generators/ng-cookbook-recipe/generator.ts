@@ -44,10 +44,10 @@ function normalizeOptions(
     ...options,
     style: options.style || 'scss',
     skipDefaultProject: true,
-    skipTests: options.skipTests !== undefined ? options.skipTests : false,
+    standalone: options.standalone ?? true,
+    skipTests: options.skipTests ?? false,
     prefix: 'app',
-    e2eTestRunner:
-      options.e2eTestRunner !== undefined ? options.e2eTestRunner : 'cypress',
+    e2eTestRunner: options.e2eTestRunner ?? 'cypress',
     projectName,
     chapterName,
     recipeName,
