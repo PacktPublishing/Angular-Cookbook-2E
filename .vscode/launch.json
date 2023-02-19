@@ -5,28 +5,18 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "debug-nx-e2e",
-      "type": "node",
+      "name": "Run e2e",
       "request": "launch",
-      "program": "${workspaceFolder}/codewithahsan/node_modules/.bin/nx",
-      "args": [
+      "runtimeArgs": [
         "run",
-        "ng-cookbook-recipe-e2e:e2e"
+        "e2e"
       ],
+      "runtimeExecutable": "npm",
       "cwd": "${workspaceFolder}/codewithahsan",
-      "console": "internalConsole"
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Launch Program",
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/codewithahsan/e2e/ng-cookbook-recipe-e2e/tests/ng-cookbook-recipe.spec.ts",
-      "outFiles": [
-        "${workspaceFolder}/**/*.js"
-      ]
+      "type": "node"
     }
   ]
 }

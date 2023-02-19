@@ -72,6 +72,80 @@ function addFiles(tree: Tree, options: NormalizedSchema) {
   );
 }
 
+type ProjectConfiguration = ReturnType<typeof readProjectConfiguration>;
+
+type RenameScriptOptions = {
+  chapterName: string;
+  recipeName: string;
+  tags: string[];
+};
+
+export const addAssets = (
+  config: ProjectConfiguration
+): ProjectConfiguration => {
+  return {
+    ...config,
+    targets: {
+      ...config.targets,
+      build: {
+        ...config.targets.build,
+        options: {
+          ...config.targets.build.options,
+          assets: [
+            ...config.targets.build.options.assets,
+            {
+              glob: '**/*',
+              input: 'node_modules/@codewithahsan/ng-cookbook-recipe/assets',
+              output: 'assets',
+            },
+          ],
+        },
+      },
+    },
+  };
+};
+
+export const addStyles = (
+  config: ProjectConfiguration
+): ProjectConfiguration => {
+  return {
+    ...config,
+    targets: {
+      ...config.targets,
+      build: {
+        ...config.targets.build,
+        options: {
+          ...config.targets.build.options,
+          styles: [
+            ...config.targets.build.options.styles,
+            'node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss',
+          ],
+        },
+      },
+    },
+  };
+};
+
+const addRenameScript = (
+  config: ProjectConfiguration,
+  options: RenameScriptOptions
+): ProjectConfiguration => {
+  return {
+    ...config,
+    targets: {
+      ...config.targets,
+      rename: {
+        executor: '@codewithahsan/ng-cookbook-recipe:rename',
+        options: {
+          chapter: options.chapterName,
+          app: options.recipeName,
+        },
+      },
+    },
+    tags: options.tags,
+  };
+};
+
 export default async function (
   tree: Tree,
   options: NgCookbookRecipeGeneratorSchema
@@ -79,56 +153,33 @@ export default async function (
   const normalizedOptions = normalizeOptions(tree, options);
   try {
     await applicationGenerator(tree, normalizedOptions);
-    const configuration = readProjectConfiguration(
+    let configuration = readProjectConfiguration(
       tree,
       normalizedOptions.projectName
     );
-    updateProjectConfiguration(tree, normalizedOptions.projectName, {
-      ...configuration,
-      targets: {
-        ...configuration.targets,
-        build: {
-          ...configuration.targets.build,
-          options: {
-            ...configuration.targets.build.options,
-            assets: [
-              ...configuration.targets.build.options.assets,
-              {
-                glob: '**/*',
-                input: 'node_modules/@codewithahsan/ng-cookbook-recipe/assets',
-                output: 'assets',
-              },
-            ],
-          },
-        },
-        rename: {
-          executor: '@codewithahsan/ng-cookbook-recipe:rename',
-          options: {
-            chapter: normalizedOptions.chapterName,
-            app: normalizedOptions.recipeName,
-          },
-        },
-      },
+    configuration = addAssets(configuration);
+    configuration = addStyles(configuration);
+    configuration = addRenameScript(configuration, {
+      recipeName: normalizedOptions.recipeName,
+      chapterName: normalizedOptions.chapterName,
       tags: normalizedOptions.parsedTags,
     });
+
+    updateProjectConfiguration(
+      tree,
+      normalizedOptions.projectName,
+      configuration
+    );
+
     if (normalizedOptions.e2eTestRunner !== 'none') {
       const e2eProjectName = `${normalizedOptions.projectName}-e2e`;
-      const e2eConfiguration = readProjectConfiguration(tree, e2eProjectName);
-
-      updateProjectConfiguration(tree, e2eProjectName, {
-        ...e2eConfiguration,
-        targets: {
-          ...e2eConfiguration.targets,
-          rename: {
-            executor: '@codewithahsan/ng-cookbook-recipe:rename',
-            options: {
-              chapter: normalizedOptions.chapterName,
-              app: `${normalizedOptions.recipeName}-e2e`,
-            },
-          },
-        },
+      let e2eConfiguration = readProjectConfiguration(tree, e2eProjectName);
+      e2eConfiguration = addRenameScript(e2eConfiguration, {
+        recipeName: `${normalizedOptions.recipeName}-e2e`,
+        chapterName: normalizedOptions.chapterName,
         tags: normalizedOptions.parsedTags,
       });
+      updateProjectConfiguration(tree, e2eProjectName, e2eConfiguration);
     }
     addFiles(tree, normalizedOptions);
     await formatFiles(tree);
