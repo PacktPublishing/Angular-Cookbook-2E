@@ -1,0 +1,45 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img
+    width="40"
+    alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+  />
+  <span>Angular Multi-State Animations</span>
+  <div class="spacer"></div>
+  <a
+    href="https://www.codewithahsan.dev/ng-book-reader?chapter=ng-basic-animation"
+    target="_blank"
+    rel="noopener noreferer"
+  >
+    <span class="material-symbols-outlined"> info </span>
+  </a>
+</div>
+
+<main class="content" role="main">
+  <div class="type-picker mb-8">
+    <h2 class="text-3xl mb-8">Pick Social Card Type</h2>
+    <div class="type-picker__options">
+      <div class="type-picker__options__option" (click)="setCardType('facebook')">
+        <button class="btn type-picker__options__option__btn" [ngClass]="selectedCardType === 'facebook' ? 'btn-primary type-picker__options__option__btn--active' : 'btn-light'">
+          <svg fill="#333" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="20px" height="20px">    <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"/></svg>
+          <div class="type-picker__options__option__btn__text">
+            Facebook
+          </div>
+        </button>
+      </div>
+      <div class="type-picker__options__option" (click)="setCardType('twitter')">
+        <button class="btn type-picker__options__option__btn" [ngClass]="selectedCardType === 'twitter' ? 'btn-primary type-picker__options__option__btn--active' : 'btn-light'">
+          <svg fill="#333" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="20px" height="20px">    <path d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z"/></svg>
+          <div class="type-picker__options__option__btn__text">
+            Twitter
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+  <ng-container [ngSwitch]="selectedCardType">
+    <app-fb-card *ngSwitchCase="'facebook'"></app-fb-card>
+    <app-twitter-card *ngSwitchCase="'twitter'"></app-twitter-card>
+  </ng-container>
+</main>
