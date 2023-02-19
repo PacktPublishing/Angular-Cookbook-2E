@@ -1,30 +1,36 @@
 {
-  "name": "ng-basic-animation",
+  "name": "ng-animations-keyframes",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/chapter04/ng-basic-animation/src",
+  "sourceRoot": "apps/chapter04/ng-animations-keyframes/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/chapter04/ng-basic-animation",
-        "index": "apps/chapter04/ng-basic-animation/src/index.html",
-        "main": "apps/chapter04/ng-basic-animation/src/main.ts",
-        "polyfills": ["zone.js"],
-        "tsConfig": "apps/chapter04/ng-basic-animation/tsconfig.app.json",
+        "outputPath": "dist/apps/chapter04/ng-animations-keyframes",
+        "index": "apps/chapter04/ng-animations-keyframes/src/index.html",
+        "main": "apps/chapter04/ng-animations-keyframes/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/chapter04/ng-animations-keyframes/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/chapter04/ng-basic-animation/src/favicon.ico",
-          "apps/chapter04/ng-basic-animation/src/assets",
+          "apps/chapter04/ng-animations-keyframes/src/favicon.ico",
+          "apps/chapter04/ng-animations-keyframes/src/assets",
           {
             "glob": "**/*",
             "input": "node_modules/@codewithahsan/ng-cookbook-recipe/assets",
             "output": "assets"
           }
         ],
-        "styles": ["apps/chapter04/ng-basic-animation/src/styles.scss"],
+        "styles": [
+          "apps/chapter04/ng-animations-keyframes/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -58,10 +64,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-basic-animation:build:production"
+          "browserTarget": "ng-animations-keyframes:build:production"
         },
         "development": {
-          "browserTarget": "ng-basic-animation:build:development"
+          "browserTarget": "ng-animations-keyframes:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -69,24 +75,28 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-basic-animation:build"
+        "browserTarget": "ng-animations-keyframes:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
-          "apps/chapter04/ng-basic-animation/**/*.ts",
-          "apps/chapter04/ng-basic-animation/**/*.html"
+          "apps/chapter04/ng-animations-keyframes/**/*.ts",
+          "apps/chapter04/ng-animations-keyframes/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "apps/chapter04/ng-basic-animation/jest.config.ts",
+        "jestConfig": "apps/chapter04/ng-animations-keyframes/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -94,7 +104,7 @@
       "executor": "@codewithahsan/ng-cookbook-recipe:rename",
       "options": {
         "chapter": "chapter04",
-        "app": "ng-basic-animation"
+        "app": "ng-animations-keyframes"
       }
     }
   },

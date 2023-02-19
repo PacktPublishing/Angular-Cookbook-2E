@@ -21,7 +21,12 @@
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/chapter04/ng-basic-animation/src/favicon.ico",
-          "apps/chapter04/ng-basic-animation/src/assets"
+          "apps/chapter04/ng-basic-animation/src/assets",
+          {
+            "glob": "**/*",
+            "input": "node_modules/@codewithahsan/ng-cookbook-recipe/assets",
+            "output": "assets"
+          }
         ],
         "styles": [
           "apps/chapter04/ng-basic-animation/src/styles.scss"

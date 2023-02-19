@@ -21,7 +21,12 @@
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/chapter04/ng-multi-state-animations/src/favicon.ico",
-          "apps/chapter04/ng-multi-state-animations/src/assets"
+          "apps/chapter04/ng-multi-state-animations/src/assets",
+          {
+            "glob": "**/*",
+            "input": "node_modules/@codewithahsan/ng-cookbook-recipe/assets",
+            "output": "assets"
+          }
         ],
         "styles": [
           "apps/chapter04/ng-multi-state-animations/src/styles.scss"
