@@ -14,14 +14,6 @@ export const cardAnimation = trigger('cardAnimation', [
       backgroundColor: 'white',
     })
   ),
-  state(
-    'hovered',
-    style({
-      transform: 'scale3d(1.05, 1.05, 1.05)',
-      backgroundColor: '#333',
-      color: 'white',
-    })
-  ),
   transition('void => active', [
     style({
       transform: 'translateX(-200px)',
