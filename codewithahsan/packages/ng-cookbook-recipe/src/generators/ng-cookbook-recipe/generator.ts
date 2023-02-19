@@ -87,6 +87,20 @@ export default async function (
       ...configuration,
       targets: {
         ...configuration.targets,
+        build: {
+          ...configuration.targets.build,
+          options: {
+            ...configuration.targets.build.options,
+            assets: [
+              ...configuration.targets.build.options.assets,
+              {
+                glob: '**/*',
+                input: 'node_modules/@codewithahsan/ng-cookbook-recipe/assets',
+                output: 'assets',
+              },
+            ],
+          },
+        },
         rename: {
           executor: '@codewithahsan/ng-cookbook-recipe:rename',
           options: {

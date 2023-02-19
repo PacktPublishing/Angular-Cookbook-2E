@@ -32,6 +32,11 @@
             "input": "./packages/ng-cookbook-recipe",
             "glob": "executors.json",
             "output": "."
+          },
+          {
+            "input": "./packages/ng-cookbook-recipe/src/assets",
+            "glob": "**/*",
+            "output": "./assets"
           }
         ]
       }
