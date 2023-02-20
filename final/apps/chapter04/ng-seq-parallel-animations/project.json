@@ -1,23 +1,27 @@
 {
-  "name": "ng-animating-lists",
+  "name": "ng-seq-parallel-animations",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/chapter04/ng-animating-lists/src",
+  "sourceRoot": "apps/chapter04/ng-seq-parallel-animations/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/chapter04/ng-animating-lists",
-        "index": "apps/chapter04/ng-animating-lists/src/index.html",
-        "main": "apps/chapter04/ng-animating-lists/src/main.ts",
-        "polyfills": ["zone.js"],
-        "tsConfig": "apps/chapter04/ng-animating-lists/tsconfig.app.json",
+        "outputPath": "dist/apps/chapter04/ng-seq-parallel-animations",
+        "index": "apps/chapter04/ng-seq-parallel-animations/src/index.html",
+        "main": "apps/chapter04/ng-seq-parallel-animations/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/chapter04/ng-seq-parallel-animations/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/chapter04/ng-animating-lists/src/favicon.ico",
-          "apps/chapter04/ng-animating-lists/src/assets",
+          "apps/chapter04/ng-seq-parallel-animations/src/favicon.ico",
+          "apps/chapter04/ng-seq-parallel-animations/src/assets",
           {
             "glob": "**/*",
             "input": "node_modules/@codewithahsan/ng-cookbook-recipe/assets",
@@ -25,7 +29,7 @@
           }
         ],
         "styles": [
-          "apps/chapter04/ng-animating-lists/src/styles.scss",
+          "apps/chapter04/ng-seq-parallel-animations/src/styles.scss",
           "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
         ],
         "scripts": []
@@ -61,10 +65,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-animating-lists:build:production"
+          "browserTarget": "ng-seq-parallel-animations:build:production"
         },
         "development": {
-          "browserTarget": "ng-animating-lists:build:development"
+          "browserTarget": "ng-seq-parallel-animations:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -72,24 +76,28 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-animating-lists:build"
+        "browserTarget": "ng-seq-parallel-animations:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
-          "apps/chapter04/ng-animating-lists/**/*.ts",
-          "apps/chapter04/ng-animating-lists/**/*.html"
+          "apps/chapter04/ng-seq-parallel-animations/**/*.ts",
+          "apps/chapter04/ng-seq-parallel-animations/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "apps/chapter04/ng-animating-lists/jest.config.ts",
+        "jestConfig": "apps/chapter04/ng-seq-parallel-animations/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -97,7 +105,7 @@
       "executor": "@codewithahsan/ng-cookbook-recipe:rename",
       "options": {
         "chapter": "chapter04",
-        "app": "ng-animating-lists"
+        "app": "ng-seq-parallel-animations"
       }
     }
   },
