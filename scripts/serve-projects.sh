@@ -8,14 +8,14 @@ fi
 APP_NAME=$1
 
 if [ "$2" == "both" ]; then
-  cd "start" && npx nx serve "$APP_NAME" --port=4200 &
-  cd "final" && npx nx serve "$APP_NAME" --port=4201 && kill $!
+  cd "start" && npx nx serve "$APP_NAME" --port=4200 -o &
+  cd "final" && npx nx serve "$APP_NAME" --port=4201 -o&& kill $!
   exit;
 fi
 
 if [ "$2" == "final" ]; then
-  cd "final" && npx nx serve "$APP_NAME" --port=4201 && kill $!
+  cd "final" && npx nx serve "$APP_NAME" --port=4201 -o && kill $!
   exit;
 fi
 
-cd "start" && npx nx serve "$APP_NAME" --port=4200
+cd "start" && npx nx serve "$APP_NAME" --port=4200 -o
