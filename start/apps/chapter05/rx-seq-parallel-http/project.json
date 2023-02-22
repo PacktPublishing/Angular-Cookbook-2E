@@ -1,23 +1,27 @@
 {
-  "name": "ng-disable-animations",
+  "name": "rx-seq-parallel-http",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/chapter04/ng-disable-animations/src",
+  "sourceRoot": "apps/chapter05/rx-seq-parallel-http/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/chapter04/ng-disable-animations",
-        "index": "apps/chapter04/ng-disable-animations/src/index.html",
-        "main": "apps/chapter04/ng-disable-animations/src/main.ts",
-        "polyfills": ["zone.js"],
-        "tsConfig": "apps/chapter04/ng-disable-animations/tsconfig.app.json",
+        "outputPath": "dist/apps/chapter05/rx-seq-parallel-http",
+        "index": "apps/chapter05/rx-seq-parallel-http/src/index.html",
+        "main": "apps/chapter05/rx-seq-parallel-http/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/chapter05/rx-seq-parallel-http/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/chapter04/ng-disable-animations/src/favicon.ico",
-          "apps/chapter04/ng-disable-animations/src/assets",
+          "apps/chapter05/rx-seq-parallel-http/src/favicon.ico",
+          "apps/chapter05/rx-seq-parallel-http/src/assets",
           {
             "glob": "**/*",
             "input": "node_modules/@codewithahsan/ng-cookbook-recipe/assets",
@@ -25,7 +29,7 @@
           }
         ],
         "styles": [
-          "apps/chapter04/ng-disable-animations/src/styles.scss",
+          "apps/chapter05/rx-seq-parallel-http/src/styles.scss",
           "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
         ],
         "scripts": []
@@ -61,10 +65,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-disable-animations:build:production"
+          "browserTarget": "rx-seq-parallel-http:build:production"
         },
         "development": {
-          "browserTarget": "ng-disable-animations:build:development"
+          "browserTarget": "rx-seq-parallel-http:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -72,32 +76,36 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-disable-animations:build"
+        "browserTarget": "rx-seq-parallel-http:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
-          "apps/chapter04/ng-disable-animations/**/*.ts",
-          "apps/chapter04/ng-disable-animations/**/*.html"
+          "apps/chapter05/rx-seq-parallel-http/**/*.ts",
+          "apps/chapter05/rx-seq-parallel-http/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "apps/chapter04/ng-disable-animations/jest.config.ts",
+        "jestConfig": "apps/chapter05/rx-seq-parallel-http/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "rename": {
       "executor": "@codewithahsan/ng-cookbook-recipe:rename",
       "options": {
-        "chapter": "chapter04",
-        "app": "ng-disable-animations"
+        "chapter": "chapter05",
+        "app": "rx-seq-parallel-http"
       }
     }
   },
