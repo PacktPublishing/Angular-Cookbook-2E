@@ -19,4 +19,4 @@ mkdir -p "final/apps/$CHAPTER"
 rm -rf "final/apps/$CHAPTER/$APP_NAME"
 cp -r "start/apps/$CHAPTER/$APP_NAME" "final/apps/$CHAPTER"
 
-echo "copied $APP_NAME"
+echo "Copied $CHAPTER/$APP_NAME to final"
