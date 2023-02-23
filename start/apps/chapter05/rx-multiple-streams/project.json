@@ -1,23 +1,27 @@
 {
-  "name": "rx-seq-parallel-http",
+  "name": "rx-multiple-streams",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/chapter05/rx-seq-parallel-http/src",
+  "sourceRoot": "apps/chapter05/rx-multiple-streams/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/chapter05/rx-seq-parallel-http",
-        "index": "apps/chapter05/rx-seq-parallel-http/src/index.html",
-        "main": "apps/chapter05/rx-seq-parallel-http/src/main.ts",
-        "polyfills": ["zone.js"],
-        "tsConfig": "apps/chapter05/rx-seq-parallel-http/tsconfig.app.json",
+        "outputPath": "dist/apps/chapter05/rx-multiple-streams",
+        "index": "apps/chapter05/rx-multiple-streams/src/index.html",
+        "main": "apps/chapter05/rx-multiple-streams/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/chapter05/rx-multiple-streams/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/chapter05/rx-seq-parallel-http/src/favicon.ico",
-          "apps/chapter05/rx-seq-parallel-http/src/assets",
+          "apps/chapter05/rx-multiple-streams/src/favicon.ico",
+          "apps/chapter05/rx-multiple-streams/src/assets",
           {
             "glob": "**/*",
             "input": "node_modules/@codewithahsan/ng-cookbook-recipe/assets",
@@ -25,7 +29,7 @@
           }
         ],
         "styles": [
-          "apps/chapter05/rx-seq-parallel-http/src/styles.scss",
+          "apps/chapter05/rx-multiple-streams/src/styles.scss",
           "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
         ],
         "scripts": []
@@ -61,10 +65,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "rx-seq-parallel-http:build:production"
+          "browserTarget": "rx-multiple-streams:build:production"
         },
         "development": {
-          "browserTarget": "rx-seq-parallel-http:build:development"
+          "browserTarget": "rx-multiple-streams:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -72,24 +76,28 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "rx-seq-parallel-http:build"
+        "browserTarget": "rx-multiple-streams:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
-          "apps/chapter05/rx-seq-parallel-http/**/*.ts",
-          "apps/chapter05/rx-seq-parallel-http/**/*.html"
+          "apps/chapter05/rx-multiple-streams/**/*.ts",
+          "apps/chapter05/rx-multiple-streams/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "apps/chapter05/rx-seq-parallel-http/jest.config.ts",
+        "jestConfig": "apps/chapter05/rx-multiple-streams/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -97,7 +105,7 @@
       "executor": "@codewithahsan/ng-cookbook-recipe:rename",
       "options": {
         "chapter": "chapter05",
-        "app": "rx-seq-parallel-http"
+        "app": "rx-multiple-streams"
       }
     }
   },
