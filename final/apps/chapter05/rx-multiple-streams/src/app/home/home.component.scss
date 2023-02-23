@@ -1,0 +1,21 @@
+.home {
+  text-align: center;
+  .box {
+    font-size: large;
+    transition: all 0.3s ease;
+  }
+  .box,
+  .submit-btn-container {
+    padding: 1.8rem;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .custom-select {
+    @apply rounded-md cursor-pointer border border-slate-600 py-2 px-4 appearance-none duration-100;
+    &:hover {
+      @apply border-purple-700 ring-1 ring-purple-700;
+    }
+  }
+}
