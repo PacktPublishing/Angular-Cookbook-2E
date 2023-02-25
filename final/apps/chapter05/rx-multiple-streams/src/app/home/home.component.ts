@@ -1,8 +1,13 @@
-import { ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import COLORS from '../colors';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { combineLatest, map, Observable } from 'rxjs';
+import {
+  AbstractControl,
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+} from '@angular/forms';
+import { combineLatest, map, Observable, startWith } from 'rxjs';
 
 interface BoxStyles {
   width: string;
@@ -20,7 +25,6 @@ interface BoxStyles {
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  cdRef = inject(ChangeDetectorRef);
   sizeOptions = [100, 200, 300, 400, 500, 600, 700];
   colorOptions = COLORS;
   borderRadiusOptions = [4, 6, 8, 10, 12, 14, 16, 18, 20];
@@ -39,23 +43,26 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.listenToInputChanges();
-    this.cdRef.detectChanges();
-    this.boxForm.reset();
   }
 
   listenToInputChanges() {
-    this.boxStyles$ = combineLatest([
-      this.boxForm.controls.size.valueChanges,
-      this.boxForm.controls.borderRadius.valueChanges,
-      this.boxForm.controls.backgroundColor.valueChanges,
-      this.boxForm.controls.textColor.valueChanges,
-    ]).pipe(
-      map(([size, borderRadius, backgroundColor, color]) => {
+    const controls: AbstractControl[] = [
+      this.boxForm.controls.size,
+      this.boxForm.controls.borderRadius,
+      this.boxForm.controls.textColor,
+      this.boxForm.controls.backgroundColor,
+    ];
+    this.boxStyles$ = combineLatest(
+      controls.map((control) =>
+        control.valueChanges.pipe(startWith(control.value))
+      )
+    ).pipe(
+      map(([size, borderRadius, textColor, backgroundColor]) => {
         return {
           width: `${size}px`,
           height: `${size}px`,
-          backgroundColor,
-          color,
+          backgroundColor: backgroundColor,
+          color: textColor,
           borderRadius: `${borderRadius}px`,
         };
       })
