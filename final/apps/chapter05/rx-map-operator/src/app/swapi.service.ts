@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { delay, forkJoin } from 'rxjs';
+import { delay, forkJoin, map, mergeMap, Observable } from 'rxjs';
 import { IFilm, IPerson } from './interfaces';
 
 @Injectable({
@@ -9,6 +9,22 @@ import { IFilm, IPerson } from './interfaces';
 export class SwapiService {
   http = inject(HttpClient);
   apiBaseUrl = 'https://swapi.dev/api';
+
+  fetchData(personId: string): Observable<{ person: IPerson }> {
+    let personInfo: IPerson;
+    return this.fetchPerson(personId).pipe(
+      mergeMap((person) => {
+        personInfo = person;
+        return this.fetchPersonFilms(person.films);
+      }),
+      map((films: IFilm[]) => {
+        personInfo.filmObjects = films;
+        return {
+          person: personInfo,
+        };
+      })
+    );
+  }
 
   fetchPerson(id: string) {
     return this.http
