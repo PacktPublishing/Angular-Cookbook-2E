@@ -1,23 +1,27 @@
 {
-  "name": "rx-switchmap-operator",
+  "name": "rx-custom-operator",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/chapter05/rx-switchmap-operator/src",
+  "sourceRoot": "apps/chapter05/rx-custom-operator/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/chapter05/rx-switchmap-operator",
-        "index": "apps/chapter05/rx-switchmap-operator/src/index.html",
-        "main": "apps/chapter05/rx-switchmap-operator/src/main.ts",
-        "polyfills": ["zone.js"],
-        "tsConfig": "apps/chapter05/rx-switchmap-operator/tsconfig.app.json",
+        "outputPath": "dist/apps/chapter05/rx-custom-operator",
+        "index": "apps/chapter05/rx-custom-operator/src/index.html",
+        "main": "apps/chapter05/rx-custom-operator/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/chapter05/rx-custom-operator/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/chapter05/rx-switchmap-operator/src/favicon.ico",
-          "apps/chapter05/rx-switchmap-operator/src/assets",
+          "apps/chapter05/rx-custom-operator/src/favicon.ico",
+          "apps/chapter05/rx-custom-operator/src/assets",
           {
             "glob": "**/*",
             "input": "node_modules/@codewithahsan/ng-cookbook-recipe/assets",
@@ -25,7 +29,7 @@
           }
         ],
         "styles": [
-          "apps/chapter05/rx-switchmap-operator/src/styles.scss",
+          "apps/chapter05/rx-custom-operator/src/styles.scss",
           "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
         ],
         "scripts": []
@@ -61,10 +65,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "rx-switchmap-operator:build:production"
+          "browserTarget": "rx-custom-operator:build:production"
         },
         "development": {
-          "browserTarget": "rx-switchmap-operator:build:development"
+          "browserTarget": "rx-custom-operator:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -72,24 +76,28 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "rx-switchmap-operator:build"
+        "browserTarget": "rx-custom-operator:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
-          "apps/chapter05/rx-switchmap-operator/**/*.ts",
-          "apps/chapter05/rx-switchmap-operator/**/*.html"
+          "apps/chapter05/rx-custom-operator/**/*.ts",
+          "apps/chapter05/rx-custom-operator/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "apps/chapter05/rx-switchmap-operator/jest.config.ts",
+        "jestConfig": "apps/chapter05/rx-custom-operator/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -97,7 +105,7 @@
       "executor": "@codewithahsan/ng-cookbook-recipe:rename",
       "options": {
         "chapter": "chapter05",
-        "app": "rx-switchmap-operator"
+        "app": "rx-custom-operator"
       }
     }
   },
