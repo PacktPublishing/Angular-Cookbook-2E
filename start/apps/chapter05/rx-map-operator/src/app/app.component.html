@@ -1,0 +1,34 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img
+    width="40"
+    alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+  />
+  <span>Using RxJS &#39;map&#39; operator to transform data</span>
+  <div class="spacer"></div>
+  <a
+    href="https://www.codewithahsan.dev/ng-book-reader?chapter=rx-map-operator"
+    target="_blank"
+    rel="noopener noreferer"
+  >
+    <span class="material-symbols-outlined"> info </span>
+  </a>
+</div>
+
+<main class="content" role="main">
+  <ng-container *ngIf="!loadingData && appData; else loader">
+    <div class="person flex justify-center text-2xl mb-8">
+      Person: {{appData.person.name}}
+    </div>
+    <div class="films grid grid-cols-2 flex-wrap gap-4">
+      <div class="films__film w-42 p-4 text-center border border-black rounded-md" *ngFor="let film of appData.person.filmObjects">
+        <h2 class="text-xl mb-4">Film: {{film.title}}</h2>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #loader>
+    <app-loader></app-loader>
+  </ng-template>
+</main>
