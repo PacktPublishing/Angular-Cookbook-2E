@@ -1,6 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { interval, Subscription } from 'rxjs';
+import { interval, Subscription, takeWhile } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -10,16 +10,33 @@ import { interval, Subscription } from 'rxjs';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnDestroy {
-  subscription!: Subscription;
   inputStreamData = ['john wick', 'inception', 'interstellar'];
   outputStreamData: number[] = [];
+  isStreamActive!: boolean;
 
   startStream() {
+    this.isStreamActive = true;
+    const secondStreamSource = interval(3000);
+    const fastestStreamSource = interval(500);
     const streamSource = interval(1500);
-    this.subscription = streamSource.subscribe((input) => {
-      this.outputStreamData.push(input);
-      console.log({ input });
-    });
+    streamSource
+      .pipe(takeWhile(() => !!this.isStreamActive))
+      .subscribe((input) => {
+        this.outputStreamData.push(input);
+        console.log('first stream output', input);
+      });
+    secondStreamSource
+      .pipe(takeWhile(() => !!this.isStreamActive))
+      .subscribe((input) => {
+        this.outputStreamData.push(input);
+        console.log('second stream output', input);
+      });
+    fastestStreamSource
+      .pipe(takeWhile(() => !!this.isStreamActive))
+      .subscribe((input) => {
+        this.outputStreamData.push(input);
+        console.log('fastest stream output', input);
+      });
   }
 
   ngOnDestroy() {
@@ -27,6 +44,6 @@ export class HomeComponent implements OnDestroy {
   }
 
   stopStream() {
-    this.subscription.unsubscribe();
+    this.isStreamActive = false;
   }
 }

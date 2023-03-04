@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="output-stream">
-      <div class="input-stream__item" *ngFor="let item of outputStreamData">
+      <div class="input-stream__item" *ngFor="let item of streamsOutput$ | async">
         {{item}}
       </div>
     </div>
