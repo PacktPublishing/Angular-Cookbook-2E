@@ -1,23 +1,27 @@
 {
-  "name": "ngrx-actions-reducer",
+  "name": "ngrx-devtools",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/chapter06/ngrx-actions-reducer/src",
+  "sourceRoot": "apps/chapter06/ngrx-devtools/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/chapter06/ngrx-actions-reducer",
-        "index": "apps/chapter06/ngrx-actions-reducer/src/index.html",
-        "main": "apps/chapter06/ngrx-actions-reducer/src/main.ts",
-        "polyfills": ["zone.js"],
-        "tsConfig": "apps/chapter06/ngrx-actions-reducer/tsconfig.app.json",
+        "outputPath": "dist/apps/chapter06/ngrx-devtools",
+        "index": "apps/chapter06/ngrx-devtools/src/index.html",
+        "main": "apps/chapter06/ngrx-devtools/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/chapter06/ngrx-devtools/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/chapter06/ngrx-actions-reducer/src/favicon.ico",
-          "apps/chapter06/ngrx-actions-reducer/src/assets",
+          "apps/chapter06/ngrx-devtools/src/favicon.ico",
+          "apps/chapter06/ngrx-devtools/src/assets",
           {
             "glob": "**/*",
             "input": "node_modules/@codewithahsan/ng-cookbook-recipe/assets",
@@ -25,7 +29,7 @@
           }
         ],
         "styles": [
-          "apps/chapter06/ngrx-actions-reducer/src/styles.scss",
+          "apps/chapter06/ngrx-devtools/src/styles.scss",
           "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
         ],
         "scripts": []
@@ -61,10 +65,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ngrx-actions-reducer:build:production"
+          "browserTarget": "ngrx-devtools:build:production"
         },
         "development": {
-          "browserTarget": "ngrx-actions-reducer:build:development"
+          "browserTarget": "ngrx-devtools:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -72,24 +76,28 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ngrx-actions-reducer:build"
+        "browserTarget": "ngrx-devtools:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
-          "apps/chapter06/ngrx-actions-reducer/**/*.ts",
-          "apps/chapter06/ngrx-actions-reducer/**/*.html"
+          "apps/chapter06/ngrx-devtools/**/*.ts",
+          "apps/chapter06/ngrx-devtools/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "apps/chapter06/ngrx-actions-reducer/jest.config.ts",
+        "jestConfig": "apps/chapter06/ngrx-devtools/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -103,7 +111,7 @@
       "executor": "@codewithahsan/ng-cookbook-recipe:rename",
       "options": {
         "chapter": "chapter06",
-        "app": "ngrx-actions-reducer"
+        "app": "ngrx-devtools"
       }
     }
   },

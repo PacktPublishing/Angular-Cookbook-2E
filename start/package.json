@@ -22,6 +22,7 @@
     "@nestjs/schematics": "^9.0.0",
     "@nestjs/testing": "^9.0.0",
     "@ngrx/store": "^15.3.0",
+    "@ngrx/store-devtools": "^15.3.0",
     "@nrwl/angular": "15.8.5",
     "@nrwl/cypress": "15.8.5",
     "@nrwl/devkit": "15.8.5",

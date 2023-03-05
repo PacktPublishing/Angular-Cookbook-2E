@@ -20,6 +20,7 @@
     "@angular/language-service": "15.2.1",
     "@codewithahsan/ng-cookbook-recipe": "file:../codewithahsan/dist/packages/ng-cookbook-recipe",
     "@ngrx/store": "^15.3.0",
+    "@ngrx/store-devtools": "^15.3.0",
     "@nrwl/angular": "15.8.5",
     "@nrwl/cypress": "15.8.5",
     "@nrwl/eslint-plugin-nx": "15.8.5",
