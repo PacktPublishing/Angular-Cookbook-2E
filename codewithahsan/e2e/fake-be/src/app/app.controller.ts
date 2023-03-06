@@ -15,9 +15,4 @@ export class AppController {
   badRequest() {
     return this.appService.badRequest();
   }
-
-  @Get('/bucket')
-  getBucket() {
-    return this.appService.getBucket();
-  }
 }

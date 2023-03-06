@@ -1,5 +1,5 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import BUCKET from './data/bucket';
+import BUCKET from './bucket/data/bucket';
 
 @Injectable()
 export class AppService {

@@ -1,4 +1,4 @@
-import { Bucket, Fruit } from '../interfaces';
+import { Bucket, Fruit } from '../../interfaces';
 
 const BUCKET: Bucket = [
   { id: 1678103283161, name: Fruit.Apple },
