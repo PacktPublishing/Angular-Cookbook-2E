@@ -1,8 +1,8 @@
 {
-  "name": "ngrx-effects",
+  "name": "ngrx-selectors",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/chapter06/ngrx-effects/src",
+  "sourceRoot": "apps/chapter06/ngrx-selectors/src",
   "prefix": "app",
   "targets": {
     "build": {
@@ -11,17 +11,17 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/apps/chapter06/ngrx-effects",
-        "index": "apps/chapter06/ngrx-effects/src/index.html",
-        "main": "apps/chapter06/ngrx-effects/src/main.ts",
+        "outputPath": "dist/apps/chapter06/ngrx-selectors",
+        "index": "apps/chapter06/ngrx-selectors/src/index.html",
+        "main": "apps/chapter06/ngrx-selectors/src/main.ts",
         "polyfills": [
           "zone.js"
         ],
-        "tsConfig": "apps/chapter06/ngrx-effects/tsconfig.app.json",
+        "tsConfig": "apps/chapter06/ngrx-selectors/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/chapter06/ngrx-effects/src/favicon.ico",
-          "apps/chapter06/ngrx-effects/src/assets",
+          "apps/chapter06/ngrx-selectors/src/favicon.ico",
+          "apps/chapter06/ngrx-selectors/src/assets",
           {
             "glob": "**/*",
             "input": "node_modules/@codewithahsan/ng-cookbook-recipe/assets",
@@ -29,7 +29,7 @@
           }
         ],
         "styles": [
-          "apps/chapter06/ngrx-effects/src/styles.scss",
+          "apps/chapter06/ngrx-selectors/src/styles.scss",
           "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
         ],
         "scripts": []
@@ -65,10 +65,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ngrx-effects:build:production"
+          "browserTarget": "ngrx-selectors:build:production"
         },
         "development": {
-          "browserTarget": "ngrx-effects:build:development"
+          "browserTarget": "ngrx-selectors:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ngrx-effects:build"
+        "browserTarget": "ngrx-selectors:build"
       }
     },
     "lint": {
@@ -86,8 +86,8 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "apps/chapter06/ngrx-effects/**/*.ts",
-          "apps/chapter06/ngrx-effects/**/*.html"
+          "apps/chapter06/ngrx-selectors/**/*.ts",
+          "apps/chapter06/ngrx-selectors/**/*.html"
         ]
       }
     },
@@ -97,7 +97,7 @@
         "{workspaceRoot}/coverage/{projectRoot}"
       ],
       "options": {
-        "jestConfig": "apps/chapter06/ngrx-effects/jest.config.ts",
+        "jestConfig": "apps/chapter06/ngrx-selectors/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -111,7 +111,7 @@
       "executor": "@codewithahsan/ng-cookbook-recipe:rename",
       "options": {
         "chapter": "chapter06",
-        "app": "ngrx-effects"
+        "app": "ngrx-selectors"
       }
     }
   },

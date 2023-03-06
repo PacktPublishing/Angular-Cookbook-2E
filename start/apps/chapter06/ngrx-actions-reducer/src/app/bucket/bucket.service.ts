@@ -7,18 +7,21 @@ import { IBucketService } from '../interfaces/bucket-service';
   providedIn: 'root',
 })
 export class BucketService implements IBucketService {
+  storeKey = 'bucket_ngrx-actions';
   bucketSource = new BehaviorSubject<IFruit[]>([]);
   $bucket: Observable<IFruit[]> = this.bucketSource.asObservable();
 
   loadItems() {
-    const bucket = JSON.parse(window.localStorage.getItem('bucket') || '[]');
+    const bucket = JSON.parse(
+      window.localStorage.getItem(this.storeKey) || '[]'
+    );
     this.bucketSource.next(bucket);
   }
 
   addItem(fruit: IFruit) {
     const bucket = [fruit, ...this.bucketSource.value];
     this.bucketSource.next(bucket);
-    window.localStorage.setItem('bucket', JSON.stringify(bucket));
+    window.localStorage.setItem(this.storeKey, JSON.stringify(bucket));
   }
 
   removeItem(fruit: IFruit) {
@@ -26,6 +29,6 @@ export class BucketService implements IBucketService {
       (item) => item.id !== fruit.id
     );
     this.bucketSource.next([...bucket]);
-    window.localStorage.setItem('bucket', JSON.stringify(bucket));
+    window.localStorage.setItem(this.storeKey, JSON.stringify(bucket));
   }
 }

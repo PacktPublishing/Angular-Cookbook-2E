@@ -7,7 +7,7 @@ import { IBucketService } from '../interfaces/bucket-service';
   providedIn: 'root',
 })
 export class BucketService implements IBucketService {
-  storeKey = 'bucket_ngrx-effects';
+  storeKey = 'bucket_ngrx-selectors';
   bucketSource = new BehaviorSubject<IFruit[]>([]);
   $bucket: Observable<IFruit[]> = this.bucketSource.asObservable();
 
