@@ -1,4 +1,5 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import BUCKET from './data/bucket';
 
 @Injectable()
 export class AppService {
@@ -8,5 +9,11 @@ export class AppService {
 
   badRequest() {
     throw new HttpException('Bad Request', HttpStatus.BAD_REQUEST);
+  }
+
+  getBucket() {
+    return {
+      bucket: BUCKET,
+    };
   }
 }
