@@ -1,23 +1,27 @@
 {
-  "name": "ngrx-component-store",
+  "name": "ng-basic-routing",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/chapter06/ngrx-component-store/src",
+  "sourceRoot": "apps/chapter07/ng-basic-routing/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/chapter06/ngrx-component-store",
-        "index": "apps/chapter06/ngrx-component-store/src/index.html",
-        "main": "apps/chapter06/ngrx-component-store/src/main.ts",
-        "polyfills": ["zone.js"],
-        "tsConfig": "apps/chapter06/ngrx-component-store/tsconfig.app.json",
+        "outputPath": "dist/apps/chapter07/ng-basic-routing",
+        "index": "apps/chapter07/ng-basic-routing/src/index.html",
+        "main": "apps/chapter07/ng-basic-routing/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/chapter07/ng-basic-routing/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/chapter06/ngrx-component-store/src/favicon.ico",
-          "apps/chapter06/ngrx-component-store/src/assets",
+          "apps/chapter07/ng-basic-routing/src/favicon.ico",
+          "apps/chapter07/ng-basic-routing/src/assets",
           {
             "glob": "**/*",
             "input": "node_modules/@codewithahsan/ng-cookbook-recipe/assets",
@@ -25,7 +29,7 @@
           }
         ],
         "styles": [
-          "apps/chapter06/ngrx-component-store/src/styles.scss",
+          "apps/chapter07/ng-basic-routing/src/styles.scss",
           "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
         ],
         "scripts": []
@@ -61,10 +65,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ngrx-component-store:build:production"
+          "browserTarget": "ng-basic-routing:build:production"
         },
         "development": {
-          "browserTarget": "ngrx-component-store:build:development"
+          "browserTarget": "ng-basic-routing:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -72,24 +76,28 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ngrx-component-store:build"
+        "browserTarget": "ng-basic-routing:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
-          "apps/chapter06/ngrx-component-store/**/*.ts",
-          "apps/chapter06/ngrx-component-store/**/*.html"
+          "apps/chapter07/ng-basic-routing/**/*.ts",
+          "apps/chapter07/ng-basic-routing/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "apps/chapter06/ngrx-component-store/jest.config.ts",
+        "jestConfig": "apps/chapter07/ng-basic-routing/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -102,8 +110,8 @@
     "rename": {
       "executor": "@codewithahsan/ng-cookbook-recipe:rename",
       "options": {
-        "chapter": "chapter06",
-        "app": "ngrx-component-store"
+        "chapter": "chapter07",
+        "app": "ng-basic-routing"
       }
     }
   },
