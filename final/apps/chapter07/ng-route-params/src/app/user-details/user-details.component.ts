@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { filter, map, Observable} from 'rxjs';
+import { filter, map, Observable, of, tap} from 'rxjs';
 import { User } from '../data';
 import { UserService } from '../user.service';
 import { UsersListComponent } from '../components/users-list/users-list.component';
@@ -22,6 +22,9 @@ export class UserDetailsComponent {
     this.user$ = this.route.paramMap.pipe(
       map((params) => params.get('uuid')),
       filter((uuid) => !!uuid),
+      tap((uuid) => {
+        this.similarUsers$ = of(this.userService.getSimilar(uuid as string))
+      }),
       map((uuid) => {
         return this.userService.getById(uuid as string) || null;
       })
