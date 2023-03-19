@@ -31,6 +31,12 @@ p {
 
 .toolbar {
   @apply absolute top-0 left-0 right-0 bg-purple-700 flex items-center h-14 text-white font-bold px-4;
+  &__title[routerLink] {
+    cursor: pointer;
+  }
+  &__logo[routerLink] {
+    cursor: pointer;
+  }
   .route-links {
     padding: 8px 16px;
     display: flex;
