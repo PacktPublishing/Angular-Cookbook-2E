@@ -1,13 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { USERS } from '../data';
-import { RouterModule } from '@angular/router';
 import { UserService } from '../user.service';
+import { UsersListComponent } from '../components/users-list/users-list.component';
 
 @Component({
   selector: 'app-users',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, UsersListComponent],
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss'],
 })

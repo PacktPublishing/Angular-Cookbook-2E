@@ -3,22 +3,15 @@
     <a routerLink="/" class="hover:text-slate-500">
       <span class="material-symbols-outlined"> arrow_back </span>
     </a>
-    <article routerLink="/{{ user.uuid }}">
+    <article>
       <img src="{{ user.picture.thumbnail }}" />
       <h4>{{ user.name.first }} {{ user.name.last }}</h4>
     </article>
   </div>
 
-  <section class="mt-6">
+  <section class="mt-6" *ngIf="similarUsers$ | async as simUsers">
     <h4 class="text-center mb-3">Similar Users</h4>
-    <ul>
-      <li
-        routerLink="/users/{{ simUser.uuid }}"
-        *ngFor="let simUser of similarUsers$ | async">
-        <img src="{{simUser.picture.thumbnail}}"/>
-        <h4>{{simUser.name.first}} {{simUser.name.last}}</h4>
-      </li>
-    </ul>
+    <app-users-list [users]="simUsers"></app-users-list>
   </section>
   
 </ng-container>

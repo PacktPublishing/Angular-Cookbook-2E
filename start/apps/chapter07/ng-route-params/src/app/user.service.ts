@@ -6,14 +6,14 @@ import { User, USERS } from './data';
 })
 export class UserService {
   getAll() {
-    return USERS;
+    return USERS as User[];
   }
 
-  getById(userId: string) {
+  getById(userId: string): User | undefined {
     return USERS.find((user) => user.uuid === userId);
   }
 
-  getSimilar(userId: string) {
+  getSimilar(userId: string): User[] {
     const maxL = Math.ceil((Math.random() * USERS.length - 1))
     return USERS.filter((user) => (user.uuid !== userId)).slice(0, maxL);
   }

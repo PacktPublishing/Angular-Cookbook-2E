@@ -7,7 +7,7 @@
   }
 }
 
-app-users, app-user-details {
+app-users-list {
   ul {
     @apply grid grid-cols-2 lg:grid-cols-3 gap-4;
     li {
