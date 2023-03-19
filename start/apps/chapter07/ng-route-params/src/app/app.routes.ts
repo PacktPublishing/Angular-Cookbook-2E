@@ -12,7 +12,7 @@ export const appRoutes: Route[] = [
       import('./users/users.component').then((m) => m.UsersComponent),
   },
   {
-    path: 'users/:uuid',
+    path: 'users/details',
     loadComponent: () =>
       import('./user-details/user-details.component').then(
         (m) => m.UserDetailsComponent

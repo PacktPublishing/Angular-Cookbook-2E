@@ -1,23 +1,27 @@
 {
-  "name": "ng-route-params",
+  "name": "ng-global-loader",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/chapter07/ng-route-params/src",
+  "sourceRoot": "apps/chapter07/ng-global-loader/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/chapter07/ng-route-params",
-        "index": "apps/chapter07/ng-route-params/src/index.html",
-        "main": "apps/chapter07/ng-route-params/src/main.ts",
-        "polyfills": ["zone.js"],
-        "tsConfig": "apps/chapter07/ng-route-params/tsconfig.app.json",
+        "outputPath": "dist/apps/chapter07/ng-global-loader",
+        "index": "apps/chapter07/ng-global-loader/src/index.html",
+        "main": "apps/chapter07/ng-global-loader/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/chapter07/ng-global-loader/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/chapter07/ng-route-params/src/favicon.ico",
-          "apps/chapter07/ng-route-params/src/assets",
+          "apps/chapter07/ng-global-loader/src/favicon.ico",
+          "apps/chapter07/ng-global-loader/src/assets",
           {
             "glob": "**/*",
             "input": "node_modules/@codewithahsan/ng-cookbook-recipe/assets",
@@ -25,7 +29,7 @@
           }
         ],
         "styles": [
-          "apps/chapter07/ng-route-params/src/styles.scss",
+          "apps/chapter07/ng-global-loader/src/styles.scss",
           "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
         ],
         "scripts": []
@@ -61,10 +65,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-route-params:build:production"
+          "browserTarget": "ng-global-loader:build:production"
         },
         "development": {
-          "browserTarget": "ng-route-params:build:development"
+          "browserTarget": "ng-global-loader:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -72,24 +76,28 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-route-params:build"
+        "browserTarget": "ng-global-loader:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
-          "apps/chapter07/ng-route-params/**/*.ts",
-          "apps/chapter07/ng-route-params/**/*.html"
+          "apps/chapter07/ng-global-loader/**/*.ts",
+          "apps/chapter07/ng-global-loader/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "apps/chapter07/ng-route-params/jest.config.ts",
+        "jestConfig": "apps/chapter07/ng-global-loader/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -103,7 +111,7 @@
       "executor": "@codewithahsan/ng-cookbook-recipe:rename",
       "options": {
         "chapter": "chapter07",
-        "app": "ng-route-params"
+        "app": "ng-global-loader"
       }
     }
   },
