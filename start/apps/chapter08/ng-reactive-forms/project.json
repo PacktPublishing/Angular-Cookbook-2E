@@ -1,23 +1,27 @@
 {
-  "name": "ng-tdf",
-  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "name": "ng-reactive-forms",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/chapter08/ng-tdf/src",
+  "sourceRoot": "apps/chapter08/ng-reactive-forms/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/chapter08/ng-tdf",
-        "index": "apps/chapter08/ng-tdf/src/index.html",
-        "main": "apps/chapter08/ng-tdf/src/main.ts",
-        "polyfills": ["zone.js"],
-        "tsConfig": "apps/chapter08/ng-tdf/tsconfig.app.json",
+        "outputPath": "dist/apps/chapter08/ng-reactive-forms",
+        "index": "apps/chapter08/ng-reactive-forms/src/index.html",
+        "main": "apps/chapter08/ng-reactive-forms/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/chapter08/ng-reactive-forms/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/chapter08/ng-tdf/src/favicon.ico",
-          "apps/chapter08/ng-tdf/src/assets",
+          "apps/chapter08/ng-reactive-forms/src/favicon.ico",
+          "apps/chapter08/ng-reactive-forms/src/assets",
           {
             "glob": "**/*",
             "input": "node_modules/@codewithahsan/ng-cookbook-recipe/assets",
@@ -25,7 +29,7 @@
           }
         ],
         "styles": [
-          "apps/chapter08/ng-tdf/src/styles.scss",
+          "apps/chapter08/ng-reactive-forms/src/styles.scss",
           "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
         ],
         "scripts": []
@@ -61,10 +65,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-tdf:build:production"
+          "browserTarget": "ng-reactive-forms:build:production"
         },
         "development": {
-          "browserTarget": "ng-tdf:build:development"
+          "browserTarget": "ng-reactive-forms:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -72,38 +76,36 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-tdf:build"
+        "browserTarget": "ng-reactive-forms:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
-          "apps/chapter08/ng-tdf/**/*.ts",
-          "apps/chapter08/ng-tdf/**/*.html"
+          "apps/chapter08/ng-reactive-forms/**/*.ts",
+          "apps/chapter08/ng-reactive-forms/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "apps/chapter08/ng-tdf/jest.config.ts",
+        "jestConfig": "apps/chapter08/ng-reactive-forms/jest.config.ts",
         "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
       }
     },
     "rename": {
       "executor": "@codewithahsan/ng-cookbook-recipe:rename",
       "options": {
         "chapter": "chapter08",
-        "app": "ng-tdf"
+        "app": "ng-reactive-forms"
       }
     }
   },

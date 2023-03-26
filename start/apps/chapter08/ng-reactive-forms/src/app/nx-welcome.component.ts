@@ -436,7 +436,7 @@ import { CommonModule } from '@angular/common';
         <div id="welcome">
           <h1>
             <span> Hello there, </span>
-            Welcome chapter08-ng-tdf 👋
+            Welcome chapter08-ng-reactive-forms 👋
           </h1>
         </div>
 
@@ -554,7 +554,7 @@ import { CommonModule } from '@angular/common';
               </svg>
             </a>
             <a
-              href="https://www.youtube.com/@NxDevtools/videos?utm_source=nx-project&sub_confirmation=1"
+              href="https://www.youtube.com/c/Nrwl_io/videos?utm_source=nx-project&sub_confirmation=1"
               target="_blank"
               rel="noreferrer"
               class="list-item-link"
