@@ -1,0 +1,14 @@
+app-vc-logs {
+  margin-top: 20px;
+  display: block;
+}
+:host {
+  @apply max-w-full sm:max-w-lg mx-6 rounded-md shadow-md p-4 text-center;
+
+  .error {
+    @apply text-red-800;
+    &[hidden] {
+      display: none !important;
+    }
+  }
+}
