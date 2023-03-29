@@ -3,10 +3,10 @@
     <label for="versionNumber">Version Number</label>
     <input formControlName="version" name="version" type="text" class="form-control my-2 text-center" id="versionNumber" aria-describedby="versionHelp" placeholder="Enter version number">
     <small id="versionHelp" class="form-text text-muted block mt-6">Use semantic versioning (x.x.x)</small>
-    <small class="error block"  *ngIf="ngForm.submitted && versionForm.controls.version.errors?.['required']">
+    <small class="error block" *ngIf="ngForm.submitted && versionForm.controls.version.errors?.['required']">
       Version number is required
     </small>
-    <small class="error block"  *ngIf="ngForm.submitted && versionForm.controls.version.errors?.['pattern']">
+    <small class="error block" *ngIf="ngForm.submitted && versionForm.controls.version.errors?.['pattern']">
       Version number does not match the pattern (x.x.x)
     </small>
   </div>

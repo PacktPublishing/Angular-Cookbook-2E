@@ -19,4 +19,10 @@ describe('VersionControlTdfComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should submit form', () => {
+    component.versionForm.controls['version'].setValue('2.2.4');
+    fixture.debugElement.nativeElement.querySelector('button').click();
+    expect(component.versionName).toBe('2.2.4');
+  });
 });

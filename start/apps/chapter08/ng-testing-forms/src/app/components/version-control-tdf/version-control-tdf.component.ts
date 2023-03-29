@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { VcLogsComponent } from '../vc-logs/vc-logs.component';
@@ -11,6 +11,7 @@ import { VcLogsComponent } from '../vc-logs/vc-logs.component';
   styleUrls: ['./version-control-tdf.component.scss'],
 })
 export class VersionControlTdfComponent {
+  @ViewChild('versionForm') versionForm!: NgForm;
   versionInput = '';
   versionName = '0.0.0';
 
