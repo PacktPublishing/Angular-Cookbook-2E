@@ -9,7 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class VersionControlComponent implements OnInit {
   versionForm = new FormGroup({
     version: new FormControl('', [
-      Validators.pattern('([0-9]+).([0-9]+).([0-9]+)'),
+      Validators.pattern('([0-9]+)\\.([0-9]+)\\.([0-9]+)'),
     ]),
   });
   versionName = '0.0.0';

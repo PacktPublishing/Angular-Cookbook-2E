@@ -6,7 +6,7 @@
     <small class="error block" *ngIf="(ngForm.submitted || ngForm.dirty) && versionForm.controls.version.errors?.['required']">
       Version number is required
     </small>
-    <small class="error block" *ngIf="ngForm.dirty && versionForm.controls.version.errors?.['pattern']">
+    <small class="error block" *ngIf="(ngForm.submitted || ngForm.dirty) && versionForm.controls.version.errors?.['pattern']">
       Version number does not match the pattern (x.x.x)
     </small>
   </div>

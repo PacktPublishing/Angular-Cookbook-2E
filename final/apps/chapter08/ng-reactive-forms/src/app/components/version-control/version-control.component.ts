@@ -18,7 +18,7 @@ import { VcLogsComponent } from '../vc-logs/vc-logs.component';
 export class VersionControlComponent {
   versionInput = '';
   versionName = '0.0.0';
-  versionPattern = '([0-9]+).([0-9]+).([0-9]+)';
+  versionPattern = '([0-9]+)\\.([0-9]+)\\.([0-9]+)';
   versionForm = new FormGroup({
     version: new FormControl('', [
       Validators.required,
