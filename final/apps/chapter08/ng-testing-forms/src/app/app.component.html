@@ -1,0 +1,36 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img
+    width="40"
+    class="toolbar__logo"
+    routerLink="/"
+    alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+  />
+  <span routerLink="/" class="toolbar__title">Testing forms in Angular</span>
+  <div class="spacer"></div>
+  <a
+    href="https://www.codewithahsan.dev/ng-book-reader?chapter=ng-testing-forms"
+    target="_blank"
+    rel="noopener noreferer"
+  >
+    <span class="material-symbols-outlined"> info </span>
+  </a>
+</div>
+
+<main class="content" role="main">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <section class="self-end">
+      <h1 class="text-center text-xl">Template Driven Form</h1>
+      <app-version-control-tdf></app-version-control-tdf>
+    </section>
+    <section class="self-end">
+      <h1 class="text-center text-xl">Reactive Form</h1>
+      <app-version-control-rf></app-version-control-rf>
+    </section>
+    <section class="self-end">
+      <h1 class="text-center text-xl">Reactive Form with real-time (Async) Validation</h1>
+      <app-version-control-rf-async></app-version-control-rf-async>
+    </section>
+  </div>
+</main>
