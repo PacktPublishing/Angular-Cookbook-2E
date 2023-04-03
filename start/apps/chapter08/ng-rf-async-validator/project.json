@@ -1,23 +1,27 @@
 {
-  "name": "ng-testing-forms",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "ng-rf-async-validator",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/chapter08/ng-testing-forms/src",
+  "sourceRoot": "apps/chapter08/ng-rf-async-validator/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/chapter08/ng-testing-forms",
-        "index": "apps/chapter08/ng-testing-forms/src/index.html",
-        "main": "apps/chapter08/ng-testing-forms/src/main.ts",
-        "polyfills": ["zone.js"],
-        "tsConfig": "apps/chapter08/ng-testing-forms/tsconfig.app.json",
+        "outputPath": "dist/apps/chapter08/ng-rf-async-validator",
+        "index": "apps/chapter08/ng-rf-async-validator/src/index.html",
+        "main": "apps/chapter08/ng-rf-async-validator/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/chapter08/ng-rf-async-validator/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/chapter08/ng-testing-forms/src/favicon.ico",
-          "apps/chapter08/ng-testing-forms/src/assets",
+          "apps/chapter08/ng-rf-async-validator/src/favicon.ico",
+          "apps/chapter08/ng-rf-async-validator/src/assets",
           {
             "glob": "**/*",
             "input": "node_modules/@codewithahsan/ng-cookbook-recipe/assets",
@@ -25,7 +29,7 @@
           }
         ],
         "styles": [
-          "apps/chapter08/ng-testing-forms/src/styles.scss",
+          "apps/chapter08/ng-rf-async-validator/src/styles.scss",
           "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
         ],
         "scripts": []
@@ -61,10 +65,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-testing-forms:build:production"
+          "browserTarget": "ng-rf-async-validator:build:production"
         },
         "development": {
-          "browserTarget": "ng-testing-forms:build:development"
+          "browserTarget": "ng-rf-async-validator:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -72,32 +76,42 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-testing-forms:build"
+        "browserTarget": "ng-rf-async-validator:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
-          "apps/chapter08/ng-testing-forms/**/*.ts",
-          "apps/chapter08/ng-testing-forms/**/*.html"
+          "apps/chapter08/ng-rf-async-validator/**/*.ts",
+          "apps/chapter08/ng-rf-async-validator/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "apps/chapter08/ng-testing-forms/jest.config.ts",
+        "jestConfig": "apps/chapter08/ng-rf-async-validator/jest.config.ts",
         "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
       }
     },
     "rename": {
       "executor": "@codewithahsan/ng-cookbook-recipe:rename",
       "options": {
         "chapter": "chapter08",
-        "app": "ng-testing-forms"
+        "app": "ng-rf-async-validator"
       }
     }
   },
