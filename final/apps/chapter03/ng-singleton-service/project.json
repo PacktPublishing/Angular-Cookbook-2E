@@ -7,25 +7,19 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter03/ng-singleton-service",
         "index": "apps/chapter03/ng-singleton-service/src/index.html",
         "main": "apps/chapter03/ng-singleton-service/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter03/ng-singleton-service/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/chapter03/ng-singleton-service/src/favicon.ico",
           "apps/chapter03/ng-singleton-service/src/assets"
         ],
-        "styles": [
-          "apps/chapter03/ng-singleton-service/src/styles.scss"
-        ],
+        "styles": ["apps/chapter03/ng-singleton-service/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -74,10 +68,8 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/chapter03/ng-singleton-service/**/*.ts",
@@ -86,10 +78,8 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "apps/chapter03/ng-singleton-service/jest.config.ts",
         "passWithNoTests": true
