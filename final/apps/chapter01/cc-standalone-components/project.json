@@ -7,25 +7,19 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter01/cc-standalone-components",
         "index": "apps/chapter01/cc-standalone-components/src/index.html",
         "main": "apps/chapter01/cc-standalone-components/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter01/cc-standalone-components/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/chapter01/cc-standalone-components/src/favicon.ico",
           "apps/chapter01/cc-standalone-components/src/assets"
         ],
-        "styles": [
-          "apps/chapter01/cc-standalone-components/src/styles.scss"
-        ],
+        "styles": ["apps/chapter01/cc-standalone-components/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -74,10 +68,8 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/chapter01/cc-standalone-components/**/*.ts",
@@ -86,10 +78,8 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "apps/chapter01/cc-standalone-components/jest.config.ts",
         "passWithNoTests": true
