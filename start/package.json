@@ -9,7 +9,7 @@
   },
   "private": true,
   "devDependencies": {
-    "@angular-devkit/build-angular": "15.2.1",
+    "@angular-devkit/build-angular": "15.2.8",
     "@angular-devkit/core": "~15.1.0",
     "@angular-devkit/schematics": "~15.1.0",
     "@angular-eslint/eslint-plugin": "~15.0.0",
