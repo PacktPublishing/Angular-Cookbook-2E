@@ -7,12 +7,16 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/chapter06/ngrx-devtools",
         "index": "apps/chapter06/ngrx-devtools/src/index.html",
         "main": "apps/chapter06/ngrx-devtools/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/chapter06/ngrx-devtools/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -77,7 +81,9 @@
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
           "apps/chapter06/ngrx-devtools/**/*.ts",
@@ -87,7 +93,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/chapter06/ngrx-devtools/jest.config.ts",
         "passWithNoTests": true

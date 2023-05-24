@@ -7,19 +7,25 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/chapter02/ng-show-for-directive",
         "index": "apps/chapter02/ng-show-for-directive/src/index.html",
         "main": "apps/chapter02/ng-show-for-directive/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/chapter02/ng-show-for-directive/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/chapter02/ng-show-for-directive/src/favicon.ico",
           "apps/chapter02/ng-show-for-directive/src/assets"
         ],
-        "styles": ["apps/chapter02/ng-show-for-directive/src/styles.scss"],
+        "styles": [
+          "apps/chapter02/ng-show-for-directive/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -69,7 +75,9 @@
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
           "apps/chapter02/ng-show-for-directive/**/*.ts",
@@ -79,7 +87,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/chapter02/ng-show-for-directive/jest.config.ts",
         "passWithNoTests": true
