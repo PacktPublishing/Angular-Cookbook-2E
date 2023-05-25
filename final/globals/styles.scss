@@ -31,6 +31,35 @@ p {
 
 .toolbar {
   @apply absolute top-0 left-0 right-0 bg-purple-700 flex items-center h-14 text-white font-bold px-4;
+  &__title[routerLink] {
+    cursor: pointer;
+  }
+  &__logo[routerLink] {
+    cursor: pointer;
+  }
+  .route-links {
+    padding: 8px 16px;
+    display: flex;
+    justify-content: flex-start;
+    &__route-link {
+      margin-right: 10px;
+      padding: 6px 16px;
+      transition: all ease 0.2s;
+      cursor: pointer;
+      &:hover:not(&--active) {
+        color: #333;
+      }
+      &--active {
+        color: white;
+        background-color: #333;
+      }
+    }
+  }
+  a:nth-last-child(1) {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .toolbar img {
@@ -63,7 +92,7 @@ svg.material-icons:not(:last-child) {
 
 input {
   &[type="text"] {
-    @apply appearance-none w-full text-sm bg-transparent text-slate-900 placeholder:text-slate-400 rounded-md py-2 ring-1 ring-purple-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 ;
+    @apply appearance-none w-full text-sm bg-transparent text-slate-900 placeholder:text-slate-400 rounded-md py-1.5 px-2 ring-1 ring-purple-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 ;
   }
 }
 
@@ -77,6 +106,9 @@ button {
   }
   &.btn-primary {
     @apply bg-purple-700 text-white hover:bg-purple-600;
+  }
+  &.btn-light {
+    @apply bg-white text-purple-700 hover:bg-purple-700 hover:text-white;
   }
   &.btn-danger {
     @apply bg-red-700 text-white hover:bg-red-600;

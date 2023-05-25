@@ -1,7 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
   "version": 2,
-  "cli": "nx",
   "title": "Build executor",
   "description": "",
   "type": "object",
@@ -15,5 +14,8 @@
       "x-prompt": "What app name is it? Example: cc-inputs-outputs"
     }
   },
-  "required": ["chapter", "app"]
+  "required": [
+    "chapter",
+    "app"
+  ]
 }

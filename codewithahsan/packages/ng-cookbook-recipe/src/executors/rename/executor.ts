@@ -1,5 +1,5 @@
 import { BuildExecutorSchema } from './schema';
-import type { ExecutorContext } from '@nrwl/devkit';
+import type { ExecutorContext } from '@nx/devkit';
 
 import { readFile, writeFile } from 'fs/promises';
 
@@ -59,7 +59,11 @@ const renameApp = async (
   );
   if (!originalName.endsWith('e2e')) {
     const jestConfigFilePath = `${context.root}/apps/${chapter}/${appName}/jest.config.ts`;
-    await updateJestConfig(jestConfigFilePath, appName, originalName);
+    try {
+      await updateJestConfig(jestConfigFilePath, appName, originalName);
+    } catch (err) {
+      console.log('error caught while finding jest file', err);
+    }
   }
   console.log(`Renaming project done. New name = ${appName}`);
 };

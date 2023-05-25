@@ -1,6 +1,5 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "cli": "nx",
   "$id": "NgCookbookRecipe",
   "title": "",
   "type": "object",
@@ -30,5 +29,8 @@
       "x-prompt": "What chapter would you like to use the app in?"
     }
   },
-  "required": ["name", "title"]
+  "required": [
+    "name",
+    "title"
+  ]
 }

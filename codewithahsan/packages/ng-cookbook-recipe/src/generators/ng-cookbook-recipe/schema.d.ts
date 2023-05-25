@@ -4,7 +4,7 @@ export interface NgCookbookRecipeGeneratorSchema {
   tags?: string;
   directory?: string;
   e2eTestRunner?: E2ETestRunner;
-  standalone: boolean;
+  standalone?: boolean;
   addTailwind?: boolean;
   routing?: boolean;
   skipDefaultProject?: boolean;

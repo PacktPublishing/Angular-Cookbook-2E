@@ -7,8 +7,8 @@ import {
   getWorkspaceLayout,
   offsetFromRoot,
   updateProjectConfiguration,
-} from '@nrwl/devkit';
-import { applicationGenerator } from '@nrwl/angular/generators';
+} from '@nx/devkit';
+import { applicationGenerator } from '@nx/angular/generators';
 import { NgCookbookRecipeGeneratorSchema } from './schema';
 import path = require('path');
 
@@ -44,7 +44,7 @@ function normalizeOptions(
     ...options,
     style: options.style || 'scss',
     skipDefaultProject: true,
-    standalone: options.standalone ?? true,
+    standalone: true,
     skipTests: options.skipTests ?? false,
     prefix: 'app',
     e2eTestRunner: options.e2eTestRunner ?? 'cypress',
@@ -152,7 +152,11 @@ export default async function (
 ) {
   const normalizedOptions = normalizeOptions(tree, options);
   try {
-    await applicationGenerator(tree, normalizedOptions);
+    try {
+      await applicationGenerator(tree, normalizedOptions);
+    } catch (err) {
+      console.log('caught while generating application', err);
+    }
     let configuration = readProjectConfiguration(
       tree,
       normalizedOptions.projectName

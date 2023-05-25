@@ -5,11 +5,12 @@
   "sourceRoot": "e2e/ng-cookbook-recipe-e2e/src",
   "targets": {
     "e2e": {
-      "executor": "@nrwl/nx-plugin:e2e",
+      "executor": "@nx/jest:jest",
       "options": {
-        "target": "ng-cookbook-recipe:build",
-        "jestConfig": "e2e/ng-cookbook-recipe-e2e/jest.config.ts"
-      }
+        "jestConfig": "e2e/ng-cookbook-recipe-e2e/jest.config.ts",
+        "runInBand": true
+      },
+      "dependsOn": ["ng-cookbook-recipe:build"]
     }
   },
   "tags": [],
