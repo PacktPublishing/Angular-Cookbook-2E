@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { CommonModule } from '@angular/common';
-import { Component, forwardRef, Input } from '@angular/core';
+import { Component, Input, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -8,6 +8,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   templateUrl: './rating.component.html',
   styleUrls: ['./rating.component.scss'],
   standalone: true,
+  imports: [CommonModule],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
@@ -15,15 +16,12 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
       multi: true,
     },
   ],
-  imports: [CommonModule]
 })
 export class RatingComponent implements ControlValueAccessor {
-  
   value = 2;
   hoveredRating = 2;
   isMouseOver = false;
-  @Input() disabled = false;
-
+  @Input() disabled = true;
 
   onChange: any = () => {};
   onTouched: any = () => {};
@@ -47,7 +45,6 @@ export class RatingComponent implements ControlValueAccessor {
   registerOnChange(fn: any) {
     this.onChange = fn;
   }
-
   registerOnTouched(fn: any) {
     this.onTouched = fn;
   }
@@ -55,7 +52,6 @@ export class RatingComponent implements ControlValueAccessor {
   setDisabledState(isDisabled: boolean): void {
     this.disabled = isDisabled;
   }
-
   writeValue(value: number) {
     this.value = value;
   }

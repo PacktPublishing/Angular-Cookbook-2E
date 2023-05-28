@@ -8,7 +8,7 @@
     >
       <div class="mb-3">
         <label for="ratingInput" class="form-label mb-4">Rating</label>
-        <input formControlName="rating" type="number" class="form-control" id="ratingInput">
+        <app-rating formControlName="rating"></app-rating>
         <div
           *ngIf="
             reviewForm.controls.rating.getError('min') ||
