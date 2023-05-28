@@ -10,7 +10,8 @@
     "serve:fake-be": "cd ./codewithahsan && npx nx serve fake-be",
     "create": "sh scripts/create-projects.sh",
     "remove": "sh scripts/remove-projects.sh",
-    "copy": "sh scripts/copy-start-to-final.sh"
+    "copy": "sh scripts/copy-start-to-final.sh",
+    "copy:styles": "sh scripts/copy-styles.sh"
   },
   "keywords": [],
   "author": "",

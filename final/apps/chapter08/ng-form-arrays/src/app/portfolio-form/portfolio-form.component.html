@@ -11,11 +11,13 @@
         <textarea id="bio" formControlName="bio" type="text" class="form-control" placeholder="Enter your bio" rows="3"></textarea>
       </fieldset>
     </section>
-    <section>
+    <section formArrayName="projects">
       <label class="text-sm">Projects</label>
-      <fieldset class="flex gap-4 mb-4 justify-between">
-        <input type="text" class="form-control" placeholder="Enter label">
-        <input type="url" class="form-control" placeholder="Enter URL">
+      <fieldset [formGroup]="projectControl" class="flex gap-4 mb-4 justify-between" *ngFor="let projectControl of projectsFormArr.controls; let isLast = last; let i = index; trackBy: trackByFn">
+        <input formControlName="label" type="text" class="form-control" placeholder="Enter label">
+        <input formControlName="url" type="url" class="form-control" placeholder="Enter URL">
+        <button type="button" [hidden]="isLast" (click)="removeProject(i)">-</button>
+        <button type="button" [style.visibility]="isLast ? 'visible' : 'hidden'" [hidden]="!isLast" (click)="addNewProject()">+</button>
       </fieldset>
     </section>
   </form>

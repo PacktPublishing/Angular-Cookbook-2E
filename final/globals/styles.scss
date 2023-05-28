@@ -90,8 +90,8 @@ svg.material-icons:not(:last-child) {
 }
 
 
-input {
-  &[type="text"] {
+input, textarea {
+  &[type="text"], &[type="url"] {
     @apply appearance-none w-full text-sm bg-transparent text-slate-900 placeholder:text-slate-400 rounded-md py-1.5 px-2 ring-1 ring-purple-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 ;
   }
 }
