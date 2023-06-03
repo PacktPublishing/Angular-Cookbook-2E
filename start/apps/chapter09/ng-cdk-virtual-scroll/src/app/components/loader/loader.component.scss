@@ -33,4 +33,10 @@
     border-color: #333 transparent #333 transparent;
     animation: lds-hourglass 1.2s infinite;
   }
+
+  &:hover {
+    .lds-hourglass:after {
+      border-color: white transparent white transparent;
+    }
+  }
 }
