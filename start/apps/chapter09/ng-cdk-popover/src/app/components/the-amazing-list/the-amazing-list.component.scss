@@ -1,0 +1,21 @@
+.heading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.list {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 500px;
+  overflow: scroll;
+  min-width: 400px;
+  max-width: 960px;
+  width: 100%;
+  &__item {
+    transition: all ease 0.3s;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    &:hover {
+      background-color: #ececec;
+    }
+  }
+}
