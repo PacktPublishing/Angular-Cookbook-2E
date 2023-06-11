@@ -1,0 +1,22 @@
+.list__item {
+  transition: all ease 0.3s;
+  padding: 8px 16px;
+  cursor: pointer;
+  &:hover, &:focus {
+    background-color: #ececec; transform: scale(1.02);
+    outline: none;
+  }
+  &__primary,
+  &__secondary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__info { font-size: small; }
+  }
+  &__primary {
+    &__info {
+      &:nth-child(1) { font-weight: bold; font-size:       larger; }
+    }
+  }
+  img { border-radius: 50%; width: 60px; height: 60px; }
+}
