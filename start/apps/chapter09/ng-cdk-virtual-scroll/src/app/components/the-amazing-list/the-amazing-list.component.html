@@ -1,6 +1,6 @@
 <h4 class="heading">Our trusted customers</h4>
 <ul class="list list-group p-2">
-  <li class="list__item list-group-item my-2 rounded-md p-4" *ngFor="let item of listItems">
+  <li class="list__item list-group-item" *ngFor="let item of listItems">
     <div class="list__item__primary">
       <div class="list__item__primary__info">
         {{ item.name }}
@@ -19,25 +19,3 @@
     </div>
   </li>
 </ul>
-
-
-<!-- <cdk-virtual-scroll-viewport class="list list-group" [itemSize]="110">
-  <div class="list__item list-group-item" *cdkVirtualFor="let item of listItems">
-    <div class="list__item__primary">
-      <div class="list__item__primary__info">
-        {{ item.name }}
-      </div>
-      <div class="list__item__primary__info">
-        {{ item.phone }}
-      </div>
-    </div>
-    <div class="list__item__secondary">
-      <div class="list__item__secondary__info">
-        <img src="{{ item.picture }}" />
-      </div>
-      <div class="list__item__secondary__info">
-        {{ item.email }}
-      </div>
-    </div>
-  </div>
-</cdk-virtual-scroll-viewport> -->
