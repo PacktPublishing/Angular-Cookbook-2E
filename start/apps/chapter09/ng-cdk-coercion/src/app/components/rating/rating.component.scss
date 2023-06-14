@@ -1,0 +1,22 @@
+.rating {
+  display: flex;
+  margin-bottom: 10px;
+  &__star {
+    cursor: pointer;
+    color: grey;
+    padding: 0 6px;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    &--active {
+      color: orange;
+    }
+    &--disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+}
