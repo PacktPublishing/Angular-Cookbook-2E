@@ -76,6 +76,8 @@
     "@angular/platform-browser-dynamic": "16.0.0",
     "@angular/router": "16.0.0",
     "@faker-js/faker": "^8.0.2",
+    "@fortawesome/angular-fontawesome": "^0.13.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@nestjs/common": "9.4.0",
     "@nestjs/core": "9.4.0",
     "@nestjs/platform-express": "9.4.0",
