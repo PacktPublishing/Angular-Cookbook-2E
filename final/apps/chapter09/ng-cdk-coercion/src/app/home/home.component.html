@@ -1,0 +1,51 @@
+<div class="home flex flex-col gap-4 mx-auto md:flex-row">
+  <div class="review-container flex-1 md:m-20">
+    <h3 class="review-container__heading text-2xl mb-6">Submit Review</h3>
+    <form
+      class="input-container"
+      [formGroup]="reviewForm"
+      (ngSubmit)="submitReview(reviewForm)"
+    >
+      <div class="mb-3">
+        <label for="ratingInput" class="form-label mb-4">Rating</label>
+        <app-rating
+          [value]="reviewForm.controls.rating.value"
+          max="8"
+          disabled="{{ratingDisabled}}"
+          (valueChanged)="applyRating($event)">
+        </app-rating>
+        <div
+          *ngIf="
+            reviewForm.dirty &&
+            (reviewForm.controls.rating.getError('min') ||
+            reviewForm.controls.rating.getError('max'))
+          "
+          class="alert alert-danger text-red-800 mt-2"
+          id="ratingError"
+        >
+          Rating should be between 1 and 5
+        </div>
+      </div>
+      <div class="mb-3 flex flex-col gap-4">
+        <label for="commentInput" class="form-label">Comment</label>
+        <textarea
+          formControlName="comment"
+          class="form-control"
+          id="commentInput"
+          rows="3"
+        ></textarea>
+      </div>
+      <button
+        id="submitBtn"
+        [disabled]="reviewForm.invalid"
+        class="btn btn-dark"
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+  <div class="flex-1 flex items-center justify-center md:m-20">
+    <pre>{{reviewForm.value | json}}</pre>
+  </div>
+</div>
