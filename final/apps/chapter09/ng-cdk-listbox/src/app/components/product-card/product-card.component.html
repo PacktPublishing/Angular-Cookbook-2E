@@ -1,0 +1,45 @@
+<a href="#" class="block group">
+  <img
+    src="https://images.unsplash.com/photo-1592921870789-04563d55041c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+    alt="" class="h-[250px] w-full object-cover sm:h-[350px]" />
+
+  <form [formGroup]="productForm" (ngSubmit)="formSubmit(productForm)">
+    <div class="mt-1.5">
+      <p class="text-xs text-gray-500">Space Grey</p>
+
+      <div class="mt-1.5 flex gap-1">
+        <fieldset>
+          <legend class="sr-only">Color</legend>
+        </fieldset>
+
+        <!-- Color Options -->
+
+        <ul cdkListbox
+            formControlName="color"
+            aria-labelledby="product-colors"
+            cdkListboxOrientation="horizontal"
+            class="flex flex-wrap justify-center gap-1 [&:hover_li]:opacity-75">
+          <li cdkOption="space-gray" cdkOptionTypeaheadLabel="space gray" class="color-option color-option--sg"></li>
+          <li cdkOption="silver" cdkOptionTypeaheadLabel="silver" class="color-option color-option--silver"></li>
+          <li cdkOption="pink" cdkOptionTypeaheadLabel="pink" class="color-option color-option--pink"></li>
+          <li cdkOption="green" cdkOptionTypeaheadLabel="green" class="color-option color-option--green"></li>
+          <li cdkOption="blue" cdkOptionTypeaheadLabel="blue" class="color-option color-option--blue"></li>
+        </ul>
+        
+        <!-- Color Options end -->
+      </div>
+
+
+      <div class="flex justify-between mt-3 text-sm items-center">
+        <h3 class="text-gray-900">
+          Small Headphones
+        </h3>
+
+        <p class="text-gray-900">$299</p>
+      </div>
+      <button [disabled]="productForm.invalid" type="submit" class="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105 disabled:cursor-not-allowed disabled:hover:scale-100">
+        Add to Cart
+      </button>
+    </div>
+  </form>
+</a>

@@ -5,19 +5,21 @@
 
   <form [formGroup]="productForm" (ngSubmit)="formSubmit(productForm)">
     <div class="mt-1.5">
-      <p class="text-xs text-gray-500">Space Grey</p>
+      <p class="text-xs text-gray-500">{{productForm.controls.color.value || 'Pick a color'}}</p>
 
       <div class="mt-1.5 flex gap-1">
         <fieldset>
           <legend class="sr-only">Color</legend>
         </fieldset>
 
+        <!-- Color Options -->
+
         <div class="flex flex-wrap justify-center gap-1 [&:hover_label]:opacity-75">
           <div>
             <input formControlName="color" name="color"  value="space-gray" type="radio" id="ColorSg" class="sr-only" />
 
-            <label tabindex="0" for="ColorSg"
-              class="block h-4 w-4 cursor-pointer rounded-full bg-[#595759] transition hover:!opacity-100">
+            <label tabindex="1" for="ColorSg"
+              class="color-option color-option--space-gray" [class.color-option--active]="productForm.controls.color.value === 'space-gray'">
               <span class="sr-only"> Space Gray </span>
             </label>
           </div>
@@ -25,8 +27,8 @@
           <div>
             <input formControlName="color" name="color"  value="silver" type="radio" id="ColorS" class="sr-only" />
 
-            <label tabindex="1" for="ColorS"
-              class="block h-4 w-4 cursor-pointer rounded-full bg-[#d2d3d4] transition hover:!opacity-100">
+            <label tabindex="2" for="ColorS"
+              class="color-option color-option--silver" [class.color-option--active]="productForm.controls.color.value === 'silver'">
               <span class="sr-only"> Silver </span>
             </label>
           </div>
@@ -34,8 +36,8 @@
           <div>
             <input formControlName="color" name="color"  value="pink" type="radio" id="ColorP" class="sr-only" />
 
-            <label tabindex="2" for="ColorP"
-              class="block h-4 w-4 cursor-pointer rounded-full bg-[#d89f97] transition hover:!opacity-100">
+            <label tabindex="3" for="ColorP"
+            class="color-option color-option--pink" [class.color-option--active]="productForm.controls.color.value === 'pink'">
               <span class="sr-only"> Pink </span>
             </label>
           </div>
@@ -43,8 +45,8 @@
           <div>
             <input formControlName="color" name="color"  value="green" type="radio" id="ColorG" class="sr-only" />
 
-            <label tabindex="3" for="ColorG"
-              class="block h-4 w-4 cursor-pointer rounded-full bg-[#afbfab] transition hover:!opacity-100">
+            <label tabindex="4" for="ColorG"
+            class="color-option color-option--green" [class.color-option--active]="productForm.controls.color.value === 'green'">
               <span class="sr-only"> Green </span>
             </label>
           </div>
@@ -52,13 +54,16 @@
           <div>
             <input formControlName="color" name="color"  value="blue" type="radio" id="ColorSb" class="sr-only" />
 
-            <label tabindex="4" for="ColorSb"
-              class="block h-4 w-4 cursor-pointer rounded-full bg-[#91a5bb] transition hover:!opacity-100">
+            <label tabindex="5" for="ColorSb"
+            class="color-option color-option--blue" [class.color-option--active]="productForm.controls.color.value === 'blue'">
               <span class="sr-only"> Blue </span>
             </label>
           </div>
         </div>
+        
+        <!-- Color Options end -->
       </div>
+
 
       <div class="flex justify-between mt-3 text-sm items-center">
         <h3 class="text-gray-900">
