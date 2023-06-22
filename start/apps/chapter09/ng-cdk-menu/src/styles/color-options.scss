@@ -1,0 +1,25 @@
+.color-option {
+  @apply block h-4 w-4 cursor-pointer rounded-full transition;
+  &:hover {
+    opacity: 1 !important;
+  }
+  &--sg {
+    @apply bg-[var(--space-gray)];
+  }
+  &--silver {
+    @apply bg-[var(--silver)];
+  }
+  &--pink {
+    @apply bg-[var(--pink)];
+  }
+  &--green {
+    @apply bg-[var(--green)];
+  }
+  &--blue {
+    @apply bg-[var(--blue)];
+  }
+
+  &[aria-selected=true] {
+    @apply scale-125;
+  }
+}
