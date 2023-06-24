@@ -1,0 +1,37 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img
+    width="40"
+    class="toolbar__logo"
+    routerLink="/"
+    alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+  />
+  <span routerLink="/" class="toolbar__title"
+    >Working with nested menus using Angular CDK Menu API</span
+  >
+  <div class="spacer"></div>
+  <a
+    href="https://www.codewithahsan.dev/ng-book-reader?chapter=ng-cdk-menu"
+    target="_blank"
+    rel="noopener noreferer"
+  >
+    <span class="material-symbols-outlined"> info </span>
+  </a>
+</div>
+
+<main class="content" role="main">
+  <div class="flex px-4 sm:px-0 gap-10 w-full max-w-sm sm:max-w-md flex-col sm:flex-row">
+    <app-product-card class="block flex-1" (colorChanged)="setSelectedColor($event)"></app-product-card>
+    <div class="flex flex-col gap-5">
+      <label class="text-2xl">
+        Selected Color:
+      </label>
+      <p class="text-xl">
+        {{selectedColor || 'No color selected'}}
+      </p>
+      <div *ngIf="selectedColor" class="color-option color-option--{{selectedColor}} !h-14 !w-14 hover:shadow-md">
+      </div>
+    </div>
+  </div>
+</main>

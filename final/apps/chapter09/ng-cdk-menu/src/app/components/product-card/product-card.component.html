@@ -1,5 +1,5 @@
 <article class="block group shadow-md bg-white relative">
-  <button class="absolute top-1 right-1 w-8 h-8 flex items-center justify-center hover:shadow-md active:!bg-slate-100 text-sm bg-transparent hover:!bg-white hover:!text-slate-900 border-none rounded-full">
+  <button [cdkMenuPosition]="menuPositions" [cdkMenuTriggerFor]="productActions" class="absolute top-1 right-1 w-8 h-8 flex items-center justify-center hover:shadow-md active:!bg-slate-100 text-sm bg-transparent hover:!bg-white hover:!text-slate-900 border-none rounded-full">
     <span class="material-symbols-outlined">
       more_vert
     </span>
@@ -48,3 +48,31 @@
     </div>
   </form>
 </article>
+
+<ng-template #productActions>
+  <ul class="menu-popover__list" cdkMenu>
+    <li cdkMenuItem class="menu-popover__list__item">
+      Share
+    </li>
+    <li cdkMenuItem class="menu-popover__list__item" [cdkMenuTriggerFor]="productEditActions">
+      Manage &#10148;
+    </li>
+    <li cdkMenuItem class="menu-popover__list__item">
+      Preview
+    </li>
+  </ul>
+</ng-template>
+
+<ng-template #productEditActions>
+  <ul class="menu-popover__list" cdkMenu>
+    <li cdkMenuItem class="menu-popover__list__item">
+      Duplicate
+    </li>
+    <li cdkMenuItem class="menu-popover__list__item">
+      Edit
+    </li>
+    <li cdkMenuItem class="menu-popover__list__item">
+      Delete
+    </li>
+  </ul>
+</ng-template>
