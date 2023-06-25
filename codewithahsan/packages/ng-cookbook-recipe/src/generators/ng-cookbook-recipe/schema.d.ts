@@ -1,9 +1,12 @@
+import { UnitTestRunner, E2eTestRunner } from "@nx/angular/generators";
+
 export interface NgCookbookRecipeGeneratorSchema {
   name: string;
   title: string;
   tags?: string;
   directory?: string;
-  e2eTestRunner?: E2ETestRunner;
+  e2eTestRunner?: E2eTestRunner;
+  unitTestRunner?: UnitTestRunner;
   standalone?: boolean;
   addTailwind?: boolean;
   routing?: boolean;

@@ -27,6 +27,11 @@
       "type": "string",
       "description": "A directory where the project is placed",
       "x-prompt": "What chapter would you like to use the app in?"
+    },
+    "unitTestRunner": {
+      "type": "string",
+      "description": "Your preffered choice of test runner",
+      "x-prompt": "What will you use for the unit tests?"
     }
   },
   "required": [

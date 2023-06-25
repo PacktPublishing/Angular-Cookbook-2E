@@ -8,7 +8,7 @@ import {
   offsetFromRoot,
   updateProjectConfiguration,
 } from '@nx/devkit';
-import { applicationGenerator } from '@nx/angular/generators';
+import { E2eTestRunner, UnitTestRunner, applicationGenerator } from '@nx/angular/generators';
 import { NgCookbookRecipeGeneratorSchema } from './schema';
 import path = require('path');
 
@@ -47,7 +47,8 @@ function normalizeOptions(
     standalone: true,
     skipTests: options.skipTests ?? false,
     prefix: 'app',
-    e2eTestRunner: options.e2eTestRunner ?? 'cypress',
+    unitTestRunner: options.unitTestRunner ?? UnitTestRunner.Jest,
+    e2eTestRunner: options.e2eTestRunner ?? E2eTestRunner.Cypress,
     projectName,
     chapterName,
     recipeName,

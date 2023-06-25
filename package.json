@@ -11,7 +11,9 @@
     "create": "sh scripts/create-projects.sh",
     "remove": "sh scripts/remove-projects.sh",
     "copy": "sh scripts/copy-start-to-final.sh",
-    "copy:styles": "sh scripts/copy-styles.sh"
+    "copy:styles": "sh scripts/copy-styles.sh",
+    "serve:ng-jest-setup": "cd start/apps/chapter10/ng-jest-setup && npm start -- -o",
+    "test:ng-jest-setup": "cd start/apps/chapter10/ng-jest-setup && npm t"
   },
   "keywords": [],
   "author": "",
