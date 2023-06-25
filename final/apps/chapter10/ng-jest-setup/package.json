@@ -1,0 +1,45 @@
+{
+  "name": "ng-jest-setup",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^15.2.0",
+    "@angular/common": "^15.2.0",
+    "@angular/compiler": "^15.2.0",
+    "@angular/core": "^15.2.0",
+    "@angular/forms": "^15.2.0",
+    "@angular/platform-browser": "^15.2.0",
+    "@angular/platform-browser-dynamic": "^15.2.0",
+    "@angular/router": "^15.2.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.12.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^15.2.8",
+    "@angular/cli": "~15.2.8",
+    "@angular/compiler-cli": "^15.2.0",
+    "@types/jest": "^29.5.2",
+    "autoprefixer": "^10.4.14",
+    "jest": "^29.5.0",
+    "jest-preset-angular": "^13.1.1",
+    "karma-coverage": "~2.2.0",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2",
+    "typescript": "~4.9.4"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": [
+      "<rootDir>/jestSetup.ts"
+    ]
+  }
+}
