@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CounterComponent } from './counter.component';
+import { CounterService } from '../services/counter.service';
+import CounterServiceMock from '../../__mocks__/services/counter.service.mock';
 
 describe('CounterComponent', () => {
   let component: CounterComponent;
@@ -9,6 +11,10 @@ describe('CounterComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [CounterComponent],
+      providers: [{
+        provide: CounterService,
+        useValue: CounterServiceMock
+      }]
     }).compileComponents();
   });
 
@@ -17,6 +23,10 @@ describe('CounterComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  }) 
 
   it('should increment the counter value upon tapping increment button', () => {
     component.counter = 0;
@@ -54,28 +64,28 @@ describe('CounterComponent', () => {
   });
 
   // replace the tests below
-  it('should call the localStorage.getItem method on component init', () => {
-    jest.spyOn(localStorage, 'getItem');
+  it('should call the CounterService.getFromStorage method on component init', () => {
+    jest.spyOn(component.counterService, 'getFromStorage');
     component.ngOnInit();
-    expect(localStorage.getItem).toHaveBeenCalled();
+    expect(component.counterService.getFromStorage).toHaveBeenCalled();
   });
 
-  it('should retrieve the last saved value from localStorage on component init', () => {
-    localStorage.setItem('counterValue', '12');
+  it('should retrieve the last saved value from CounterService on component init', () => {
+    jest.spyOn(component.counterService, 'getFromStorage').mockReturnValue(12);
+    component.counterService.saveToStorage(12);
     component.ngOnInit();
     expect(component.counter).toBe(12);
   });
 
-  it('should save the new counterValue to localStorage on increment, decrement and reset', () => {
+  it('should save the new counterValue to CounterService on increment, decrement and reset', () => {
     jest.spyOn(localStorage, 'setItem');
     component.counter = 0;
     component.increment();
-    expect(localStorage.setItem).toHaveBeenCalledWith('counterValue', '1');
+    expect(component.counterService.saveToStorage).toHaveBeenCalledWith(1);
     component.counter = 20;
     component.decrement();
-    expect(localStorage.setItem).toHaveBeenCalledWith('counterValue', '19');
+    expect(component.counterService.saveToStorage).toHaveBeenCalledWith(19);
     component.reset();
-    expect(localStorage.setItem).toHaveBeenCalledWith('counterValue', '0');
+    expect(component.counterService.saveToStorage).toHaveBeenCalledWith(0);
   });
-
 });
