@@ -24,10 +24,6 @@ describe('CounterComponent', () => {
     fixture.detectChanges();
   });
 
-  afterEach(() => {
-    jest.clearAllMocks();
-  }) 
-
   it('should increment the counter value upon tapping increment button', () => {
     component.counter = 0;
     component.increment();
@@ -65,13 +61,13 @@ describe('CounterComponent', () => {
 
   // replace the tests below
   it('should call the CounterService.getFromStorage method on component init', () => {
-    jest.spyOn(component.counterService, 'getFromStorage');
+    jest.spyOn(CounterServiceMock, 'getFromStorage');
     component.ngOnInit();
     expect(component.counterService.getFromStorage).toHaveBeenCalled();
   });
 
   it('should retrieve the last saved value from CounterService on component init', () => {
-    jest.spyOn(component.counterService, 'getFromStorage').mockReturnValue(12);
+    jest.spyOn(CounterServiceMock, 'getFromStorage').mockReturnValue(12);
     component.counterService.saveToStorage(12);
     component.ngOnInit();
     expect(component.counter).toBe(12);
@@ -81,11 +77,11 @@ describe('CounterComponent', () => {
     jest.spyOn(localStorage, 'setItem');
     component.counter = 0;
     component.increment();
-    expect(component.counterService.saveToStorage).toHaveBeenCalledWith(1);
+    expect(CounterServiceMock.saveToStorage).toHaveBeenCalledWith(1);
     component.counter = 20;
     component.decrement();
-    expect(component.counterService.saveToStorage).toHaveBeenCalledWith(19);
+    expect(CounterServiceMock.saveToStorage).toHaveBeenCalledWith(19);
     component.reset();
-    expect(component.counterService.saveToStorage).toHaveBeenCalledWith(0);
+    expect(CounterServiceMock.saveToStorage).toHaveBeenCalledWith(0);
   });
 });
