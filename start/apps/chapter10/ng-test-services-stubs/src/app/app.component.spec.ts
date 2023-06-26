@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { RouterTestingModule } from '@angular/router/testing';
 
-const pageTitle = 'Providing global mocks for Jest';
+const pageTitle = 'Mocking Angular services using stubs';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
