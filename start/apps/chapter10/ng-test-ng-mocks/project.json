@@ -1,0 +1,118 @@
+{
+  "name": "ng-test-ng-mocks",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/chapter10/ng-test-ng-mocks/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/chapter10/ng-test-ng-mocks",
+        "index": "apps/chapter10/ng-test-ng-mocks/src/index.html",
+        "main": "apps/chapter10/ng-test-ng-mocks/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/chapter10/ng-test-ng-mocks/tsconfig.app.json",
+        "assets": [
+          "apps/chapter10/ng-test-ng-mocks/src/favicon.ico",
+          "apps/chapter10/ng-test-ng-mocks/src/assets",
+          {
+            "glob": "**/*",
+            "input": "node_modules/@codewithahsan/ng-cookbook-recipe/assets",
+            "output": "assets"
+          }
+        ],
+        "styles": [
+          "apps/chapter10/ng-test-ng-mocks/src/styles.scss",
+          "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "ng-test-ng-mocks:build:production"
+        },
+        "development": {
+          "browserTarget": "ng-test-ng-mocks:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "ng-test-ng-mocks:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/chapter10/ng-test-ng-mocks/**/*.ts",
+          "apps/chapter10/ng-test-ng-mocks/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
+      "options": {
+        "jestConfig": "apps/chapter10/ng-test-ng-mocks/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "rename": {
+      "executor": "@codewithahsan/ng-cookbook-recipe:rename",
+      "options": {
+        "chapter": "chapter10",
+        "app": "ng-test-ng-mocks"
+      }
+    }
+  }
+}
