@@ -1,12 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { RouterTestingModule } from '@angular/router/testing';
+import { VersionControlComponent } from './components/version-control/version-control.component';
+import { FormsModule } from '@angular/forms';
+import { VcLogsComponent } from './components/vc-logs/vc-logs.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent],
-      imports: [RouterTestingModule],
+      declarations: [AppComponent, VersionControlComponent, VcLogsComponent],
+      imports: [RouterTestingModule, FormsModule],
     }).compileComponents();
   });
 
@@ -15,7 +18,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.toolbar__title')?.textContent).toContain(
-      'Mocking child components and directives using ng-mocks package'
+      'Writing even easier tests with Angular CDK component harnesses'
     );
   });
 });
