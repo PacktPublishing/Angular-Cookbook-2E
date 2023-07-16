@@ -12,10 +12,9 @@ describe('VersionControlComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ VersionControlComponent, VcLogsComponent ],
-      imports: [FormsModule]
-    })
-    .compileComponents();
+      declarations: [VersionControlComponent, VcLogsComponent],
+      imports: [FormsModule],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -30,40 +29,35 @@ describe('VersionControlComponent', () => {
   });
 
   it('should show error on wrong version number input', async () => {
-    const form = fixture.debugElement.query(
-      By.css('form')
-    ).injector.get(NgForm);
+    const form = fixture.debugElement
+      .query(By.css('form'))
+      .injector.get(NgForm);
     form.controls['version'].setValue('abcd');
-    fixture.detectChanges();
-    await fixture.whenStable();
     const submitVersionButton = fixture.debugElement.query(
       By.css('#submitVersionBtn')
     ).nativeElement;
     submitVersionButton.click();
     fixture.detectChanges();
-    await fixture.whenStable();
     const errorAlert = fixture.debugElement.query(
       By.css('small.error')
     ).nativeElement;
-    expect(errorAlert).toBeTruthy();
     const errorAlertText = errorAlert.textContent.trim();
-    expect(errorAlertText).toBe('Version number does not match the pattern (x.x.x)');
+    expect(errorAlertText).toBe(
+      'Version number does not match the pattern (x.x.x)'
+    );
   });
 
   it('should show the new log in the list after adding submitting a new log', async () => {
-    const form = fixture.debugElement.query(
-      By.css('form')
-    ).injector.get(NgForm);
+    const form = fixture.debugElement
+      .query(By.css('form'))
+      .injector.get(NgForm);
     const VERSION = '2.3.6';
     form.controls['version'].setValue(VERSION);
-    fixture.detectChanges();
-    await fixture.whenStable();
     const submitButton = fixture.debugElement.query(
       By.css('button[type=submit]')
     ).nativeElement;
     submitButton.click();
     fixture.detectChanges();
-    await fixture.whenStable();
     const logs = fixture.debugElement.queryAll(By.css('.logs__item'));
     expect(logs.length).toBe(2);
     const firstLog = logs[0].nativeElement.textContent.trim();
