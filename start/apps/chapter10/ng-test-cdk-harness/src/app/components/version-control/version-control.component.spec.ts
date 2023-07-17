@@ -3,12 +3,9 @@ import { By } from '@angular/platform-browser';
 import { VersionControlComponent } from './version-control.component';
 import { FormsModule, NgForm } from '@angular/forms';
 import { VcLogsComponent } from '../vc-logs/vc-logs.component';
-import { HarnessLoader } from '@angular/cdk/testing';
-import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 describe('VersionControlComponent', () => {
   let component: VersionControlComponent;
   let fixture: ComponentFixture<VersionControlComponent>;
-  let harnessLoader: HarnessLoader;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -21,7 +18,6 @@ describe('VersionControlComponent', () => {
     fixture = TestBed.createComponent(VersionControlComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    harnessLoader = TestbedHarnessEnvironment.loader(fixture);
   });
 
   it('should create', () => {

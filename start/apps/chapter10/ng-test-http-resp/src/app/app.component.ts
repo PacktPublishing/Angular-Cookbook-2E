@@ -3,6 +3,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { UserService } from './services/user.service';
 import { Observable } from 'rxjs';
+import { User } from './user.interface';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   userService = inject(UserService);
-  users$!: Observable<any[]>;
+  users$!: Observable<User[]>;
+  
   ngOnInit(): void {
     this.users$ = this.userService.getUsers();
   }
