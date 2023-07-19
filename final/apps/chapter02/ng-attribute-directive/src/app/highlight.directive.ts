@@ -8,6 +8,7 @@ import {
 
 @Directive({
   selector: '[appHighlight]',
+  standalone: true,
 })
 export class HighlightDirective implements OnChanges {
   @Input() highlightText = '';
