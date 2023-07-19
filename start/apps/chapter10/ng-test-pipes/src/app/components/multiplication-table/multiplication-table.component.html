@@ -1,0 +1,16 @@
+<div class="multiplication-table rounded-md bg-slate-900 px-4 py-2 text-green-400" *ngIf="digit && limit">
+  <div class="multiplication-table__elements">
+    <div
+      class="multiplication-table__elements__item grid gap-8 grid-cols-5 justify-between text-lg"
+      *ngFor="let factor of [] | multTable: digit:limit"
+    >
+      <span>{{factor.digit}}</span>
+      <span> * </span>
+      <span>{{factor.factor}}</span>
+      <span> = </span>
+      <span>
+        {{factor.result}}
+      </span>
+    </div>
+  </div>
+</div>
