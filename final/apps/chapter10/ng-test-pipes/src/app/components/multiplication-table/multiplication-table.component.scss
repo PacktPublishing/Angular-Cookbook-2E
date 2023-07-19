@@ -1,0 +1,15 @@
+.multiplication-table {
+  font-size: 28px;
+  display: flex;
+  justify-content: space-between;
+  &__info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__elements {
+    text-align: right;
+    overflow-y: scroll;
+  }
+}
