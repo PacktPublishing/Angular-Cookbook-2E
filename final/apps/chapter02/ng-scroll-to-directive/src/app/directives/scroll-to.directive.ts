@@ -9,7 +9,7 @@ export class ScrollToDirective {
   onClick() {
     const targetElement = document.querySelector(this.target);
     if (!targetElement) {
-      return;
+      throw new Error('`target` is required.');
     }
     targetElement.scrollIntoView({ behavior: 'smooth' });
   }
