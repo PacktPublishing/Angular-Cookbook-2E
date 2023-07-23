@@ -6,4 +6,8 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class NotificationsService {
   count$ = new BehaviorSubject(0);
+
+  setCount(value: number) {
+    this.count$.next(value);
+  }
 }

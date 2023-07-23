@@ -7,11 +7,12 @@ import { NotificationsService } from '../services/notifications.service';
   styleUrls: ['./notifications-manager.component.scss'],
 })
 export class NotificationsManagerComponent {
-  notificationsCount$ = inject(NotificationsService).count$;
+  notificationService = inject(NotificationsService);
+  notificationsCount$ = this.notificationService.count$;
 
   addNotification() {
     const currentValue = this.notificationsCount$.getValue();
-    this.notificationsCount$.next(currentValue + 1);
+    this.notificationService.setCount(currentValue + 1);
   }
 
   removeNotification() {
@@ -19,10 +20,10 @@ export class NotificationsManagerComponent {
     if (currentValue === 0) {
       return;
     }
-    this.notificationsCount$.next(currentValue - 1);
+    this.notificationService.setCount(currentValue - 1);
   }
 
   resetCount() {
-    this.notificationsCount$.next(0);
+    this.notificationService.setCount(0);
   }
 }
