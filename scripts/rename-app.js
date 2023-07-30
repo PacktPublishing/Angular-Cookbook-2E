@@ -17,7 +17,7 @@ const main = async () => {
     });
     contents = JSON.parse(contents);
     const originalName = contents['name'];
-    const newName = contents['name'].split('-').slice(1).join('-');
+    const newName = contents['name'].replace(`${chapter}-`, '');
     contents['name'] = newName;
     let stringified = JSON.stringify(contents, null, 2);
     stringified = stringified.replaceAll(originalName, newName);

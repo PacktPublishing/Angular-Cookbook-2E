@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "sh scripts/run-tests.sh",
+    "e2e": "sh scripts/run-e2e.sh",
     "postinstall": "concurrently \"cd start && npm i --legacy-peer-deps\"  \"cd final && npm i --legacy-peer-deps\" \"cd codewithahsan && npm i --legacy-peer-deps\"",
     "serve": "sh scripts/serve-projects.sh",
     "serve:fake-be": "cd ./codewithahsan && npx nx serve fake-be",
