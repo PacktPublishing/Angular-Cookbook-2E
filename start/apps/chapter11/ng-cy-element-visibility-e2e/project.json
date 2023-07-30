@@ -1,0 +1,36 @@
+{
+  "name": "ng-cy-element-visibility-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/chapter11/ng-cy-element-visibility-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/chapter11/ng-cy-element-visibility-e2e/cypress.config.ts",
+        "devServerTarget": "ng-cy-element-visibility:serve:development",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "ng-cy-element-visibility:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/chapter11/ng-cy-element-visibility-e2e/**/*.{js,ts}"
+        ]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": [
+    "ng-cy-element-visibility"
+  ]
+}

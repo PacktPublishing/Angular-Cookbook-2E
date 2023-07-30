@@ -4,6 +4,6 @@ describe('ng-cypress-starter', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display the correct header title', () => {
-    getHeaderTitle().should('contain.text', 'Your first Cypress test in Angular');
+    getHeaderTitle().should('contain.text', 'Validating if a DOM element is visible on the view');
   });
 });
