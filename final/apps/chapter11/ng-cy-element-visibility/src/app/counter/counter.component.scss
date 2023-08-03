@@ -1,0 +1,25 @@
+.counter {
+  padding: 40px;
+  width: 500px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__heading {
+    text-align: center;
+  }
+  &__value {
+    margin-bottom: 30px;
+  }
+  &__actions {
+    visibility: hidden;
+    align-items: center;
+  }
+
+  &:hover {
+    .counter__actions {
+      visibility: visible;
+    }
+  }
+}

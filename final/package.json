@@ -46,6 +46,7 @@
     "@typescript-eslint/parser": "5.60.1",
     "autoprefixer": "^10.4.0",
     "cypress": "12.16.0",
+    "cypress-real-events": "^1.10.0",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
