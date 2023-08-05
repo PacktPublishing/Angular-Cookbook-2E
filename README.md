@@ -56,6 +56,9 @@ cd start && npx nx g @nx/cypress:cypress-project chapter-number/your-app-name-e2
 ## cd start && npx nx g @nx/cypress:cypress-project chapter11/ng-cy-forms-e2e --project ny-cy-forms
 
 # select 'vite' bundler when asked
+
+cd ..
+
 node scripts/rename-app.js chapter-number your-app-name-e2e folder
 # ex
 ## node scripts/rename-app.js chapter11 ng-cy-forms-e2e start
