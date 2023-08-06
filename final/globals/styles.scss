@@ -111,7 +111,7 @@ textarea {
   }
 }
 
-button {
+button:not(.unset) {
   @apply rounded-md px-3 py-1.5 bg-white border-purple-500 border duration-200 cursor-pointer;
   &:hover:not(:disabled) {
     @apply bg-purple-700 text-white;

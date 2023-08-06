@@ -12,6 +12,23 @@ export class UserService {
     return this.http.get<User[]>('/assets/users.json');
   }
 
+  findByTerm(term: string) {
+    return this.getAll().pipe(
+      map((users) => {
+        return users.filter((user) => {
+          const searchableProps = [
+            user.name.first,
+            user.name.last,
+            user.email
+          ]
+          return searchableProps.some((val) => {
+            return val.toLowerCase().includes(term.toLowerCase());
+          })
+        })
+      })
+    );
+  }
+
   getById(userId: string): Observable<User | undefined> {
     return this.getAll().pipe(
       map((users) => {

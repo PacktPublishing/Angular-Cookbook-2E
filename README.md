@@ -64,3 +64,11 @@ node scripts/rename-app.js chapter-number your-app-name-e2e folder
 ## node scripts/rename-app.js chapter11 ng-cy-forms-e2e start
 ## node scripts/rename-app.js chapter11 ng-cy-forms-e2e final
 ```
+
+### Update global styles
+
+```shell
+cd codewithahsan && npm run build
+cd ..
+npm run copy:styles
+```
