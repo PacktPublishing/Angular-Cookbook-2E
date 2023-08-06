@@ -21,13 +21,6 @@ export class UsersComponent implements OnInit {
     this.searchUserInputChange$.next(this.searchInput());
   })
   ngOnInit(): void {
-    this.userService.getAll()
-      .subscribe({
-        next: (users) => {
-          this.users.set(users);
-        }
-      })
-
     this.searchUserInputChange$.pipe(
       distinctUntilChanged(),
       debounceTime(500),
