@@ -9,6 +9,10 @@ import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { bucketReducer } from './store/bucket.reducer';
 import { provideHttpClient } from '@angular/common/http';
+import { provideEffects } from '@ngrx/effects';
+import { BucketEffects } from './store/bucket.effects';
+import { provideToastr } from 'ngx-toastr';
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(appRoutes, withEnabledBlockingInitialNavigation()),
@@ -20,5 +24,7 @@ export const appConfig: ApplicationConfig = {
       maxAge: 50,
     }),
     provideHttpClient(),
+    provideEffects([BucketEffects]),
+    provideToastr()
   ],
 };

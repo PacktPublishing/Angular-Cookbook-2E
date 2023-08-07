@@ -7,10 +7,10 @@ import { appRoutes } from './app.routes';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
-import { bucketReducer } from './app/store/bucket.reducer';
+import { bucketReducer } from './store/bucket.reducer';
 import { provideHttpClient } from '@angular/common/http';
 import { provideEffects } from '@ngrx/effects';
-import { BucketEffects } from './app/store/bucket.effects';
+import { BucketEffects } from './store/bucket.effects';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(appRoutes, withEnabledBlockingInitialNavigation()),

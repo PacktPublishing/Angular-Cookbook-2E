@@ -14,6 +14,13 @@ if [ "$2" == "both" ]; then
   exit;
 fi
 
+if [ "$2" == "with-server" ]; then
+  cd "start" && npx nx run "$APP_NAME-e2e:e2e" &
+  cd "codewithahsan" && npx nx serve "fake-be" && kill $!
+  exit;
+fi
+
+
 if [ "$2" == "final" ]; then
   cd "final" && npx nx run "$APP_NAME-e2e:e2e" --watch
   exit;
