@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+@mixin UserItem {
+  @apply px-3 py-1.5 border border-slate-500 rounded-md flex gap-4 hover:shadow-lg duration-200 cursor-pointer items-center;
+  img {
+    @apply rounded-full aspect-square w-12 h-12;
+  }
+}
+
+app-users-list {
+  ul {
+    @apply grid grid-cols-2 lg:grid-cols-3 gap-4;
+    li {
+      @include UserItem();
+    }
+  }
+}
+
+app-user-details {
+  article {
+    @include UserItem();
+  }
+}

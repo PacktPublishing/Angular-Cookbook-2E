@@ -1,5 +1,7 @@
 import { getSearchInput, getUsersCards } from '../support/users.po';
 
+const dobRegex = /^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{2}$/;
+
 describe('Users List Page', () => {
   beforeEach(() => {
     cy.intercept('/assets/users.json').as('searchUsers');
