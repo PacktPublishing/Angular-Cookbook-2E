@@ -31,7 +31,10 @@ export class BucketEffects {
       ofType(BucketActions.addFruit),
       exhaustMap((action) =>
         this.bucketService.addItem(action.fruit).pipe(
-          map(({ fruit }) => BucketActions.addFruitSuccess({ fruit })),
+          map(({ fruit }) => {
+            this.toastr.success('Bucket item added');
+            return BucketActions.addFruitSuccess({ fruit });
+          }),
           catchError((error) => {
             this.toastr.error('Could not add bucket item');
             return of(BucketActions.addFruitFailure({ error }));
@@ -46,11 +49,12 @@ export class BucketEffects {
       ofType(BucketActions.removeFruit),
       exhaustMap((action) =>
         this.bucketService.removeItem(action.fruitId).pipe(
-          map(() =>
-            BucketActions.removeFruitSuccess({ fruitId: action.fruitId })
-          ),
-          catchError((error) => {
-            this.toastr.error('Could not delete bucket item');
+          map(() => {
+            this.toastr.success('Bucket item deleted');
+            return BucketActions.removeFruitSuccess({ fruitId: action.fruitId })
+          }),
+          catchError(({ error }) => {
+            this.toastr.error(`Could not delete bucket item: ${error.message}`);
             return of(BucketActions.removeFruitFailure({ error }));
           })
         )

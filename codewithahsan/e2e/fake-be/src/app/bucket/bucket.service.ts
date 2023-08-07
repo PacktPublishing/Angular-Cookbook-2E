@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { IFruit } from '../interfaces';
 import BUCKET from './data/bucket';
 
@@ -18,6 +18,10 @@ export class BucketService {
   }
 
   removeItem(fruitId: number) {
+    const itemFound = bucketInMemory.find((fruit) => fruit.id === fruitId)
+    if (!itemFound) {
+      throw new HttpException('Item not found', HttpStatus.NOT_FOUND);
+    }
     bucketInMemory = bucketInMemory.filter((fruit) => fruit.id !== fruitId);
     return {
       success: true,

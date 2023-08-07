@@ -3,7 +3,7 @@
     <select
       [(ngModel)]="selectedFruit"
       class="custom-select flex-1 cursor-pointer outline-none rounded-md border border-slate-900 px-2 py-1.5"
-      id="inputGroupSelect04"
+      data-test-id="fruitSelector"
       aria-label="Example select with button addon"
     >
       <option selected value="">Choose...</option>
@@ -13,6 +13,7 @@
     </select>
     <div class="input-group-append">
       <button
+        data-test-id="addItemSubmitBtn"
         [disabled]="!selectedFruit"
         class="btn btn-outline-secondary"
         type="button"
@@ -33,7 +34,7 @@
     <ng-container *ngIf="bucket.length > 0; else bucketEmptyMessage">
     <div class="fruits__item" *ngFor="let item of bucket">
       <div class="fruits__item__title">{{ item.name }}</div>
-      <div class="fruites__item__delete-icon" (click)="deleteFromBucket(item)">
+      <div class="fruits__item__delete-icon" (click)="deleteFromBucket(item)">
         <div class="material-symbols-outlined">delete</div>
       </div>
     </div>
