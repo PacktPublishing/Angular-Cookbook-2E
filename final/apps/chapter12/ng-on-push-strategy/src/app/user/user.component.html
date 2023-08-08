@@ -1,0 +1,23 @@
+<div *ngIf="user; else loader" class="user-detail">
+  <div class="w-full text-center">
+    <button class="fixed right-20 top-2" routerLink="/">
+      Back
+    </button>
+  </div>
+  <div class="main-content user-card">
+    <app-user-card [user]="user"></app-user-card>
+  </div>
+
+  <div class="secondary-container my-4">
+    <h4 class="text-center text-xl">Similar Users</h4>
+    <div class="similar-users grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <ng-container *ngIf="similarUsers; else loader">
+        <app-user-card class="user-card" *ngFor="let user of similarUsers" [user]="user"></app-user-card>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>
