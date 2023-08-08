@@ -1,4 +1,4 @@
-import { Component, inject, NgZone, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { IUser } from '../interfaces/user.interface';
@@ -19,9 +19,7 @@ export class UsersComponent implements OnInit {
   searchForm!: FormGroup;
   componentAlive!: boolean;
   userService = inject(UserService);
-  zone = inject(NgZone);
   isLoading = false;
-  logs: Record<string, number> | null = null;
   ngOnInit() {
     this.componentAlive = true;
     this.searchForm = new FormGroup({
@@ -41,22 +39,5 @@ export class UsersComponent implements OnInit {
         this.users = users;
         this.isLoading = false;
       });
-  }
-
-  pushLog(email: string) {
-    this.zone.runOutsideAngular(() => {
-      setTimeout(() => {
-        this.zone.run(() => {
-          if (!this.logs) {
-            this.logs = {};
-          }
-          if (this.logs[email]) {
-            this.logs[email]++;
-          } else {
-            this.logs[email] = 1;
-          }
-        })
-      }, 0);
-    })
   }
 }
