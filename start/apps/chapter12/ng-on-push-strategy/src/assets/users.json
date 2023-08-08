@@ -1,0 +1,114 @@
+{
+  "results": [
+    {
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/9.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/9.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/9.jpg"
+      },
+      "name": { "title": "Mr", "first": "Irineu", "last": "da Rocha" },
+      "email": "irineu.darocha@example.com",
+      "uuid": "7abefe7e-4c42-4fd8-be31-452010c4f6a9",
+      "dob": { "date": "1975-03-06T10:54:34.673Z", "age": 46 }
+    },
+    {
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/74.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/74.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/74.jpg"
+      },
+      "name": { "title": "Mrs", "first": "آنیتا", "last": "حسینی" },
+      "email": "anyt.hsyny@example.com",
+      "uuid": "2a7d1ce3-f52a-4621-9169-c26771c4e434",
+      "dob": { "date": "1955-11-21T06:44:22.385Z", "age": 66 }
+    },
+    {
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/45.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/45.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/45.jpg"
+      },
+      "name": { "title": "Miss", "first": "Elfie", "last": "Siegert" },
+      "email": "elfie.siegert@example.com",
+      "uuid": "44e5dc9c-fd69-437a-952a-f1b0c8315120",
+      "dob": { "date": "1992-08-28T13:18:20.025Z", "age": 29 }
+    },
+    {
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/85.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/85.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/85.jpg"
+      },
+      "name": { "title": "Mr", "first": "Hudson", "last": "Li" },
+      "email": "hudson.li@example.com",
+      "uuid": "2b3f709e-519d-42d3-b69d-74415d5c469b",
+      "dob": { "date": "1985-11-12T22:19:45.503Z", "age": 36 }
+    },
+    {
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/62.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/62.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/62.jpg"
+      },
+      "name": { "title": "Mrs", "first": "Indie", "last": "Hall" },
+      "email": "indie.hall@example.com",
+      "uuid": "6609c567-46c2-4ddb-a191-76bbe578e6b5",
+      "dob": { "date": "1948-05-30T23:25:58.383Z", "age": 73 }
+    },
+    {
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/35.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/35.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/35.jpg"
+      },
+      "name": { "title": "Mr", "first": "Austrelino", "last": "Lima" },
+      "email": "austrelino.lima@example.com",
+      "uuid": "ae873630-02b3-4b14-8760-b7ec47c3ead6",
+      "dob": { "date": "1956-09-24T14:34:37.971Z", "age": 65 }
+    },
+    {
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/31.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/31.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/31.jpg"
+      },
+      "name": { "title": "Mrs", "first": "Ruby", "last": "Flores" },
+      "email": "ruby.flores@example.com",
+      "uuid": "f4c6aa36-46fd-42bc-aa92-79a908a7d8bb",
+      "dob": { "date": "1992-05-21T01:59:04.915Z", "age": 29 }
+    },
+    {
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/83.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/83.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/83.jpg"
+      },
+      "name": { "title": "Ms", "first": "Lexi", "last": "Keijer" },
+      "email": "lexi.keijer@example.com",
+      "uuid": "da358afc-67fd-4cd4-9274-407a4d5a5a4d",
+      "dob": { "date": "1962-08-17T02:26:44.268Z", "age": 59 }
+    },
+    {
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/70.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/70.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/70.jpg"
+      },
+      "name": { "title": "Mr", "first": "Max", "last": "Wang" },
+      "email": "max.wang@example.com",
+      "uuid": "3c6180a2-6245-4ec2-8a11-66e3107519d9",
+      "dob": { "date": "1968-02-12T06:26:19.865Z", "age": 53 }
+    },
+    {
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/58.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/58.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/58.jpg"
+      },
+      "name": { "title": "Mr", "first": "Justin", "last": "Grewal" },
+      "email": "justin.grewal@example.com",
+      "uuid": "4e016944-e58c-4f37-aa3c-4a31ee8bea83",
+      "dob": { "date": "1951-04-13T15:26:04.859Z", "age": 70 }
+    }
+  ]
+}
