@@ -1,6 +1,6 @@
 <div *ngIf="user; else loader" class="user-detail">
-  <div class="w-full text-center">
-    <button class="fixed right-20 top-2" routerLink="/">
+  <div class="w-full relative h-20 text-center flex justify-start">
+    <button [style.opacity]="user && similarUsers ? 1 : 0" class="absolute top-0 left-0 duration-200" routerLink="/">
       Back
     </button>
   </div>
