@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { IUser } from '../interfaces/user.interface';
@@ -15,6 +15,7 @@ import { LoaderComponent } from '../component/loader/loader.component';
   styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent implements OnInit {
+  @ViewChildren(UserCardComponent) userCards!: QueryList<UserCardComponent>;
   users!: IUser[];
   searchForm!: FormGroup;
   componentAlive!: boolean;
@@ -43,5 +44,28 @@ export class UsersComponent implements OnInit {
 
   usersTrackBy(_index: number, user: IUser) {
     return user.uuid;
+  }
+
+  updateName(user: IUser) {
+    this.users = this.users.map((userItem) => {
+      if (userItem.uuid === user.uuid) {
+        return {
+          ...userItem,
+          name: {
+            ...userItem.name,
+            last: 'Test 123'
+          }
+        }
+      }
+      return userItem;
+    })
+    const matchingComponent = this.userCards.find(comp => {
+      return comp.user.uuid === user.uuid;
+    })
+    if (matchingComponent) {
+      setTimeout(() => {
+        matchingComponent.cdRef.detectChanges();
+      }, 0);
+    }
   }
 }
