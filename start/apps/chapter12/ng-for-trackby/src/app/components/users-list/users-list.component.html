@@ -1,0 +1,10 @@
+<h4 class="heading">Our trusted customers</h4>
+<ul class="list list-group p-2">
+  <li class="list__item list-group-item" *ngFor="let item of listItems">
+    <app-user-card
+      [item]="item"
+      (itemClicked)="itemClicked.emit(item)"
+      (itemDeleted)="itemDeleted.emit(item)">
+    </app-user-card>
+  </li>
+</ul>
