@@ -1,0 +1,14 @@
+<div [style.backgroundColor]="randomColor" class="card flex flex-col max-w-sm mx-auto h-full duration-200 cursor-pointer hover:border-purple-500 hover:shadow-md p-4 border border-slate-300 rounded-md text-center" *ngIf="user" routerLink="/user/{{user.uuid}}">
+  <img [src]="user.picture.large" class="card-img-top rounded-full mx-auto w-32 aspect-square" alt="...">
+  <div class="card-body flex-1">
+    <h5 class="card-title">{{user.name.first}} {{user.name.last}}</h5>
+    <p class="card-text break-words">{{user.email}}</p>
+    <a href="tel: {{user.phone}}" class="btn btn-primary">{{user.phone}}</a>
+  </div>
+  <div class="p-4 bg-slate-900 text-green-300 rounded-md h-fit">
+    <div>
+      Color Generation Count:
+    </div>
+    <pre>{{log}}</pre>
+  </div>
+</div>
