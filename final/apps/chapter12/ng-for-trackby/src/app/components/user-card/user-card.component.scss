@@ -1,0 +1,36 @@
+.list {
+  &__item {
+    @apply rounded-md p-4;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: #ececec;
+    }
+    &__primary,
+    &__secondary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__info {
+        font-size: small;
+      }
+    }
+
+    &__primary {
+      &__info {
+        &:nth-child(1) {
+          font-weight: bold;
+          font-size: larger;
+        }
+      }
+    }
+  }
+}
+
+:host {
+  img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+}

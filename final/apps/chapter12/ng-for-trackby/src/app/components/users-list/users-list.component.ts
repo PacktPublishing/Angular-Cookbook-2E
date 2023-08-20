@@ -14,4 +14,7 @@ export class UsersListComponent {
   @Input() listItems: AppUserCard[] = [];
   @Output() itemClicked = new EventEmitter<AppUserCard>();
   @Output() itemDeleted = new EventEmitter<AppUserCard>();
+  trackByFn(_index: number, item: AppUserCard) {
+    return item.id;
+  }
 }
