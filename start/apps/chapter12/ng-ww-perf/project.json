@@ -32,8 +32,7 @@
           "apps/chapter12/ng-ww-perf/src/styles.scss",
           "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
         ],
-        "scripts": [],
-        "webWorkerTsConfig": "apps/chapter12/ng-ww-perf/tsconfig.worker.json"
+        "scripts": []
       },
       "configurations": {
         "production": {
@@ -99,8 +98,7 @@
       ],
       "options": {
         "jestConfig": "apps/chapter12/ng-ww-perf/jest.config.ts",
-        "passWithNoTests": true,
-        "webWorkerTsConfig": "apps/chapter12/ng-ww-perf/tsconfig.worker.json"
+        "passWithNoTests": true
       },
       "configurations": {
         "ci": {
