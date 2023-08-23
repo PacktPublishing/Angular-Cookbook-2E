@@ -92,6 +92,7 @@
     "ngx-toastr": "^17.0.2",
     "reflect-metadata": "^0.1.13",
     "rxjs": "7.8.1",
+    "three": "^0.155.0",
     "tslib": "^2.3.0",
     "zone.js": "0.13.0"
   }
