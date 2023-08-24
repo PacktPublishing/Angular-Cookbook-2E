@@ -13,6 +13,11 @@ if [ "$2" == "both" ]; then
   exit;
 fi
 
+if [ "$2" == "with-stats" ]; then
+  cd "start" && npx nx build "$APP_NAME" --stats-json
+  exit;
+fi
+
 if [ "$2" == "with-server" ]; then
   cd "start" && npx nx build "$APP_NAME" &
   cd "codewithahsan" && npx nx build "fake-be" && kill $!
