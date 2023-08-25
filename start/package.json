@@ -6,7 +6,7 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "postinstall": "cd apps/chapter10/ng-jest-setup && npm i"
+    "postinstall": "sh ../scripts/post-install.sh start"
   },
   "private": true,
   "devDependencies": {
