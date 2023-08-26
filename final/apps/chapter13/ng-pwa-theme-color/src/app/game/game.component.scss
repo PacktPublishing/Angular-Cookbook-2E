@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  max-width: 690px;
+  margin: 0 auto;
+}
+
+.alert {
+  @apply rounded-md px-3 py-1.5;
+  &.alert-success {
+    @apply bg-green-300 border border-green-700;
+  }
+  &.alert-danger {
+    @apply bg-red-300 border border-red-700;
+  }
+}
