@@ -14,6 +14,7 @@ import { GameStepperComponent } from '../components/game-stepper/game-stepper.co
 import { IDiceSide } from '../interfaces/dice.interface';
 import { LeaderboardService } from '../services/leaderboard.service';
 import { IScore } from '../interfaces/score.interface';
+import { InstallablePromptService } from '../services/installable-prompt.service';
 @Component({
   selector: 'app-game',
   standalone: true,
@@ -37,6 +38,7 @@ export class GameComponent {
   guessedValue: number | null = null;
   isCorrectGuess: null | boolean = null;
   leaderboardService = inject(LeaderboardService);
+  promptService = inject(InstallablePromptService);
   scores: IScore[] = this.leaderboardService.getScores();
 
   nameForm = new FormGroup({
@@ -57,6 +59,9 @@ export class GameComponent {
     const userName = this.nameForm.controls.name.value as string;
     if (!this.isCorrectGuess) {
       return;
+    }
+    if (this.promptService.installPromptEvent) {
+      this.promptService.isPromptBannerShown.set(true);
     }
     this.scores = this.leaderboardService.setScores({
       name: userName,
