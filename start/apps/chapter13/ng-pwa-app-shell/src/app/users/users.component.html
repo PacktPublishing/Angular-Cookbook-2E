@@ -1,0 +1,14 @@
+<div class="home">
+  <h2 class="text-center text-2xl">Users</h2>
+  <form class="input-container" [formGroup]="searchForm">
+    <div class="relative mb-4">
+      <input formControlName="username" type="text" placeholder="Quick Search..." class="pr-4 !pl-10 py-2">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-none text-slate-300 dark:text-slate-400 absolute top-0 left-2 bottom-0 m-auto" aria-hidden="true"><path d="m19 19-3.5-3.5"></path><circle cx="11" cy="11" r="6"></circle></svg>
+    </div>
+  </form>
+  <div class="secondary-container">
+    <div class="users grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4" *ngIf="users">
+      <app-user-card *ngFor="let user of users" [user]="user"></app-user-card>
+    </div>
+  </div>
+</div>
