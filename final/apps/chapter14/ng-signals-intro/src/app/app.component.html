@@ -35,7 +35,7 @@
   
     <!-- Task List -->
     <ul>
-      <li *ngFor="let task of tasks() | tasksFilter : filter()" (click)="toggleTask(task)" class="mb-2 flex gap-4 items-center cursor-pointer hover:opacity-70">
+      <li (click)="toggleTask(task)" *ngFor="let task of filteredTasks()" class="mb-2 flex gap-4 items-center cursor-pointer hover:opacity-70">
         <input type="checkbox" [checked]="task.completed" />
         <span [ngClass]="{'line-through': task.completed}">{{ task.title }}</span>
       </li>
@@ -43,10 +43,13 @@
   
     <!-- Filters -->
     <div class="mt-4">
-      <button (click)="filter.set(filters.All)" [ngClass]="{'!bg-purple-500 text-white': filter() === filters.All}" class="p-2 rounded mr-2">All</button>
-      <button (click)="filter.set(filters.Active)" [ngClass]="{'!bg-purple-500 text-white': filter() === filters.Active}" class="p-2 rounded mr-2">Active</button>
-      <button (click)="filter.set(filters.Completed)" [ngClass]="{'!bg-purple-500 text-white': filter() === filters.Completed}" class="p-2 rounded">Completed</button>
+      <button (click)="changeFilter(filters.All)" [ngClass]="{'!bg-purple-500 text-white': filter() === filters.All}" class="p-2 rounded mr-2">All</button>
+      <button (click)="changeFilter(filters.Active)" [ngClass]="{'!bg-purple-500 text-white': filter() === filters.Active}" class="p-2 rounded mr-2">Active</button>
+      <button (click)="changeFilter(filters.Completed)" [ngClass]="{'!bg-purple-500 text-white': filter() === filters.Completed}" class="p-2 rounded">Completed</button>
     </div>
   </div>
   
 </main>
+<app-snackbar>
+  Congratulations! You completed all tasks.
+</app-snackbar>
