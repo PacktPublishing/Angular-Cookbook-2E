@@ -11,13 +11,14 @@ import { cardAnimation } from '../../animations';
   styleUrls: ['./twitter-card.component.scss'],
 })
 export class TwitterCardComponent {
-  cardState = 'active';
-  @HostListener('mouseenter')
-  onMouseEnter() {
-    this.cardState = 'hovered';
-  }
-  @HostListener('mouseleave')
-  onMouseLeave() {
-    this.cardState = 'active';
+  cardState: 'active' | 'hovered' = 'active';
+  @HostListener('mouseenter') 
+  onMouseEnter() { 
+    this.cardState = 'hovered'; 
+  } 
+
+  @HostListener('mouseleave') 
+  onMouseLeave() { 
+    this.cardState = 'active'; 
   }
 }

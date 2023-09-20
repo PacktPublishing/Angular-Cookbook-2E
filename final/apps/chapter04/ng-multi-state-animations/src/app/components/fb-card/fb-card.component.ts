@@ -11,14 +11,14 @@ import { cardAnimation } from '../../animations';
   styleUrls: ['./fb-card.component.scss'],
 })
 export class FbCardComponent {
-  cardState = 'active';
+  cardState: 'active' | 'hovered' = 'active';
+  @HostListener('mouseenter') 
+  onMouseEnter() { 
+    this.cardState = 'hovered'; 
+  } 
 
-  @HostListener('mouseenter')
-  onMouseEnter() {
-    this.cardState = 'hovered';
-  }
-  @HostListener('mouseleave')
-  onMouseLeave() {
-    this.cardState = 'active';
+  @HostListener('mouseleave') 
+  onMouseLeave() { 
+    this.cardState = 'active'; 
   }
 }
