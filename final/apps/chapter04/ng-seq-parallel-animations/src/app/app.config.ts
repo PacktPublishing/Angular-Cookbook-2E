@@ -8,6 +8,6 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(appRoutes, withEnabledBlockingInitialNavigation()),
-    provideAnimations(),
+    provideAnimations()
   ],
 };

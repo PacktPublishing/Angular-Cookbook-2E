@@ -8,16 +8,16 @@ import { ROUTE_ANIMATION } from './animations';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  animations: [ROUTE_ANIMATION],
   imports: [CommonModule, RouterModule],
+  animations: [ROUTE_ANIMATION]
 })
 export class AppComponent {
   @ViewChild(RouterOutlet) routerOutlet!: RouterOutlet;
-  getRouteAnimationState() {
-    return (
-      this.routerOutlet &&
-      this.routerOutlet.activatedRouteData &&
-      this.routerOutlet.activatedRouteData['transitionState']
-    );
+  getRouteAnimationState() { 
+    return ( 
+      this.routerOutlet && 
+      this.routerOutlet.activatedRouteData && 
+      this.routerOutlet.activatedRouteData['transitionState'] 
+    ); 
   }
 }

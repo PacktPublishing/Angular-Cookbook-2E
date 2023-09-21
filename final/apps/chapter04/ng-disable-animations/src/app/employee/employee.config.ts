@@ -1,6 +1,6 @@
-import { IAppConfig } from '../app-config';
+import { IEmployeeConfig } from '../app.config';
 
-export const EmployeeConfig: IAppConfig = {
+export const employeeConfig: IEmployeeConfig = {
   canDeleteItems: false,
-  disableAnimations: true,
+  disableAnimations: true
 };
