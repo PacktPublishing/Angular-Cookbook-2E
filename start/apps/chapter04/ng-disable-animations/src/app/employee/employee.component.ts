@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BucketComponent } from '../bucket/bucket.component';
-import { APP_CONFIG } from '../app-config';
-import { EmployeeConfig } from './employee.config';
+import { EMPLOYEE_CONFIG } from '../app.config';
+import { employeeConfig } from './employee.config';
 
 @Component({
   selector: 'app-employee',
@@ -12,8 +12,8 @@ import { EmployeeConfig } from './employee.config';
   styleUrls: ['./employee.component.scss'],
   providers: [
     {
-      provide: APP_CONFIG,
-      useValue: EmployeeConfig,
+      provide: EMPLOYEE_CONFIG,
+      useValue: employeeConfig,
     },
   ],
 })

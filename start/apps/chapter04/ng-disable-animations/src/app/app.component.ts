@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { AppConfig, APP_CONFIG } from './app-config';
 import { AuthService } from './auth/auth.service';
 
 @Component({
@@ -9,13 +8,7 @@ import { AuthService } from './auth/auth.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [RouterModule, CommonModule],
-  providers: [
-    {
-      provide: APP_CONFIG,
-      useValue: AppConfig,
-    },
-  ],
+  imports: [RouterModule, CommonModule]
 })
 export class AppComponent {
   // DO NOT USE THE CODE BELOW IN PRODUCTION
