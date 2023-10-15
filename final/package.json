@@ -21,6 +21,7 @@
     "@angular/language-service": "16.1.6",
     "@angular/pwa": "^16.2.0",
     "@codewithahsan/ng-cookbook-recipe": "file:../codewithahsan/dist/packages/ng-cookbook-recipe",
+    "@codewithahsan/ng-cb-ui": "file:../codewithahsan/dist/packages/ng-cb-ui",
     "@nestjs/schematics": "10.0.1",
     "@nestjs/testing": "10.0.2",
     "@ngrx/store": "16.0.1",
