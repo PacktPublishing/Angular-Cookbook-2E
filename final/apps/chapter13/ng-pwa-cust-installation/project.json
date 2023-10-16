@@ -31,7 +31,7 @@
         ],
         "styles": [
           "apps/chapter13/ng-pwa-cust-installation/src/styles.scss",
-          "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
+          "node_modules/@codewithahsan/ng-cb-ui/styles/globals.scss"
         ],
         "scripts": [],
         "serviceWorker": true,

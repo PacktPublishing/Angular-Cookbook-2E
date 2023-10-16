@@ -12,3 +12,5 @@ export class HeaderComponent {
   @Input() appName = 'ng-cookbook-recipe';
   @Input() appTitle = 'Angular Cookbook Recipe';
 }
+
+// TODO: remove the headers from all the projects via schematics

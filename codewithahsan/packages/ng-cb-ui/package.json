@@ -8,5 +8,10 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "exports": {
+    "./styles/globals": {
+      "sass": "./styles/globals.scss"
+    }
+  }
 }

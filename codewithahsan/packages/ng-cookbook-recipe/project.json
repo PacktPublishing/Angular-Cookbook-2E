@@ -37,11 +37,6 @@
             "input": "./packages/ng-cookbook-recipe/src/assets",
             "glob": "**/*",
             "output": "./assets"
-          },
-          {
-            "input": "./packages/ng-cookbook-recipe/src/styles",
-            "glob": "**/*",
-            "output": "./styles"
           }
         ]
       }

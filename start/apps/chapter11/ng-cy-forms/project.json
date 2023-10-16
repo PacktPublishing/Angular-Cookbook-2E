@@ -30,7 +30,7 @@
         ],
         "styles": [
           "apps/chapter11/ng-cy-forms/src/styles.scss",
-          "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
+          "node_modules/@codewithahsan/ng-cb-ui/styles/globals.scss"
         ],
         "scripts": []
       },
