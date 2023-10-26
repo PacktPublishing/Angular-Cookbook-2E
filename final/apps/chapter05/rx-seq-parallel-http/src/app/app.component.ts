@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
-import { forkJoin, mergeMap } from 'rxjs';
 import { LoaderComponent } from './components/loader/loader.component';
 import { IPerson } from './interfaces';
 import { SwapiService } from './swapi.service';
+import { catchError, forkJoin, mergeMap, of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -26,18 +26,29 @@ export class AppComponent implements OnInit {
       .fetchPerson('1')
       .pipe(
         mergeMap((person) => {
-          this.person = person;
-          this.person.filmObjects = [];
-          return forkJoin([
-            ...this.person.films.map((filmUrl) =>
-              this.swapi.fetchFilm(filmUrl)
-            ),
-          ]);
+          const personObj = {
+            ...person,
+            filmObjects: [],
+          };
+          this.person = personObj;
+          return forkJoin(
+            this.person.films.map((filmUrl) => this.swapi.fetchFilm(filmUrl))
+          );
+        }),
+        catchError((err) => {
+          console.error('Error while fetching films', err);
+          alert('Could not get films. Please try again.');
+          return of([]);
         })
       )
-      .subscribe((filmObjects) => {
-        this.person.filmObjects = filmObjects;
-        this.loadingData = false;
+      .subscribe({
+        next: (films) => {
+          this.person.filmObjects = films;
+          this.loadingData = false;
+        },
+        error: (err) => {
+          console.error('Error while fetching person', err);
+        },
       });
   }
 }
