@@ -8,16 +8,16 @@ import { IFilm, IPerson } from './interfaces';
 })
 export class SwapiService {
   http = inject(HttpClient);
-  apiBaseUrl = 'https://swapi.dev/api';
+  apiBaseUrl = `${location.href}assets/data`;
   fetchPerson(id: string) {
     return this.http
-      .get<IPerson>(`${this.apiBaseUrl}/people/${id}/`)
+      .get<IPerson>(`${this.apiBaseUrl}/people/${id}.json`)
       .pipe(delay(Math.floor(Math.random() * 2 + 1) * 500));
   }
 
   fetchFilm(filmUrl: string) {
     return this.http
-      .get<IFilm>(filmUrl)
+      .get<IFilm>(`${this.apiBaseUrl}/${filmUrl}.json`)
       .pipe(delay(Math.ceil(Math.random() * 4) * 500));
   }
 }
