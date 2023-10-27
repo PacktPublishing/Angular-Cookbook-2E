@@ -11,6 +11,7 @@ export class BucketService implements IBucketService {
   loadItems() {
     return JSON.parse(window.localStorage.getItem(this.storeKey) || '[]');
   }
+
   saveItems(items: IFruit[]) {
     window.localStorage.setItem(this.storeKey, JSON.stringify(items));
   }
