@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/internal/Observable';
 import { ANIMATIONS } from '../animations';
 import { Fruit } from '../constants/fruit';
 import { IFruit } from '../interfaces/fruit.interface';
+import { BucketService } from './bucket.service';
 import { StoreModule, Store } from '@ngrx/store';
 import { BucketActions } from '../store/bucket.actions';
 import { selectBucket } from '../store/bucket.selectors';
@@ -18,10 +19,11 @@ import { selectBucket } from '../store/bucket.selectors';
   imports: [CommonModule, FormsModule, StoreModule],
 })
 export class BucketComponent {
+  bucketService = inject(BucketService);
   selectedFruit: Fruit = '' as Fruit;
   fruits: string[] = Object.values(Fruit);
   store = inject(Store);
-  $bucket: Observable<IFruit[]> = this.store.select(selectBucket);
+  $bucket: Observable<readonly IFruit[]> = this.store.select(selectBucket);
 
   addSelectedFruitToBucket() {
     const newFruit: IFruit = {
