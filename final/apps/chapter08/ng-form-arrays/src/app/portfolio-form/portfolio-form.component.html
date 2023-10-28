@@ -13,9 +13,10 @@
     </section>
     <section formArrayName="projects">
       <label [formGroup]="portfolioForm" class="text-sm">Projects</label>
-      <fieldset *ngFor="let projectControl of projectsFormArr.controls; trackBy: trackByFn" [formGroup]="projectControl" class="flex gap-4 mb-4 justify-between">
+      <fieldset *ngFor="let projectControl of projectsFormArr.controls; let isLast = last; trackBy: trackByFn" [formGroup]="projectControl" class="flex gap-4 mb-4 justify-between">
         <input formControlName="label" type="text" class="form-control" placeholder="Enter label">
         <input formControlName="url" type="url" class="form-control" placeholder="Enter URL">
+        <button type="button" [style.visibility]="isLast ? 'visible' : 'hidden'" [hidden]="!isLast" (click)="addNewProject()">+</button>
       </fieldset>
     </section>
   </form>

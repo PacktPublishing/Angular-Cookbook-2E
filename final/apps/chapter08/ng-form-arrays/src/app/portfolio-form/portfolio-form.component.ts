@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormBuilder,
@@ -15,18 +15,31 @@ import {
   templateUrl: './portfolio-form.component.html',
   styleUrls: ['./portfolio-form.component.scss'],
 })
-export class PortfolioFormComponent {
+export class PortfolioFormComponent implements OnInit {
   fb = inject(FormBuilder);
   portfolioForm = this.fb.group({
     name: ['', Validators.required],
     bio: [''],
     projects: this.fb.array<
       FormGroup<{
-        label: FormControl<string>;
-        url: FormControl<string>;
+        label: FormControl<string | null>;
+        url: FormControl<string | null>;
       }>
     >([]),
   });
+
+  ngOnInit(): void {
+    this.addNewProject();
+  }
+
+  addNewProject() {
+    this.projectsFormArr.push(
+      this.fb.group({
+        label: ['', Validators.required],
+        url: ['', Validators.required],
+      })
+    );
+  }
 
   get projectsFormArr() {
     return this.portfolioForm.controls.projects;
