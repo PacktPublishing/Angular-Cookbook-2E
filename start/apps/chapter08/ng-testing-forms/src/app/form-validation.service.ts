@@ -36,7 +36,7 @@ export class FormValidationService {
     };
   }
 
-  validateVersion(version: string): Observable<{ result: boolean }> {
+  private validateVersion(version: string): Observable<{ result: boolean }> {
     return this.http.get<{ result: boolean }>(
       `${this.apiBaseUrl}?val=${version}`
     );
