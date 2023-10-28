@@ -3,7 +3,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AbstractControl } from '@angular/forms';
 import { of } from 'rxjs/internal/observable/of';
 import { FormValidationService } from '../../form-validation.service';
-
 import { VersionControlRfAsyncComponent } from './version-control-rf-async.component';
 
 const FormValidationServiceMock = {
@@ -14,9 +13,6 @@ const FormValidationServiceMock = {
       }
       return of(null);
     };
-  },
-  validateVersion() {
-    return of(true);
   },
 };
 
