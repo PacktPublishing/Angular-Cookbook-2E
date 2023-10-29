@@ -9,16 +9,6 @@
       <div class="mb-3">
         <label for="ratingInput" class="form-label mb-4">Rating</label>
         <app-rating formControlName="rating"></app-rating>
-        <div
-          *ngIf="
-            reviewForm.controls.rating.getError('min') ||
-            reviewForm.controls.rating.getError('max')
-          "
-          class="alert alert-danger text-red-800 mt-2"
-          id="ratingError"
-        >
-          Rating should be between 1 and 5
-        </div>
       </div>
       <div class="mb-3 flex flex-col gap-4">
         <label for="commentInput" class="form-label">Comment</label>
