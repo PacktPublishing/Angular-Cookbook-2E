@@ -4,6 +4,7 @@
     <app-the-amazing-list-item
       cdkOverlayOrigin #itemTrigger="cdkOverlayOrigin"
       class="list__item"
+      [class.list__item--active]="popoverMenuTrigger === itemTrigger"
       (click)="openMenu($event, itemTrigger)"
       *cdkVirtualFor="let item of listItems"
       [item]="item">
@@ -11,12 +12,12 @@
   </cdk-virtual-scroll-viewport>
 </ul>
 
-<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="popoverMenuTrigger"
+<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="popoverMenuTrigger!"
   [cdkConnectedOverlayOpen]="menuShown" [cdkConnectedOverlayHasBackdrop]="true"
   (backdropClick)="closeMenu()"
   [cdkConnectedOverlayPositions]="menuPositions"
   appPopoverPositionalClass targetSelector=".menu-popover" inverseClass="menu-popover--up"
-  [originY]="menuPopoverOrigin.originY" (positionChange)="popoverPositionChanged($event, menuPopoverOrigin)"
+  [originY]="menuPopoverOrigin.originY" (positionChange)="popoverPositionChanged($event)"
 
   cdkConnectedOverlayPanelClass="menu-popover"
   >
