@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/internal/Observable';
 import { AppUserCard } from './interfaces/app-user-card.interface';
 import { DataService } from './core/data.service';
 import { LoaderComponent } from './components/loader/loader.component';
-import { TheAmazingListComponent } from './components/the-amazing-list/the-amazing-list.component';
+import { UsersListComponent } from './components/users-list/users-list.component';
 
 const LOADER_TIMEOUT = 3000;
 
@@ -14,7 +14,7 @@ const LOADER_TIMEOUT = 3000;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule, LoaderComponent, TheAmazingListComponent],
+  imports: [CommonModule, RouterModule, LoaderComponent, UsersListComponent],
 })
 export class AppComponent {
   $listItemsData!: Observable<AppUserCard[]>;

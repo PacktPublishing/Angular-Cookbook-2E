@@ -22,7 +22,7 @@
   <button class="mb-4" (click)="getData()">Get Data</button>
   <ng-container *ngIf="!showLoader; else loader">
     <ng-container *ngIf="$listItemsData | async as listItemsData">
-      <app-the-amazing-list [listItems]="listItemsData"></app-the-amazing-list>
+      <app-users-list [listItems]="listItemsData"></app-users-list>
     </ng-container>
   </ng-container>
 </main>
