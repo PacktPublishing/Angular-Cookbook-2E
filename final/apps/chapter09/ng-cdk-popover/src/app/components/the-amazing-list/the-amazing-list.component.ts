@@ -21,7 +21,7 @@ import { PopoverPositionalClassDirective } from '../../directives/popover-positi
 })
 export class TheAmazingListComponent {
   @Input() listItems: AppUserCard[] = [];
-  popoverMenuTrigger!: CdkOverlayOrigin;
+  popoverMenuTrigger!: CdkOverlayOrigin | null;
   menuPositions: ConnectedPosition[] = [
     {
       offsetY: 4,
@@ -44,9 +44,9 @@ export class TheAmazingListComponent {
   }
   cdRef = inject(ChangeDetectorRef);
 
-  popoverPositionChanged($event: ConnectedOverlayPositionChange, popover: Partial<ConnectedPosition>) {
-    if (popover.originY !== $event.connectionPair.originY) {
-      popover.originY = $event.connectionPair.originY;
+  popoverPositionChanged($event: ConnectedOverlayPositionChange) {
+    if (this.menuPopoverOrigin.originY !== $event.connectionPair.originY) {
+      this.menuPopoverOrigin.originY = $event.connectionPair.originY;
     }
     this.cdRef.detectChanges();
   }
@@ -61,6 +61,7 @@ export class TheAmazingListComponent {
   }
 
   closeMenu() {
+    this.popoverMenuTrigger = null;
     this.menuShown = false;
   }
 
