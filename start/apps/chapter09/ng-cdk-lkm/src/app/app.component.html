@@ -20,7 +20,7 @@
 
 <main class="content" role="main">
   <ng-container *ngIf="$listItemsData | async as listItemsData; else loader">
-    <app-the-amazing-list [listItems]="listItemsData"></app-the-amazing-list>
+    <app-users-list [listItems]="listItemsData"></app-users-list>
   </ng-container>
 </main>
 <ng-template #loader>
