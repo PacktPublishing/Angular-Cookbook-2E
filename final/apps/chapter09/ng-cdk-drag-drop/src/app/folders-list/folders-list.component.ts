@@ -50,7 +50,7 @@ export class FoldersListComponent {
       );
     } else {
       transferArrayItem(
-        event.previousContainer.data, event.container.        data,
+        event.previousContainer.data, event.container.data,
         event.previousIndex, event.currentIndex
       );
     }
