@@ -18,6 +18,9 @@ export class ValueGuesserComponent {
   }
 
   guessValue(value: number) {
+    if (this.rolling) {
+      return;
+    }
     this.selected = value;
     this.valueGuessed.emit(value);
   }
