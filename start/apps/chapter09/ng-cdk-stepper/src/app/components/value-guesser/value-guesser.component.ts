@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-value-guesser',
@@ -9,6 +9,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   imports: [CommonModule]
 })
 export class ValueGuesserComponent {
+  @Input() rolling = false;
   @Output() valueGuessed = new EventEmitter<number>();
   selected: number | null = null;
 
