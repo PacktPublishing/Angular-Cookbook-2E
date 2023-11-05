@@ -14,6 +14,6 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-/// <reference types="cypress-real-events" />
-import './commands';
-import 'cypress-real-events/support';
+/// <reference types="cypress-real-events" />  
+import './commands'; 
+import 'cypress-real-events/support'; 
