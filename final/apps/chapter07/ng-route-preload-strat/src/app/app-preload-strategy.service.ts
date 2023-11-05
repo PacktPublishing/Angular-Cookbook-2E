@@ -15,9 +15,10 @@ export class AppPreloadStrategyService implements PreloadingStrategy {
       return of(null)
     }
     const isAdmin = this.auth.loggedInUserType === UserType.Admin;
-    if (isAdmin && route.data?.['loadForAdmin']) {
-      return this.logAndLoad(route, load);
-    } else if (!isAdmin && route.data?.['loadForEmployee']) {
+    if (
+      (isAdmin && route.data?.['loadForAdmin']) || 
+      (!isAdmin && route.data?.['loadForEmployee'])
+    ) {
       return this.logAndLoad(route, load);
     }
     return of(null)
