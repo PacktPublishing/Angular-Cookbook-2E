@@ -1,5 +1,5 @@
 class LocalStorageMock {
-  storage: Partial<Storage> = {};
+  private storage: Partial<Storage> = {};
   
   getItem(key: string) {
     return this.storage[key] ? this.storage[key] : null;

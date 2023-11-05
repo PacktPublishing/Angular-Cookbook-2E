@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CounterComponent } from './counter.component';
 import { CounterService } from '../services/counter.service';
-import CounterServiceMock from '../../__mocks__/services/counter.service.mock';
+import counterServiceMock from '../../__mocks__/services/counter.service.mock';
 
 describe('CounterComponent', () => {
   let component: CounterComponent;
@@ -13,7 +13,7 @@ describe('CounterComponent', () => {
       imports: [CounterComponent],
       providers: [{
         provide: CounterService,
-        useValue: CounterServiceMock
+        useValue: counterServiceMock
       }]
     }).compileComponents();
   });
@@ -61,13 +61,13 @@ describe('CounterComponent', () => {
 
   // replace the tests below
   it('should call the CounterService.getFromStorage method on component init', () => {
-    jest.spyOn(CounterServiceMock, 'getFromStorage');
+    jest.spyOn(counterServiceMock, 'getFromStorage');
     component.ngOnInit();
     expect(component.counterService.getFromStorage).toHaveBeenCalled();
   });
 
   it('should retrieve the last saved value from CounterService on component init', () => {
-    jest.spyOn(CounterServiceMock, 'getFromStorage').mockReturnValue(12);
+    jest.spyOn(counterServiceMock, 'getFromStorage').mockReturnValue(12);
     component.counterService.saveToStorage(12);
     component.ngOnInit();
     expect(component.counter).toBe(12);
@@ -77,11 +77,11 @@ describe('CounterComponent', () => {
     jest.spyOn(localStorage, 'setItem');
     component.counter = 0;
     component.increment();
-    expect(CounterServiceMock.saveToStorage).toHaveBeenCalledWith(1);
+    expect(counterServiceMock.saveToStorage).toHaveBeenCalledWith(1);
     component.counter = 20;
     component.decrement();
-    expect(CounterServiceMock.saveToStorage).toHaveBeenCalledWith(19);
+    expect(counterServiceMock.saveToStorage).toHaveBeenCalledWith(19);
     component.reset();
-    expect(CounterServiceMock.saveToStorage).toHaveBeenCalledWith(0);
+    expect(counterServiceMock.saveToStorage).toHaveBeenCalledWith(0);
   });
 });
