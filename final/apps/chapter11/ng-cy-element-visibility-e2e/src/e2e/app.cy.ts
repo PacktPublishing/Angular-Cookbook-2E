@@ -1,6 +1,6 @@
 import { getCounterActions, getCounterCard, getHeaderTitle, getToggleCounterButton } from '../support/app.po';
 
-describe('ng-cypress-starter', () => {
+describe('ng-cy-element-visibility', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display the correct header title', () => {
@@ -15,11 +15,11 @@ describe('ng-cypress-starter', () => {
     getCounterCard().should('exist');
   });
 
-  it('should show the action buttons when the counter card is hovered', () => {
+  it('should show the action buttons when the counter card is hovered', () => { 
     getCounterCard().realHover();
-    getCounterActions().should('have.length', 3);
-    getCounterActions().contains('Increment').should('be.visible');
-    getCounterActions().contains('Decrement').should('be.visible');
-    getCounterActions().contains('Reset').should('be.visible');
-  })
+    getCounterActions().should('have.length', 3); 
+    getCounterActions().contains('Increment').should('be.visible'); 
+    getCounterActions().contains('Decrement').should('be.visible'); 
+    getCounterActions().contains('Reset').should('be.visible'); 
+  });
 });

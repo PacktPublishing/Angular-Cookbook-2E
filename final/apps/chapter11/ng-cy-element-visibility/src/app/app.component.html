@@ -23,6 +23,6 @@
 <main class="content" role="main">
   <div class="flex px-4 sm:px-0 gap-10 w-full max-w-sm sm:max-w-md flex-col items-center">
     <button data-test-id="toggleCounterBtn" (click)="toggleCounterVisibility()">Toggle Counter Visibility</button>
-    <app-counter *ngIf="visibility === visibilityOptions.Visible"></app-counter>
+    <app-counter data-test-id="counterCard" *ngIf="visibility === visibilityOptions.Visible"></app-counter>
   </div>
 </main>
