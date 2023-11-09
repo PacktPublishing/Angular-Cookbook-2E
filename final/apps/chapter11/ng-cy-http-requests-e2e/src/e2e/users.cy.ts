@@ -1,6 +1,7 @@
 import { getSearchInput, getUsersCards } from '../support/users.po';
 
 describe('ng-cy-http-requests > users', () => {
+
   beforeEach(() => {
     cy.intercept('/assets/users.json').as('searchUsers');
     cy.visit('/users');
@@ -11,9 +12,7 @@ describe('ng-cy-http-requests > users', () => {
       timeout: 10000
     });
     getUsersCards().should('have.length', 10);
-  });
 
-  it('should get the users list on searching', () => {
     getSearchInput().type('rube');
     cy.wait('@searchUsers', {
       timeout: 10000
