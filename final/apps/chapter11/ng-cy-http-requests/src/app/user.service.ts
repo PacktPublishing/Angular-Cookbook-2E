@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { User } from './user.interface';
 import { HttpClient } from '@angular/common/http';
-import { EMPTY, Observable, delay, map, mergeMap, of } from 'rxjs';
+import { EMPTY, Observable, delay, map, mergeMap, of } from 'rxjs'; 
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +9,12 @@ import { EMPTY, Observable, delay, map, mergeMap, of } from 'rxjs';
 export class UserService {
   http = inject(HttpClient);
   getAll(): Observable<User[]> {
-    return of(EMPTY)
-      .pipe(
-        delay(5000),
-        mergeMap(() => {
-          return this.http.get<User[]>('/assets/users.json')
-        })
+    return of(EMPTY) 
+      .pipe( 
+        delay(5000), 
+        mergeMap(() => { 
+          return this.http.get<User[]>('/assets/users.json') 
+        }) 
       );
   }
 
