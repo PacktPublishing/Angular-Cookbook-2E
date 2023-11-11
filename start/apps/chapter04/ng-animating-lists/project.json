@@ -7,16 +7,12 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter04/ng-animating-lists",
         "index": "apps/chapter04/ng-animating-lists/src/index.html",
         "main": "apps/chapter04/ng-animating-lists/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter04/ng-animating-lists/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -65,10 +61,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-animating-lists:build:production"
+          "buildTarget": "ng-animating-lists:build:production"
         },
         "development": {
-          "browserTarget": "ng-animating-lists:build:development"
+          "buildTarget": "ng-animating-lists:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -76,14 +72,12 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-animating-lists:build"
+        "buildTarget": "ng-animating-lists:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/chapter04/ng-animating-lists/**/*.ts",
@@ -93,12 +87,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter04/ng-animating-lists/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/chapter04/ng-animating-lists/jest.config.ts"
       }
     },
     "rename": {

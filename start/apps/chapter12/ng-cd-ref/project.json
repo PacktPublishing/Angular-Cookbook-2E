@@ -8,16 +8,12 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter12/ng-cd-ref",
         "index": "apps/chapter12/ng-cd-ref/src/index.html",
         "main": "apps/chapter12/ng-cd-ref/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter12/ng-cd-ref/tsconfig.app.json",
         "assets": [
           "apps/chapter12/ng-cd-ref/src/favicon.ico",
@@ -65,10 +61,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-cd-ref:build:production"
+          "buildTarget": "ng-cd-ref:build:production"
         },
         "development": {
-          "browserTarget": "ng-cd-ref:build:development"
+          "buildTarget": "ng-cd-ref:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -76,14 +72,12 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-cd-ref:build"
+        "buildTarget": "ng-cd-ref:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/chapter12/ng-cd-ref/**/*.ts",
@@ -93,18 +87,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter12/ng-cd-ref/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
+        "jestConfig": "apps/chapter12/ng-cd-ref/jest.config.ts"
       }
     },
     "rename": {

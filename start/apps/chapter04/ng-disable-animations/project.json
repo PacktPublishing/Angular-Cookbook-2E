@@ -7,16 +7,12 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter04/ng-disable-animations",
         "index": "apps/chapter04/ng-disable-animations/src/index.html",
         "main": "apps/chapter04/ng-disable-animations/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter04/ng-disable-animations/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -65,10 +61,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-disable-animations:build:production"
+          "buildTarget": "ng-disable-animations:build:production"
         },
         "development": {
-          "browserTarget": "ng-disable-animations:build:development"
+          "buildTarget": "ng-disable-animations:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -76,14 +72,12 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-disable-animations:build"
+        "buildTarget": "ng-disable-animations:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/chapter04/ng-disable-animations/**/*.ts",
@@ -93,12 +87,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter04/ng-disable-animations/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/chapter04/ng-disable-animations/jest.config.ts"
       }
     },
     "rename": {

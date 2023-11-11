@@ -7,16 +7,12 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter05/ng-async-pipe",
         "index": "apps/chapter05/ng-async-pipe/src/index.html",
         "main": "apps/chapter05/ng-async-pipe/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter05/ng-async-pipe/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -65,10 +61,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-async-pipe:build:production"
+          "buildTarget": "ng-async-pipe:build:production"
         },
         "development": {
-          "browserTarget": "ng-async-pipe:build:development"
+          "buildTarget": "ng-async-pipe:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -76,14 +72,12 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-async-pipe:build"
+        "buildTarget": "ng-async-pipe:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/chapter05/ng-async-pipe/**/*.ts",
@@ -93,12 +87,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter05/ng-async-pipe/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/chapter05/ng-async-pipe/jest.config.ts"
       }
     },
     "rename": {
