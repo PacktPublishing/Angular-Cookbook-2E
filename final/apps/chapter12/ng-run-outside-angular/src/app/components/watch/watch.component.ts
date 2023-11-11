@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, NgZone, OnInit, ViewChild, inject } from '@angular/core';
 import { WatchTimeComponent } from '../watch-time/watch-time.component';
 
 declare let window: any;
@@ -26,6 +26,7 @@ export class WatchComponent implements OnInit {
   xVelocity;
   yVelocity;
   intervalTimer!: ReturnType<typeof setTimeout>;
+  zone = inject(NgZone);
   constructor() {
     this.xVelocity = this.minSpeed;
     this.yVelocity = this.minSpeed;
@@ -41,9 +42,11 @@ export class WatchComponent implements OnInit {
       window['appLogs'] = {};
     }
     window['appLogs']['watchComponentRender'] = 0;
-    this.intervalTimer = setInterval(() => {
-      this.animate();
-    }, 30);
+    this.zone.runOutsideAngular(() => {
+      this.intervalTimer = setInterval(() => {
+        this.animate();
+      }, 30);
+    });
   }
 
   calcSpeed() {
