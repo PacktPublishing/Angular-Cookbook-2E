@@ -7,16 +7,12 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter04/ng-basic-animation",
         "index": "apps/chapter04/ng-basic-animation/src/index.html",
         "main": "apps/chapter04/ng-basic-animation/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter04/ng-basic-animation/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -28,9 +24,7 @@
             "output": "assets"
           }
         ],
-        "styles": [
-          "apps/chapter04/ng-basic-animation/src/styles.scss"
-        ],
+        "styles": ["apps/chapter04/ng-basic-animation/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -64,10 +58,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-basic-animation:build:production"
+          "buildTarget": "ng-basic-animation:build:production"
         },
         "development": {
-          "browserTarget": "ng-basic-animation:build:development"
+          "buildTarget": "ng-basic-animation:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -75,14 +69,12 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-basic-animation:build"
+        "buildTarget": "ng-basic-animation:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/chapter04/ng-basic-animation/**/*.ts",
@@ -92,12 +84,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter04/ng-basic-animation/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/chapter04/ng-basic-animation/jest.config.ts"
       }
     },
     "rename": {

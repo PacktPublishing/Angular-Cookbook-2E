@@ -8,16 +8,12 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter13/ng-pwa-app-shell",
         "index": "apps/chapter13/ng-pwa-app-shell/src/index.html",
         "main": "apps/chapter13/ng-pwa-app-shell/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter13/ng-pwa-app-shell/tsconfig.app.json",
         "assets": [
           "apps/chapter13/ng-pwa-app-shell/src/favicon.ico",
@@ -68,10 +64,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-pwa-app-shell:build:production"
+          "buildTarget": "ng-pwa-app-shell:build:production"
         },
         "development": {
-          "browserTarget": "ng-pwa-app-shell:build:development"
+          "buildTarget": "ng-pwa-app-shell:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -79,14 +75,12 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-pwa-app-shell:build"
+        "buildTarget": "ng-pwa-app-shell:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/chapter13/ng-pwa-app-shell/**/*.ts",
@@ -96,18 +90,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter13/ng-pwa-app-shell/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
+        "jestConfig": "apps/chapter13/ng-pwa-app-shell/jest.config.ts"
       }
     },
     "rename": {

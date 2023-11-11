@@ -8,16 +8,12 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter12/ng-ww-perf",
         "index": "apps/chapter12/ng-ww-perf/src/index.html",
         "main": "apps/chapter12/ng-ww-perf/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter12/ng-ww-perf/tsconfig.app.json",
         "assets": [
           "apps/chapter12/ng-ww-perf/src/favicon.ico",
@@ -65,10 +61,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-ww-perf:build:production"
+          "buildTarget": "ng-ww-perf:build:production"
         },
         "development": {
-          "browserTarget": "ng-ww-perf:build:development"
+          "buildTarget": "ng-ww-perf:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -76,14 +72,12 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-ww-perf:build"
+        "buildTarget": "ng-ww-perf:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/chapter12/ng-ww-perf/**/*.ts",
@@ -93,18 +87,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter12/ng-ww-perf/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
+        "jestConfig": "apps/chapter12/ng-ww-perf/jest.config.ts"
       }
     },
     "rename": {

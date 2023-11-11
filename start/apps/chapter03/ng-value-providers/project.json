@@ -7,25 +7,19 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter03/ng-value-providers",
         "index": "apps/chapter03/ng-value-providers/src/index.html",
         "main": "apps/chapter03/ng-value-providers/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter03/ng-value-providers/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/chapter03/ng-value-providers/src/favicon.ico",
           "apps/chapter03/ng-value-providers/src/assets"
         ],
-        "styles": [
-          "apps/chapter03/ng-value-providers/src/styles.scss"
-        ],
+        "styles": ["apps/chapter03/ng-value-providers/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -59,10 +53,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-value-providers:build:production"
+          "buildTarget": "ng-value-providers:build:production"
         },
         "development": {
-          "browserTarget": "ng-value-providers:build:development"
+          "buildTarget": "ng-value-providers:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -70,14 +64,12 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-value-providers:build"
+        "buildTarget": "ng-value-providers:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/chapter03/ng-value-providers/**/*.ts",
@@ -87,12 +79,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter03/ng-value-providers/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/chapter03/ng-value-providers/jest.config.ts"
       }
     },
     "rename": {

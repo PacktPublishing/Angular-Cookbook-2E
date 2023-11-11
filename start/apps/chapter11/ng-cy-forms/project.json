@@ -8,16 +8,12 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter11/ng-cy-forms",
         "index": "apps/chapter11/ng-cy-forms/src/index.html",
         "main": "apps/chapter11/ng-cy-forms/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter11/ng-cy-forms/tsconfig.app.json",
         "assets": [
           "apps/chapter11/ng-cy-forms/src/favicon.ico",
@@ -65,10 +61,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-cy-forms:build:production"
+          "buildTarget": "ng-cy-forms:build:production"
         },
         "development": {
-          "browserTarget": "ng-cy-forms:build:development"
+          "buildTarget": "ng-cy-forms:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -76,14 +72,12 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-cy-forms:build"
+        "buildTarget": "ng-cy-forms:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/chapter11/ng-cy-forms/**/*.ts",
@@ -93,18 +87,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter11/ng-cy-forms/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
+        "jestConfig": "apps/chapter11/ng-cy-forms/jest.config.ts"
       }
     },
     "rename": {
