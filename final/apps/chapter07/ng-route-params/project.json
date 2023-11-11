@@ -61,10 +61,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-route-params:build:production"
+          "buildTarget": "ng-route-params:build:production"
         },
         "development": {
-          "browserTarget": "ng-route-params:build:development"
+          "buildTarget": "ng-route-params:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -72,11 +72,11 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-route-params:build"
+        "buildTarget": "ng-route-params:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -89,14 +89,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter07/ng-route-params/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
+        "jestConfig": "apps/chapter07/ng-route-params/jest.config.ts"
       }
     },
     "rename": {
