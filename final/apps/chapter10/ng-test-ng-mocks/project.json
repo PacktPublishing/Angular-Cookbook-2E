@@ -8,16 +8,12 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter10/ng-test-ng-mocks",
         "index": "apps/chapter10/ng-test-ng-mocks/src/index.html",
         "main": "apps/chapter10/ng-test-ng-mocks/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter10/ng-test-ng-mocks/tsconfig.app.json",
         "assets": [
           "apps/chapter10/ng-test-ng-mocks/src/favicon.ico",
@@ -65,10 +61,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-test-ng-mocks:build:production"
+          "buildTarget": "ng-test-ng-mocks:build:production"
         },
         "development": {
-          "browserTarget": "ng-test-ng-mocks:build:development"
+          "buildTarget": "ng-test-ng-mocks:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -76,14 +72,12 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-test-ng-mocks:build"
+        "buildTarget": "ng-test-ng-mocks:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/chapter10/ng-test-ng-mocks/**/*.ts",
@@ -93,18 +87,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter10/ng-test-ng-mocks/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
+        "jestConfig": "apps/chapter10/ng-test-ng-mocks/jest.config.ts"
       }
     },
     "rename": {
