@@ -8,7 +8,8 @@
       "executor": "@nx/jest:jest",
       "options": {
         "jestConfig": "e2e/ng-cookbook-recipe-e2e/jest.config.ts",
-        "runInBand": true
+        "runInBand": true,
+        "passWithNoTests": false
       },
       "dependsOn": ["ng-cookbook-recipe:build"]
     }
