@@ -4,6 +4,8 @@ import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AppUserCard } from '../interfaces/app-user-card.interface';
 
+const USERS_LIMIT = 10000;
+
 @Injectable({
   providedIn: 'root',
 })
@@ -18,7 +20,7 @@ export class DataService {
     return this.http.get<AppUserCard[]>('/assets/data.json').pipe(
       map((users) => {
         this.users = [...users];
-        return this.users;
+        return this.users.slice(0, USERS_LIMIT);
       })
     );
   }
