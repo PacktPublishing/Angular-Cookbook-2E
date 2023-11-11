@@ -25,7 +25,7 @@ export class UserComponent implements OnInit, OnDestroy {
     this.isComponentAlive = true;
     this.route.paramMap
       .pipe(
-        takeWhile(() => !!this.isComponentAlive),
+        takeWhile(() => this.isComponentAlive),
         mergeMap((params) => {
           const userId = params.get('uuid');
           return this.userService.getUser(userId || '').pipe(
