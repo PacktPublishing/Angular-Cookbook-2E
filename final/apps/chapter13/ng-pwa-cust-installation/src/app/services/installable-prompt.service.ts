@@ -7,20 +7,23 @@ declare global {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class InstallablePromptService {
   installPromptEvent!: BeforeInstallPromptEvent;
   isPromptBannerShown = signal(false);
   constructor() {
-    window.addEventListener('beforeinstallprompt', this.handleInstallPrompt.bind(this))
+    window.addEventListener(
+      'beforeinstallprompt',
+      this.handleInstallPrompt.bind(this)
+    );
   }
 
   handleInstallPrompt(ev: BeforeInstallPromptEvent) {
     ev.preventDefault();
     this.installPromptEvent = ev;
     console.log('before install prompt event fired', ev);
-    window.removeEventListener('beforeinstallprompt', this.handleInstallPrompt)
+    window.removeEventListener('beforeinstallprompt', this.handleInstallPrompt);
   }
 
   async showInstallPrompt() {
