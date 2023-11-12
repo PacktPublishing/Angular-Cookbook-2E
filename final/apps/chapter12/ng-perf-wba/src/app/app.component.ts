@@ -3,7 +3,7 @@ import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { AppConfig, APP_CONFIG } from './app-config';
 import { AuthService } from './auth/auth.service';
-import { format } from 'date-fns'; 
+import { format } from 'date-fns';
 import { Scene } from 'three';
 
 @Component({
