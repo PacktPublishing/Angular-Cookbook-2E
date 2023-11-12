@@ -2,7 +2,15 @@
 
 import { generateRandomColor } from "../utils";
 
-addEventListener('message', ({ data }) => {
+type RandomColorIncomingEvent = {
+  data: {
+    randomizationCount: number
+  }
+}
+
+export type RandomColorOutgoingEvent = { data: { color: string } };
+
+addEventListener('message', ({ data }: RandomColorIncomingEvent) => {
   const {
     randomizationCount
   } = data;
