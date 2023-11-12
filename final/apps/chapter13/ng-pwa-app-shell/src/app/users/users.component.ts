@@ -1,5 +1,5 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { IUser } from '../interfaces/user.interface';
 import { UserService } from '../services/user.service';
@@ -19,6 +19,7 @@ export class UsersComponent implements OnInit {
   searchForm!: FormGroup;
   componentAlive!: boolean;
   userService = inject(UserService);
+  platformId = inject(PLATFORM_ID);
   isSearching = true;
   ngOnInit() {
     this.componentAlive = true;
@@ -31,7 +32,7 @@ export class UsersComponent implements OnInit {
         tap(() => {
           this.isSearching = true;
         }),
-        takeWhile(() => !!this.componentAlive),
+        takeWhile(() => !!this.componentAlive && isPlatformBrowser(this.platformId)),
         mergeMap((query) => this.userService.searchUsers(query))
       )
       .subscribe((users) => {

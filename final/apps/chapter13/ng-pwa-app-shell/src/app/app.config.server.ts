@@ -8,16 +8,16 @@ const serverConfig: ApplicationConfig = {
   providers: [
     provideServerRendering(),
     {
-      provide: ROUTES,
-      multi: true,
-      useValue: [
-        {
-          path: 'shell',
-          component: AppShellComponent,
-        },
-      ],
-    },
-  ],
+        provide: ROUTES,
+        multi: true,
+        useValue: [
+            {
+                path: 'shell',
+                component: AppShellComponent
+            }
+        ]
+    }
+]
 };
 
 export const config = mergeApplicationConfig(appConfig, serverConfig);
