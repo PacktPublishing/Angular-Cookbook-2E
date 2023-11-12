@@ -38,7 +38,7 @@ export class GameComponent {
   isCorrectGuess: null | boolean = null;
   leaderboardService = inject(LeaderboardService);
   scores: IScore[] = this.leaderboardService.getScores();
-
+  rolling = false;
   nameForm = new FormGroup({
     name: new FormControl('', Validators.required),
   });
