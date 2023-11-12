@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { LogsService } from '../../services/logs.service';
 import { generateRandomColor } from '../../utils';
 import { RANDOMIZATION_COUNT } from '../../tokens';
-import { getRandomColorWorker } from '../../workers/random-color.worker';
+import { RandomColorOutgoingEvent , getRandomColorWorker } from '../../workers/random-color.worker';
 
 @Component({
   selector: 'app-user-card',
@@ -22,12 +22,18 @@ export class UserCardComponent implements OnInit, OnChanges, OnDestroy {
   randomColor = '';
   worker: Worker | null = getRandomColorWorker();
 
+  get log() {
+    return this.logsService.logs[this.user.email] ?? 0;
+  }
+
   ngOnInit(): void {
-    if (!this.worker) {
+    if(!this.worker) {
       return;
     }
-    this.worker.onmessage = ({ data: { color } }) => {
-      console.log(`received color ${color} from worker for user ${this.user.email}`);
+    this.worker.onmessage = ({ data: { color } }: RandomColorOutgoingEvent) => {
+      console.log(
+        `received color ${color} from worker for user ${this.user.email}`
+      );
       this.logsService.updateLogEntry(this.user.email);
       this.randomColor = color;
     };
@@ -45,10 +51,6 @@ export class UserCardComponent implements OnInit, OnChanges, OnDestroy {
 
   ngOnDestroy(): void {
     this.worker?.terminate();
-  }
-
-  get log() {
-    return this.logsService.logs[this.user.email] ?? 0;
   }
 }
 
