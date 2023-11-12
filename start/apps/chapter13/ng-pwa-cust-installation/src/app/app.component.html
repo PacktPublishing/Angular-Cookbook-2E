@@ -23,13 +23,3 @@
 <main class="content" role="main">
   <router-outlet></router-outlet>
 </main>
-<div id="installPrompt" *ngIf="promptService.isPromptBannerShown" class="fixed inset-x-0 bottom-10 p-4">
-  <div class="rounded-lg bg-purple-600 px-4 py-3 text-white shadow-lg">
-    <p class="text-center text-sm font-medium">
-      Love the Dice Game?
-      <a (click)="promptService.showInstallPrompt()" href="#" class="inline-block underline">
-        Install it!
-      </a>
-    </p>
-  </div>
-</div>

@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { InstallablePromptService } from './services/installable-prompt.service';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +9,4 @@ import { InstallablePromptService } from './services/installable-prompt.service'
   standalone: true,
   imports: [CommonModule, RouterModule],
 })
-export class AppComponent {
-  promptService = inject(InstallablePromptService);
-}
+export class AppComponent {}

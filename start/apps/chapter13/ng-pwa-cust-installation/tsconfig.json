@@ -7,10 +7,7 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "typeRoots": [
-      "./src/types"
-    ]
+    "noFallthroughCasesInSwitch": true
   },
   "files": [],
   "include": [],
