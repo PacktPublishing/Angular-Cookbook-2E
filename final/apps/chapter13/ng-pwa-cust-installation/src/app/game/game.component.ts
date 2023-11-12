@@ -40,7 +40,7 @@ export class GameComponent {
   leaderboardService = inject(LeaderboardService);
   promptService = inject(InstallablePromptService);
   scores: IScore[] = this.leaderboardService.getScores();
-
+  rolling = false;
   nameForm = new FormGroup({
     name: new FormControl('', Validators.required),
   });
