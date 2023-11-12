@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+
 import { AppShellComponent } from './app-shell.component';
 
 describe('AppShellComponent', () => {
@@ -7,9 +8,10 @@ describe('AppShellComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppShellComponent],
-    }).compileComponents();
-
+      imports: [AppShellComponent]
+    })
+    .compileComponents();
+    
     fixture = TestBed.createComponent(AppShellComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
