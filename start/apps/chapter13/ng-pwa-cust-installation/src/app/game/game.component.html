@@ -3,11 +3,11 @@
     <ng-template cdkStepLabel>Enter your name</ng-template>
     <form (ngSubmit)="submitName()" [formGroup]="nameForm">
       <div class="mb-3" *ngIf="nameForm.get('name') as nameControl">
-        <label for="nameInput" class="form-label dark:text-white">Player Name</label>
+        <label for="nameInput" class="form-label dark:!text-white">Player Name</label>
         <input
           type="text"
           formControlName="name"
-          class="form-control"
+          class="form-control dark:!text-white dark:placeholder:!text-white"
           id="nameInput"
           placeholder="Enter your name"
         />
@@ -28,8 +28,8 @@
     <ng-template cdkStepLabel>
       Guess what the value will be when the die is rolled
     </ng-template>
-    <app-value-guesser (valueGuessed)="rollTheDice($event)"></app-value-guesser>
-    <app-dice (diceRolled)="showResult($event)"></app-dice>
+    <app-value-guesser [rolling]="rolling" (valueGuessed)="rollTheDice($event)"></app-value-guesser>
+    <app-dice (diceRolling)="rolling = $event;" (diceRolled)="showResult($event)"></app-dice>
     <ng-container [ngSwitch]="isCorrectGuess">
       <div class="alert alert-success" *ngSwitchCase="true">
         You rock {{ nameForm.get('name')!.value }}! You got 50 points
