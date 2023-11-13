@@ -15,9 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@angular/*": [
-        "./node_modules/@angular/*"
-      ]
+      "@angular/*": ["./node_modules/@angular/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
