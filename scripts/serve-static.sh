@@ -15,7 +15,7 @@ APP_NAME=$2
 PORT=$3
 
 if [ -z $3 ]; then
-  PORT = 8080;
+  npx cross-env PORT=8080
 fi
 
 if [ "$4" == "final" ]; then

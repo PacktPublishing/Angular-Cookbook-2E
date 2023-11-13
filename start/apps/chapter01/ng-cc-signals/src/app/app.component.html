@@ -1,0 +1,35 @@
+<ng-cb-ui-header appTitle="Component communication using Signals" appName="ng-cc-signals">
+</ng-cb-ui-header>
+
+<main class="content" role="main">
+  <div class="mx-auto p-4">
+    <div class="flex items-center justify-between mb-4">
+      <h1 class="text-2xl">Task Manager</h1>
+      <span>(0 / 0)</span>
+    </div>
+
+    <!-- Task Input -->
+    <div class="mb-4">
+      <input class="p-2 border rounded mr-2" placeholder="New task..." />
+      <button>Add</button>
+    </div>
+
+    <!-- Task List -->
+    <ul>
+      @for (task of tasks; track $index) {
+        <li class="mb-2 flex gap-4 items-center cursor-pointer hover:opacity-70">
+          <input type="checkbox" [checked]="task.completed" />
+          <span [ngClass]="{'line-through': task.completed}">{{ task.title }}</span>
+        </li>
+      }
+    </ul>
+
+    <!-- Filters -->
+    <div class="mt-4">
+      <button class="p-2 rounded mr-2">All</button>
+      <button class="p-2 rounded mr-2">Active</button>
+      <button class="p-2 rounded">Completed</button>
+    </div>
+  </div>
+
+</main>

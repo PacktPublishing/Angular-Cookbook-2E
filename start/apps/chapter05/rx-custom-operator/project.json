@@ -26,7 +26,7 @@
         ],
         "styles": [
           "apps/chapter05/rx-custom-operator/src/styles.scss",
-          "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
+          "node_modules/@codewithahsan/ng-cb-ui/styles/globals.scss"
         ],
         "scripts": []
       },
