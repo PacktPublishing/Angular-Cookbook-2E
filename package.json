@@ -6,7 +6,7 @@
   "scripts": {
     "test": "sh scripts/run-tests.sh",
     "e2e": "sh scripts/run-e2e.sh",
-    "postinstall": "concurrently \"cd start && npm i --legacy-peer-deps\"  \"cd final && npm i --legacy-peer-deps\" \"cd codewithahsan && npm i --legacy-peer-deps\"",
+    "postinstall": "cd codewithahsan && npm i --legacy-peer-deps && concurrently \"cd start && npm i --legacy-peer-deps\"  \"cd final && npm i --legacy-peer-deps\"",
     "serve": "sh scripts/serve-projects.sh",
     "serve:prod": "sh scripts/serve-projects-prod.sh",
     "serve:fake-be": "cd ./codewithahsan && npx nx serve fake-be",
@@ -17,7 +17,8 @@
     "serve:ng-jest-setup": "cd start/apps/chapter10/ng-jest-setup && npm start -- -o",
     "test:ng-jest-setup": "cd start/apps/chapter10/ng-jest-setup && npm t",
     "build": "sh scripts/build.sh",
-    "serve:static": "sh scripts/serve-static.sh"
+    "serve:static": "sh scripts/serve-static.sh",
+    "sanity": "sh scripts/sanity.sh"
   },
   "keywords": [],
   "author": "",
