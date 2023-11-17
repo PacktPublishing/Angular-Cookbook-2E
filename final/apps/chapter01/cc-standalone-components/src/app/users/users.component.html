@@ -1,8 +1,8 @@
 <ul>
-  <li
-    routerLink="/{{ user.uuid }}"
-    *ngFor="let user of users">
-    <img src="{{user.picture.thumbnail}}"/>
-    <h4>{{user.name.first}} {{user.name.last}}</h4>
-  </li>
+  @for (user of users; track user.uuid) {
+    <li routerLink="/{{ user.uuid }}">
+      <img src="{{user.picture.thumbnail}}"/>
+      <h4>{{user.name.first}} {{user.name.last}}</h4>
+    </li>
+  }
 </ul>
