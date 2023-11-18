@@ -1,0 +1,118 @@
+{
+  "name": "ng-control-flow",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/chapter02/ng-control-flow/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/chapter02/ng-control-flow",
+        "index": "apps/chapter02/ng-control-flow/src/index.html",
+        "main": "apps/chapter02/ng-control-flow/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "apps/chapter02/ng-control-flow/tsconfig.app.json",
+        "assets": [
+          "apps/chapter02/ng-control-flow/src/favicon.ico",
+          "apps/chapter02/ng-control-flow/src/assets",
+          {
+            "glob": "**/*",
+            "input": "node_modules/@codewithahsan/ng-cookbook-recipe/assets",
+            "output": "assets"
+          }
+        ],
+        "styles": [
+          "apps/chapter02/ng-control-flow/src/styles.scss",
+          "node_modules/@codewithahsan/ng-cb-ui/styles/globals.scss"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "ng-control-flow:build:production"
+        },
+        "development": {
+          "browserTarget": "ng-control-flow:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "ng-control-flow:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/chapter02/ng-control-flow/**/*.ts",
+          "apps/chapter02/ng-control-flow/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
+      "options": {
+        "jestConfig": "apps/chapter02/ng-control-flow/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "rename": {
+      "executor": "@codewithahsan/ng-cookbook-recipe:rename",
+      "options": {
+        "chapter": "chapter02",
+        "app": "ng-control-flow"
+      }
+    }
+  }
+}
