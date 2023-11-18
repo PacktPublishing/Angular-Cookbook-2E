@@ -1,10 +1,10 @@
 import { Component, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { SkillLevel } from '../enums';
+import { RecipeType, SkillLevel } from '../enums';
 import { RECIPES } from '../data/recipes';
 import { Recipe } from '../interfaces';
-import { ANIMATIONS }  from '../animations';
+import { ANIMATIONS } from '../animations';
 
 @Component({
   selector: 'app-recipe-picker',
@@ -12,15 +12,22 @@ import { ANIMATIONS }  from '../animations';
   imports: [CommonModule, FormsModule],
   templateUrl: './recipe-picker.component.html',
   styleUrls: ['./recipe-picker.component.scss'],
-  animations: [ANIMATIONS.LIST_ITEM_ANIMATION]
+  animations: [ANIMATIONS.LIST_ITEM_ANIMATION],
 })
 export class RecipePickerComponent {
   skillLevel = signal<SkillLevel | ''>('');
   options = SkillLevel;
+  recipeTypes = RecipeType;
   recipes = signal<Recipe[]>(RECIPES);
 
-  getFilteredRecipes = computed(() => {
-    return this.recipes().filter(recipe => recipe.level === this.skillLevel())
+  filteredRecipes = computed(() => {
+    return this.recipes().filter(
+      (recipe) => recipe.level === this.skillLevel()
+    );
+  });
+
+  isAnimationDisabled = computed(() => {
+    return this.skillLevel() === '' || this.filteredRecipes().length === 0;
   });
 
   skillChanged($event: Event) {

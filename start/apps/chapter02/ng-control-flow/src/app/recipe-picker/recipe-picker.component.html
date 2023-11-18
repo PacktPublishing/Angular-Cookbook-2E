@@ -1,4 +1,3 @@
-<!-- app.component.html -->
 <div class="flex flex-col items-center justify-center py-10">
   <div class="mb-4">
     <label for="skillLevel" class="block text-gray-700 text-sm font-bold mb-2">Choose your skill level:</label>
@@ -12,9 +11,20 @@
   @if(skillLevel() === '') {
     <h2 for="skillLevel" class="text-xl text-gray-700 mb-2">No skill level selected</h2>
   } @else {
-    <section class="w-full grid grid-cols-1 max-w-2xl mx-auto" [@listItemAnimation]="getFilteredRecipes()">
-      @for (recipe of getFilteredRecipes(); track recipe.id) {
-        <article class="flex mb-4 bg-white rounded overflow-hidden shadow-lg">
+    <section class="w-full grid grid-cols-1 max-w-2xl mx-auto" [@.disabled]="isAnimationDisabled()" [@listItemAnimation]="filteredRecipes()">
+      @for (recipe of filteredRecipes(); track recipe.id) {
+        <article class="relative flex mb-4 bg-white rounded overflow-hidden shadow-lg">
+          @switch (recipe.type) {
+            @case (recipeTypes.GlutenFree) {
+              <img [title]="recipeTypes.GlutenFree" class="absolute w-6 h-6 top-10 right-10" src="/assets/images/gluten-free.svg" />
+            }
+            @case (recipeTypes.Vegan) {
+              <img [title]="recipeTypes.Vegan" class="absolute w-6 h-6 top-10 right-10" src="/assets/images/vegan.svg" />
+            }
+            @case (recipeTypes.Vegetarian) {
+              <img [title]="recipeTypes.Vegetarian" class="absolute w-6 h-6 top-10 right-10" src="/assets/images/vegetarian.svg" />
+            }
+          }
           <div class="flex-none w-48 relative">
             <img src="{{ recipe.image }}" alt="" class="absolute inset-0 w-full h-full object-cover" />
           </div>
@@ -36,6 +46,8 @@
             </div>
           </div>
         </article>
+      } @empty {
+        <h2 for="skillLevel" class="text-xl text-gray-700 mb-2">No recipes found</h2>
       }
     </section>
   }
