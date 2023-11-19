@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { RecipeType, SkillLevel } from '../enums';
 import { RECIPES } from '../data/recipes';
 import { Recipe } from '../interfaces';
-import { ANIMATIONS } from '../animations';
 
 @Component({
   selector: 'app-recipe-picker',
@@ -12,7 +11,6 @@ import { ANIMATIONS } from '../animations';
   imports: [CommonModule, FormsModule],
   templateUrl: './recipe-picker.component.html',
   styleUrls: ['./recipe-picker.component.scss'],
-  animations: [ANIMATIONS.LIST_ITEM_ANIMATION],
 })
 export class RecipePickerComponent {
   skillLevel = signal<SkillLevel | ''>('');
