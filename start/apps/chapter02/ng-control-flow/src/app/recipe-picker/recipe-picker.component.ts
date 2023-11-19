@@ -26,10 +26,6 @@ export class RecipePickerComponent {
     );
   });
 
-  isAnimationDisabled = computed(() => {
-    return this.skillLevel() === '' || this.filteredRecipes().length === 0;
-  });
-
   skillChanged($event: Event) {
     const input = $event.target as HTMLInputElement;
     this.skillLevel.set(input.value as SkillLevel);
