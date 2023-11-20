@@ -9,9 +9,9 @@
     </select>
   </div>
   @if(skillLevel() === '') {
-    <h2 for="skillLevel" class="text-xl text-gray-700 mb-2">No skill level selected</h2>
+    <h2 class="text-xl text-gray-700 mb-2">No skill level selected</h2>
   } @else {
-    <section class="w-full grid grid-cols-1 max-w-2xl mx-auto" [@listItemAnimation]="filteredRecipes()">
+    <section class="w-full grid grid-cols-1 max-w-2xl mx-auto" [@.disabled]="!filteredRecipes().length" [@listItemAnimation]="filteredRecipes()">
       @for (recipe of filteredRecipes(); track recipe.id) {
         <article class="relative flex mb-4 bg-white rounded overflow-hidden shadow-lg">
           @switch (recipe.type) {
@@ -47,7 +47,7 @@
           </div>
         </article>
       } @empty {
-        <h2 for="skillLevel" class="text-xl text-gray-700 mb-2">No recipes found</h2>
+        <h2 class="text-xl text-gray-700 mb-2">No recipes found</h2>
       }
     </section>
   }
