@@ -26,7 +26,7 @@ export class HomeComponent {
       secondStreamSource,
       fastestStreamSource
     ).pipe(
-      takeWhile(() => !!this.isStreamActive),
+      takeWhile(() => this.isStreamActive),
       scan((acc, next) => {
         return [...acc, next];
       }, [] as number[]),

@@ -20,19 +20,19 @@ export class HomeComponent implements OnDestroy {
     const fastestStreamSource = interval(500);
     const streamSource = interval(1500);
     streamSource
-      .pipe(takeWhile(() => !!this.isStreamActive))
+      .pipe(takeWhile(() => this.isStreamActive))
       .subscribe((input) => {
         this.outputStreamData.push(input);
         console.log('first stream output', input);
       });
     secondStreamSource
-      .pipe(takeWhile(() => !!this.isStreamActive))
+      .pipe(takeWhile(() => this.isStreamActive))
       .subscribe((input) => {
         this.outputStreamData.push(input);
         console.log('second stream output', input);
       });
     fastestStreamSource
-      .pipe(takeWhile(() => !!this.isStreamActive))
+      .pipe(takeWhile(() => this.isStreamActive))
       .subscribe((input) => {
         this.outputStreamData.push(input);
         console.log('fastest stream output', input);
