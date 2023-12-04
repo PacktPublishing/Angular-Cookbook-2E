@@ -53,19 +53,19 @@ describe('CounterComponent', () => {
   });
 
   // replace the tests below
-  it('should call the localStorage.getItem method on component init', () => {
+  it('should get counter from storage on component init', () => {
     jest.spyOn(component.counterService, 'getFromStorage');
     component.ngOnInit();
     expect(component.counterService.getFromStorage).toHaveBeenCalled();
   });
 
-  it('should retrieve the last saved value from localStorage on component init', () => {
+  it('should have the initial value of counter from storage on component init', () => {
     jest.spyOn(component.counterService, 'getFromStorage').mockReturnValue(12);
     component.ngOnInit();
     expect(component.counter).toBe(12);
   });
 
-  it('should save the new counterValue to localStorage on increment, decrement and reset', () => {
+  it('should save the new counterValue on increment, decrement and reset', () => {
     jest.spyOn(component.counterService, 'saveToStorage');
     component.counter = 0;
     component.increment();
