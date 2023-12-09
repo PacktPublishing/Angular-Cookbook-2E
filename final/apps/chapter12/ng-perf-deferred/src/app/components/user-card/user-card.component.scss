@@ -1,0 +1,37 @@
+.card-container {
+  perspective: 1000px; /* Use perspective to give a 3D effect */
+  min-height: 300px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  transition: transform 0.6s; /* Smooth transition for flipping */
+}
+
+.card:hover .card-front {
+  // transform: rotateY(180deg); /* Rotate the front card to reveal the back */
+  opacity: 0;
+}
+
+.card:hover .card-back {
+  // transform: rotateY(0deg); /* Rotate the back card to a visible position */
+  opacity: 1;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  backface-visibility: hidden; /* Hide the back of the card when it's turned away */
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  transition: all ease 0.2s;
+}
+
+.card-back {
+  opacity: 0;
+  @apply flex flex-col h-full;
+}
+
+/* Add any other styling for the back card as needed */
