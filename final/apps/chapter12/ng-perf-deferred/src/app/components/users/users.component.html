@@ -6,19 +6,19 @@
     </div>
   </form>
   <div class="secondary-container">
-    @defer (when !isSearching) {
-      <div class="users grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-cols-4-[200px_minmax(900px,_1fr)_100px]">
-        <app-user-card *ngFor="let user of users" [user]="user"></app-user-card>
-      </div>
-    } @placeholder {
-      <ngx-skeleton-loader
-        class="users w-full grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
-        count="10"
-        [theme]="{
-          'height.px': 258,
-          'background-color': '#eee',
-        }"
-      ></ngx-skeleton-loader>
-    }
+    <div class="users grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4" *ngIf="!isSearching; else loadingTemplate">
+      <app-user-card *ngFor="let user of users" [user]="user"></app-user-card>
+    </div>
   </div>
 </div>
+
+<ng-template #loadingTemplate>
+  <ngx-skeleton-loader
+    class="users w-full grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+    count="10"
+    [theme]="{
+      'height.px': 258,
+      'background-color': '#eee',
+    }"
+  ></ngx-skeleton-loader>
+</ng-template>

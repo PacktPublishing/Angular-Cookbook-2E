@@ -11,4 +11,8 @@ section {
   app-users {
     @apply block min-w-full;
   }
+
+  .error {
+    @apply text-red-700;
+  }
 }
