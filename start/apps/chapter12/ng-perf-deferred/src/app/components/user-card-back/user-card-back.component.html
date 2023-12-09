@@ -1,0 +1,13 @@
+<div class="h-full w-full flex flex-col max-w-sm mx-auto duration-200 p-4 border border-slate-300 rounded-md text-center bg-purple-500 text-white">
+  <div class="card-header flex gap-6 items-center mb-4">
+    <img [src]="user.picture.medium" class="rounded-full w-16 aspect-square" alt="{{user.name.first}} {{user.name.last}}">
+    <h5 class="card-title">{{user.name.title}} {{user.name.first}} {{user.name.last}}</h5>
+  </div>
+  <div class="card-body flex-1 flex flex-col justify-center items-center">
+    <p class="card-text mb-2">Contact me</p>
+    <a href="tel:{{user.cell}}" class="btn btn-light">{{user.cell}}</a>
+  </div>
+  <div class="card-footer mt-4">
+    <p class="card-text text-sm">UUID: {{user.login.uuid}}</p>
+  </div>
+</div>
