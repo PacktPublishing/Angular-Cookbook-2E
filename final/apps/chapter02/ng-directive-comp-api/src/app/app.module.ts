@@ -17,7 +17,7 @@ import { ButtonWithTooltipDirective } from './directives/button-with-tooltip.dir
     TooltipComponent,
     ButtonFilledDirective,
     ButtonOutlinedDirective,
-    ButtonWithTooltipDirective,
+    ButtonWithTooltipDirective
   ],
   imports: [
     BrowserModule,
