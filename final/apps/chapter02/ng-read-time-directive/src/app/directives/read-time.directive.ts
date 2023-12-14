@@ -1,11 +1,4 @@
-import {
-  Directive,
-  ElementRef,
-  EventEmitter,
-  Input,
-  OnInit,
-  Output,
-} from '@angular/core';
+import { Directive, ElementRef, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 export interface ReadTimeConfig {
   wordsPerMinute: number;
@@ -22,11 +15,17 @@ export class ReadTimeDirective implements OnInit {
 
   constructor(private el: ElementRef) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     const text = this.el.nativeElement.textContent;
     const time = this.calculateReadTime(text);
     const timeStr = this.createTimeString(time);
     this.readTimeCalculated.emit(timeStr);
+  }
+
+  calculateReadTime(text: string) {
+    const wordsCount = text.split(/\s+/g).length;
+    const minutes = wordsCount / this.configuration.wordsPerMinute;
+    return Math.ceil(minutes);
   }
 
   createTimeString(timeInMinutes: number) {
@@ -37,11 +36,5 @@ export class ReadTimeDirective implements OnInit {
     } else {
       return `${timeInMinutes} minutes`;
     }
-  }
-
-  calculateReadTime(text: string) {
-    const wordsCount = text.split(/\s+/g).length;
-    const minutes = wordsCount / this.configuration.wordsPerMinute;
-    return Math.ceil(minutes);
   }
 }
