@@ -192,8 +192,8 @@ By the end of this book, you’ll be able to create full-fledged, professional-l
 
 
 ## Software and hardware list
-| Chapter number | Software required | OS required |
-| --- | --- | --- | --- |
+| Chapter | Software required | OS required |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 -13 | Angular v17 | Mac OS X, Windows, or Linux(Any) |
 | 1 -13 | Nx v17+ | Mac OS X, Windows, or Linux(Any) |
 | 1 -13 | TypeScript 5.x | Mac OS X, Windows, or Linux(Any) |
