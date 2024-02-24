@@ -11,8 +11,7 @@
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
         "project": "packages/ng-cb-ui/ng-package.json",
-        "tailwindConfig": "packages/ng-cb-ui/tailwind.config.js",
-        "updateBuildableProjectDepsInPackageJson": true
+        "tailwindConfig": "packages/ng-cb-ui/tailwind.config.js"
       },
       "configurations": {
         "production": {

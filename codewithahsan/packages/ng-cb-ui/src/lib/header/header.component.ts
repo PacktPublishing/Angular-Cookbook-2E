@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgLogoComponent } from '../ng-logo/ng-logo.component';
 
 @Component({
   selector: 'ng-cb-ui-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgLogoComponent],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
