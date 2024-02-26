@@ -12,6 +12,7 @@ export default async function updateAppComponentFiles(tree: Tree) {
 
     const appComponentHtmlPath = `${project.sourceRoot}/app/app.component.html`;
     const appComponentTsPath = `${project.sourceRoot}/app/app.component.ts`;
+    const appModuleTsPath = `${project.sourceRoot}/app/app.module.ts`;
 
     // Update HTML content
     if (tree.exists(appComponentHtmlPath)) {
@@ -44,26 +45,35 @@ export default async function updateAppComponentFiles(tree: Tree) {
       }
     }
 
+    let tsContent = '';
+    let isModulesBasedApp = false;
+
     // Update TS content
     if (tree.exists(appComponentTsPath)) {
-      let tsContent = tree.read(appComponentTsPath, 'utf-8');
-
-      // Check if HeaderComponent is already imported
-      if (!tsContent.includes('HeaderComponent')) {
-        // Add the import statement at the top
-        tsContent = `import { HeaderComponent } from '@codewithahsan/ng-cb-ui';\n${tsContent}`;
+      tsContent = tree.read(appComponentTsPath, 'utf-8');
+      if (
+        !tsContent.includes('standalone: true') &&
+        tree.exists(appModuleTsPath)
+      ) {
+        // an app that uses app.module...
+        tsContent = tree.read(appModuleTsPath, 'utf-8');
+        isModulesBasedApp = true;
       }
-
-      // Update the @Component decorator to include HeaderComponent in the imports array
-      tsContent = tsContent.replace(
-        /(imports:\s*\[[^\]]*)(\])/,
-        `$1, HeaderComponent$2`
-      );
-
-      tree.write(appComponentTsPath, tsContent);
     }
+    if (!tsContent.includes('HeaderComponent')) {
+      tsContent = `import { HeaderComponent } from '@codewithahsan/ng-cb-ui';\n${tsContent}`;
+    }
+
+    tsContent = tsContent.replace(
+      /(imports:\s*\[)([^\]]*\])/,
+      `$1HeaderComponent, $2`
+    );
+
+    tree.write(
+      isModulesBasedApp ? appModuleTsPath : appComponentTsPath,
+      tsContent
+    );
   });
 
-  // Format updated files
   await formatFiles(tree);
 }

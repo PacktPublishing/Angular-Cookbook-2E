@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
   "name": "ng-cookbook-recipe",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "generators": {
     "ng-cookbook-recipe": {
       "factory": "./src/generators/ng-cookbook-recipe/generator",
