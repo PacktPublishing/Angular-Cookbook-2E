@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ng-jest-setup:build:production"
+              "buildTarget": "ng-jest-setup:build:production"
             },
             "development": {
-              "browserTarget": "ng-jest-setup:build:development"
+              "buildTarget": "ng-jest-setup:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ng-jest-setup:build"
+            "buildTarget": "ng-jest-setup:build"
           }
         },
         "test": {
