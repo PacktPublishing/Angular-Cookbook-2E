@@ -8,16 +8,12 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter02/ng-control-flow",
         "index": "apps/chapter02/ng-control-flow/src/index.html",
         "main": "apps/chapter02/ng-control-flow/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter02/ng-control-flow/tsconfig.app.json",
         "assets": [
           "apps/chapter02/ng-control-flow/src/favicon.ico",
@@ -65,10 +61,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-control-flow:build:production"
+          "buildTarget": "ng-control-flow:build:production"
         },
         "development": {
-          "browserTarget": "ng-control-flow:build:development"
+          "buildTarget": "ng-control-flow:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -76,14 +72,12 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-control-flow:build"
+        "buildTarget": "ng-control-flow:build"
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/chapter02/ng-control-flow/**/*.ts",
@@ -93,9 +87,7 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "apps/chapter02/ng-control-flow/jest.config.ts",
         "passWithNoTests": true

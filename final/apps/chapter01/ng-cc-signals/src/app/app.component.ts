@@ -10,7 +10,13 @@ import { SnackbarComponent } from './components/snackbar/snackbar.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule, HeaderComponent, SnackbarComponent],
+  imports: [
+    HeaderComponent,
+    CommonModule,
+    RouterModule,
+    HeaderComponent,
+    SnackbarComponent,
+  ],
 })
 export class AppComponent {
   @ViewChild(SnackbarComponent) snackbar!: SnackbarComponent;
@@ -26,43 +32,45 @@ export class AppComponent {
     if (this.finishedTasksCount() === tasks.length && tasks.length > 0) {
       this.snackbar.show();
     }
-  })
+  });
 
   filteredTasks = computed(() => {
-    switch(this.filter()) {
+    switch (this.filter()) {
       case TasksFilter.All:
         return this.tasks();
       case TasksFilter.Active:
-        return this.tasks().filter(taskItem => {
+        return this.tasks().filter((taskItem) => {
           return !taskItem.completed;
         });
       case TasksFilter.Completed:
-        return this.tasks().filter(taskItem => {
+        return this.tasks().filter((taskItem) => {
           return taskItem.completed;
         });
     }
-  })
+  });
 
   changeFilter(filter: TasksFilter) {
     this.filter.set(filter);
   }
 
   toggleTask(task: Task) {
-    const updatedTasks = this.tasks().map(taskItem =>
-      taskItem.title === task.title ? {...taskItem, completed: !taskItem.completed} : taskItem
+    const updatedTasks = this.tasks().map((taskItem) =>
+      taskItem.title === task.title
+        ? { ...taskItem, completed: !taskItem.completed }
+        : taskItem
     );
     this.tasks.set(updatedTasks);
   }
 
   finishedTasksCount = computed(() => {
-    return this.tasks().filter(task => task.completed).length;
-  })
+    return this.tasks().filter((task) => task.completed).length;
+  });
 
   addTask(titleInput: HTMLInputElement) {
     if (titleInput.value) {
       const newTask = {
         title: titleInput.value,
-        completed: false
+        completed: false,
       };
       this.tasks.set([...this.tasks(), newTask]);
     }
