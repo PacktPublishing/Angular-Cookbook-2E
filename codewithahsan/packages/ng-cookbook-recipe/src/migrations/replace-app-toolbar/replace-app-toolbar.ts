@@ -1,6 +1,6 @@
 import { Tree } from '@nx/devkit';
 import { formatFiles, getProjects } from '@nrwl/devkit';
-import * as cheerio from 'cheerio';
+import { load } from 'cheerio';
 
 export default async function updateAppComponentFiles(tree: Tree) {
   const projects = getProjects(tree);
@@ -17,7 +17,10 @@ export default async function updateAppComponentFiles(tree: Tree) {
     // Update HTML content
     if (tree.exists(appComponentHtmlPath)) {
       const content = tree.read(appComponentHtmlPath, 'utf-8');
-      const $ = cheerio.load(content);
+      const $ = load(content, {
+        xml: true,
+        lowerCaseAttributeNames: false,
+      });
       const toolbar = $('.toolbar');
       if (toolbar.length) {
         const title = toolbar.find('span').first().text();
@@ -40,8 +43,13 @@ export default async function updateAppComponentFiles(tree: Tree) {
         // Replace the old toolbar div with the new header component
         toolbar.replaceWith(newToolbar);
 
+        const output = $.html({
+          xmlMode: false,
+          decodeEntities: false,
+        });
+
         // Write the updated HTML back to the file
-        tree.write(appComponentHtmlPath, $('body').html());
+        tree.write(appComponentHtmlPath, output);
       }
     }
 
@@ -60,6 +68,12 @@ export default async function updateAppComponentFiles(tree: Tree) {
         isModulesBasedApp = true;
       }
     }
+
+    if (!tsContent) {
+      // there's no content in either the component or module file
+      return;
+    }
+
     if (!tsContent.includes('HeaderComponent')) {
       tsContent = `import { HeaderComponent } from '@codewithahsan/ng-cb-ui';\n${tsContent}`;
     }

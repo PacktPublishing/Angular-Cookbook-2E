@@ -9,6 +9,12 @@ import { RecipePickerComponent } from './recipe-picker/recipe-picker.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule, HeaderComponent, RecipePickerComponent],
+  imports: [
+    HeaderComponent,
+    CommonModule,
+    RouterModule,
+    HeaderComponent,
+    RecipePickerComponent,
+  ],
 })
 export class AppComponent {}

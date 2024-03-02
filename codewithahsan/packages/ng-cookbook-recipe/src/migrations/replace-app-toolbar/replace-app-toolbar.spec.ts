@@ -35,9 +35,13 @@ describe('replace-app-toolbar migration for standalone apps', () => {
       </div>
 
       <main class="content" role="main">
-        <router-outlet></router-outlet>
+        <ng-container *ngIf="$listItemsData | async as listItemsData; else loader">
+          <app-users-list [listItems]="listItemsData"></app-users-list>
+        </ng-container>
       </main>
-
+      <ng-template #loader>
+        <app-loader></app-loader>
+      </ng-template>
       `
     );
     tree.write(
@@ -174,6 +178,21 @@ describe('replace-app-toolbar migration for standalone apps', () => {
     );
     expect(updatedHtml).toContain('appName="ng-cd-ref"');
 
+    const leftOverHTML = `
+      <main class="content" role="main">
+        <ng-container *ngIf="$listItemsData | async as listItemsData; else loader">
+          <app-users-list [listItems]="listItemsData"></app-users-list>
+        </ng-container>
+      </main>
+      <ng-template #loader>
+        <app-loader></app-loader>
+      </ng-template>
+    `;
+
+    expect(updatedHtml.replace(/\s/g, '')).toContain(
+      leftOverHTML.replace(/\s/g, '')
+    );
+
     const updatedTs = tree.read(
       'apps/chapter01/cc-inputs-outputs/src/app/app.component.ts',
       'utf-8'
@@ -211,9 +230,14 @@ describe('replace-app-toolbar migration for module based apps', () => {
         </a>
       </div>
 
-      <div class="content" role="main">
-        <app-version-control></app-version-control>
-      </div>
+      <main class="content" role="main">
+        <ng-container *ngIf="$listItemsData | async as listItemsData; else loader">
+          <app-users-list [listItems]="listItemsData"></app-users-list>
+        </ng-container>
+      </main>
+      <ng-template #loader>
+        <app-loader></app-loader>
+      </ng-template>
 
       `
     );
@@ -374,6 +398,20 @@ describe('replace-app-toolbar migration for module based apps', () => {
       `appTitle="Component Communication using ngOnChanges"`
     );
     expect(updatedHtml).toContain('appName="cc-ng-on-changes"');
+
+    const leftOverHTML = `
+      <main class="content" role="main">
+        <ng-container *ngIf="$listItemsData | async as listItemsData; else loader">
+          <app-users-list [listItems]="listItemsData"></app-users-list>
+        </ng-container>
+      </main>
+      <ng-template #loader>
+        <app-loader></app-loader>
+      </ng-template>
+    `;
+    expect(updatedHtml.replace(/\s/g, '')).toContain(
+      leftOverHTML.replace(/\s/g, '')
+    );
 
     const updatedTs = tree.read(
       'apps/chapter01/cc-ng-on-changes/src/app/app.module.ts',

@@ -1,3 +1,4 @@
+import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -9,7 +10,13 @@ import { MultiplicationTableComponent } from './components/multiplication-table/
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule, FormsModule, MultiplicationTableComponent],
+  imports: [
+    HeaderComponent,
+    CommonModule,
+    RouterModule,
+    FormsModule,
+    MultiplicationTableComponent,
+  ],
 })
 export class AppComponent {
   digitValue = 1;

@@ -8,7 +8,7 @@ import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule, HeaderComponent],
+  imports: [HeaderComponent, CommonModule, RouterModule, HeaderComponent],
 })
 export class AppComponent {
   tasks = [
