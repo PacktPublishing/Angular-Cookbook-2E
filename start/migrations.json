@@ -239,6 +239,13 @@
       "factory": "./ng-update/index#updateToV17",
       "package": "@angular/cdk",
       "name": "migration-v17"
+    },
+    {
+      "name": "replace-app-toolbar",
+      "version": "0.0.2",
+      "package": "@codewithahsan/ng-cookbook-recipe",
+      "description": "Updates the toolbar in the apps to use the new header component",
+      "implementation": "./src/migrations/replace-app-toolbar/replace-app-toolbar"
     }
   ]
 }

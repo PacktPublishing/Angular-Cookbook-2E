@@ -1,3 +1,4 @@
+import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { LoaderComponent } from './components/loader/loader.component';
@@ -9,7 +10,7 @@ import { SwapiService } from './swapi.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, LoaderComponent],
+  imports: [HeaderComponent, CommonModule, LoaderComponent],
 })
 export class AppComponent implements OnInit {
   swapi = inject(SwapiService);

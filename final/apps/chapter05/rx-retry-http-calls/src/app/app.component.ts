@@ -1,3 +1,4 @@
+import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -11,7 +12,7 @@ import { retryBackoff } from './retry-backoff';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, LoaderComponent],
+  imports: [HeaderComponent, CommonModule, LoaderComponent],
 })
 export class AppComponent implements OnInit {
   http = inject(HttpClient);

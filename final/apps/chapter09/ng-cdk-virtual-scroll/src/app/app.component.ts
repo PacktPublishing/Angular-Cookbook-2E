@@ -1,3 +1,4 @@
+import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -14,18 +15,24 @@ const LOADER_TIMEOUT = 3000;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule, LoaderComponent, UsersListComponent],
+  imports: [
+    HeaderComponent,
+    CommonModule,
+    RouterModule,
+    LoaderComponent,
+    UsersListComponent,
+  ],
 })
 export class AppComponent {
   $listItemsData!: Observable<AppUserCard[]>;
   showLoader = false;
-  constructor(private dataService: DataService) {  }
+  constructor(private dataService: DataService) {}
 
   getData() {
     this.showLoader = true;
     setTimeout(() => {
       this.showLoader = false;
       this.$listItemsData = this.dataService.getUsers();
-    }, LOADER_TIMEOUT)
+    }, LOADER_TIMEOUT);
   }
 }

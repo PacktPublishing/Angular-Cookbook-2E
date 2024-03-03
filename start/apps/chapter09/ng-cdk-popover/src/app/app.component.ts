@@ -1,3 +1,4 @@
+import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -12,7 +13,13 @@ import { UsersListComponent } from './components/users-list/users-list.component
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule, LoaderComponent, UsersListComponent],
+  imports: [
+    HeaderComponent,
+    CommonModule,
+    RouterModule,
+    LoaderComponent,
+    UsersListComponent,
+  ],
 })
 export class AppComponent {
   $listItemsData!: Observable<AppUserCard[]>;

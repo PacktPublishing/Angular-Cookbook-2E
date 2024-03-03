@@ -1,3 +1,4 @@
+import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -17,9 +18,10 @@ import { ButtonWithTooltipDirective } from './directives/button-with-tooltip.dir
     TooltipComponent,
     ButtonFilledDirective,
     ButtonOutlinedDirective,
-    ButtonWithTooltipDirective
+    ButtonWithTooltipDirective,
   ],
   imports: [
+    HeaderComponent,
     BrowserModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
   ],

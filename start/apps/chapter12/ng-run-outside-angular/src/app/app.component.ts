@@ -1,3 +1,4 @@
+import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -8,6 +9,6 @@ import { WatchBoxComponent } from './components/watch-box/watch-box.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule, WatchBoxComponent],
+  imports: [HeaderComponent, CommonModule, RouterModule, WatchBoxComponent],
 })
-export class AppComponent { }
+export class AppComponent {}

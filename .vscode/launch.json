@@ -17,6 +17,21 @@
         "<node_internals>/**"
       ],
       "type": "node"
+    },
+    {
+      "name": "Run replace toolbar test",
+      "request": "launch",
+      "runtimeArgs": [
+        "run",
+        "ng-cookbook-recipe:test",
+        "--watch"
+      ],
+      "runtimeExecutable": "nx",
+      "cwd": "${workspaceFolder}/codewithahsan",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
     }
   ]
 }

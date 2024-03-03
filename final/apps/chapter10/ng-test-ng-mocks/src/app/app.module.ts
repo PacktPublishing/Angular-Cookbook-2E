@@ -1,3 +1,4 @@
+import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -8,18 +9,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VcLogsComponent } from './components/vc-logs/vc-logs.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    VersionControlComponent,
-    VcLogsComponent
-  ],
+  declarations: [AppComponent, VersionControlComponent, VcLogsComponent],
   imports: [
+    HeaderComponent,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

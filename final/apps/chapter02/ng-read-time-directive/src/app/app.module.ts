@@ -1,3 +1,4 @@
+import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +10,7 @@ import { ReadTimeDirective } from './directives/read-time.directive';
 @NgModule({
   declarations: [AppComponent, ReadTimeDirective],
   imports: [
+    HeaderComponent,
     BrowserModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
   ],

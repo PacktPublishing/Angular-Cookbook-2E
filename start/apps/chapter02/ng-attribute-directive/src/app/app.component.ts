@@ -1,3 +1,4 @@
+import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
@@ -6,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   standalone: true,
   styleUrls: ['./app.component.scss'],
-  imports: [CommonModule]
+  imports: [HeaderComponent, CommonModule],
 })
 export class AppComponent {}

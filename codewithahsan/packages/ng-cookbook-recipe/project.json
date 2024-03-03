@@ -37,12 +37,17 @@
             "input": "./packages/ng-cookbook-recipe/src/assets",
             "glob": "**/*",
             "output": "./assets"
+          },
+          {
+            "input": "./packages/ng-cookbook-recipe",
+            "glob": "migrations.json",
+            "output": "."
           }
         ]
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -57,8 +62,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "packages/ng-cookbook-recipe/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "packages/ng-cookbook-recipe/jest.config.ts"
       }
     }
   },

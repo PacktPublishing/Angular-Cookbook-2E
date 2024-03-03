@@ -1,6 +1,14 @@
+import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterModule } from '@angular/router';
+import {
+  NavigationCancel,
+  NavigationEnd,
+  NavigationError,
+  NavigationStart,
+  Router,
+  RouterModule,
+} from '@angular/router';
 import { AppConfig, APP_CONFIG } from './app-config';
 import { AuthService } from './auth/auth.service';
 import { LoaderComponent } from './components/loader/loader.component';
@@ -10,7 +18,7 @@ import { LoaderComponent } from './components/loader/loader.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [RouterModule, CommonModule, LoaderComponent],
+  imports: [HeaderComponent, RouterModule, CommonModule, LoaderComponent],
   providers: [
     {
       provide: APP_CONFIG,
@@ -36,7 +44,7 @@ export class AppComponent {
       ) {
         this.isRouting = false;
       }
-    })
+    });
   }
 
   get isLoggedIn() {
