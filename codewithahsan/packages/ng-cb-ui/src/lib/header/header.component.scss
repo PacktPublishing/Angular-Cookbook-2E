@@ -24,11 +24,6 @@
       }
     }
   }
-  a:nth-last-child(1) {
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
 }
 
 .toolbar img {
@@ -43,4 +38,14 @@
   display: inline-block;
   margin-inline: 16px;
   padding-inline: 2px;
+}
+
+.review-widget {
+  @apply duration-200 fixed top-0 right-[-100%] bg-white p-4 shadow-md;
+  &--shown {
+    @apply right-0;
+  }
+  .review-header {
+    @apply mb-4 flex justify-between;
+  }
 }
