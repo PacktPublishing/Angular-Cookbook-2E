@@ -7,14 +7,15 @@
 
   </ng-content>
   <div class="flex gap-4 items-center">
-    <div class="h-full flex items-center cursor-pointer" (click)="toggleReviewsShown()">
+    <div title="see reviews" class="h-full flex items-center cursor-pointer" (click)="toggleReviewsShown()">
       <span class="material-symbols-outlined">
         reviews
       </span>
     </div>
     <a
+      title="see info"
       class="h-full flex items-center"
-      href="https://www.codewithahsan.dev/ng-book-reader?chapter={{appName}}"
+      href="https://ng-cookbook.com/#/thank-you?recipeName={{appName}}"
       target="_blank"
       rel="noopener noreferer"
     >
@@ -28,7 +29,9 @@
   }">
     <header class="review-header">
       <h3>Recipe Reviews:</h3>
-      <button (click)="toggleReviewsShown()">Close</button>
+      <span (click)="toggleReviewsShown()" class="material-symbols-outlined close-btn">
+        close
+      </span>
     </header>
     <iframe [src]="reviewLink" class="w-full py-10 " height="500"></iframe>
   </div>

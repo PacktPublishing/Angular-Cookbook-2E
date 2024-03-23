@@ -46,6 +46,10 @@
     @apply right-0;
   }
   .review-header {
-    @apply mb-4 flex justify-between;
+    @apply mb-4 flex justify-between items-center relative;
+
+    .close-btn {
+      @apply py-4 px-2 relative left-2 hover:opacity-75 cursor-pointer;
+    }
   }
 }
