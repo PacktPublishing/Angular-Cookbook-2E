@@ -1,0 +1,26 @@
+<!-- Toolbar -->
+<ng-cb-ui-header
+  appTitle="Precaching requests using an Angular service worker"
+  appName="ng-pwa-precaching"
+  ><div class="spacer"></div
+></ng-cb-ui-header>
+
+<main class="content" role="main">
+  <ng-container *ngIf="!loadingData && appData; else loader">
+    <div class="person flex justify-center text-2xl mb-8">
+      Person: {{ appData.person.name }}
+    </div>
+    <div class="films grid grid-cols-2 flex-wrap gap-4">
+      <div
+        class="films__film w-42 p-4 text-center border border-black rounded-md"
+        *ngFor="let film of appData.person.filmObjects"
+      >
+        <h2 class="text-xl mb-4">Film: {{ film.title }}</h2>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #loader>
+    <app-loader></app-loader>
+  </ng-template>
+</main>

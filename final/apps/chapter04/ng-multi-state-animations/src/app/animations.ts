@@ -14,14 +14,11 @@ export const cardAnimation = trigger('cardAnimation', [
       backgroundColor: 'white',
     })
   ),
-  state(
-    'hovered',
-    style({
-      transform: 'scale3d(1.05, 1.05, 1.05)',
-      backgroundColor: '#333',
-      color: 'white',
-    })
-  ),
+  state('hovered', style({ 
+    transform: 'scale3d(1.05, 1.05, 1.05)', 
+    backgroundColor: '#333', 
+    color: 'white' 
+  })),
   transition('void => active', [
     style({
       transform: 'translateX(-200px)',
@@ -35,24 +32,18 @@ export const cardAnimation = trigger('cardAnimation', [
       })
     ),
   ]),
-  transition('active => hovered', [
-    animate(
-      '0.3s 0s ease-out',
-      style({
-        transform: 'scale3d(1.05, 1.05, 1.05)',
-        backgroundColor: '#333',
-        color: 'white',
-      })
-    ),
+  transition('active => hovered', [ 
+    animate('0.3s 0s ease-out', style({ 
+      transform: 'scale3d(1.05, 1.05, 1.05)', 
+      backgroundColor: '#333', 
+      color: 'white' 
+    })) 
   ]),
   transition('hovered => active', [
-    animate(
-      '0.3s 0s ease-out',
-      style({
-        transform: 'scale3d(1, 1, 1)',
-        color: 'rgb(51, 51, 51)',
-        backgroundColor: 'white',
-      })
-    ),
+    animate('0.3s 0s ease-out', style({
+      transform: 'scale3d(1, 1, 1)',
+      color: 'rgb(51, 51, 51)',
+      backgroundColor: 'white'
+    }))
   ]),
 ]);

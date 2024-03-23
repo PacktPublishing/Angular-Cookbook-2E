@@ -1,3 +1,4 @@
+import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,6 +11,7 @@ import { ScrollToDirective } from './directives/scroll-to.directive';
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent, ScrollToDirective],
   imports: [
+    HeaderComponent,
     BrowserModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
   ],

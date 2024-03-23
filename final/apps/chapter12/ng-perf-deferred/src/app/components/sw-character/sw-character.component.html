@@ -1,0 +1,14 @@
+<ng-container *ngIf="!loadingData; else loader">
+  <div class="person flex justify-center text-2xl mb-8">
+    Person: {{person.name}}
+  </div>
+  <div class="films grid grid-cols-2 flex-wrap gap-4">
+    <div class="films__film w-42 p-4 text-center border border-black rounded-md" *ngFor="let film of person.filmObjects">
+      <h2 class="text-xl mb-4">Film: {{film.title}}</h2>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>

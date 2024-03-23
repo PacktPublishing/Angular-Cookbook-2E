@@ -8,16 +8,12 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter12/ng-perf-budgets",
         "index": "apps/chapter12/ng-perf-budgets/src/index.html",
         "main": "apps/chapter12/ng-perf-budgets/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter12/ng-perf-budgets/tsconfig.app.json",
         "assets": [
           "apps/chapter12/ng-perf-budgets/src/favicon.ico",
@@ -30,7 +26,7 @@
         ],
         "styles": [
           "apps/chapter12/ng-perf-budgets/src/styles.scss",
-          "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
+          "node_modules/@codewithahsan/ng-cb-ui/styles/globals.scss"
         ],
         "scripts": []
       },
@@ -65,10 +61,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-perf-budgets:build:production"
+          "buildTarget": "ng-perf-budgets:build:production"
         },
         "development": {
-          "browserTarget": "ng-perf-budgets:build:development"
+          "buildTarget": "ng-perf-budgets:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -76,14 +72,12 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-perf-budgets:build"
+        "buildTarget": "ng-perf-budgets:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/chapter12/ng-perf-budgets/**/*.ts",
@@ -93,18 +87,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter12/ng-perf-budgets/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
+        "jestConfig": "apps/chapter12/ng-perf-budgets/jest.config.ts"
       }
     },
     "rename": {

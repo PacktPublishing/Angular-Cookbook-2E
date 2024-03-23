@@ -2,19 +2,19 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Observable } from 'rxjs/internal/Observable';
-import { ANIMATIONS } from '../animations';
 import { APP_CONFIG } from '../app-config';
 import { Fruit } from '../constants/fruit';
 import { IFruit } from '../interfaces/fruit.interface';
 import { BucketService } from './bucket.service';
+import { ANIMATIONS } from '../animations';
 
 @Component({
   selector: 'app-bucket',
   templateUrl: './bucket.component.html',
   styleUrls: ['./bucket.component.scss'],
   standalone: true,
-  animations: [ANIMATIONS.LIST_ITEM_ANIMATION],
   imports: [CommonModule, FormsModule],
+  animations: [ANIMATIONS.LIST_ITEM_ANIMATION]
 })
 export class BucketComponent implements OnInit {
   bucketService = inject(BucketService);

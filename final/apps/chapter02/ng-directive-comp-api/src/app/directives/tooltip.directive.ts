@@ -1,19 +1,17 @@
 import {
-  ApplicationRef,
-  ComponentFactoryResolver,
   ComponentRef,
   Directive,
   ElementRef,
   EmbeddedViewRef,
   HostListener,
-  Injector,
   Input,
+  ViewContainerRef,
 } from '@angular/core';
 import { TooltipComponent } from '../components/tooltip/tooltip.component';
 
 @Directive({
   selector: '[appTooltip]',
-  standalone: true,
+  standalone: true
 })
 export class TooltipDirective {
   @Input() appTooltip = '';
@@ -22,11 +20,8 @@ export class TooltipDirective {
   @HostListener('mouseenter')
   onMouseEnter(): void {
     if (this.componentRef === null) {
-      const componentFactory =
-        this.componentFactoryResolver.resolveComponentFactory(TooltipComponent);
-      this.componentRef = componentFactory.create(this.injector);
+      this.componentRef = this.viewContainerRef.createComponent(TooltipComponent);
       if (this.componentRef !== null) {
-        this.appRef.attachView(this.componentRef.hostView);
         const domElem = (this.componentRef.hostView as EmbeddedViewRef<any>)
           .rootNodes[0] as HTMLElement;
         document.body.appendChild(domElem);
@@ -46,16 +41,13 @@ export class TooltipDirective {
 
   destroy(): void {
     if (this.componentRef !== null) {
-      this.appRef.detachView(this.componentRef.hostView);
       this.componentRef.destroy();
       this.componentRef = null;
     }
   }
   constructor(
     private elementRef: ElementRef,
-    private appRef: ApplicationRef,
-    private componentFactoryResolver: ComponentFactoryResolver,
-    private injector: Injector
+    private viewContainerRef: ViewContainerRef
   ) {}
 
   private setTooltipComponentProperties() {

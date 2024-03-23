@@ -23,6 +23,6 @@
     Submit
   </button>
 </form>
-<app-value-guesser></app-value-guesser>
-<app-dice></app-dice>
+<app-value-guesser [rolling]="rolling"></app-value-guesser>
+<app-dice (diceRolling)="rolling = $event;"></app-dice>
 <app-leader-board></app-leader-board>

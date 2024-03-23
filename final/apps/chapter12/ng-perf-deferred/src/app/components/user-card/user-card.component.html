@@ -1,0 +1,21 @@
+<div class="card-container h-full">
+  <div class="card h-full w-fit" #container>
+    <div class="card card-front h-full flex flex-col max-w-sm mx-auto duration-200 cursor-pointer hover:border-purple-500 hover:shadow-md p-4 border border-slate-300 rounded-md text-center" *ngIf="user" routerLink="/user/{{user.login.uuid}}">
+      <img [src]="user.picture.large" class="card-img-top rounded-full mx-auto w-32 aspect-square" alt="...">
+      <div class="card-body flex-1 flex flex-col">
+        <h5 class="card-title flex-1">{{user.name.first}} {{user.name.last}}</h5>
+        <p class="card-text break-words">{{user.email}}</p>
+        <a href="tel: {{user.phone}}" class="btn btn-primary">{{user.phone}}</a>
+      </div>
+    </div>
+    @defer (on hover(container)) {
+      <app-user-card-back [user]="user" class="card-back card h-full block">
+      </app-user-card-back>
+    } @placeholder {
+      <div class=" bg-white card-back card">
+        Loading...
+      </div>
+    }
+  </div>
+</div>
+

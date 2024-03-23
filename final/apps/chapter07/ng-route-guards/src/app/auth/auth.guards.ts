@@ -12,7 +12,7 @@ export const canActivateLogin: CanActivateFn = () => {
     router.navigate([`/${isAdmin ? 'admin' : 'employee'}`])
     return false
   }
-  return !inject(AuthService).isLoggedIn()
+  return !authService.isLoggedIn()
 }
 
 export const canActivateAdminOrEmployee: CanActivateFn = () => {

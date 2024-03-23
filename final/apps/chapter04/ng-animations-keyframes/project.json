@@ -58,10 +58,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-animations-keyframes:build:production"
+          "buildTarget": "ng-animations-keyframes:build:production"
         },
         "development": {
-          "browserTarget": "ng-animations-keyframes:build:development"
+          "buildTarget": "ng-animations-keyframes:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -69,11 +69,11 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-animations-keyframes:build"
+        "buildTarget": "ng-animations-keyframes:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -86,8 +86,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter04/ng-animations-keyframes/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/chapter04/ng-animations-keyframes/jest.config.ts"
       }
     },
     "rename": {

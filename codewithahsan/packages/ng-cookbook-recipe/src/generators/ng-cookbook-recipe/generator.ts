@@ -8,7 +8,11 @@ import {
   offsetFromRoot,
   updateProjectConfiguration,
 } from '@nx/devkit';
-import { E2eTestRunner, UnitTestRunner, applicationGenerator } from '@nx/angular/generators';
+import {
+  E2eTestRunner,
+  UnitTestRunner,
+  applicationGenerator,
+} from '@nx/angular/generators';
 import { NgCookbookRecipeGeneratorSchema } from './schema';
 import path = require('path');
 
@@ -119,7 +123,7 @@ export const addStyles = (
           ...config.targets.build.options,
           styles: [
             ...config.targets.build.options.styles,
-            'node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss',
+            'node_modules/@codewithahsan/ng-cb-ui/styles/globals.scss',
           ],
         },
       },

@@ -1,22 +1,7 @@
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img
-    width="40"
-    class="toolbar__logo"
-    routerLink="/"
-    alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-  />
-  <span routerLink="/" class="toolbar__title">Unit testing Angular Pipes</span>
-  <div class="spacer"></div>
-  <a
-    href="https://www.codewithahsan.dev/ng-book-reader?chapter=ng-test-pipes"
-    target="_blank"
-    rel="noopener noreferer"
-  >
-    <span class="material-symbols-outlined"> info </span>
-  </a>
-</div>
+<ng-cb-ui-header appTitle="Unit testing Angular Pipes" appName="ng-test-pipes"
+  ><div class="spacer"></div
+></ng-cb-ui-header>
 
 <main class="content" role="main">
   <section class="flex gap-4 flex-col md:flex-row items-center">
@@ -59,7 +44,7 @@
       </div>
     </div>
     <app-multiplication-table
-      class="block  max-h-96 overflow-auto p-4"
+      class="block max-h-96 overflow-auto p-4"
       [digit]="digitValue"
       [limit]="maxFactorValue"
     ></app-multiplication-table>

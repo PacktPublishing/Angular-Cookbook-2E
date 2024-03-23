@@ -1,5 +1,7 @@
 .bell {
   position: relative;
+  display: flex;
+  align-items: center;
   &:hover {
     cursor: pointer;
     opacity: 0.7;

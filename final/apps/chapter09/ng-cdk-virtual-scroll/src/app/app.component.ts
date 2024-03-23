@@ -1,3 +1,4 @@
+import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -5,7 +6,7 @@ import { Observable } from 'rxjs/internal/Observable';
 import { AppUserCard } from './interfaces/app-user-card.interface';
 import { DataService } from './core/data.service';
 import { LoaderComponent } from './components/loader/loader.component';
-import { TheAmazingListComponent } from './components/the-amazing-list/the-amazing-list.component';
+import { UsersListComponent } from './components/users-list/users-list.component';
 
 const LOADER_TIMEOUT = 3000;
 
@@ -14,18 +15,24 @@ const LOADER_TIMEOUT = 3000;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule, LoaderComponent, TheAmazingListComponent],
+  imports: [
+    HeaderComponent,
+    CommonModule,
+    RouterModule,
+    LoaderComponent,
+    UsersListComponent,
+  ],
 })
 export class AppComponent {
   $listItemsData!: Observable<AppUserCard[]>;
   showLoader = false;
-  constructor(private dataService: DataService) {  }
+  constructor(private dataService: DataService) {}
 
   getData() {
     this.showLoader = true;
     setTimeout(() => {
       this.showLoader = false;
       this.$listItemsData = this.dataService.getUsers();
-    }, LOADER_TIMEOUT)
+    }, LOADER_TIMEOUT);
   }
 }

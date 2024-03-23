@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@codewithahsan/ng-cb-ui": ["packages/ng-cb-ui/src/index.ts"],
       "@codewithahsan/ng-cookbook-recipe": [
         "packages/ng-cookbook-recipe/src/index.ts"
       ]

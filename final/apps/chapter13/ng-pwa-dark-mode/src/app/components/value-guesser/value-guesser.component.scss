@@ -1,0 +1,23 @@
+:host {
+  display: block;
+}
+.values {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  &__value-box {
+    width: 5rem;
+    height: 5rem;
+    color: #fff;
+    @apply dark:bg-slate-500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+    &--selected{
+      @apply bg-purple-600;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "replace-app-toolbar": {
+      "version": "0.0.2",
+      "description": "Updates the toolbar in the apps to use the new header component",
+      "implementation": "./src/migrations/replace-app-toolbar/replace-app-toolbar"
+    }
+  }
+}

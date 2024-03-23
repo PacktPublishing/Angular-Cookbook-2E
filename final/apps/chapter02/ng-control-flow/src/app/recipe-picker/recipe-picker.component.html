@@ -1,0 +1,54 @@
+<div class="flex flex-col items-center justify-center py-10">
+  <div class="mb-4">
+    <label for="skillLevel" class="block text-gray-700 text-sm font-bold mb-2">Choose your skill level:</label>
+    <select id="skillLevel" (change)="skillChanged($event)" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+      <option value="">---choose---</option>
+      @for(option of options | keyvalue; track $index) {
+        <option value="{{option.value}}">{{option.key}}</option>
+      }
+    </select>
+  </div>
+  @if(skillLevel() === '') {
+    <h2 class="text-xl text-gray-700 mb-2">No skill level selected</h2>
+  } @else {
+    <section class="w-full grid grid-cols-1 max-w-2xl mx-auto" [@.disabled]="!filteredRecipes().length" [@listItemAnimation]="filteredRecipes()">
+      @for (recipe of filteredRecipes(); track recipe.id) {
+        <article class="relative flex mb-4 bg-white rounded overflow-hidden shadow-lg">
+          @switch (recipe.type) {
+            @case (recipeTypes.GlutenFree) {
+              <img [title]="recipeTypes.GlutenFree" class="absolute w-6 h-6 top-10 right-10" src="/assets/images/gluten-free.svg" />
+            }
+            @case (recipeTypes.Vegan) {
+              <img [title]="recipeTypes.Vegan" class="absolute w-6 h-6 top-10 right-10" src="/assets/images/vegan.svg" />
+            }
+            @case (recipeTypes.Vegetarian) {
+              <img [title]="recipeTypes.Vegetarian" class="absolute w-6 h-6 top-10 right-10" src="/assets/images/vegetarian.svg" />
+            }
+          }
+          <div class="flex-none w-48 relative">
+            <img src="{{ recipe.image }}" alt="" class="absolute inset-0 w-full h-full object-cover" />
+          </div>
+          <div class="flex-1 p-6">
+            <div class="flex flex-wrap">
+              <h1 class="flex-auto text-xl font-semibold">
+                {{ recipe.name }}
+              </h1>
+            </div>
+            <p class="text-sm text-gray-500 mt-2">
+              {{ recipe.description }}
+            </p>
+            <div class="flex items-baseline mt-4 mb-6">
+              <ul class="space-y-2 list-disc pl-4">
+                @for (step of recipe.steps; track $index) {
+                  <li class="text-gray-700 text-base">{{ step }}</li>
+                }
+              </ul>
+            </div>
+          </div>
+        </article>
+      } @empty {
+        <h2 class="text-xl text-gray-700 mb-2">No recipes found</h2>
+      }
+    </section>
+  }
+</div>

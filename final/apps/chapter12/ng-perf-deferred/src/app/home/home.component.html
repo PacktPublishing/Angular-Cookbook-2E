@@ -1,0 +1,38 @@
+<section class="mb-20">
+  @defer (on viewport) {
+    <h2 class="text-4xl mb-6">Star Wars Character</h2>
+    <app-sw-character></app-sw-character>
+  } @placeholder {
+    <app-loader></app-loader>
+  } @error {
+    <div class="error">
+      Could not load star war character component
+    </div>
+  }
+</section>
+
+<section class="mb-20">
+  @defer (on viewport) {
+    <h2 class="text-4xl mb-6">Drag & Drop</h2>
+    <app-folders-list></app-folders-list>
+  } @placeholder {
+    <app-loader></app-loader>
+  } @error {
+    <div class="error">
+      Could not load folders list component
+    </div>
+  }
+</section>
+
+<section class="mb-20">
+  @defer (on viewport;) {
+    <h2 class="text-4xl mb-6">Users list</h2>
+    <app-users></app-users>
+  } @placeholder {
+    <app-loader></app-loader>
+  } @error {
+    <div class="error">
+      Could not load users list component
+    </div>
+  }
+</section>

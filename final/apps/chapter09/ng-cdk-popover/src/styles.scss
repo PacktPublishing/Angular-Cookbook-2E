@@ -1,7 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-
-/* You can add global styles to this file, and also import other style files */
-
 .cdk-overlay-container {
   display: block;
   &.z-index-top {
@@ -98,30 +95,29 @@
   min-height: 1px;
 }
 
-
 .menu-popover {
   min-width: 150px;
   height: auto;
   border: 1px solid white;
   border-radius: 8px;
 
-  &::before {
-    top: -10px;
-    border-width: 0px 10px 10px 10px;
-    border-color: transparent transparent white     transparent;
-    position: absolute;
-    content: '';
-    right: 5%;
-    border-style: solid;
-  }
+  &::before { 
+    top: -10px; 
+    border-width: 0px 10px 10px 10px; 
+    border-color: transparent transparent white     transparent; 
+    position: absolute; 
+    content: ''; 
+    right: 5%; 
+    border-style: solid; 
+  } 
 
-  &--up {
-    transform: translateY(-20px);
-    &::before {
-      top: unset !important;
-      transform: rotate(180deg);
-      bottom: -10px;
-    }
+  &--up { 
+    transform: translateY(-20px); 
+    &::before { 
+      top: unset !important; 
+      transform: rotate(180deg); 
+      bottom: -10px; 
+    } 
   }
 
   &__list {

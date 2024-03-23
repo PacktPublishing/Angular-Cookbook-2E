@@ -1,0 +1,26 @@
+<!-- Toolbar -->
+<ng-cb-ui-header
+  appTitle="Providing a custom installable experience in your Angular PWA"
+  appName="ng-pwa-cust-installation"
+  ><div class="spacer"></div
+></ng-cb-ui-header>
+
+<main class="content" role="main">
+  <router-outlet></router-outlet>
+</main>
+@if(promptService.isPromptBannerShown()) {
+<div id="installPrompt" class="fixed inset-x-0 bottom-10 p-4">
+  <div class="rounded-lg bg-purple-600 px-4 py-3 text-white shadow-lg">
+    <p class="text-center text-sm font-medium">
+      Love the Dice Game?
+      <a
+        (click)="promptService.showInstallPrompt()"
+        href="#"
+        class="inline-block underline"
+      >
+        Install it!
+      </a>
+    </p>
+  </div>
+</div>
+}

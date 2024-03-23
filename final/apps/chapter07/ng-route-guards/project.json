@@ -26,7 +26,7 @@
         ],
         "styles": [
           "apps/chapter07/ng-route-guards/src/styles.scss",
-          "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
+          "node_modules/@codewithahsan/ng-cb-ui/styles/globals.scss"
         ],
         "scripts": []
       },
@@ -61,10 +61,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-route-guards:build:production"
+          "buildTarget": "ng-route-guards:build:production"
         },
         "development": {
-          "browserTarget": "ng-route-guards:build:development"
+          "buildTarget": "ng-route-guards:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -72,11 +72,11 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-route-guards:build"
+        "buildTarget": "ng-route-guards:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -89,14 +89,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter07/ng-route-guards/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
+        "jestConfig": "apps/chapter07/ng-route-guards/jest.config.ts"
       }
     },
     "rename": {

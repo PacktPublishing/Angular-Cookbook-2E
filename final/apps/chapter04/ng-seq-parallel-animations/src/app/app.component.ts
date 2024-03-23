@@ -1,17 +1,23 @@
+import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { cardAnimation } from './animation';
 import { FbCardComponent } from './components/fb-card/fb-card.component';
 import { TwitterCardComponent } from './components/twitter-card/twitter-card.component';
 import { SocialCardType } from './types/social-card-type';
+import { cardAnimation } from './animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [cardAnimation],
   standalone: true,
-  imports: [CommonModule, FbCardComponent, TwitterCardComponent],
+  imports: [
+    HeaderComponent,
+    CommonModule,
+    FbCardComponent,
+    TwitterCardComponent,
+  ],
+  animations: [cardAnimation],
 })
 export class AppComponent {
   selectedCardType: SocialCardType = 'facebook';

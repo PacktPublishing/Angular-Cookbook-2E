@@ -1,0 +1,37 @@
+<div class="toolbar" role="banner">
+  <ng-cb-ui-ng-logo class="mx-4 px-1"></ng-cb-ui-ng-logo>
+  <span routerLink="/" class="toolbar__title"
+    >{{appTitle}}</span
+  >
+  <ng-content>
+
+  </ng-content>
+  <div class="header-actions">
+    <div title="see reviews" class="header-actions__action" (click)="toggleReviewsShown()">
+      <span class="material-symbols-outlined">
+        reviews
+      </span>
+    </div>
+    <a
+      title="see info"
+      class="header-actions__action"
+      href="https://ng-cookbook.com/#/thank-you?recipeName={{appName}}"
+      target="_blank"
+      rel="noopener noreferer"
+    >
+      <span class="material-symbols-outlined"> info </span>
+    </a>
+  </div>
+</div>
+
+<div class="review-widget" [ngClass]="{
+    'review-widget--shown': reviewsShown
+  }">
+    <header class="review-header">
+      <h3>Recipe Reviews:</h3>
+      <span (click)="toggleReviewsShown()" class="material-symbols-outlined close-btn">
+        close
+      </span>
+    </header>
+    <iframe [src]="reviewLink" class="w-full py-10 " height="500"></iframe>
+  </div>

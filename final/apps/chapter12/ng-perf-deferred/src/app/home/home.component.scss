@@ -1,0 +1,18 @@
+:host {
+  @apply w-full block;
+}
+section {
+  @apply min-h-screen flex flex-col gap-4 items-center justify-center p-10 min-w-full;
+
+  &:nth-child(even) {
+    @apply bg-slate-100;
+  }
+
+  app-users {
+    @apply block min-w-full;
+  }
+
+  .error {
+    @apply text-red-700;
+  }
+}

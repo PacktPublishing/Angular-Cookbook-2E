@@ -1,0 +1,106 @@
+{
+  "name": "ng-pwa-cust-installation",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/chapter13/ng-pwa-cust-installation/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/chapter13/ng-pwa-cust-installation",
+        "index": "apps/chapter13/ng-pwa-cust-installation/src/index.html",
+        "main": "apps/chapter13/ng-pwa-cust-installation/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/chapter13/ng-pwa-cust-installation/tsconfig.app.json",
+        "assets": [
+          "apps/chapter13/ng-pwa-cust-installation/src/favicon.ico",
+          "apps/chapter13/ng-pwa-cust-installation/src/assets",
+          {
+            "glob": "**/*",
+            "input": "node_modules/@codewithahsan/ng-cookbook-recipe/assets",
+            "output": "assets"
+          },
+          "apps/chapter13/ng-pwa-cust-installation/src/manifest.webmanifest"
+        ],
+        "styles": [
+          "apps/chapter13/ng-pwa-cust-installation/src/styles.scss",
+          "node_modules/@codewithahsan/ng-cb-ui/styles/globals.scss"
+        ],
+        "scripts": [],
+        "serviceWorker": true,
+        "ngswConfigPath": "apps/chapter13/ng-pwa-cust-installation/ngsw-config.json"
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "ng-pwa-cust-installation:build:production"
+        },
+        "development": {
+          "buildTarget": "ng-pwa-cust-installation:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "ng-pwa-cust-installation:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/chapter13/ng-pwa-cust-installation/**/*.ts",
+          "apps/chapter13/ng-pwa-cust-installation/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/chapter13/ng-pwa-cust-installation/jest.config.ts"
+      }
+    },
+    "rename": {
+      "executor": "@codewithahsan/ng-cookbook-recipe:rename",
+      "options": {
+        "chapter": "chapter13",
+        "app": "ng-pwa-cust-installation"
+      }
+    }
+  }
+}

@@ -7,12 +7,10 @@ import { TooltipDirective } from './tooltip.directive';
   hostDirectives: [
     {
       directive: ButtonDirective,
-      // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
       inputs: ['color', 'fill'],
     },
     {
       directive: TooltipDirective,
-      // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property, @angular-eslint/no-input-rename
       inputs: ['appTooltip: tooltip'],
     },
   ],
