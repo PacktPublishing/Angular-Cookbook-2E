@@ -53,10 +53,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ng-directive-comp-api:build:production"
+          "buildTarget": "ng-directive-comp-api:build:production"
         },
         "development": {
-          "browserTarget": "ng-directive-comp-api:build:development"
+          "buildTarget": "ng-directive-comp-api:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -64,11 +64,11 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ng-directive-comp-api:build"
+        "buildTarget": "ng-directive-comp-api:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -81,8 +81,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter02/ng-directive-comp-api/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/chapter02/ng-directive-comp-api/jest.config.ts"
       }
     },
     "rename": {

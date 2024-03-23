@@ -26,7 +26,7 @@
         ],
         "styles": [
           "apps/chapter06/ngrx-actions-reducer/src/styles.scss",
-          "node_modules/@codewithahsan/ng-cookbook-recipe/styles/globals.scss"
+          "node_modules/@codewithahsan/ng-cb-ui/styles/globals.scss"
         ],
         "scripts": []
       },
@@ -61,10 +61,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ngrx-actions-reducer:build:production"
+          "buildTarget": "ngrx-actions-reducer:build:production"
         },
         "development": {
-          "browserTarget": "ngrx-actions-reducer:build:development"
+          "buildTarget": "ngrx-actions-reducer:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -72,11 +72,11 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ngrx-actions-reducer:build"
+        "buildTarget": "ngrx-actions-reducer:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -89,14 +89,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter06/ngrx-actions-reducer/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
+        "jestConfig": "apps/chapter06/ngrx-actions-reducer/jest.config.ts"
       }
     },
     "rename": {

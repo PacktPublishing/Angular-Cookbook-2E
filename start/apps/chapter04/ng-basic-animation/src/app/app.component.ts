@@ -1,3 +1,4 @@
+import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FbCardComponent } from './components/fb-card/fb-card.component';
@@ -9,7 +10,12 @@ import { SocialCardType } from './types/social-card-type';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, FbCardComponent, TwitterCardComponent],
+  imports: [
+    HeaderComponent,
+    CommonModule,
+    FbCardComponent,
+    TwitterCardComponent,
+  ],
 })
 export class AppComponent {
   selectedCardType: SocialCardType = 'facebook';

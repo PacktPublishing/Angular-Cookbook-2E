@@ -1,0 +1,64 @@
+.toolbar {
+  @apply absolute top-0 left-0 right-0 bg-purple-700 flex items-center h-14 text-white font-bold px-4;
+  &__title[routerLink] {
+    cursor: pointer;
+  }
+  &__logo[routerLink] {
+    cursor: pointer;
+  }
+  .route-links {
+    padding: 8px 16px;
+    display: flex;
+    justify-content: flex-start;
+    &__route-link {
+      margin-right: 10px;
+      padding: 6px 16px;
+      transition: all ease 0.2s;
+      cursor: pointer;
+      &:hover:not(&--active) {
+        color: #333;
+      }
+      &--active {
+        color: white;
+        background-color: #333;
+      }
+    }
+  }
+  .header-actions {
+    @apply flex gap-4 items-center;
+  }
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.toolbar .notif-bell {
+  margin: 0 20px 0 16px;
+}
+
+.toolbar ng-cb-ui-ng-logo {
+  display: inline-block;
+  margin-inline: 16px;
+  padding-inline: 2px;
+}
+
+.review-widget {
+  @apply duration-200 fixed top-0 right-[-100%] bg-white p-4 shadow-md;
+  &--shown {
+    @apply right-0;
+  }
+  .review-header {
+    @apply mb-4 flex justify-between items-center relative;
+
+    .close-btn {
+      @apply py-4 px-2 relative left-2 hover:opacity-75 cursor-pointer;
+    }
+  }
+}
+
+.header-actions {
+  &__action {
+    @apply h-full flex items-center cursor-pointer hover:opacity-70;
+  }
+}

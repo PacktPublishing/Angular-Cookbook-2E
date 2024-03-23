@@ -6,7 +6,6 @@ import { ButtonDirective } from './button.directive';
   hostDirectives: [
     {
       directive: ButtonDirective,
-      // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
       inputs: ['color'],
     },
   ],

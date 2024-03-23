@@ -23,7 +23,6 @@ h4,
 h5,
 h6 {
   margin: 8px 0;
-  @apply dark:text-white;
 }
 
 p {
@@ -77,8 +76,8 @@ p {
 
 .content {
   display: flex;
-  padding: 120px 0 32px 0;
-  margin: 0 auto;
+  padding: 0 0 32px 0;
+  margin: 120px auto 0 auto;
   max-width: 960px;
   flex-direction: column;
   align-items: center;
@@ -95,7 +94,7 @@ svg.material-icons:not(:last-child) {
 }
 
 @mixin inputEl {
-  @apply appearance-none w-full text-sm bg-transparent text-slate-900 placeholder:text-slate-400 rounded-md py-1.5 px-2 ring-1 ring-purple-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-white dark:placeholder-white;
+  @apply appearance-none w-full text-sm bg-transparent text-slate-900 placeholder:text-slate-400 rounded-md py-1.5 px-2 ring-1 ring-purple-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
 }
 
 input {

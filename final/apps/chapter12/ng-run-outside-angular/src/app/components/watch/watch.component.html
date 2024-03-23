@@ -1,0 +1,16 @@
+<div class="watch" [class.watch--hover]="hover" #stopWatch>
+  <div class="watch__inner">
+    <app-watch-time [value]="hours" name="hours"></app-watch-time>
+    <div class="watch__inner__sep">:</div>
+    <app-watch-time [value]="minutes" name="minutes"></app-watch-time>
+    <div class="watch__inner__sep">:</div>
+    <app-watch-time [value]="seconds" name="seconds"></app-watch-time>
+    <div class="watch__inner__sep">:</div>
+    <app-watch-time
+      [value]="milliseconds"
+      name="milliseconds"
+      [digits]="3"
+    ></app-watch-time>
+  </div>
+  <div class="watch__greetings">{{ greetingMessage }}</div>
+</div>

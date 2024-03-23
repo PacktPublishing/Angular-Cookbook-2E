@@ -1,0 +1,18 @@
+<ng-container *ngIf="item">
+  <div class="list__item__primary">
+    <h2 class="list__item__primary__info">
+      {{ item.name }}
+    </h2>
+    <div class="list__item__primary__info">
+      {{ item.phone }}
+    </div>
+  </div>
+  <div class="list__item__secondary">
+    <div class="list__item__secondary__info">
+      <img src="{{ item.picture }}" />
+    </div>
+    <div class="list__item__secondary__info">
+      {{ item.email }}
+    </div>
+  </div>
+</ng-container>

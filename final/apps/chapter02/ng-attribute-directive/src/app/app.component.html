@@ -1,27 +1,38 @@
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img
-    width="40"
-    alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-  />
-  <span>Attribute Directive in Angular</span>
-  <div class="spacer"></div>
-  <a
-    href="https://www.codewithahsan.dev/ng-book-reader?chapter=ng-attribute-directive"
-    target="_blank"
-    rel="noopener noreferer"
-  >
-    <span class="material-symbols-outlined"> info </span>
-  </a>
-</div>
+<ng-cb-ui-header
+  appTitle="Attribute Directive in Angular"
+  appName="ng-attribute-directive"
+  ><div class="spacer"></div
+></ng-cb-ui-header>
 
 <div class="content p-4" role="main">
   <div class="relative mb-4">
-    <input [(ngModel)]="searchText" type="text" placeholder="Quick Search..." class="pr-4 !pl-10 py-2">
-    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-none text-slate-300 dark:text-slate-400 absolute top-0 left-2 bottom-0 m-auto" aria-hidden="true"><path d="m19 19-3.5-3.5"></path><circle cx="11" cy="11" r="6"></circle></svg>
+    <input
+      [(ngModel)]="searchText"
+      type="text"
+      placeholder="Quick Search..."
+      class="pr-4 !pl-10 py-2"
+    />
+    <svg
+      width="24"
+      height="24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="flex-none text-slate-300 dark:text-slate-400 absolute top-0 left-2 bottom-0 m-auto"
+      aria-hidden="true"
+    >
+      <path d="m19 19-3.5-3.5" />
+      <circle cx="11" cy="11" r="6" />
+    </svg>
   </div>
-  <p class="text-content max-w-2xl m-auto" appHighlight [highlightText]="searchText">
+  <p
+    class="text-content max-w-2xl m-auto"
+    appHighlight
+    [highlightText]="searchText"
+  >
     Silent sir say desire fat him letter. Whatever settling goodness too and
     honoured she building answered her. Strongly thoughts remember mr to do
     consider debating. Spirits musical behaved on we he farther letters.

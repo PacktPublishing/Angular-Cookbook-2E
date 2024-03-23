@@ -1,16 +1,17 @@
-const createLocalStorageMock = () => {
-  const storage: Partial<Storage> = {};
-  return {
-    getItem: (key: string) => {
-      return storage[key] ? storage[key] : null;
-    },
-    setItem: (key: string, value: string) => {
-      storage[key] = value;
-    },
-  } as Storage;
-};
+class LocalStorageMock {
+  private storage: Partial<Storage> = {};
+  
+  getItem(key: string) {
+    return this.storage[key] ? this.storage[key] : null;
+  }
+  
+  setItem(key: string, value: string) {
+    this.storage[key] = value;
+  }
+}
+
 Object.defineProperty(window, 'localStorage', {
-  value: createLocalStorageMock(),
+  value: new LocalStorageMock(),
 });
 
 Object.defineProperty(window, 'alert', {

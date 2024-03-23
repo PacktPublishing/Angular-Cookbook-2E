@@ -32,7 +32,7 @@ export class WatchComponent implements OnInit {
   }
 
   get greetingMessage() {
-    window['appLogs']['watch']++;
+    window['appLogs']['watchComponentRender']++;
     return this.name ? `Greetings ${this.name}` : '';
   }
 
@@ -40,7 +40,7 @@ export class WatchComponent implements OnInit {
     if (!window['appLogs']) {
       window['appLogs'] = {};
     }
-    window['appLogs']['watch'] = 0;
+    window['appLogs']['watchComponentRender'] = 0;
     this.intervalTimer = setInterval(() => {
       this.animate();
     }, 30);

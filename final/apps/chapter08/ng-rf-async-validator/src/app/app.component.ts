@@ -1,3 +1,4 @@
+import { HeaderComponent } from '@codewithahsan/ng-cb-ui';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -9,20 +10,24 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule, VersionControlComponent],
+  imports: [
+    HeaderComponent,
+    CommonModule,
+    RouterModule,
+    VersionControlComponent,
+  ],
 })
 export class AppComponent implements OnInit {
   http = inject(HttpClient);
 
   ngOnInit(): void {
-    this.resetApi()
+    this.resetApi();
   }
   resetApi() {
-    this.http.get('http://localhost:3333/api/version/reset')
-      .subscribe({
-        next: () => {
-          console.log('version has been reset')
-        }
-      })
+    this.http.get('http://localhost:3333/api/version/reset').subscribe({
+      next: () => {
+        console.log('version has been reset');
+      },
+    });
   }
 }

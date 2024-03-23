@@ -1,6 +1,12 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-portfolio-form',
@@ -14,8 +20,13 @@ export class PortfolioFormComponent implements OnInit {
   portfolioForm = this.fb.group({
     name: ['', Validators.required],
     bio: [''],
-    projects: this.fb.array<FormGroup>([])
-  })
+    projects: this.fb.array<
+      FormGroup<{
+        label: FormControl<string | null>;
+        url: FormControl<string | null>;
+      }>
+    >([]),
+  });
 
   ngOnInit(): void {
     this.addNewProject();
@@ -25,13 +36,9 @@ export class PortfolioFormComponent implements OnInit {
     this.projectsFormArr.push(
       this.fb.group({
         label: ['', Validators.required],
-        url: ['', Validators.required]
+        url: ['', Validators.required],
       })
-    )
-  }
-
-  removeProject(index: number) {
-    this.projectsFormArr.removeAt(index);
+    );
   }
 
   get projectsFormArr() {

@@ -21,6 +21,7 @@ export class DiceComponent {
   };
   selectedSide: IDiceSide;
   rollTransition: RollTransitions;
+  @Output() diceRolling = new EventEmitter<boolean>();
   @Output() diceRolled = new EventEmitter<IDiceSide>();
   constructor(private el: ElementRef) {
     this.dice.sides = new Array(6).fill(0).map((_, index) => {
@@ -35,12 +36,14 @@ export class DiceComponent {
   }
 
   rollDice() {
+    this.diceRolling.emit(true);
     const index = Math.floor(Math.random() * 6);
     this.selectedSide = this.dice.sides[index];
     this.toggleRollTransition();
     setTimeout(() => {
       // we emit after the dice's animation has finished
       this.diceRolled.emit(this.selectedSide);
+      this.diceRolling.emit(false);
     }, 2000);
   }
 

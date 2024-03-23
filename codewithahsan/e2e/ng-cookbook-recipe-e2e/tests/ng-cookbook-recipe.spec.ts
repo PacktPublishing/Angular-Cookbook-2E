@@ -6,6 +6,8 @@ import {
   uniq,
 } from '@nx/plugin/testing';
 
+const path = require('path');
+
 describe('ng-cookbook-recipe e2e', () => {
   // Setting up individual workspaces per
   // test can cause e2e runs to take a long time.
@@ -34,9 +36,13 @@ describe('ng-cookbook-recipe e2e', () => {
     await runNxCommandAsync(`rename ${projectName}-e2e`);
     await runNxCommandAsync(`rename ${projectName}`);
     expect(() =>
-      checkFilesExist(`apps/${projectName}/src/index.html`)
+      checkFilesExist(
+        path.resolve(`tmp/nx-e2e/proj/${projectName}/src/index.html`)
+      )
     ).not.toThrow();
-    const project = readJson(`apps/${projectName}/project.json`);
+    const project = readJson(
+      path.resolve(`tmp/nx-e2e/proj/${projectName}/project.json`)
+    );
     expect(project.name).toBe(projectName);
   }, 120000);
 
@@ -49,9 +55,15 @@ describe('ng-cookbook-recipe e2e', () => {
       await runNxCommandAsync(`run chapter01-${projectName}-e2e:rename`);
       await runNxCommandAsync(`run chapter01-${projectName}:rename`);
       expect(() =>
-        checkFilesExist(`apps/chapter01/${projectName}/src/index.html`)
+        checkFilesExist(
+          path.resolve(
+            `tmp/nx-e2e/proj/chapter01/${projectName}/src/index.html`
+          )
+        )
       ).not.toThrow();
-      const project = readJson(`apps/chapter01/${projectName}/project.json`);
+      const project = readJson(
+        path.resolve(`tmp/nx-e2e/proj/chapter01/${projectName}/project.json`)
+      );
       expect(project.name).toBe(projectName);
     }, 120000);
   });
@@ -67,10 +79,16 @@ describe('ng-cookbook-recipe e2e', () => {
       );
       await runNxCommandAsync(`run chapter01-foo-bar-${projectName}:rename`);
       expect(() =>
-        checkFilesExist(`apps/chapter01/foo/bar/${projectName}/src/index.html`)
+        checkFilesExist(
+          path.resolve(
+            `tmp/nx-e2e/proj/chapter01/foo/bar/${projectName}/src/index.html`
+          )
+        )
       ).not.toThrow();
       const project = readJson(
-        `apps/chapter01/foo/bar/${projectName}/project.json`
+        path.resolve(
+          `tmp/nx-e2e/proj/chapter01/foo/bar/${projectName}/project.json`
+        )
       );
       expect(project.name).toBe(projectName);
     }, 120000);

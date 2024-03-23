@@ -15,7 +15,8 @@ export class GameComponent {
   nameForm = new FormGroup({
     name: new FormControl('', Validators.required),
   });
-
+  rolling = false;
+  
   submitName() {
     // on game name submit
   }

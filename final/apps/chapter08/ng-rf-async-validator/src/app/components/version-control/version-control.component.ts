@@ -20,19 +20,17 @@ export class VersionControlComponent implements OnInit {
   versionInput = '';
   versionName = '0.0.0';
   versionForm = new FormGroup({
-    version: new FormControl('', [
-      Validators.required
-    ]),
+    version: new FormControl('', [Validators.required]),
   });
 
-  versionService = inject(VersionService)
-  
+  versionService = inject(VersionService);
+
   ngOnInit() {
     this.versionForm.controls.version.setAsyncValidators(
       this.versionService.versionValidator()
-    )
+    );
   }
-  
+
   formSubmit(form: FormGroup) {
     if (!form.valid) {
       return;
@@ -41,20 +39,23 @@ export class VersionControlComponent implements OnInit {
     this.versionService.submitVersion(newVersion).subscribe({
       next: () => {
         this.versionName = newVersion;
-        this.versionForm.reset({
-          version: ''
-        }, {emitEvent: false});
+        this.versionForm.reset(
+          {
+            version: '',
+          },
+          { emitEvent: false }
+        );
         this.versionForm.controls.version.setErrors(null);
       },
-      error: ({error}) => {
+      error: ({ error }) => {
         if (error.message === 'oldVersion' || error.message === 'pattern') {
           this.versionForm.controls.version.setErrors({
-            [error.message]: true
-          })
+            [error.message]: true,
+          });
         } else {
-          alert(error.message)
+          alert(error.message);
         }
-      }
-    })
+      },
+    });
   }
 }

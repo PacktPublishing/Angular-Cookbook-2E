@@ -1,0 +1,13 @@
+.file {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  padding: 10px 20px;
+  background: white;
+  margin: 10px;
+  transition: all ease 0.2s;
+  &__icon {
+    font-size: 30px;
+    margin-right: 16px;
+  }
+}

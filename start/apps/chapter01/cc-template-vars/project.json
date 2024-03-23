@@ -7,25 +7,19 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter01/cc-template-vars",
         "index": "apps/chapter01/cc-template-vars/src/index.html",
         "main": "apps/chapter01/cc-template-vars/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter01/cc-template-vars/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/chapter01/cc-template-vars/src/favicon.ico",
           "apps/chapter01/cc-template-vars/src/assets"
         ],
-        "styles": [
-          "apps/chapter01/cc-template-vars/src/styles.scss"
-        ],
+        "styles": ["apps/chapter01/cc-template-vars/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -59,10 +53,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "cc-template-vars:build:production"
+          "buildTarget": "cc-template-vars:build:production"
         },
         "development": {
-          "browserTarget": "cc-template-vars:build:development"
+          "buildTarget": "cc-template-vars:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -70,14 +64,12 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "cc-template-vars:build"
+        "buildTarget": "cc-template-vars:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/chapter01/cc-template-vars/**/*.ts",
@@ -87,12 +79,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chapter01/cc-template-vars/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/chapter01/cc-template-vars/jest.config.ts"
       }
     },
     "rename": {

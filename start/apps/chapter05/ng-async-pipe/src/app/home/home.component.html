@@ -1,6 +1,6 @@
 <div class="home">
   <div class="buttons-container">
-    <button [disabled]="!!isStreamActive" class="btn btn-primary" (click)="startStream()">Start Stream</button>
+    <button [disabled]="isStreamActive" class="btn btn-primary" (click)="startStream()">Start Stream</button>
     <button [disabled]="!isStreamActive" class="btn btn-dark" (click)="stopStream()">Stop Stream</button>
   </div>
   <div class="cards-container">

@@ -28,8 +28,8 @@
     <ng-template cdkStepLabel>
       Guess what the value will be when the die is rolled
     </ng-template>
-    <app-value-guesser (valueGuessed)="rollTheDice($event)"></app-value-guesser>
-    <app-dice (diceRolled)="showResult($event)"></app-dice>
+    <app-value-guesser [rolling]="rolling" (valueGuessed)="rollTheDice($event)"></app-value-guesser>
+    <app-dice (diceRolling)="rolling = $event;" (diceRolled)="showResult($event)"></app-dice>
     <ng-container [ngSwitch]="isCorrectGuess">
       <div class="alert alert-success" *ngSwitchCase="true">
         You rock {{ nameForm.get('name')!.value }}! You got 50 points

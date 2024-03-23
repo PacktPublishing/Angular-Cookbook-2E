@@ -10,17 +10,14 @@
   &__value-box {
     width: 5rem;
     height: 5rem;
-    background-color: #333;
-    @apply dark:bg-slate-500;
     color: #fff;
+    @apply dark:bg-slate-500;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 16px;
-    cursor: pointer;
-    &--selected,
-    &:hover {
-      background-color: #007bff;
+    &--selected{
+      @apply bg-purple-600;
     }
   }
 }
