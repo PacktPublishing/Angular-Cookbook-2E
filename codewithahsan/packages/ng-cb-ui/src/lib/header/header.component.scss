@@ -56,3 +56,9 @@
     }
   }
 }
+
+.header-actions {
+  &__action {
+    @apply h-full flex items-center cursor-pointer hover:opacity-70;
+  }
+}
