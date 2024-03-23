@@ -24,6 +24,9 @@
       }
     }
   }
+  .header-actions {
+    @apply flex gap-4 items-center;
+  }
 }
 
 .toolbar img {
