@@ -6,11 +6,32 @@
   <ng-content>
 
   </ng-content>
-  <a
-    href="https://www.codewithahsan.dev/ng-book-reader?chapter={{appName}}"
-    target="_blank"
-    rel="noopener noreferer"
-  >
-    <span class="material-symbols-outlined"> info </span>
-  </a>
+  <div class="flex gap-4 items-center">
+    <div title="see reviews" class="h-full flex items-center cursor-pointer" (click)="toggleReviewsShown()">
+      <span class="material-symbols-outlined">
+        reviews
+      </span>
+    </div>
+    <a
+      title="see info"
+      class="h-full flex items-center"
+      href="https://ng-cookbook.com/#/thank-you?recipeName={{appName}}"
+      target="_blank"
+      rel="noopener noreferer"
+    >
+      <span class="material-symbols-outlined"> info </span>
+    </a>
+  </div>
 </div>
+
+<div class="review-widget" [ngClass]="{
+    'review-widget--shown': reviewsShown
+  }">
+    <header class="review-header">
+      <h3>Recipe Reviews:</h3>
+      <span (click)="toggleReviewsShown()" class="material-symbols-outlined close-btn">
+        close
+      </span>
+    </header>
+    <iframe [src]="reviewLink" class="w-full py-10 " height="500"></iframe>
+  </div>
