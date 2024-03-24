@@ -48,15 +48,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "packages/ng-cookbook-recipe/**/*.ts",
-          "packages/ng-cookbook-recipe/generators.json",
-          "packages/ng-cookbook-recipe/executors.json",
-          "packages/ng-cookbook-recipe/package.json"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
