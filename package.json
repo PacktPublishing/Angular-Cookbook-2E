@@ -6,7 +6,7 @@
   "scripts": {
     "test": "sh scripts/run-tests.sh",
     "e2e": "sh scripts/run-e2e.sh",
-    "postinstall": "cd codewithahsan && npm i --legacy-peer-deps && cd .. && concurrently \"cd start && npm i --legacy-peer-deps\"  \"cd final && npm i --legacy-peer-deps\"",
+    "postinstall": "cd codewithahsan && npm i && cd .. && concurrently \"cd start && npm i \"  \"cd final && npm i \"",
     "serve": "sh scripts/serve-projects.sh",
     "serve:prod": "sh scripts/serve-projects-prod.sh",
     "serve:fake-be": "cd ./codewithahsan && npx nx serve fake-be",
@@ -27,5 +27,8 @@
     "@types/jest": "^29.2.4",
     "cheerio": "^1.0.0-rc.12",
     "concurrently": "^7.6.0"
+  },
+  "dependencies": {
+    "jest": "^29.5.0"
   }
 }
