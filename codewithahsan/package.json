@@ -12,7 +12,7 @@
     "postinstall": "npm run build:all"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "17.0.10",
+    "@angular-devkit/build-angular": "17.3.1",
     "@angular-devkit/core": "17.0.10",
     "@angular-devkit/schematics": "17.0.10",
     "@angular-eslint/eslint-plugin": "17.0.1",
