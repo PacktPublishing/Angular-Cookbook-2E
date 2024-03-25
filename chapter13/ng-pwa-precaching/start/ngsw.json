@@ -1,0 +1,87 @@
+{
+  "configVersion": 1,
+  "timestamp": 1711364342853,
+  "index": "/chapter13/ng-pwa-precaching/start/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/chapter13/ng-pwa-precaching/start/favicon.ico",
+        "/chapter13/ng-pwa-precaching/start/index.html",
+        "/chapter13/ng-pwa-precaching/start/main.dff98223667a0362.js",
+        "/chapter13/ng-pwa-precaching/start/manifest.webmanifest",
+        "/chapter13/ng-pwa-precaching/start/polyfills.1353ada4e4841618.js",
+        "/chapter13/ng-pwa-precaching/start/runtime.b892728016b5f7b2.js",
+        "/chapter13/ng-pwa-precaching/start/styles.1c412e682d9b2717.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/chapter13/ng-pwa-precaching/start/assets/box-model.png",
+        "/chapter13/ng-pwa-precaching/start/assets/cover.jpg",
+        "/chapter13/ng-pwa-precaching/start/assets/icons/icon-128x128.png",
+        "/chapter13/ng-pwa-precaching/start/assets/icons/icon-144x144.png",
+        "/chapter13/ng-pwa-precaching/start/assets/icons/icon-152x152.png",
+        "/chapter13/ng-pwa-precaching/start/assets/icons/icon-192x192.png",
+        "/chapter13/ng-pwa-precaching/start/assets/icons/icon-384x384.png",
+        "/chapter13/ng-pwa-precaching/start/assets/icons/icon-512x512.png",
+        "/chapter13/ng-pwa-precaching/start/assets/icons/icon-72x72.png",
+        "/chapter13/ng-pwa-precaching/start/assets/icons/icon-96x96.png",
+        "/chapter13/ng-pwa-precaching/start/assets/profile.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/chapter13/ng-pwa-precaching/start/assets/box-model.png": "a6b449f03994a1ee5fd9b4e95b5c6ebf8288b07c",
+    "/chapter13/ng-pwa-precaching/start/assets/cover.jpg": "609ffd1d4eaab96b2df79e14540015bccf4e2ed9",
+    "/chapter13/ng-pwa-precaching/start/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
+    "/chapter13/ng-pwa-precaching/start/assets/icons/icon-144x144.png": "96a0d629765c1bc85d9263c6bc83094ca776d267",
+    "/chapter13/ng-pwa-precaching/start/assets/icons/icon-152x152.png": "b1fbbee3902eb96a7658e3bb006f31f78ca5a44c",
+    "/chapter13/ng-pwa-precaching/start/assets/icons/icon-192x192.png": "e4211163bf0911688fbfb80278d8ff4d2f77691d",
+    "/chapter13/ng-pwa-precaching/start/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/chapter13/ng-pwa-precaching/start/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/chapter13/ng-pwa-precaching/start/assets/icons/icon-72x72.png": "279825a1ac4377032ae996a1832c641e33ccf1b6",
+    "/chapter13/ng-pwa-precaching/start/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
+    "/chapter13/ng-pwa-precaching/start/assets/profile.png": "f09fcf7522ea67374d8b1885e120b0bf032a64f0",
+    "/chapter13/ng-pwa-precaching/start/favicon.ico": "4e23d0f9b6ddaf3c9ddef90dbaed2342941297b5",
+    "/chapter13/ng-pwa-precaching/start/index.html": "7c7f4b4ba4a90a3b4fc7f06b554e45664217852f",
+    "/chapter13/ng-pwa-precaching/start/main.dff98223667a0362.js": "9f5a1a9db19d3bbaea5338a22fc0377ecd02308a",
+    "/chapter13/ng-pwa-precaching/start/manifest.webmanifest": "d2df5761cd6739cdf5168171a6ea66cf4aeb0b30",
+    "/chapter13/ng-pwa-precaching/start/polyfills.1353ada4e4841618.js": "87235ddf4347e4156f601ad5d8ba94175e3c2807",
+    "/chapter13/ng-pwa-precaching/start/runtime.b892728016b5f7b2.js": "3dfded4c63018ec23155c65aa951cb8833abaf8f",
+    "/chapter13/ng-pwa-precaching/start/styles.1c412e682d9b2717.css": "329a512f0f628681077fdf9f0ca5df4fe56d5c2d"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
