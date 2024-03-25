@@ -16,6 +16,7 @@ Then from the project root, run the following:
 npm install
 ```
 This should install the dependencies of both the `start` and `final` monorepos.
+
 ## Serve Projects
 Serve both the start and final projects, or one of them as follows:
 
