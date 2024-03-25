@@ -1,8 +1,5 @@
 name: Sanity
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main

@@ -1,14 +1,39 @@
 #!/bin/bash
-cd "start" && npx nx run-many --target build &
-cd "start/apps/chapter10/ng-jest-setup" && npm run build &
-cd "start" && npx nx build ng-pwa-app-shell &
-cd "start/apps/chapter13/ng-pwa-conversion" && npm run build &
-cd "final" && npx nx run-many --target build &
-cd "final/apps/chapter10/ng-jest-setup" && npm run build &
-cd "final" && npx nx build ng-pwa-app-shell &
-cd "final/apps/chapter13/ng-pwa-conversion" && npm run build
 
-cd ../../../../
+(
+  cd "start" && npx nx run-many --target build
+) &
+
+(
+  cd "start/apps/chapter10/ng-jest-setup" && npm run build
+) &
+
+(
+  cd "start" && npx nx build ng-pwa-app-shell
+) &
+
+(
+  cd "start/apps/chapter13/ng-pwa-conversion" && npm run build
+) &
+
+(
+  cd "final" && npx nx run-many --target build
+) &
+
+(
+  cd "final/apps/chapter10/ng-jest-setup" && npm run build
+) &
+
+(
+  cd "final" && npx nx build ng-pwa-app-shell
+) &
+
+(
+  cd "final/apps/chapter13/ng-pwa-conversion" && npm run build
+) &
+
+wait # Wait for all background processes to complete
+
 
 # Define the root directory, adjust this path according to your actual root directory location
 ROOT_DIR="./"
