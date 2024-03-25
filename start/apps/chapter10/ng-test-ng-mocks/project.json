@@ -44,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter10/ng-test-ng-mocks/start/"
         },
         "development": {
           "buildOptimizer": false,
@@ -77,13 +78,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "apps/chapter10/ng-test-ng-mocks/**/*.ts",
-          "apps/chapter10/ng-test-ng-mocks/**/*.html"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",

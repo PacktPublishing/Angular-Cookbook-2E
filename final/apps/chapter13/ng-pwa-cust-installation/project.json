@@ -47,7 +47,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter13/ng-pwa-cust-installation/final/"
         },
         "development": {
           "buildOptimizer": false,
@@ -80,13 +81,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "apps/chapter13/ng-pwa-cust-installation/**/*.ts",
-          "apps/chapter13/ng-pwa-cust-installation/**/*.html"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",

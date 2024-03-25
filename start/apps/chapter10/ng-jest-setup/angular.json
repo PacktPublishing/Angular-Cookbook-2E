@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ng-jest-setup",
+            "outputPath": "../../../dist/apps/chapter10/ng-jest-setup",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -43,6 +43,7 @@
                   "maximumError": "4kb"
                 }
               ],
+              "baseHref": "/chapter10/ng-jest-setup/start/",
               "outputHashing": "all"
             },
             "development": {

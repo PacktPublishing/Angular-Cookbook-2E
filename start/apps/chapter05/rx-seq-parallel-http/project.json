@@ -44,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter05/rx-seq-parallel-http/start/"
         },
         "development": {
           "buildOptimizer": false,
@@ -77,13 +78,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "apps/chapter05/rx-seq-parallel-http/**/*.ts",
-          "apps/chapter05/rx-seq-parallel-http/**/*.html"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",

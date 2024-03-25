@@ -44,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter12/ng-for-trackby/final/"
         },
         "development": {
           "buildOptimizer": false,
@@ -77,13 +78,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "apps/chapter12/ng-for-trackby/**/*.ts",
-          "apps/chapter12/ng-for-trackby/**/*.html"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",

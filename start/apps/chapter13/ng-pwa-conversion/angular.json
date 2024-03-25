@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ng-pwa-conversion",
+            "outputPath": "../../../dist/apps/chapter13/ng-pwa-conversion",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -61,6 +61,7 @@
                   "maximumError": "4kb"
                 }
               ],
+              "baseHref": "/chapter13/ng-pwa-conversion/start/",
               "outputHashing": "all"
             },
             "development": {

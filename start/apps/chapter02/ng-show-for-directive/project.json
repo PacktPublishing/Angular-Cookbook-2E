@@ -36,7 +36,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter02/ng-show-for-directive/start/"
         },
         "development": {
           "buildOptimizer": false,
@@ -69,13 +70,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "apps/chapter02/ng-show-for-directive/**/*.ts",
-          "apps/chapter02/ng-show-for-directive/**/*.html"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",

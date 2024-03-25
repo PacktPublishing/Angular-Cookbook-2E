@@ -2,16 +2,18 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
     "build": {
-      "dependsOn": ["^build"],
-      "cache": true
-    },
-    "lint": {
-      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
+      "dependsOn": [
+        "^build"
+      ],
       "cache": true
     },
     "@nx/jest:jest": {
       "cache": true,
-      "inputs": ["default", "^default", "{workspaceRoot}/jest.preset.js"],
+      "inputs": [
+        "default",
+        "^default",
+        "{workspaceRoot}/jest.preset.js"
+      ],
       "options": {
         "passWithNoTests": true
       },
@@ -21,6 +23,13 @@
           "codeCoverage": true
         }
       }
+    },
+    "@nx/eslint:lint": {
+      "inputs": [
+        "default",
+        "{workspaceRoot}/.eslintrc.json"
+      ],
+      "cache": true
     }
   },
   "workspaceLayout": {
@@ -42,5 +51,6 @@
       "style": "scss"
     }
   },
-  "nxCloudAccessToken": "OTIzMjQ3OTMtNzkyZS00ZDc5LTgxOWEtYWRlNjc1YmY1YzI4fHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "OTIzMjQ3OTMtNzkyZS00ZDc5LTgxOWEtYWRlNjc1YmY1YzI4fHJlYWQtd3JpdGU=",
+  "useInferencePlugins": false
 }

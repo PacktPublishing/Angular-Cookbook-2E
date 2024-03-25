@@ -44,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter12/ng-on-push-strategy/start/"
         },
         "development": {
           "buildOptimizer": false,
@@ -77,13 +78,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "apps/chapter12/ng-on-push-strategy/**/*.ts",
-          "apps/chapter12/ng-on-push-strategy/**/*.html"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",

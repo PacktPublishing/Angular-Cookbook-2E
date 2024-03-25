@@ -45,7 +45,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter11/ng-cy-mock-data/start/"
         },
         "development": {
           "buildOptimizer": false,
@@ -78,13 +79,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "apps/chapter11/ng-cy-mock-data/**/*.ts",
-          "apps/chapter11/ng-cy-mock-data/**/*.html"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",

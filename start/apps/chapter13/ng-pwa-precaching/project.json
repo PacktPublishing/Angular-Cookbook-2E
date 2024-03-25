@@ -47,7 +47,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter13/ng-pwa-precaching/start/"
         },
         "development": {
           "buildOptimizer": false,
@@ -80,13 +81,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "apps/chapter13/ng-pwa-precaching/**/*.ts",
-          "apps/chapter13/ng-pwa-precaching/**/*.html"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",

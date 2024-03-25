@@ -44,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter06/ngrx-actions-reducer/start/"
         },
         "development": {
           "buildOptimizer": false,
@@ -77,13 +78,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "apps/chapter06/ngrx-actions-reducer/**/*.ts",
-          "apps/chapter06/ngrx-actions-reducer/**/*.html"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",

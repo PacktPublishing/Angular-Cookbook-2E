@@ -36,7 +36,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter03/ng-aliased-class-providers/final/"
         },
         "development": {
           "buildOptimizer": false,
@@ -69,13 +70,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "apps/chapter03/ng-aliased-class-providers/**/*.ts",
-          "apps/chapter03/ng-aliased-class-providers/**/*.html"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",

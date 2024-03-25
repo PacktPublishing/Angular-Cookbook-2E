@@ -36,7 +36,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter03/ng-singleton-service/start/"
         },
         "development": {
           "buildOptimizer": false,
@@ -69,13 +70,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "apps/chapter03/ng-singleton-service/**/*.ts",
-          "apps/chapter03/ng-singleton-service/**/*.html"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",

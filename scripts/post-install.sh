@@ -1,10 +1,13 @@
 #!/bin/bash
 
-cd "./apps/chapter10/ng-jest-setup" && npm i --legacy-peer-deps > /dev/null 2>&1 &
-pid1=$!
+# Install dependencies in the first project
+cd "./apps/chapter10/ng-jest-setup" && npm i
 
-cd "./apps/chapter13/ng-pwa-conversion" && npm i --legacy-peer-deps
-
-kill $pid1 2>/dev/null
-
-exit
+# Check if the first installation succeeded
+if [ $? -eq 0 ]; then
+    # Install dependencies in the second project
+    cd "../../chapter13/ng-pwa-conversion" && npm i
+else
+    echo "Installation failed in chapter10/ng-jest-setup, skipping chapter13/ng-pwa-conversion"
+    exit 1
+fi

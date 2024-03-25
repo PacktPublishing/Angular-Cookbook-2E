@@ -8,16 +8,12 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/chapter13/ng-pwa-app-shell/browser",
         "index": "apps/chapter13/ng-pwa-app-shell/src/index.html",
         "main": "apps/chapter13/ng-pwa-app-shell/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/chapter13/ng-pwa-app-shell/tsconfig.app.json",
         "assets": [
           "apps/chapter13/ng-pwa-app-shell/src/favicon.ico",
@@ -51,7 +47,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter13/ng-pwa-app-shell/final/"
         },
         "development": {
           "buildOptimizer": false,
@@ -84,21 +81,11 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
-      "options": {
-        "lintFilePatterns": [
-          "apps/chapter13/ng-pwa-app-shell/**/*.ts",
-          "apps/chapter13/ng-pwa-app-shell/**/*.html"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "apps/chapter13/ng-pwa-app-shell/jest.config.ts"
       }

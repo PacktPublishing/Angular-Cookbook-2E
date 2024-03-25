@@ -47,7 +47,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter13/ng-pwa-dark-mode/start/"
         },
         "development": {
           "buildOptimizer": false,
@@ -80,13 +81,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "apps/chapter13/ng-pwa-dark-mode/**/*.ts",
-          "apps/chapter13/ng-pwa-dark-mode/**/*.html"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
