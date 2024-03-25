@@ -46,7 +46,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter11/ng-cy-mock-data/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter11/ng-cy-mock-data/start/"
         },
         "development": {
           "buildOptimizer": false,

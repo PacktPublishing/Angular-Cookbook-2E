@@ -48,7 +48,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter13/ng-pwa-dark-mode/final/"
+          "baseHref": "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/"
         },
         "development": {
           "buildOptimizer": false,

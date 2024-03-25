@@ -37,7 +37,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter01/cc-ng-on-changes/final/"
+          "baseHref": "/Angular-Cookbook-2E/chapter01/cc-ng-on-changes/final/"
         },
         "development": {
           "buildOptimizer": false,

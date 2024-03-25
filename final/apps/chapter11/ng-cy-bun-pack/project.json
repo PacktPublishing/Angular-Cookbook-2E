@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter11/ng-cy-bun-pack/final/"
+          "baseHref": "/Angular-Cookbook-2E/chapter11/ng-cy-bun-pack/final/"
         },
         "development": {
           "buildOptimizer": false,

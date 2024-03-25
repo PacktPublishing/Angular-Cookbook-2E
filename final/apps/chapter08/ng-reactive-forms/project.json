@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter08/ng-reactive-forms/final/"
+          "baseHref": "/Angular-Cookbook-2E/chapter08/ng-reactive-forms/final/"
         },
         "development": {
           "buildOptimizer": false,

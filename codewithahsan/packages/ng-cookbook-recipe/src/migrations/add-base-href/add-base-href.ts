@@ -24,7 +24,7 @@ export default async function update(host: Tree) {
           json.targets?.build?.configurations
         ) {
           const configurations = json.targets.build.configurations;
-          const baseHref = `${project.targets.rename.options.chapter}/${project.targets.rename.options.app}/${workspaceName}`;
+          const baseHref = `Angular-Cookbook-2E/${project.targets.rename.options.chapter}/${project.targets.rename.options.app}/${workspaceName}`;
           // If there's a production configuration, set the baseHref
           if (configurations.production) {
             configurations.production.baseHref = `/${baseHref}/`;

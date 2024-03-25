@@ -78,3 +78,5 @@ for CHAPTER_PATH in "${ROOT_DIR}/final/dist/apps/"*; do
         echo "Copied final content for ${CHAPTER_NAME}/${APP_NAME}"
     done
 done
+
+cp dist-app/* ./dist/apps

@@ -1,0 +1,726 @@
+[
+  {
+    "appTitle": "Component Communication using @Input() & @Output()",
+    "appPath": "chapter01/cc-inputs-outputs/final/index.html"
+  },
+  {
+    "appTitle": "Component Communication using @Input() & @Output()",
+    "appPath": "chapter01/cc-inputs-outputs/start/index.html"
+  },
+  {
+    "appTitle": "Component Communication using ngOnChanges",
+    "appPath": "chapter01/cc-ng-on-changes/final/index.html"
+  },
+  {
+    "appTitle": "Component Communication using ngOnChanges",
+    "appPath": "chapter01/cc-ng-on-changes/start/index.html"
+  },
+  {
+    "appTitle": "Component Communication using Services",
+    "appPath": "chapter01/cc-services/final/index.html"
+  },
+  {
+    "appTitle": "Component Communication using Services",
+    "appPath": "chapter01/cc-services/start/index.html"
+  },
+  {
+    "appTitle": "Intercepting @Input() changes using setters",
+    "appPath": "chapter01/cc-setters/final/index.html"
+  },
+  {
+    "appTitle": "Intercepting @Input() changes using setters",
+    "appPath": "chapter01/cc-setters/start/index.html"
+  },
+  {
+    "appTitle": "Standalone components & communicating between Routes",
+    "appPath": "chapter01/cc-standalone-components/final/index.html"
+  },
+  {
+    "appTitle": "Standalone components & communicating between Routes",
+    "appPath": "chapter01/cc-standalone-components/start/index.html"
+  },
+  {
+    "appTitle": "Component Communication using Template Variables",
+    "appPath": "chapter01/cc-template-vars/final/index.html"
+  },
+  {
+    "appTitle": "Component Communication using Template Variables",
+    "appPath": "chapter01/cc-template-vars/start/index.html"
+  },
+  {
+    "appTitle": "Components Communication using ViewChild()",
+    "appPath": "chapter01/cc-view-child/final/index.html"
+  },
+  {
+    "appTitle": "Components Communication using ViewChild()",
+    "appPath": "chapter01/cc-view-child/start/index.html"
+  },
+  {
+    "appTitle": "Component communication using Signals",
+    "appPath": "chapter01/ng-cc-signals/final/index.html"
+  },
+  {
+    "appTitle": "Component communication using Signals",
+    "appPath": "chapter01/ng-cc-signals/start/index.html"
+  },
+  {
+    "appTitle": "Attribute Directive in Angular",
+    "appPath": "chapter02/ng-attribute-directive/final/index.html"
+  },
+  {
+    "appTitle": "Attribute Directive in Angular",
+    "appPath": "chapter02/ng-attribute-directive/start/index.html"
+  },
+  {
+    "appTitle": "Angular's new control flow",
+    "appPath": "chapter02/ng-control-flow/final/index.html"
+  },
+  {
+    "appTitle": "Angular's new control flow",
+    "appPath": "chapter02/ng-control-flow/start/index.html"
+  },
+  {
+    "appTitle": "Directive Composition API",
+    "appPath": "chapter02/ng-directive-comp-api/final/index.html"
+  },
+  {
+    "appTitle": "Directive Composition API",
+    "appPath": "chapter02/ng-directive-comp-api/start/index.html"
+  },
+  {
+    "appTitle": "How to use *ngIf and *ngSwitch together",
+    "appPath": "chapter02/ng-multi-struc-directives/final/index.html"
+  },
+  {
+    "appTitle": "How to use *ngIf and *ngSwitch together",
+    "appPath": "chapter02/ng-multi-struc-directives/start/index.html"
+  },
+  {
+    "appTitle": "Read Time Directive",
+    "appPath": "chapter02/ng-read-time-directive/final/index.html"
+  },
+  {
+    "appTitle": "Read Time Directive",
+    "appPath": "chapter02/ng-read-time-directive/start/index.html"
+  },
+  {
+    "appTitle": "Scroll-To Directive",
+    "appPath": "chapter02/ng-scroll-to-directive/final/index.html"
+  },
+  {
+    "appTitle": "Scroll-To Directive",
+    "appPath": "chapter02/ng-scroll-to-directive/start/index.html"
+  },
+  {
+    "appTitle": "*appShowFor Structural Directive",
+    "appPath": "chapter02/ng-show-for-directive/final/index.html"
+  },
+  {
+    "appTitle": "*appShowFor Structural Directive",
+    "appPath": "chapter02/ng-show-for-directive/start/index.html"
+  },
+  {
+    "appTitle": "Providing alternate classes against same DI Token",
+    "appPath": "chapter03/ng-aliased-class-providers/final/index.html"
+  },
+  {
+    "appTitle": "Providing alternate classes against same DI Token",
+    "appPath": "chapter03/ng-aliased-class-providers/start/index.html"
+  },
+  {
+    "appTitle": "Providing a class to Angular using DI Tokens",
+    "appPath": "chapter03/ng-di-token/final/index.html"
+  },
+  {
+    "appTitle": "Providing a class to Angular using DI Tokens",
+    "appPath": "chapter03/ng-di-token/start/index.html"
+  },
+  {
+    "appTitle": "Angular Optional Dependencies",
+    "appPath": "chapter03/ng-optional-dependencies/final/index.html"
+  },
+  {
+    "appTitle": "Angular Optional Dependencies",
+    "appPath": "chapter03/ng-optional-dependencies/start/index.html"
+  },
+  {
+    "appTitle": "Angular Singleton Service",
+    "appPath": "chapter03/ng-singleton-service/final/index.html"
+  },
+  {
+    "appTitle": "Angular Singleton Service",
+    "appPath": "chapter03/ng-singleton-service/start/index.html"
+  },
+  {
+    "appTitle": "Angular Singleton Service - forRoot()",
+    "appPath": "chapter03/ng-singleton-service-forroot/final/index.html"
+  },
+  {
+    "appTitle": "Angular Singleton Service - forRoot()",
+    "appPath": "chapter03/ng-singleton-service-forroot/start/index.html"
+  },
+  {
+    "appTitle": "Dynamic configurations using value providers",
+    "appPath": "chapter03/ng-value-providers/final/index.html"
+  },
+  {
+    "appTitle": "Dynamic configurations using value providers",
+    "appPath": "chapter03/ng-value-providers/start/index.html"
+  },
+  {
+    "appTitle": "Lists using staggering animations in Angular",
+    "appPath": "chapter04/ng-animating-lists/final/index.html"
+  },
+  {
+    "appTitle": "Lists using staggering animations in Angular",
+    "appPath": "chapter04/ng-animating-lists/start/index.html"
+  },
+  {
+    "appTitle": "Angular Animations with Keyframes",
+    "appPath": "chapter04/ng-animations-keyframes/final/index.html"
+  },
+  {
+    "appTitle": "Angular Animations with Keyframes",
+    "appPath": "chapter04/ng-animations-keyframes/start/index.html"
+  },
+  {
+    "appTitle": "Angular Basic (two-state) Animation",
+    "appPath": "chapter04/ng-basic-animation/final/index.html"
+  },
+  {
+    "appTitle": "Angular Basic (two-state) Animation",
+    "appPath": "chapter04/ng-basic-animation/start/index.html"
+  },
+  {
+    "appTitle": "Disabling Angular animations conditionally",
+    "appPath": "chapter04/ng-disable-animations/final/index.html"
+  },
+  {
+    "appTitle": "Disabling Angular animations conditionally",
+    "appPath": "chapter04/ng-disable-animations/start/index.html"
+  },
+  {
+    "appTitle": "Angular Multi-State Animations",
+    "appPath": "chapter04/ng-multi-state-animations/final/index.html"
+  },
+  {
+    "appTitle": "Angular Multi-State Animations",
+    "appPath": "chapter04/ng-multi-state-animations/start/index.html"
+  },
+  {
+    "appTitle": "Route Animations in Angular",
+    "appPath": "chapter04/ng-route-animations/final/index.html"
+  },
+  {
+    "appTitle": "Route Animations in Angular",
+    "appPath": "chapter04/ng-route-animations/start/index.html"
+  },
+  {
+    "appTitle": "Angular sequential VS parallel animations",
+    "appPath": "chapter04/ng-seq-parallel-animations/final/index.html"
+  },
+  {
+    "appTitle": "Angular sequential VS parallel animations",
+    "appPath": "chapter04/ng-seq-parallel-animations/start/index.html"
+  },
+  {
+    "appTitle": "Angular's Async Pipe to unsubscribe streams automagically",
+    "appPath": "chapter05/ng-async-pipe/final/index.html"
+  },
+  {
+    "appTitle": "Angular's Async Pipe to unsubscribe streams automagically",
+    "appPath": "chapter05/ng-async-pipe/start/index.html"
+  },
+  {
+    "appTitle": "RxJS Custom Operator",
+    "appPath": "chapter05/rx-custom-operator/final/index.html"
+  },
+  {
+    "appTitle": "RxJS Custom Operator",
+    "appPath": "chapter05/rx-custom-operator/start/index.html"
+  },
+  {
+    "appTitle": "Using RxJS 'map' operator to transform data",
+    "appPath": "chapter05/rx-map-operator/final/index.html"
+  },
+  {
+    "appTitle": "Using RxJS 'map' operator to transform data",
+    "appPath": "chapter05/rx-map-operator/start/index.html"
+  },
+  {
+    "appTitle": "Listening to multiple observable streams",
+    "appPath": "chapter05/rx-multiple-streams/final/index.html"
+  },
+  {
+    "appTitle": "Listening to multiple observable streams",
+    "appPath": "chapter05/rx-multiple-streams/start/index.html"
+  },
+  {
+    "appTitle": "Retry failed HTTP calls with RxJS",
+    "appPath": "chapter05/rx-retry-http-calls/final/index.html"
+  },
+  {
+    "appTitle": "Retry failed HTTP calls with RxJS",
+    "appPath": "chapter05/rx-retry-http-calls/start/index.html"
+  },
+  {
+    "appTitle": "Sequential and Parallel http calls in Angular with RxJS",
+    "appPath": "chapter05/rx-seq-parallel-http/final/index.html"
+  },
+  {
+    "appTitle": "Sequential and Parallel http calls in Angular with RxJS",
+    "appPath": "chapter05/rx-seq-parallel-http/start/index.html"
+  },
+  {
+    "appTitle": "RxJS switchMap & debounce operators with autocompletes",
+    "appPath": "chapter05/rx-switchmap-operator/final/index.html"
+  },
+  {
+    "appTitle": "RxJS switchMap & debounce operators with autocompletes",
+    "appPath": "chapter05/rx-switchmap-operator/start/index.html"
+  },
+  {
+    "appTitle": "Unsubscribing streams to avoid memory leaks",
+    "appPath": "chapter05/rx-unsubscribing-streams/final/index.html"
+  },
+  {
+    "appTitle": "Unsubscribing streams to avoid memory leaks",
+    "appPath": "chapter05/rx-unsubscribing-streams/start/index.html"
+  },
+  {
+    "appTitle": "Creating NgRx store with actions & reducer",
+    "appPath": "chapter06/ngrx-actions-reducer/final/index.html"
+  },
+  {
+    "appTitle": "Creating NgRx store with actions & reducer",
+    "appPath": "chapter06/ngrx-actions-reducer/start/index.html"
+  },
+  {
+    "appTitle": "Using NgRx Component Store to manage state for a component",
+    "appPath": "chapter06/ngrx-component-store/final/index.html"
+  },
+  {
+    "appTitle": "Using NgRx Component Store to manage state for a component",
+    "appPath": "chapter06/ngrx-component-store/start/index.html"
+  },
+  {
+    "appTitle": "Using NgRx Devtools to debug state",
+    "appPath": "chapter06/ngrx-devtools/final/index.html"
+  },
+  {
+    "appTitle": "Using NgRx Devtools to debug state",
+    "appPath": "chapter06/ngrx-devtools/start/index.html"
+  },
+  {
+    "appTitle": "Using NgRx effects to fetch data from API calls",
+    "appPath": "chapter06/ngrx-effects/final/index.html"
+  },
+  {
+    "appTitle": "Using NgRx effects to fetch data from API calls",
+    "appPath": "chapter06/ngrx-effects/start/index.html"
+  },
+  {
+    "appTitle": "Using NgRx selectors to select and render state in components",
+    "appPath": "chapter06/ngrx-selectors/final/index.html"
+  },
+  {
+    "appTitle": "Using NgRx selectors to select and render state in components",
+    "appPath": "chapter06/ngrx-selectors/start/index.html"
+  },
+  {
+    "appTitle": "Creating routes in an Angular app",
+    "appPath": "chapter07/ng-basic-routing/final/index.html"
+  },
+  {
+    "appTitle": "Creating routes in an Angular app",
+    "appPath": "chapter07/ng-basic-routing/start/index.html"
+  },
+  {
+    "appTitle": "Global Loader for Angular Routes",
+    "appPath": "chapter07/ng-global-loader/final/index.html"
+  },
+  {
+    "appTitle": "Global Loader for Angular Routes",
+    "appPath": "chapter07/ng-global-loader/start/index.html"
+  },
+  {
+    "appTitle": "Lazily loaded routes in Angular",
+    "appPath": "chapter07/ng-lazy-routing/final/index.html"
+  },
+  {
+    "appTitle": "Lazily loaded routes in Angular",
+    "appPath": "chapter07/ng-lazy-routing/start/index.html"
+  },
+  {
+    "appTitle": "Angular Route Guards",
+    "appPath": "chapter07/ng-route-guards/final/index.html"
+  },
+  {
+    "appTitle": "Angular Route Guards",
+    "appPath": "chapter07/ng-route-guards/start/index.html"
+  },
+  {
+    "appTitle": "Working with Angular Route Params",
+    "appPath": "chapter07/ng-route-params/final/index.html"
+  },
+  {
+    "appTitle": "Working with Angular Route Params",
+    "appPath": "chapter07/ng-route-params/start/index.html"
+  },
+  {
+    "appTitle": "Angular Route Preloading Strategies",
+    "appPath": "chapter07/ng-route-preload-strat/final/index.html"
+  },
+  {
+    "appTitle": "Angular Route Preloading Strategies",
+    "appPath": "chapter07/ng-route-preload-strat/start/index.html"
+  },
+  {
+    "appTitle": "Complex forms with Form Arrays",
+    "appPath": "chapter08/ng-form-arrays/final/index.html"
+  },
+  {
+    "appTitle": "Complex forms with Form Arrays",
+    "appPath": "chapter08/ng-form-arrays/start/index.html"
+  },
+  {
+    "appTitle": "\n      Writing your own custom form control using ControlValueAccessor\n    ",
+    "appPath": "chapter08/ng-form-cva/final/index.html"
+  },
+  {
+    "appTitle": "\n      Writing your own custom form control using ControlValueAccessor\n    ",
+    "appPath": "chapter08/ng-form-cva/start/index.html"
+  },
+  {
+    "appTitle": "Angular Reactive Forms",
+    "appPath": "chapter08/ng-reactive-forms/final/index.html"
+  },
+  {
+    "appTitle": "Angular Reactive Forms",
+    "appPath": "chapter08/ng-reactive-forms/start/index.html"
+  },
+  {
+    "appTitle": "Server side validation using asynchronous validator functions",
+    "appPath": "chapter08/ng-rf-async-validator/final/index.html"
+  },
+  {
+    "appTitle": "Server side validation using asynchronous validator functions",
+    "appPath": "chapter08/ng-rf-async-validator/start/index.html"
+  },
+  {
+    "appTitle": "Angular Template Driven Forms",
+    "appPath": "chapter08/ng-tdf/final/index.html"
+  },
+  {
+    "appTitle": "Angular Template Driven Forms",
+    "appPath": "chapter08/ng-tdf/start/index.html"
+  },
+  {
+    "appTitle": "Testing forms in Angular",
+    "appPath": "chapter08/ng-testing-forms/final/index.html"
+  },
+  {
+    "appTitle": "Testing forms in Angular",
+    "appPath": "chapter08/ng-testing-forms/start/index.html"
+  },
+  {
+    "appTitle": "Input coercion utilities from Angular CDK",
+    "appPath": "chapter09/ng-cdk-coercion/final/index.html"
+  },
+  {
+    "appTitle": "Input coercion utilities from Angular CDK",
+    "appPath": "chapter09/ng-cdk-coercion/start/index.html"
+  },
+  {
+    "appTitle": "\n      Using CDK Drag and Drop to move items from one list to another\n    ",
+    "appPath": "chapter09/ng-cdk-drag-drop/final/index.html"
+  },
+  {
+    "appTitle": "\n      Using CDK Drag and Drop to move items from one list to another\n    ",
+    "appPath": "chapter09/ng-cdk-drag-drop/start/index.html"
+  },
+  {
+    "appTitle": "Accessible Listbox interactions using CDK Listbox directives",
+    "appPath": "chapter09/ng-cdk-listbox/final/index.html"
+  },
+  {
+    "appTitle": "Accessible Listbox interactions using CDK Listbox directives",
+    "appPath": "chapter09/ng-cdk-listbox/start/index.html"
+  },
+  {
+    "appTitle": "Using Angular ListKeyManager for keyboard navigation",
+    "appPath": "chapter09/ng-cdk-lkm/final/index.html"
+  },
+  {
+    "appTitle": "Using Angular ListKeyManager for keyboard navigation",
+    "appPath": "chapter09/ng-cdk-lkm/start/index.html"
+  },
+  {
+    "appTitle": "Working with nested menus using Angular CDK Menu API",
+    "appPath": "chapter09/ng-cdk-menu/final/index.html"
+  },
+  {
+    "appTitle": "Working with nested menus using Angular CDK Menu API",
+    "appPath": "chapter09/ng-cdk-menu/start/index.html"
+  },
+  {
+    "appTitle": "Pointy little popovers with Angular CDK",
+    "appPath": "chapter09/ng-cdk-popover/final/index.html"
+  },
+  {
+    "appTitle": "Pointy little popovers with Angular CDK",
+    "appPath": "chapter09/ng-cdk-popover/start/index.html"
+  },
+  {
+    "appTitle": "Creating a multi-step from with CDK Stepper API",
+    "appPath": "chapter09/ng-cdk-stepper/final/index.html"
+  },
+  {
+    "appTitle": "Creating a multi-step from with CDK Stepper API",
+    "appPath": "chapter09/ng-cdk-stepper/start/index.html"
+  },
+  {
+    "appTitle": "Angular CDK Virtual Scroll",
+    "appPath": "chapter09/ng-cdk-virtual-scroll/final/index.html"
+  },
+  {
+    "appTitle": "Angular CDK Virtual Scroll",
+    "appPath": "chapter09/ng-cdk-virtual-scroll/start/index.html"
+  },
+  {
+    "appTitle": "Providing global mocks for Jest",
+    "appPath": "chapter10/ng-jest-global-mocks/final/index.html"
+  },
+  {
+    "appTitle": "Providing global mocks for Jest",
+    "appPath": "chapter10/ng-jest-global-mocks/start/index.html"
+  },
+  {
+    "appTitle": "Setting up unit tests in Angular with Jest",
+    "appPath": "chapter10/ng-jest-setup/final/index.html"
+  },
+  {
+    "appTitle": "Setting up unit tests in Angular with Jest",
+    "appPath": "chapter10/ng-jest-setup/start/index.html"
+  },
+  {
+    "appTitle": "\n      Writing even easier tests with Angular CDK component harnesses\n    ",
+    "appPath": "chapter10/ng-test-cdk-harness/final/index.html"
+  },
+  {
+    "appTitle": "\n      Writing even easier tests with Angular CDK component harnesses\n    ",
+    "appPath": "chapter10/ng-test-cdk-harness/start/index.html"
+  },
+  {
+    "appTitle": "Unit Testing responses from HTTP calls",
+    "appPath": "chapter10/ng-test-http-resp/final/index.html"
+  },
+  {
+    "appTitle": "Unit Testing responses from HTTP calls",
+    "appPath": "chapter10/ng-test-http-resp/start/index.html"
+  },
+  {
+    "appTitle": "\n      Mocking child components and directives using ng-mocks package\n    ",
+    "appPath": "chapter10/ng-test-ng-mocks/final/index.html"
+  },
+  {
+    "appTitle": "\n      Mocking child components and directives using ng-mocks package\n    ",
+    "appPath": "chapter10/ng-test-ng-mocks/start/index.html"
+  },
+  {
+    "appTitle": "Unit testing Angular Pipes",
+    "appPath": "chapter10/ng-test-pipes/final/index.html"
+  },
+  {
+    "appTitle": "Unit testing Angular Pipes",
+    "appPath": "chapter10/ng-test-pipes/start/index.html"
+  },
+  {
+    "appTitle": "Using spies on an injected service in a unit test",
+    "appPath": "chapter10/ng-test-services/final/index.html"
+  },
+  {
+    "appTitle": "Using spies on an injected service in a unit test",
+    "appPath": "chapter10/ng-test-services/start/index.html"
+  },
+  {
+    "appTitle": "Mocking Angular services using stubs",
+    "appPath": "chapter10/ng-test-services-stubs/final/index.html"
+  },
+  {
+    "appTitle": "Mocking Angular services using stubs",
+    "appPath": "chapter10/ng-test-services-stubs/start/index.html"
+  },
+  {
+    "appTitle": "Using Cypress bundled packages",
+    "appPath": "chapter11/ng-cy-bun-pack/final/index.html"
+  },
+  {
+    "appTitle": "Using Cypress bundled packages",
+    "appPath": "chapter11/ng-cy-bun-pack/start/index.html"
+  },
+  {
+    "appTitle": "Validating if a DOM element is visible on the view",
+    "appPath": "chapter11/ng-cy-element-visibility/final/index.html"
+  },
+  {
+    "appTitle": "Validating if a DOM element is visible on the view",
+    "appPath": "chapter11/ng-cy-element-visibility/start/index.html"
+  },
+  {
+    "appTitle": "Testing form inputs and submission in Cypress",
+    "appPath": "chapter11/ng-cy-forms/final/index.html"
+  },
+  {
+    "appTitle": "Testing form inputs and submission in Cypress",
+    "appPath": "chapter11/ng-cy-forms/start/index.html"
+  },
+  {
+    "appTitle": "Waiting for http requests in Cypress",
+    "appPath": "chapter11/ng-cy-http-requests/final/index.html"
+  },
+  {
+    "appTitle": "Waiting for http requests in Cypress",
+    "appPath": "chapter11/ng-cy-http-requests/start/index.html"
+  },
+  {
+    "appTitle": "Using cypress fixtures to provide mock data",
+    "appPath": "chapter11/ng-cy-mock-data/final/index.html"
+  },
+  {
+    "appTitle": "Using cypress fixtures to provide mock data",
+    "appPath": "chapter11/ng-cy-mock-data/start/index.html"
+  },
+  {
+    "appTitle": "Your first Cypress test in Angular",
+    "appPath": "chapter11/ng-cypress-starter/final/index.html"
+  },
+  {
+    "appTitle": "Your first Cypress test in Angular",
+    "appPath": "chapter11/ng-cypress-starter/start/index.html"
+  },
+  {
+    "appTitle": "Detaching the change detector from components",
+    "appPath": "chapter12/ng-cd-ref/final/index.html"
+  },
+  {
+    "appTitle": "Detaching the change detector from components",
+    "appPath": "chapter12/ng-cd-ref/start/index.html"
+  },
+  {
+    "appTitle": "Using trackBy for lists with *ngFor",
+    "appPath": "chapter12/ng-for-trackby/final/index.html"
+  },
+  {
+    "appTitle": "Using trackBy for lists with *ngFor",
+    "appPath": "chapter12/ng-for-trackby/start/index.html"
+  },
+  {
+    "appTitle": "Using OnPush change detection to prune component subtrees",
+    "appPath": "chapter12/ng-on-push-strategy/final/index.html"
+  },
+  {
+    "appTitle": "Using OnPush change detection to prune component subtrees",
+    "appPath": "chapter12/ng-on-push-strategy/start/index.html"
+  },
+  {
+    "appTitle": "Using performance budgets for auditing in Angular",
+    "appPath": "chapter12/ng-perf-budgets/final/index.html"
+  },
+  {
+    "appTitle": "Using performance budgets for auditing in Angular",
+    "appPath": "chapter12/ng-perf-budgets/start/index.html"
+  },
+  {
+    "appTitle": "Optimizing performance using @defer blocks",
+    "appPath": "chapter12/ng-perf-deferred/final/index.html"
+  },
+  {
+    "appTitle": "Optimizing performance using @defer blocks",
+    "appPath": "chapter12/ng-perf-deferred/start/index.html"
+  },
+  {
+    "appTitle": "Analyzing bundles with webpack-bundle-analyzer",
+    "appPath": "chapter12/ng-perf-wba/final/index.html"
+  },
+  {
+    "appTitle": "Analyzing bundles with webpack-bundle-analyzer",
+    "appPath": "chapter12/ng-perf-wba/start/index.html"
+  },
+  {
+    "appTitle": "Moving heavy computation to pure pipes in Angular",
+    "appPath": "chapter12/ng-pipes-perf/final/index.html"
+  },
+  {
+    "appTitle": "Moving heavy computation to pure pipes in Angular",
+    "appPath": "chapter12/ng-pipes-perf/start/index.html"
+  },
+  {
+    "appTitle": "Running async events outside Angular with NgZone",
+    "appPath": "chapter12/ng-run-outside-angular/final/index.html"
+  },
+  {
+    "appTitle": "Running async events outside Angular with NgZone",
+    "appPath": "chapter12/ng-run-outside-angular/start/index.html"
+  },
+  {
+    "appTitle": "Using web workers for heavy computation in Angular",
+    "appPath": "chapter12/ng-ww-perf/final/index.html"
+  },
+  {
+    "appTitle": "Using web workers for heavy computation in Angular",
+    "appPath": "chapter12/ng-ww-perf/start/index.html"
+  },
+  {
+    "appTitle": "Creating an App Shell for your Angular PWA",
+    "appPath": "chapter13/ng-pwa-app-shell/final/browser/index.html"
+  },
+  {
+    "appTitle": "Creating an App Shell for your Angular PWA",
+    "appPath": "chapter13/ng-pwa-app-shell/start/index.html"
+  },
+  {
+    "appTitle": "Converting an existing Angular app into a PWA with the Angular CLI",
+    "appPath": "chapter13/ng-pwa-conversion/final/index.html"
+  },
+  {
+    "appTitle": "Converting an existing Angular app into a PWA with the Angular CLI",
+    "appPath": "chapter13/ng-pwa-conversion/start/index.html"
+  },
+  {
+    "appTitle": "Providing a custom installable experience in your Angular PWA",
+    "appPath": "chapter13/ng-pwa-cust-installation/final/index.html"
+  },
+  {
+    "appTitle": "Providing a custom installable experience in your Angular PWA",
+    "appPath": "chapter13/ng-pwa-cust-installation/start/index.html"
+  },
+  {
+    "appTitle": "Using Dark Mode in your Angular PWA",
+    "appPath": "chapter13/ng-pwa-dark-mode/final/index.html"
+  },
+  {
+    "appTitle": "Using Dark Mode in your Angular PWA",
+    "appPath": "chapter13/ng-pwa-dark-mode/start/index.html"
+  },
+  {
+    "appTitle": "Precaching requests using an Angular service worker",
+    "appPath": "chapter13/ng-pwa-precaching/final/index.html"
+  },
+  {
+    "appTitle": "Precaching requests using an Angular service worker",
+    "appPath": "chapter13/ng-pwa-precaching/start/index.html"
+  },
+  {
+    "appTitle": "Modifying the theme color for your PWA",
+    "appPath": "chapter13/ng-pwa-theme-color/final/index.html"
+  },
+  {
+    "appTitle": "Modifying the theme color for your PWA",
+    "appPath": "chapter13/ng-pwa-theme-color/start/index.html"
+  },
+  {
+    "appTitle": "Angular Tutorials Overview",
+    "appPath": "index.html"
+  }
+]

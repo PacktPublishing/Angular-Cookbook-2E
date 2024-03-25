@@ -48,7 +48,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter13/ng-pwa-theme-color/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter13/ng-pwa-theme-color/start/"
         },
         "development": {
           "buildOptimizer": false,

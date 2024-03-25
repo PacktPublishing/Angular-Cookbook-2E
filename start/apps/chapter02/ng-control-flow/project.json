@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter02/ng-control-flow/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter02/ng-control-flow/start/"
         },
         "development": {
           "buildOptimizer": false,

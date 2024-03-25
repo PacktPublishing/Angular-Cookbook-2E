@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter07/ng-route-params/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter07/ng-route-params/start/"
         },
         "development": {
           "buildOptimizer": false,

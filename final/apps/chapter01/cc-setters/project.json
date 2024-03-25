@@ -37,7 +37,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter01/cc-setters/final/"
+          "baseHref": "/Angular-Cookbook-2E/chapter01/cc-setters/final/"
         },
         "development": {
           "buildOptimizer": false,

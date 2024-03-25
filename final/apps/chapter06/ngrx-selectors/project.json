@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter06/ngrx-selectors/final/"
+          "baseHref": "/Angular-Cookbook-2E/chapter06/ngrx-selectors/final/"
         },
         "development": {
           "buildOptimizer": false,

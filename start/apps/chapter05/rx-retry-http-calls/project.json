@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter05/rx-retry-http-calls/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter05/rx-retry-http-calls/start/"
         },
         "development": {
           "buildOptimizer": false,

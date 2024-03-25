@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter06/ngrx-actions-reducer/final/"
+          "baseHref": "/Angular-Cookbook-2E/chapter06/ngrx-actions-reducer/final/"
         },
         "development": {
           "buildOptimizer": false,

@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter09/ng-cdk-listbox/final/"
+          "baseHref": "/Angular-Cookbook-2E/chapter09/ng-cdk-listbox/final/"
         },
         "development": {
           "buildOptimizer": false,

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angular Cookbook 2nd Ed. Recipes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <div id="appContainer" class="container mx-auto px-4 py-8 max-w-md"></div>
+
+    <script>
+      fetch('apps.json')
+        .then((response) => response.json())
+        .then((apps) => {
+          const appContainer = document.getElementById('appContainer');
+          let chapters = {}; // Holds the chapters and their apps
+
+          // Organize apps by chapters
+          apps.forEach((app) => {
+            const [chapter, appName, stage] = app.appPath.split('/');
+            const key = `${chapter}/${appName}`;
+            if (!chapters[chapter]) chapters[chapter] = {};
+            if (!chapters[chapter][appName]) {
+              chapters[chapter][appName] = {
+                appTitle: app.appTitle,
+                paths: {},
+              };
+            }
+            chapters[chapter][appName].paths[stage] = app.appPath;
+          });
+
+          // Sort chapters by name
+          const sortedChapters = Object.keys(chapters)
+            .sort()
+            .reduce((acc, chapter) => {
+              acc[chapter] = chapters[chapter];
+              return acc;
+            }, {});
+
+          // Generate HTML
+          Object.entries(sortedChapters).forEach(([chapterName, apps]) => {
+            const chapterDiv = document.createElement('div');
+            chapterDiv.classList.add('mb-8');
+
+            const chapterTitleDiv = document.createElement('div');
+            chapterTitleDiv.textContent = chapterName;
+            chapterTitleDiv.classList.add('text-lg', 'font-semibold', 'mb-4');
+            chapterDiv.appendChild(chapterTitleDiv);
+
+            Object.entries(apps).forEach(([appName, { appTitle, paths }]) => {
+              const appDiv = document.createElement('div');
+              appDiv.classList.add('pl-4', 'mb-2');
+
+              const appTitleDiv = document.createElement('div');
+              appTitleDiv.textContent = appTitle;
+              appTitleDiv.classList.add('text-blue-600');
+              appDiv.appendChild(appTitleDiv);
+
+              const appLinksDiv = document.createElement('div');
+              appLinksDiv.classList.add('flex', 'space-x-4', 'pl-4', 'pt-2', 'flex-row-reverse', 'gap-4');
+
+              Object.entries(paths).forEach(([stage, path]) => {
+                const link = document.createElement('a');
+                link.href = path;
+                link.textContent =
+                  stage.charAt(0).toUpperCase() + stage.slice(1);
+                link.classList.add('text-green-600', 'hover:underline');
+                appLinksDiv.appendChild(link);
+              });
+
+              appDiv.appendChild(appLinksDiv);
+              chapterDiv.appendChild(appDiv);
+            });
+
+            appContainer.appendChild(chapterDiv);
+          });
+        })
+        .catch((error) => console.error('Failed to load app data:', error));
+    </script>
+  </body>
+</html>

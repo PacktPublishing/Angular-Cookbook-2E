@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter10/ng-test-pipes/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter10/ng-test-pipes/start/"
         },
         "development": {
           "buildOptimizer": false,

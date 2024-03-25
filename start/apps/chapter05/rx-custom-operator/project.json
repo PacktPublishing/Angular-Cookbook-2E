@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter05/rx-custom-operator/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter05/rx-custom-operator/start/"
         },
         "development": {
           "buildOptimizer": false,

@@ -64,7 +64,7 @@
                   "maximumError": "4kb"
                 }
               ],
-              "baseHref": "/chapter13/ng-pwa-conversion/final/",
+              "baseHref": "/Angular-Cookbook-2E/chapter13/ng-pwa-conversion/final/",
               "outputHashing": "all"
             },
             "development": {

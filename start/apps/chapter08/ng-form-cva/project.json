@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter08/ng-form-cva/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter08/ng-form-cva/start/"
         },
         "development": {
           "buildOptimizer": false,

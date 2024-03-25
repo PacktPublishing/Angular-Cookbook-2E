@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter12/ng-run-outside-angular/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter12/ng-run-outside-angular/start/"
         },
         "development": {
           "buildOptimizer": false,

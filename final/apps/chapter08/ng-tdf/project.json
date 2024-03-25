@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter08/ng-tdf/final/"
+          "baseHref": "/Angular-Cookbook-2E/chapter08/ng-tdf/final/"
         },
         "development": {
           "buildOptimizer": false,

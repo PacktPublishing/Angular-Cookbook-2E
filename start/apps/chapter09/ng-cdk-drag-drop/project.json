@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter09/ng-cdk-drag-drop/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter09/ng-cdk-drag-drop/start/"
         },
         "development": {
           "buildOptimizer": false,

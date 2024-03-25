@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter09/ng-cdk-menu/final/"
+          "baseHref": "/Angular-Cookbook-2E/chapter09/ng-cdk-menu/final/"
         },
         "development": {
           "buildOptimizer": false,

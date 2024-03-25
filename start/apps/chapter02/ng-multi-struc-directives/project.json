@@ -37,7 +37,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter02/ng-multi-struc-directives/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter02/ng-multi-struc-directives/start/"
         },
         "development": {
           "buildOptimizer": false,

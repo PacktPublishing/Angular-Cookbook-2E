@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter08/ng-testing-forms/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter08/ng-testing-forms/start/"
         },
         "development": {
           "buildOptimizer": false,

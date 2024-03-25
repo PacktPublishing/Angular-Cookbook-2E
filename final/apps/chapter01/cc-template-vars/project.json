@@ -37,7 +37,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter01/cc-template-vars/final/"
+          "baseHref": "/Angular-Cookbook-2E/chapter01/cc-template-vars/final/"
         },
         "development": {
           "buildOptimizer": false,

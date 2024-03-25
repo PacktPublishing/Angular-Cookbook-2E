@@ -42,7 +42,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter04/ng-basic-animation/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter04/ng-basic-animation/start/"
         },
         "development": {
           "buildOptimizer": false,

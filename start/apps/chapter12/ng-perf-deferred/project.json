@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter12/ng-perf-deferred/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter12/ng-perf-deferred/start/"
         },
         "development": {
           "buildOptimizer": false,

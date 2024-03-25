@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter11/ng-cypress-starter/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter11/ng-cypress-starter/start/"
         },
         "development": {
           "buildOptimizer": false,

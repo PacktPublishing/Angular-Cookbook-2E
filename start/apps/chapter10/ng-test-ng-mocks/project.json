@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter10/ng-test-ng-mocks/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter10/ng-test-ng-mocks/start/"
         },
         "development": {
           "buildOptimizer": false,

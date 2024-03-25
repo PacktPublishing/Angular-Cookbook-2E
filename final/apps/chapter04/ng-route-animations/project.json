@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter04/ng-route-animations/final/"
+          "baseHref": "/Angular-Cookbook-2E/chapter04/ng-route-animations/final/"
         },
         "development": {
           "buildOptimizer": false,

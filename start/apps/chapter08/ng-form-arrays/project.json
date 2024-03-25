@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter08/ng-form-arrays/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter08/ng-form-arrays/start/"
         },
         "development": {
           "buildOptimizer": false,

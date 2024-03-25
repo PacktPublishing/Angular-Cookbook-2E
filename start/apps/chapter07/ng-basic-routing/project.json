@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter07/ng-basic-routing/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter07/ng-basic-routing/start/"
         },
         "development": {
           "buildOptimizer": false,

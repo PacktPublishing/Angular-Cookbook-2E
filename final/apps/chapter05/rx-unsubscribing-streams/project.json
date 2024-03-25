@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter05/rx-unsubscribing-streams/final/"
+          "baseHref": "/Angular-Cookbook-2E/chapter05/rx-unsubscribing-streams/final/"
         },
         "development": {
           "buildOptimizer": false,

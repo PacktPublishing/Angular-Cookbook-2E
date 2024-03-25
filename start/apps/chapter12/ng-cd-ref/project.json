@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter12/ng-cd-ref/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter12/ng-cd-ref/start/"
         },
         "development": {
           "buildOptimizer": false,

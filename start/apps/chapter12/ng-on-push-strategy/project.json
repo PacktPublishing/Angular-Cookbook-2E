@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter12/ng-on-push-strategy/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter12/ng-on-push-strategy/start/"
         },
         "development": {
           "buildOptimizer": false,

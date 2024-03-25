@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter12/ng-ww-perf/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter12/ng-ww-perf/start/"
         },
         "development": {
           "buildOptimizer": false,

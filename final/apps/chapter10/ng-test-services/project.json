@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter10/ng-test-services/final/"
+          "baseHref": "/Angular-Cookbook-2E/chapter10/ng-test-services/final/"
         },
         "development": {
           "buildOptimizer": false,

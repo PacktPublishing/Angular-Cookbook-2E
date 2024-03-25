@@ -37,7 +37,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter02/ng-directive-comp-api/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter02/ng-directive-comp-api/start/"
         },
         "development": {
           "buildOptimizer": false,

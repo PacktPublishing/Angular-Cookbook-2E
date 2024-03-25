@@ -123,7 +123,7 @@ describe('should add base href to projects', () => {
       'utf-8'
     );
     expect(updatedProjectJson).toContain(
-      '"baseHref": "/chapter01/cc-inputs-outputs/start/"'
+      '"baseHref": "/Angular-Cookbook-2E/chapter01/cc-inputs-outputs/start/"'
     );
   });
 });

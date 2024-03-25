@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter08/ng-rf-async-validator/start/"
+          "baseHref": "/Angular-Cookbook-2E/chapter08/ng-rf-async-validator/start/"
         },
         "development": {
           "buildOptimizer": false,

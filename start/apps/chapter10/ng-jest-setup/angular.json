@@ -43,7 +43,7 @@
                   "maximumError": "4kb"
                 }
               ],
-              "baseHref": "/chapter10/ng-jest-setup/start/",
+              "baseHref": "/Angular-Cookbook-2E/chapter10/ng-jest-setup/start/",
               "outputHashing": "all"
             },
             "development": {

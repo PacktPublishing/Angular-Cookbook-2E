@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/chapter07/ng-global-loader/final/"
+          "baseHref": "/Angular-Cookbook-2E/chapter07/ng-global-loader/final/"
         },
         "development": {
           "buildOptimizer": false,
