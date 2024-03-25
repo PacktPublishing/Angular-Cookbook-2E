@@ -36,7 +36,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter02/ng-attribute-directive/start/"
         },
         "development": {
           "buildOptimizer": false,

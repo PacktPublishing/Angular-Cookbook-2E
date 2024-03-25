@@ -24,6 +24,21 @@
       "runtimeArgs": [
         "run",
         "ng-cookbook-recipe:test",
+        "--watch",
+        "--verbose"
+      ],
+      "runtimeExecutable": "nx",
+      "cwd": "${workspaceFolder}/codewithahsan",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    }, {
+      "name": "Run add-base-href test",
+      "request": "launch",
+      "runtimeArgs": [
+        "run",
+        "ng-cookbook-recipe:test",
         "--watch"
       ],
       "runtimeExecutable": "nx",

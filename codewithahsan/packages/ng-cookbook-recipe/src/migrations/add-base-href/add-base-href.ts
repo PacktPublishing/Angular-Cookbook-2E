@@ -1,9 +1,18 @@
-import { Tree, formatFiles, getProjects, updateJson } from '@nx/devkit';
+import {
+  Tree,
+  formatFiles,
+  getProjects,
+  readJson,
+  updateJson,
+} from '@nx/devkit';
 
 export default async function update(host: Tree) {
   const projects = getProjects(host);
-  projects.forEach((projectName) => {
-    const projectConfigPath = `${projectName.name}/project.json`;
+  const workspaceConfig = readJson(host, 'package.json');
+  console.log({ workspaceConfig });
+  const workspaceName = workspaceConfig.name;
+  projects.forEach((project) => {
+    const projectConfigPath = `${project.root}/project.json`;
 
     // Check if project.json exists for the current project
     if (host.exists(projectConfigPath)) {
@@ -15,13 +24,13 @@ export default async function update(host: Tree) {
           json.targets?.build?.configurations
         ) {
           const configurations = json.targets.build.configurations;
-
+          const baseHref = `${project.targets.rename.options.chapter}/${project.targets.rename.options.app}/${workspaceName}`;
           // If there's a production configuration, set the baseHref
           if (configurations.production) {
-            configurations.production.baseHref = `/${projectName}/`;
+            configurations.production.baseHref = `/${baseHref}/`;
           } else {
             // If there isn't a production configuration, create one with the baseHref
-            configurations.production = { baseHref: `/${projectName}/` };
+            configurations.production = { baseHref: `/${baseHref}/` };
           }
         }
 

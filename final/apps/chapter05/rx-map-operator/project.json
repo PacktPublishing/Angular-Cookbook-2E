@@ -44,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter05/rx-map-operator/final/"
         },
         "development": {
           "buildOptimizer": false,

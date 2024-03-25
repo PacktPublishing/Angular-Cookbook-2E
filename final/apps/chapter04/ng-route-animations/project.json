@@ -44,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter04/ng-route-animations/final/"
         },
         "development": {
           "buildOptimizer": false,

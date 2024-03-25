@@ -36,7 +36,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter03/ng-value-providers/final/"
         },
         "development": {
           "buildOptimizer": false,

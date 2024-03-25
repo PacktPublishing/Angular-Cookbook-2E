@@ -18,7 +18,8 @@
     "test:ng-jest-setup": "cd start/apps/chapter10/ng-jest-setup && npm t",
     "build": "sh scripts/build.sh",
     "serve:static": "sh scripts/serve-static.sh",
-    "sanity": "sh scripts/sanity.sh"
+    "sanity": "sh scripts/sanity.sh",
+    "prepare-dist": "sh scripts/prepare-dist.sh"
   },
   "keywords": [],
   "author": "",

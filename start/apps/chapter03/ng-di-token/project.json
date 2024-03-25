@@ -36,7 +36,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter03/ng-di-token/start/"
         },
         "development": {
           "buildOptimizer": false,

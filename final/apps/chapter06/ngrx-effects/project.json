@@ -44,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter06/ngrx-effects/final/"
         },
         "development": {
           "buildOptimizer": false,

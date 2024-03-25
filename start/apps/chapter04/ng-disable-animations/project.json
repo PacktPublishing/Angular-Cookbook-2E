@@ -44,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter04/ng-disable-animations/start/"
         },
         "development": {
           "buildOptimizer": false,

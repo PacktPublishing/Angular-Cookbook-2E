@@ -45,7 +45,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter11/ng-cy-mock-data/start/"
         },
         "development": {
           "buildOptimizer": false,

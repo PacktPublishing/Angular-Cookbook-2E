@@ -36,7 +36,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter02/ng-multi-struc-directives/final/"
         },
         "development": {
           "buildOptimizer": false,

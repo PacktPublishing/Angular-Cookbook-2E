@@ -44,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter07/ng-global-loader/final/"
         },
         "development": {
           "buildOptimizer": false,

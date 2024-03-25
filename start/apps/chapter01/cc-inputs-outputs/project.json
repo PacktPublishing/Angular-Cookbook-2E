@@ -37,7 +37,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/cc-inputs-outputs/"
+          "baseHref": "/chapter01/cc-inputs-outputs/start/"
         },
         "development": {
           "buildOptimizer": false,

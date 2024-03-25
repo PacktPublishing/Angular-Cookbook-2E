@@ -44,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter11/ng-cypress-starter/final/"
         },
         "development": {
           "buildOptimizer": false,

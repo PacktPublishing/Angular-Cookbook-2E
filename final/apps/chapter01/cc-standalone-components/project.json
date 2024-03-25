@@ -36,7 +36,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter01/cc-standalone-components/final/"
         },
         "development": {
           "buildOptimizer": false,

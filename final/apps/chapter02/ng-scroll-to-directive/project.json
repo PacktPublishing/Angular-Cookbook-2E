@@ -36,7 +36,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter02/ng-scroll-to-directive/final/"
         },
         "development": {
           "buildOptimizer": false,

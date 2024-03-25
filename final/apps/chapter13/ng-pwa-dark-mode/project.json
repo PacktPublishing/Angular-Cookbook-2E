@@ -47,7 +47,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter13/ng-pwa-dark-mode/final/"
         },
         "development": {
           "buildOptimizer": false,

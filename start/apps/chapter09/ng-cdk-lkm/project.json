@@ -44,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter09/ng-cdk-lkm/start/"
         },
         "development": {
           "buildOptimizer": false,

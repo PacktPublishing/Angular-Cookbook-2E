@@ -74,8 +74,14 @@ export default async function updateAppComponentFiles(tree: Tree) {
       return;
     }
 
-    if (!tsContent.includes('HeaderComponent')) {
+    if (
+      !tsContent.includes('HeaderComponent') &&
+      !tsContent.includes('@codewithahsan/ng-cb-ui')
+    ) {
       tsContent = `import { HeaderComponent } from '@codewithahsan/ng-cb-ui';\n${tsContent}`;
+    } else if (tsContent.includes('HeaderComponent')) {
+      // already added
+      return;
     }
 
     tsContent = tsContent.replace(

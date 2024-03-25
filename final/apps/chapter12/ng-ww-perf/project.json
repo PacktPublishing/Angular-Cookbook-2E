@@ -45,7 +45,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter12/ng-ww-perf/final/"
         },
         "development": {
           "buildOptimizer": false,

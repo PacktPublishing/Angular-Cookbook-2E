@@ -44,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter12/ng-perf-deferred/start/"
         },
         "development": {
           "buildOptimizer": false,

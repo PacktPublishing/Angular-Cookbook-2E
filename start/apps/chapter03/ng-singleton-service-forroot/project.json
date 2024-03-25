@@ -38,7 +38,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter03/ng-singleton-service-forroot/start/"
         },
         "development": {
           "buildOptimizer": false,

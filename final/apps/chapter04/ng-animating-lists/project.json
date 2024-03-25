@@ -44,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter04/ng-animating-lists/final/"
         },
         "development": {
           "buildOptimizer": false,

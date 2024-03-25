@@ -194,6 +194,13 @@
       "package": "@codewithahsan/ng-cookbook-recipe",
       "description": "Updates the toolbar in the apps to use the new header component",
       "implementation": "./src/migrations/replace-app-toolbar/replace-app-toolbar"
+    },
+    {
+      "name": "add-base-href",
+      "version": "0.0.3",
+      "package": "@codewithahsan/ng-cookbook-recipe",
+      "description": "Adds base href to the projects",
+      "implementation": "./src/migrations/add-base-href/add-base-href"
     }
   ]
 }

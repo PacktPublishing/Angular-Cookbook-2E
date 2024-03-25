@@ -44,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "baseHref": "/chapter10/ng-test-pipes/final/"
         },
         "development": {
           "buildOptimizer": false,
