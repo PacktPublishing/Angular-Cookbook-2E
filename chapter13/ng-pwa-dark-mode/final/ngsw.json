@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1711364513402,
-  "index": "/chapter13/ng-pwa-dark-mode/final/index.html",
+  "timestamp": 1711380179878,
+  "index": "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,14 +11,14 @@
         "ignoreVary": true
       },
       "urls": [
-        "/chapter13/ng-pwa-dark-mode/final/64.8c3e55e8ed2468a2.js",
-        "/chapter13/ng-pwa-dark-mode/final/favicon.ico",
-        "/chapter13/ng-pwa-dark-mode/final/index.html",
-        "/chapter13/ng-pwa-dark-mode/final/main.5b7ef27b1dc902ba.js",
-        "/chapter13/ng-pwa-dark-mode/final/manifest.webmanifest",
-        "/chapter13/ng-pwa-dark-mode/final/polyfills.f7d86b4eb3a376d7.js",
-        "/chapter13/ng-pwa-dark-mode/final/runtime.2204a99d35501d2d.js",
-        "/chapter13/ng-pwa-dark-mode/final/styles.23a5735f7af8420b.css"
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/64.8c3e55e8ed2468a2.js",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/favicon.ico",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/index.html",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/main.5b7ef27b1dc902ba.js",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/manifest.webmanifest",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/polyfills.f7d86b4eb3a376d7.js",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/runtime.2204a99d35501d2d.js",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/styles.23a5735f7af8420b.css"
       ],
       "patterns": []
     },
@@ -30,42 +30,42 @@
         "ignoreVary": true
       },
       "urls": [
-        "/chapter13/ng-pwa-dark-mode/final/assets/box-model.png",
-        "/chapter13/ng-pwa-dark-mode/final/assets/cover.jpg",
-        "/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-128x128.png",
-        "/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-144x144.png",
-        "/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-152x152.png",
-        "/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-192x192.png",
-        "/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-384x384.png",
-        "/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-512x512.png",
-        "/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-72x72.png",
-        "/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-96x96.png",
-        "/chapter13/ng-pwa-dark-mode/final/assets/profile.png"
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/box-model.png",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/cover.jpg",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-128x128.png",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-144x144.png",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-152x152.png",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-192x192.png",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-384x384.png",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-512x512.png",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-72x72.png",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-96x96.png",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/profile.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/chapter13/ng-pwa-dark-mode/final/64.8c3e55e8ed2468a2.js": "505023e4d6cdc669c790f18e81855975c2be0e90",
-    "/chapter13/ng-pwa-dark-mode/final/assets/box-model.png": "a6b449f03994a1ee5fd9b4e95b5c6ebf8288b07c",
-    "/chapter13/ng-pwa-dark-mode/final/assets/cover.jpg": "609ffd1d4eaab96b2df79e14540015bccf4e2ed9",
-    "/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
-    "/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-144x144.png": "96a0d629765c1bc85d9263c6bc83094ca776d267",
-    "/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-152x152.png": "b1fbbee3902eb96a7658e3bb006f31f78ca5a44c",
-    "/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-192x192.png": "e4211163bf0911688fbfb80278d8ff4d2f77691d",
-    "/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-72x72.png": "279825a1ac4377032ae996a1832c641e33ccf1b6",
-    "/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
-    "/chapter13/ng-pwa-dark-mode/final/assets/profile.png": "f09fcf7522ea67374d8b1885e120b0bf032a64f0",
-    "/chapter13/ng-pwa-dark-mode/final/favicon.ico": "4e23d0f9b6ddaf3c9ddef90dbaed2342941297b5",
-    "/chapter13/ng-pwa-dark-mode/final/index.html": "ea1b65578ed52564491869c8bc8e5f3ab9d2ca63",
-    "/chapter13/ng-pwa-dark-mode/final/main.5b7ef27b1dc902ba.js": "5b20dbab6f249b6e2a9008c53ca8d96d990ad925",
-    "/chapter13/ng-pwa-dark-mode/final/manifest.webmanifest": "5dc7a2a8236c90c85e1d23289f50c2c694b0fc16",
-    "/chapter13/ng-pwa-dark-mode/final/polyfills.f7d86b4eb3a376d7.js": "7db67b99ab8504c2faba86461e694d7da705a3db",
-    "/chapter13/ng-pwa-dark-mode/final/runtime.2204a99d35501d2d.js": "72bb86cd93f8ad1560c70998b1d76c9dd0c150fd",
-    "/chapter13/ng-pwa-dark-mode/final/styles.23a5735f7af8420b.css": "1f7e2d983735199e67e95a05e8e8e25f7fdefd31"
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/64.8c3e55e8ed2468a2.js": "505023e4d6cdc669c790f18e81855975c2be0e90",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/box-model.png": "a6b449f03994a1ee5fd9b4e95b5c6ebf8288b07c",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/cover.jpg": "609ffd1d4eaab96b2df79e14540015bccf4e2ed9",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-144x144.png": "96a0d629765c1bc85d9263c6bc83094ca776d267",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-152x152.png": "b1fbbee3902eb96a7658e3bb006f31f78ca5a44c",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-192x192.png": "e4211163bf0911688fbfb80278d8ff4d2f77691d",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-72x72.png": "279825a1ac4377032ae996a1832c641e33ccf1b6",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/profile.png": "f09fcf7522ea67374d8b1885e120b0bf032a64f0",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/favicon.ico": "4e23d0f9b6ddaf3c9ddef90dbaed2342941297b5",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/index.html": "d40bfd5a14fe5ac7f58e25e267e78cf42f4be68b",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/main.5b7ef27b1dc902ba.js": "5b20dbab6f249b6e2a9008c53ca8d96d990ad925",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/manifest.webmanifest": "5dc7a2a8236c90c85e1d23289f50c2c694b0fc16",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/polyfills.f7d86b4eb3a376d7.js": "7db67b99ab8504c2faba86461e694d7da705a3db",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/runtime.2204a99d35501d2d.js": "72bb86cd93f8ad1560c70998b1d76c9dd0c150fd",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/styles.23a5735f7af8420b.css": "1f7e2d983735199e67e95a05e8e8e25f7fdefd31"
   },
   "navigationUrls": [
     {
