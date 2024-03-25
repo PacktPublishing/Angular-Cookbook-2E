@@ -19,7 +19,8 @@
     "build": "sh scripts/build.sh",
     "serve:static": "sh scripts/serve-static.sh",
     "sanity": "sh scripts/sanity.sh",
-    "prepare-dist": "sh scripts/prepare-dist.sh"
+    "predeploy": "sh scripts/prepare-dist.sh",
+    "deploy": "gh-pages --dist dist/apps"
   },
   "keywords": [],
   "author": "",
@@ -27,9 +28,7 @@
   "devDependencies": {
     "@types/jest": "^29.2.4",
     "cheerio": "^1.0.0-rc.12",
-    "concurrently": "^7.6.0"
-  },
-  "dependencies": {
-    "jest": "^29.5.0"
+    "concurrently": "^7.6.0",
+    "gh-pages": "^6.1.1"
   }
 }
