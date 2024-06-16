@@ -1,5 +1,11 @@
 # Angular Cookbook Second Edition
 
+<div style="text-align: center;">
+<img width="100" alt="angular logo" src="./docs/angular-logo.svg" />
+</div>
+
+### Code updated to Angular v18
+
 This is the code repository for the [Angular-Cookbook-2E](https://www.packtpub.com/product/angular-cookbook-second-edition/9781803233444), published by Packt.
 
 More details are below, pick up [your copy](https://www.amazon.com/Angular-Cookbook-actionable-recipes-developers-ebook/dp/B0C3MG5X99/ref=sr_1_2?crid=LESX4FJVT8Y&keywords=Angular+cookbook+second+edition&qid=1703577160&s=books&sprefix=angular+cookbook+second+editio%2Cstripbooks-intl-ship%2C271&sr=1-2) today!
