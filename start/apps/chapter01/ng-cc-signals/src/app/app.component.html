@@ -6,19 +6,19 @@
   <div class="mx-auto p-4">
     <div class="flex items-center justify-between mb-4">
       <h1 class="text-2xl">Task Manager</h1>
-      <span>(0 / 0)</span>
+      <span>({{store.completedTodos().length}} / {{store.todos().length}})</span>
     </div>
 
     <!-- Task Input -->
-    <div class="mb-4">
-      <input class="p-2 border rounded mr-2" placeholder="New task..." />
-      <button>Add</button>
-    </div>
+    <form (ngSubmit)="submitNewTodo()" class="mb-4">
+      <input name="newTodoInput" [(ngModel)]="newTodoTitle" class="p-2 border rounded mr-2" placeholder="New task..." />
+      <button [disabled]="!newTodoTitle()" type="submit">Add</button>
+    </form>
 
     <!-- Task List -->
     <ul>
-      @for (task of tasks; track $index) {
-        <li class="mb-2 flex gap-4 items-center cursor-pointer hover:opacity-70">
+      @for (task of store.filteredTodos(); track $index) {
+        <li (click)="store.toggleTodo(task.id)" class="mb-2 flex gap-4 items-center cursor-pointer hover:opacity-70">
           <input type="checkbox" [checked]="task.completed" />
           <span [ngClass]="{'line-through': task.completed}">{{ task.title }}</span>
         </li>
@@ -27,10 +27,13 @@
 
     <!-- Filters -->
     <div class="mt-4">
-      <button class="p-2 rounded mr-2">All</button>
-      <button class="p-2 rounded mr-2">Active</button>
-      <button class="p-2 rounded">Completed</button>
+      <button [class.btn-primary]="store.filter() === 'all'" (click)="store.changeFilter('all')" class="p-2 rounded mr-2">All</button>
+      <button [class.btn-primary]="store.filter() === 'active'" (click)="store.changeFilter('active')" class="p-2 rounded mr-2">Active</button>
+      <button [class.btn-primary]="store.filter() === 'completed'" (click)="store.changeFilter('completed')" class="p-2 rounded">Completed</button>
     </div>
   </div>
 
 </main>
+<app-snackbar>
+  Congratulations 🚀 You finished all the tasks!
+</app-snackbar>
