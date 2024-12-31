@@ -1,5 +1,5 @@
 import { Tree } from '@nx/devkit';
-import { formatFiles, getProjects } from '@nrwl/devkit';
+import { formatFiles, getProjects } from '@nx/devkit';
 import { load } from 'cheerio';
 
 export default async function updateAppComponentFiles(tree: Tree) {
