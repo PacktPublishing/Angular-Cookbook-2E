@@ -4,9 +4,10 @@ import { first } from 'rxjs/operators';
 import { NotificationsService } from '../../../services/notifications.service';
 
 @Component({
-  selector: 'app-notifications-manager',
-  templateUrl: './notifications-manager.component.html',
-  styleUrls: ['./notifications-manager.component.scss'],
+    selector: 'app-notifications-manager',
+    templateUrl: './notifications-manager.component.html',
+    styleUrls: ['./notifications-manager.component.scss'],
+    standalone: false
 })
 export class NotificationsManagerComponent {
   notificationsService = inject(NotificationsService);

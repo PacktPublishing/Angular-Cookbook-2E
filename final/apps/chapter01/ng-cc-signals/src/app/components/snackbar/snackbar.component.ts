@@ -2,11 +2,10 @@ import { Component, TemplateRef, ViewChild, ViewContainerRef, inject } from '@an
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-snackbar',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './snackbar.component.html',
-  styleUrls: ['./snackbar.component.scss'],
+    selector: 'app-snackbar',
+    imports: [CommonModule],
+    templateUrl: './snackbar.component.html',
+    styleUrls: ['./snackbar.component.scss']
 })
 export class SnackbarComponent {
   @ViewChild('snackbar') snackbar!: TemplateRef<HTMLElement>; 

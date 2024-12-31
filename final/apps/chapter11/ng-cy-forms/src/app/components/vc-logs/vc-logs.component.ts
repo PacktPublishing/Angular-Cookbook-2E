@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-vc-logs',
-  templateUrl: './vc-logs.component.html',
-  styleUrls: ['./vc-logs.component.scss'],
-  standalone: true,
-  imports: [CommonModule]
+    selector: 'app-vc-logs',
+    templateUrl: './vc-logs.component.html',
+    styleUrls: ['./vc-logs.component.scss'],
+    imports: [CommonModule]
 })
 export class VcLogsComponent implements OnChanges {
   @Input() vName = '';

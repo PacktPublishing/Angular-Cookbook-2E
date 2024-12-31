@@ -4,11 +4,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { BooleanInput, NumberInput, coerceBooleanProperty, coerceNumberProperty } from '@angular/cdk/coercion';
 
 @Component({
-  selector: 'app-rating',
-  templateUrl: './rating.component.html',
-  styleUrls: ['./rating.component.scss'],
-  standalone: true,
-  imports: [CommonModule]
+    selector: 'app-rating',
+    templateUrl: './rating.component.html',
+    styleUrls: ['./rating.component.scss'],
+    imports: [CommonModule]
 })
 export class RatingComponent {
   @Input() value = 2;

@@ -9,11 +9,10 @@ import {
 import { VcLogsComponent } from '../vc-logs/vc-logs.component';
 
 @Component({
-  selector: 'app-version-control',
-  templateUrl: './version-control.component.html',
-  styleUrls: ['./version-control.component.scss'],
-  standalone: true,
-  imports: [CommonModule, VcLogsComponent, ReactiveFormsModule],
+    selector: 'app-version-control',
+    templateUrl: './version-control.component.html',
+    styleUrls: ['./version-control.component.scss'],
+    imports: [CommonModule, VcLogsComponent, ReactiveFormsModule]
 })
 export class VersionControlComponent {
   versionInput = '';

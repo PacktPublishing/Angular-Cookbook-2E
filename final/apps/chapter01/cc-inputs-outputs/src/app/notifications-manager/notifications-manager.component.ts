@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-notifications-manager',
-  templateUrl: './notifications-manager.component.html',
-  styleUrls: ['./notifications-manager.component.scss'],
+    selector: 'app-notifications-manager',
+    templateUrl: './notifications-manager.component.html',
+    styleUrls: ['./notifications-manager.component.scss'],
+    standalone: false
 })
 export class NotificationsManagerComponent {
   @Input() count = 0;

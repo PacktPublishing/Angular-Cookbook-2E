@@ -10,11 +10,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
-  selector: 'app-folders-list',
-  templateUrl: './folders-list.component.html',
-  styleUrls: ['./folders-list.component.scss'],
-  imports: [CommonModule, FileComponent, FolderComponent, DragDropModule, FontAwesomeModule],
-  standalone: true
+    selector: 'app-folders-list',
+    templateUrl: './folders-list.component.html',
+    styleUrls: ['./folders-list.component.scss'],
+    imports: [CommonModule, FileComponent, FolderComponent, DragDropModule, FontAwesomeModule]
 })
 export class FoldersListComponent {
   folders = APP_DATA;

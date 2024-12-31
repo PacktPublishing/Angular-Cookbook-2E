@@ -7,12 +7,11 @@ import { RANDOMIZATION_COUNT } from '../../tokens';
 import { LogsService } from '../../services/logs.service';
 
 @Component({
-  selector: 'app-user-card',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './user-card.component.html',
-  styleUrls: ['./user-card.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-user-card',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './user-card.component.html',
+    styleUrls: ['./user-card.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserCardComponent {
   @Input() user!: IUser;

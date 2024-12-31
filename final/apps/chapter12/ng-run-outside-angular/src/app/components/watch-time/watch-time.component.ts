@@ -9,12 +9,11 @@ import {
 declare let window: any;
 
 @Component({
-  selector: 'app-watch-time',
-  templateUrl: './watch-time.component.html',
-  styleUrls: ['./watch-time.component.scss'],
-  standalone: true,
-  imports: [CommonModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-watch-time',
+    templateUrl: './watch-time.component.html',
+    styleUrls: ['./watch-time.component.scss'],
+    imports: [CommonModule],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WatchTimeComponent implements OnInit {
   @Input() value!: number;

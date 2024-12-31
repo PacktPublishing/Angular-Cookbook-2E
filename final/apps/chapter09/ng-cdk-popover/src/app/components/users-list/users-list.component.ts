@@ -7,11 +7,10 @@ import { CdkOverlayOrigin, ConnectedOverlayPositionChange, ConnectedPosition, Ov
 import { PopoverPositionalClassDirective } from '../../directives/popover-positional-class.directive';
 
 @Component({
-  selector: 'app-users-list',
-  standalone: true,
-  imports: [CommonModule, ScrollingModule, UsersListItemComponent, OverlayModule, PopoverPositionalClassDirective],
-  templateUrl: './users-list.component.html',
-  styleUrls: ['./users-list.component.scss'],
+    selector: 'app-users-list',
+    imports: [CommonModule, ScrollingModule, UsersListItemComponent, OverlayModule, PopoverPositionalClassDirective],
+    templateUrl: './users-list.component.html',
+    styleUrls: ['./users-list.component.scss']
 })
 export class UsersListComponent {
   @Input() listItems: AppUserCard[] = [];

@@ -4,11 +4,10 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CdkListboxModule } from '@angular/cdk/listbox';
 
 @Component({
-  selector: 'app-product-card',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, CdkListboxModule],
-  templateUrl: './product-card.component.html',
-  styleUrls: ['./product-card.component.scss'],
+    selector: 'app-product-card',
+    imports: [CommonModule, ReactiveFormsModule, CdkListboxModule],
+    templateUrl: './product-card.component.html',
+    styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent {
   @Output() colorChanged = new EventEmitter<string>();

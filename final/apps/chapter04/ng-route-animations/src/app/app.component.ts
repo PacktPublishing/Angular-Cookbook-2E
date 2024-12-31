@@ -5,12 +5,11 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { ROUTE_ANIMATION } from './animations';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [HeaderComponent, CommonModule, RouterModule],
-  animations: [ROUTE_ANIMATION],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [HeaderComponent, CommonModule, RouterModule],
+    animations: [ROUTE_ANIMATION]
 })
 export class AppComponent {
   @ViewChild(RouterOutlet) routerOutlet!: RouterOutlet;

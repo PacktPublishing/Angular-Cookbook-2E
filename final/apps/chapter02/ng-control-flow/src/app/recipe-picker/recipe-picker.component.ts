@@ -7,12 +7,11 @@ import { Recipe } from '../interfaces';
 import { ANIMATIONS } from '../animations';
 
 @Component({
-  selector: 'app-recipe-picker',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './recipe-picker.component.html',
-  styleUrls: ['./recipe-picker.component.scss'],
-  animations: [ANIMATIONS.LIST_ITEM_ANIMATION],
+    selector: 'app-recipe-picker',
+    imports: [CommonModule, FormsModule],
+    templateUrl: './recipe-picker.component.html',
+    styleUrls: ['./recipe-picker.component.scss'],
+    animations: [ANIMATIONS.LIST_ITEM_ANIMATION]
 })
 export class RecipePickerComponent {
   skillLevel = signal<SkillLevel | ''>('');

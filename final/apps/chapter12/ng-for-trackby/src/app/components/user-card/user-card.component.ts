@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 import { AppUserCard } from '../../interfaces/app-user-card.interface';
 
 @Component({
-  selector: 'app-user-card',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './user-card.component.html',
-  styleUrls: ['./user-card.component.scss'],
+    selector: 'app-user-card',
+    imports: [CommonModule],
+    templateUrl: './user-card.component.html',
+    styleUrls: ['./user-card.component.scss']
 })
 export class UserCardComponent implements OnInit {
   @Input() item!: AppUserCard;

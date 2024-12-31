@@ -6,17 +6,16 @@ import { Task, TasksFilter } from './task.model';
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [
-    HeaderComponent,
-    CommonModule,
-    RouterModule,
-    HeaderComponent,
-    SnackbarComponent,
-  ],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [
+        HeaderComponent,
+        CommonModule,
+        RouterModule,
+        HeaderComponent,
+        SnackbarComponent,
+    ]
 })
 export class AppComponent {
   @ViewChild(SnackbarComponent) snackbar!: SnackbarComponent;

@@ -8,17 +8,16 @@ import { format } from 'date-fns';
 import { Scene } from 'three';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [HeaderComponent, RouterModule, CommonModule],
-  providers: [
-    {
-      provide: APP_CONFIG,
-      useValue: AppConfig,
-    },
-  ],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [HeaderComponent, RouterModule, CommonModule],
+    providers: [
+        {
+            provide: APP_CONFIG,
+            useValue: AppConfig,
+        },
+    ]
 })
 export class AppComponent {
   // DO NOT USE THE CODE BELOW IN PRODUCTION

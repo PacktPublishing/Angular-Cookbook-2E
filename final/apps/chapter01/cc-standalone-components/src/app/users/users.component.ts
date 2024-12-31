@@ -4,11 +4,10 @@ import { USERS } from '../data';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-users',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss'],
+    selector: 'app-users',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './users.component.html',
+    styleUrls: ['./users.component.scss']
 })
 export class UsersComponent {
   users = USERS;

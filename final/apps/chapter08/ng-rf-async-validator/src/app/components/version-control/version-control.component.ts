@@ -10,11 +10,10 @@ import { VcLogsComponent } from '../vc-logs/vc-logs.component';
 import { VersionService } from '../../version.service';
 
 @Component({
-  selector: 'app-version-control',
-  standalone: true,
-  imports: [CommonModule, VcLogsComponent, ReactiveFormsModule],
-  templateUrl: './version-control.component.html',
-  styleUrls: ['./version-control.component.scss'],
+    selector: 'app-version-control',
+    imports: [CommonModule, VcLogsComponent, ReactiveFormsModule],
+    templateUrl: './version-control.component.html',
+    styleUrls: ['./version-control.component.scss']
 })
 export class VersionControlComponent implements OnInit {
   versionInput = '';

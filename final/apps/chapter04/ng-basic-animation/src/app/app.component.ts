@@ -6,28 +6,27 @@ import { TwitterCardComponent } from './components/twitter-card/twitter-card.com
 import { SocialCardType } from './types/social-card-type';
 import { trigger, transition, style, animate } from '@angular/animations';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [
-    HeaderComponent,
-    CommonModule,
-    FbCardComponent,
-    TwitterCardComponent,
-  ],
-  animations: [
-    trigger('fadeInOut', [
-      transition(':enter', [
-        style({ opacity: 0, scale: 0.85 }),
-        animate('200ms 100ms', style({ opacity: 1, scale: 1 })),
-      ]),
-      transition(':leave', [
-        style({ opacity: 1, scale: 1 }),
-        animate('100ms', style({ opacity: 0, scale: 0.85 })),
-      ]),
-    ]),
-  ],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [
+        HeaderComponent,
+        CommonModule,
+        FbCardComponent,
+        TwitterCardComponent,
+    ],
+    animations: [
+        trigger('fadeInOut', [
+            transition(':enter', [
+                style({ opacity: 0, scale: 0.85 }),
+                animate('200ms 100ms', style({ opacity: 1, scale: 1 })),
+            ]),
+            transition(':leave', [
+                style({ opacity: 1, scale: 1 }),
+                animate('100ms', style({ opacity: 0, scale: 0.85 })),
+            ]),
+        ]),
+    ]
 })
 export class AppComponent {
   selectedCardType: SocialCardType = 'facebook';

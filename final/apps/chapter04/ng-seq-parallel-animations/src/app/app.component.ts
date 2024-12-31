@@ -7,17 +7,16 @@ import { SocialCardType } from './types/social-card-type';
 import { cardAnimation } from './animations';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [
-    HeaderComponent,
-    CommonModule,
-    FbCardComponent,
-    TwitterCardComponent,
-  ],
-  animations: [cardAnimation],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [
+        HeaderComponent,
+        CommonModule,
+        FbCardComponent,
+        TwitterCardComponent,
+    ],
+    animations: [cardAnimation]
 })
 export class AppComponent {
   selectedCardType: SocialCardType = 'facebook';

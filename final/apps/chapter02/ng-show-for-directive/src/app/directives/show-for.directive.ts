@@ -8,7 +8,8 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: '[appShowFor]',
+    selector: '[appShowFor]',
+    standalone: false
 })
 export class ShowForDirective {
   @Input() duration = 1500;

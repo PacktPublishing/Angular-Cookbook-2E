@@ -5,7 +5,8 @@ export interface ReadTimeConfig {
 }
 
 @Directive({
-  selector: '[appReadTime]',
+    selector: '[appReadTime]',
+    standalone: false
 })
 export class ReadTimeDirective implements OnInit {
   @Input() configuration: ReadTimeConfig = {
