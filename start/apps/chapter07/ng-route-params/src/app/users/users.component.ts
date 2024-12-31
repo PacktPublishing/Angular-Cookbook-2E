@@ -4,11 +4,10 @@ import { UserService } from '../user.service';
 import { UsersListComponent } from '../components/users-list/users-list.component';
 
 @Component({
-  selector: 'app-users',
-  standalone: true,
-  imports: [CommonModule, UsersListComponent],
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss'],
+    selector: 'app-users',
+    imports: [CommonModule, UsersListComponent],
+    templateUrl: './users.component.html',
+    styleUrls: ['./users.component.scss']
 })
 export class UsersComponent {
   userService = inject(UserService);

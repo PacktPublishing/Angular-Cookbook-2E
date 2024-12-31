@@ -6,16 +6,15 @@ import { VersionControlComponent } from './components/version-control/version-co
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [
-    HeaderComponent,
-    CommonModule,
-    RouterModule,
-    VersionControlComponent,
-  ],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [
+        HeaderComponent,
+        CommonModule,
+        RouterModule,
+        VersionControlComponent,
+    ]
 })
 export class AppComponent implements OnInit {
   http = inject(HttpClient);

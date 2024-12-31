@@ -4,11 +4,10 @@ import { WatchComponent } from '../watch/watch.component';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-watch-box',
-  templateUrl: './watch-box.component.html',
-  styleUrls: ['./watch-box.component.scss'],
-  standalone: true,
-  imports: [CommonModule, WatchComponent, FormsModule]
+    selector: 'app-watch-box',
+    templateUrl: './watch-box.component.html',
+    styleUrls: ['./watch-box.component.scss'],
+    imports: [CommonModule, WatchComponent, FormsModule]
 })
 export class WatchBoxComponent implements OnInit {
   name = '';

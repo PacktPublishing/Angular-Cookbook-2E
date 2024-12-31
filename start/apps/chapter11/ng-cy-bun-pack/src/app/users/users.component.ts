@@ -6,11 +6,10 @@ import { User } from '../user.interface';
 import { BehaviorSubject, debounceTime, distinctUntilChanged, mergeMap } from 'rxjs';
 
 @Component({
-  selector: 'app-users',
-  standalone: true,
-  imports: [CommonModule, UsersListComponent],
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss'],
+    selector: 'app-users',
+    imports: [CommonModule, UsersListComponent],
+    templateUrl: './users.component.html',
+    styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
   userService = inject(UserService);

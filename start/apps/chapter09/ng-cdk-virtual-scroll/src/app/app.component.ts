@@ -11,17 +11,16 @@ import { UsersListComponent } from './components/users-list/users-list.component
 const LOADER_TIMEOUT = 3000;
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [
-    HeaderComponent,
-    CommonModule,
-    RouterModule,
-    LoaderComponent,
-    UsersListComponent,
-  ],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [
+        HeaderComponent,
+        CommonModule,
+        RouterModule,
+        LoaderComponent,
+        UsersListComponent,
+    ]
 })
 export class AppComponent {
   $listItemsData!: Observable<AppUserCard[]>;

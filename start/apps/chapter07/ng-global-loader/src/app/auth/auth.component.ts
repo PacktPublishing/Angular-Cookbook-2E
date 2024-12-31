@@ -5,11 +5,10 @@ import { Router, RouterModule } from '@angular/router';
 import { UserType } from '../constants/user-type';
 
 @Component({
-  selector: 'app-auth',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.scss'],
+    selector: 'app-auth',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './auth.component.html',
+    styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent {
   auth = inject(AuthService);

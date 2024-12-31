@@ -10,12 +10,11 @@ import { selectBucketItems, selectIsCIP } from '../store/bucket.selectors';
 import { ANIMATIONS } from '../animations';
 
 @Component({
-  selector: 'app-bucket',
-  templateUrl: './bucket.component.html',
-  styleUrls: ['./bucket.component.scss'],
-  standalone: true,
-  animations: [ANIMATIONS.LIST_ITEM_ANIMATION],
-  imports: [CommonModule, FormsModule, StoreModule],
+    selector: 'app-bucket',
+    templateUrl: './bucket.component.html',
+    styleUrls: ['./bucket.component.scss'],
+    animations: [ANIMATIONS.LIST_ITEM_ANIMATION],
+    imports: [CommonModule, FormsModule, StoreModule]
 })
 export class BucketComponent implements OnInit {
   selectedFruit: Fruit = '' as Fruit;

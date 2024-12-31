@@ -8,11 +8,10 @@ import { UserCardComponent } from '../component/user-card/user-card.component';
 import { LoaderComponent } from '../component/loader/loader.component';
 
 @Component({
-  selector: 'app-user',
-  standalone: true,
-  imports: [CommonModule, UserCardComponent, LoaderComponent, RouterModule],
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss'],
+    selector: 'app-user',
+    imports: [CommonModule, UserCardComponent, LoaderComponent, RouterModule],
+    templateUrl: './user.component.html',
+    styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit, OnDestroy {
   user!: IUser;

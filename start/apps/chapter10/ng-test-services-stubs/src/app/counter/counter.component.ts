@@ -3,11 +3,10 @@ import { Component, OnInit, inject } from '@angular/core';
 import { CounterService } from '../services/counter.service';
 
 @Component({
-  selector: 'app-counter',
-  templateUrl: './counter.component.html',
-  styleUrls: ['./counter.component.scss'],
-  standalone: true,
-  imports: [CommonModule]
+    selector: 'app-counter',
+    templateUrl: './counter.component.html',
+    styleUrls: ['./counter.component.scss'],
+    imports: [CommonModule]
 })
 export class CounterComponent implements OnInit {
   counter = 0;
