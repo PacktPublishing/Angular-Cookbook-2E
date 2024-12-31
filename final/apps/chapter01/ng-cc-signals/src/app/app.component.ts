@@ -23,6 +23,7 @@ import { SnackbarComponent } from './components/snackbar/snackbar.component';
 export class AppComponent {
   newTodoTitle = signal('');
   store = inject(TodoStore);
+  searchTerm = signal('');
   snackbar = viewChild.required(SnackbarComponent);
 
   constructor() {
