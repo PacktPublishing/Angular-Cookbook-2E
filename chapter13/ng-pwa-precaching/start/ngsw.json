@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1718575010662,
+  "timestamp": 1735676195079,
   "index": "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/index.html",
   "assetGroups": [
     {
@@ -13,9 +13,9 @@
       "urls": [
         "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/favicon.ico",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/index.html",
-        "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/main.65fa1231eeaf24b6.js",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/main.68439838343cb5b4.js",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/manifest.webmanifest",
-        "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/polyfills.6adabbfeb9ee2324.js",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/polyfills.207fe5e93fc9b5c7.js",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/runtime.3410f1643fa0210c.js",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/styles.1c412e682d9b2717.css"
       ],
@@ -58,10 +58,10 @@
     "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/assets/profile.png": "f09fcf7522ea67374d8b1885e120b0bf032a64f0",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/favicon.ico": "4e23d0f9b6ddaf3c9ddef90dbaed2342941297b5",
-    "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/index.html": "d6a8bdd99e058ff6cb26877840208fadaaf35607",
-    "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/main.65fa1231eeaf24b6.js": "7a9831dee769dc5921575581a7a57cbdf0706c0d",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/index.html": "f04c771d5d59443b7fcd513df758eebb7feaf535",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/main.68439838343cb5b4.js": "9800adf5dba3f21918ce06dbca67817174b3ec03",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/manifest.webmanifest": "d2df5761cd6739cdf5168171a6ea66cf4aeb0b30",
-    "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/polyfills.6adabbfeb9ee2324.js": "5067a0661be7d93737aa264933e9812bc21943e6",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/polyfills.207fe5e93fc9b5c7.js": "9d739fe218ba2bc6c47381d7313037c20b93b23b",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/runtime.3410f1643fa0210c.js": "21f3ed6b9bc14a92ebdcdd4ea4c8ea0089ef7432",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-precaching/start/styles.1c412e682d9b2717.css": "329a512f0f628681077fdf9f0ca5df4fe56d5c2d"
   },
