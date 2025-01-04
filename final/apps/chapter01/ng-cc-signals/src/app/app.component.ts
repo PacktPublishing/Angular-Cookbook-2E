@@ -28,9 +28,9 @@ export class AppComponent {
 
   constructor() {
     effect(() => {
-      const allCompleted = this.store
-        .todos()
-        .every((todoItem) => todoItem.completed);
+      const allCompleted =
+        this.store.todos().length > 0 &&
+        this.store.todos().every((todoItem) => todoItem.completed);
       if (allCompleted) {
         this.snackbar().show();
       }

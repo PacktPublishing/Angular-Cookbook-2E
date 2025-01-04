@@ -35,7 +35,8 @@
       />
       <button [disabled]="!newTodoTitle()" type="submit">Add</button>
     </form>
-
+    @if(store.loadingTodos()) { Loading... } @else if
+    (store.loadingTodosError()) { {{ store.loadingTodosError() }} }
     <!-- Task List -->
     <ul>
       @for (task of store.filteredTodos(); track $index) {
