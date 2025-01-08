@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter01/ng-cc-signals/final/"
+          "baseHref": "/Angular-Cookbook-2E/chapter01/ng-cc-signals/start/"
         },
         "development": {
           "buildOptimizer": false,

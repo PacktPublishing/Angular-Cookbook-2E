@@ -1,5 +1,5 @@
 <ng-cb-ui-header
-  appTitle="Component communication using Signals"
+  appTitle="Using NgRx Signal Store with resource"
   appName="ng-cc-signals"
 >
   <div class="spacer"></div>
@@ -21,7 +21,7 @@
         [(ngModel)]="searchTerm"
         class="p-2 border rounded mr-2"
         placeholder="Search Todos"
-        (ngModelChange)="store.updateSearch($event)"
+        (ngModelChange)="store.updateSearchTerm($event)"
       />
     </div>
 
@@ -35,8 +35,11 @@
       />
       <button [disabled]="!newTodoTitle()" type="submit">Add</button>
     </form>
-    @if(store.loadingTodos()) { Loading... } @else if
-    (store.loadingTodosError()) { {{ store.loadingTodosError() }} }
+
+    @if (store.todosLoading()) { Loading... }
+    @else if(store.todosLoadingError()) {
+    {{ store.todosLoadingError() }}
+    }
     <!-- Task List -->
     <ul>
       @for (task of store.filteredTodos(); track $index) {
