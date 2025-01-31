@@ -5,11 +5,10 @@ import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
-  selector: 'app-folder',
-  templateUrl: './folder.component.html',
-  styleUrls: ['./folder.component.scss'],
-  imports: [CommonModule, FontAwesomeModule],
-  standalone: true
+    selector: 'app-folder',
+    templateUrl: './folder.component.html',
+    styleUrls: ['./folder.component.scss'],
+    imports: [CommonModule, FontAwesomeModule]
 })
 export class FolderComponent {
   @Input() folder!: IFolder;

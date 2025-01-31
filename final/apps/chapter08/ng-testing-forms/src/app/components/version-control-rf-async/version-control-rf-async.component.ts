@@ -10,11 +10,10 @@ import { VcLogsComponent } from '../vc-logs/vc-logs.component';
 import { FormValidationService } from '../../form-validation.service';
 
 @Component({
-  selector: 'app-version-control-rf-async',
-  standalone: true,
-  imports: [CommonModule, VcLogsComponent, ReactiveFormsModule],
-  templateUrl: './version-control-rf-async.component.html',
-  styleUrls: ['./version-control-rf-async.component.scss'],
+    selector: 'app-version-control-rf-async',
+    imports: [CommonModule, VcLogsComponent, ReactiveFormsModule],
+    templateUrl: './version-control-rf-async.component.html',
+    styleUrls: ['./version-control-rf-async.component.scss']
 })
 export class VersionControlRfAsyncComponent implements OnInit {
   versionInput = '';

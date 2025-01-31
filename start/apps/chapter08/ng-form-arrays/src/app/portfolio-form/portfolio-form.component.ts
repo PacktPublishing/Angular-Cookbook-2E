@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-portfolio-form',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './portfolio-form.component.html',
-  styleUrls: ['./portfolio-form.component.scss'],
+    selector: 'app-portfolio-form',
+    imports: [CommonModule, ReactiveFormsModule],
+    templateUrl: './portfolio-form.component.html',
+    styleUrls: ['./portfolio-form.component.scss']
 })
 export class PortfolioFormComponent {
   fb = inject(FormBuilder);

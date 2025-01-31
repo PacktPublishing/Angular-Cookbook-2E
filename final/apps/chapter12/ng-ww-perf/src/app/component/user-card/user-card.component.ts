@@ -8,11 +8,10 @@ import { RANDOMIZATION_COUNT } from '../../tokens';
 import { RandomColorOutgoingEvent , getRandomColorWorker } from '../../workers/random-color.worker';
 
 @Component({
-  selector: 'app-user-card',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './user-card.component.html',
-  styleUrls: ['./user-card.component.scss']
+    selector: 'app-user-card',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './user-card.component.html',
+    styleUrls: ['./user-card.component.scss']
 })
 export class UserCardComponent implements OnInit, OnChanges, OnDestroy {
   @Input() user!: IUser;

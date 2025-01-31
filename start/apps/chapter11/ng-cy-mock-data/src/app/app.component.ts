@@ -5,11 +5,10 @@ import { RouterModule } from '@angular/router';
 import { BucketComponent } from './bucket/bucket.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [HeaderComponent, RouterModule, CommonModule, BucketComponent],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [HeaderComponent, RouterModule, CommonModule, BucketComponent]
 })
 export class AppComponent {
   // DO NOT USE THE CODE BELOW IN PRODUCTION

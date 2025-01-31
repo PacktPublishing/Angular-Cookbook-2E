@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-value-guesser',
-  templateUrl: './value-guesser.component.html',
-  styleUrls: ['./value-guesser.component.scss'],
-  standalone: true,
-  imports: [CommonModule]
+    selector: 'app-value-guesser',
+    templateUrl: './value-guesser.component.html',
+    styleUrls: ['./value-guesser.component.scss'],
+    imports: [CommonModule]
 })
 export class ValueGuesserComponent {
   @Output() valueGuessed = new EventEmitter<number>();

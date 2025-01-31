@@ -10,11 +10,10 @@ enum CounterVisibility {
 }
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [HeaderComponent, CommonModule, RouterModule, CounterComponent],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [HeaderComponent, CommonModule, RouterModule, CounterComponent]
 })
 export class AppComponent {
   visibilityOptions = CounterVisibility;

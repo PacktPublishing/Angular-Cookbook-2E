@@ -7,11 +7,10 @@ import { mergeMap, startWith, takeWhile } from 'rxjs/operators';
 import { UserCardComponent } from '../component/user-card/user-card.component';
 
 @Component({
-  selector: 'app-users',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, UserCardComponent],
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss'],
+    selector: 'app-users',
+    imports: [CommonModule, ReactiveFormsModule, UserCardComponent],
+    templateUrl: './users.component.html',
+    styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
   users!: IUser[];

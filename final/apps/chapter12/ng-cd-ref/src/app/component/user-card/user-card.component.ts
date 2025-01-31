@@ -7,11 +7,10 @@ import { RANDOMIZATION_COUNT } from '../../tokens';
 import { LogsService } from '../../services/logs.service';
 
 @Component({
-  selector: 'app-user-card',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './user-card.component.html',
-  styleUrls: ['./user-card.component.scss']
+    selector: 'app-user-card',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './user-card.component.html',
+    styleUrls: ['./user-card.component.scss']
 })
 export class UserCardComponent implements AfterViewInit {
   @Input() user!: IUser;

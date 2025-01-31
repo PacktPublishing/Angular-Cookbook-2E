@@ -5,11 +5,10 @@ import { ValueGuesserComponent } from '../components/value-guesser/value-guesser
 import { LeaderBoardComponent } from '../components/leader-board/leader-board.component';
 import { DiceComponent } from '../components/dice/dice.component';
 @Component({
-  selector: 'app-game',
-  standalone: true,
-  templateUrl: './game.component.html',
-  styleUrls: ['./game.component.scss'],
-  imports: [CommonModule, ReactiveFormsModule, ValueGuesserComponent, LeaderBoardComponent, DiceComponent]
+    selector: 'app-game',
+    templateUrl: './game.component.html',
+    styleUrls: ['./game.component.scss'],
+    imports: [CommonModule, ReactiveFormsModule, ValueGuesserComponent, LeaderBoardComponent, DiceComponent]
 })
 export class GameComponent {
   nameForm = new FormGroup({

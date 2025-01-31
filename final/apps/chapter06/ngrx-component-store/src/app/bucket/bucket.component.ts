@@ -7,12 +7,11 @@ import { IFruit } from '../interfaces/fruit.interface';
 import { BucketService } from './bucket.service';
 
 @Component({
-  selector: 'app-bucket',
-  templateUrl: './bucket.component.html',
-  styleUrls: ['./bucket.component.scss'],
-  standalone: true,
-  animations: [ANIMATIONS.LIST_ITEM_ANIMATION],
-  imports: [CommonModule, FormsModule],
+    selector: 'app-bucket',
+    templateUrl: './bucket.component.html',
+    styleUrls: ['./bucket.component.scss'],
+    animations: [ANIMATIONS.LIST_ITEM_ANIMATION],
+    imports: [CommonModule, FormsModule]
 })
 export class BucketComponent {
   selectedFruit: Fruit = '' as Fruit;

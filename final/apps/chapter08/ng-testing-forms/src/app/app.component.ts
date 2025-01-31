@@ -7,17 +7,16 @@ import { VersionControlRfComponent } from './components/version-control-rf/versi
 import { VersionControlTdfComponent } from './components/version-control-tdf/version-control-tdf.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [
-    HeaderComponent,
-    CommonModule,
-    RouterModule,
-    VersionControlTdfComponent,
-    VersionControlRfComponent,
-    VersionControlRfAsyncComponent,
-  ],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [
+        HeaderComponent,
+        CommonModule,
+        RouterModule,
+        VersionControlTdfComponent,
+        VersionControlRfComponent,
+        VersionControlRfAsyncComponent,
+    ]
 })
 export class AppComponent {}

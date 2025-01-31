@@ -6,11 +6,10 @@ import { SwapiService } from '../../services/swapi.service';
 import { LoaderComponent } from '../loader/loader.component';
 
 @Component({
-  selector: 'app-sw-character',
-  standalone: true,
-  imports: [CommonModule, LoaderComponent],
-  templateUrl: './sw-character.component.html',
-  styleUrls: ['./sw-character.component.scss'],
+    selector: 'app-sw-character',
+    imports: [CommonModule, LoaderComponent],
+    templateUrl: './sw-character.component.html',
+    styleUrls: ['./sw-character.component.scss']
 })
 export class SwCharacterComponent {
   swapi = inject(SwapiService);

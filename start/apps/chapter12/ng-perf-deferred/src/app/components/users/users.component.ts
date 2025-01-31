@@ -8,11 +8,10 @@ import { UserCardComponent } from '../user-card/user-card.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @Component({
-  selector: 'app-users',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, UserCardComponent, NgxSkeletonLoaderModule],
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss'],
+    selector: 'app-users',
+    imports: [CommonModule, ReactiveFormsModule, UserCardComponent, NgxSkeletonLoaderModule],
+    templateUrl: './users.component.html',
+    styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
   users: IUser[] = [];

@@ -7,11 +7,10 @@ import { LogsService } from '../../services/logs.service';
 import { RandomColorPipe } from '../../pipes/random-color.pipe';
 
 @Component({
-  selector: 'app-user-card',
-  standalone: true,
-  imports: [CommonModule, RouterModule, RandomColorPipe],
-  templateUrl: './user-card.component.html',
-  styleUrls: ['./user-card.component.scss']
+    selector: 'app-user-card',
+    imports: [CommonModule, RouterModule, RandomColorPipe],
+    templateUrl: './user-card.component.html',
+    styleUrls: ['./user-card.component.scss']
 })
 export class UserCardComponent {
   @Input() user!: IUser;

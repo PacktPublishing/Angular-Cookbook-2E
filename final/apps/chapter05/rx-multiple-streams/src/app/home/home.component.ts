@@ -18,11 +18,10 @@ interface BoxStyles {
 }
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+    selector: 'app-home',
+    imports: [CommonModule, ReactiveFormsModule],
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   sizeOptions = [100, 200, 300, 400, 500, 600, 700];

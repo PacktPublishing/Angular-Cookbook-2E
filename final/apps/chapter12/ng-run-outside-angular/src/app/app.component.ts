@@ -5,10 +5,9 @@ import { RouterModule } from '@angular/router';
 import { WatchBoxComponent } from './components/watch-box/watch-box.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [HeaderComponent, CommonModule, RouterModule, WatchBoxComponent],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [HeaderComponent, CommonModule, RouterModule, WatchBoxComponent]
 })
 export class AppComponent {}

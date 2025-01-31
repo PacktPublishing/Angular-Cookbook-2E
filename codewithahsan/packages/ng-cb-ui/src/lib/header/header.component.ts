@@ -5,11 +5,10 @@ import { PULSE_CHECKER_SESSIONS } from '../../assets/pulsechecker-sessions';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'ng-cb-ui-header',
-  standalone: true,
-  imports: [CommonModule, NgLogoComponent],
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+    selector: 'ng-cb-ui-header',
+    imports: [CommonModule, NgLogoComponent],
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
   @Input() appName = 'ng-cookbook-recipe';

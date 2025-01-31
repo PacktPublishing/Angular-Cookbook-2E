@@ -4,19 +4,17 @@ import { CommonModule } from '@angular/common';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
-  selector: 'app-rating',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './rating.component.html',
-  styleUrls: ['./rating.component.scss'],
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => RatingComponent),
-
-      multi: true,
-    },
-  ],
+    selector: 'app-rating',
+    imports: [CommonModule],
+    templateUrl: './rating.component.html',
+    styleUrls: ['./rating.component.scss'],
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => RatingComponent),
+            multi: true,
+        },
+    ]
 })
 export class RatingComponent implements ControlValueAccessor {
   value = 2;

@@ -7,11 +7,10 @@ import { IPerson } from './interfaces';
 import { SwapiService } from './swapi.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [HeaderComponent, CommonModule, LoaderComponent],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [HeaderComponent, CommonModule, LoaderComponent]
 })
 export class AppComponent implements OnInit {
   swapi = inject(SwapiService);

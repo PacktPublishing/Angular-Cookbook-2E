@@ -4,11 +4,10 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { VcLogsComponent } from '../vc-logs/vc-logs.component';
 
 @Component({
-  selector: 'app-version-control',
-  templateUrl: './version-control.component.html',
-  styleUrls: ['./version-control.component.scss'],
-  standalone: true,
-  imports: [CommonModule, FormsModule, VcLogsComponent]
+    selector: 'app-version-control',
+    templateUrl: './version-control.component.html',
+    styleUrls: ['./version-control.component.scss'],
+    imports: [CommonModule, FormsModule, VcLogsComponent]
 })
 export class VersionControlComponent  {
   versionInput = '';

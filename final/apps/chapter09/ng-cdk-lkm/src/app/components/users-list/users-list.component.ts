@@ -6,11 +6,10 @@ import { UsersListItemComponent } from '../users-list-item/users-list-item.compo
 import { FocusKeyManager } from '@angular/cdk/a11y';
 
 @Component({
-  selector: 'app-users-list',
-  standalone: true,
-  imports: [CommonModule, ScrollingModule, UsersListItemComponent],
-  templateUrl: './users-list.component.html',
-  styleUrls: ['./users-list.component.scss'],
+    selector: 'app-users-list',
+    imports: [CommonModule, ScrollingModule, UsersListItemComponent],
+    templateUrl: './users-list.component.html',
+    styleUrls: ['./users-list.component.scss']
 })
 export class UsersListComponent implements AfterViewInit {
   @HostBinding('role') 

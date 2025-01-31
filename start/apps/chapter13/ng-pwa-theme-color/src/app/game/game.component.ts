@@ -15,19 +15,18 @@ import { IDiceSide } from '../interfaces/dice.interface';
 import { LeaderboardService } from '../services/leaderboard.service';
 import { IScore } from '../interfaces/score.interface';
 @Component({
-  selector: 'app-game',
-  standalone: true,
-  templateUrl: './game.component.html',
-  styleUrls: ['./game.component.scss'],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    ValueGuesserComponent,
-    LeaderBoardComponent,
-    DiceComponent,
-    CdkStepperModule,
-    GameStepperComponent
-  ],
+    selector: 'app-game',
+    templateUrl: './game.component.html',
+    styleUrls: ['./game.component.scss'],
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        ValueGuesserComponent,
+        LeaderBoardComponent,
+        DiceComponent,
+        CdkStepperModule,
+        GameStepperComponent
+    ]
 })
 export class GameComponent {
   @ViewChild(CdkStepper) stepper!: CdkStepper;

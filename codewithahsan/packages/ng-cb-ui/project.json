@@ -3,15 +3,14 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/ng-cb-ui/src",
   "prefix": "ng-cb-ui",
-  "tags": ["ui"],
   "projectType": "library",
+  "tags": ["ui"],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "packages/ng-cb-ui/ng-package.json",
-        "tailwindConfig": "packages/ng-cb-ui/tailwind.config.js"
+        "project": "packages/ng-cb-ui/ng-package.json"
       },
       "configurations": {
         "production": {

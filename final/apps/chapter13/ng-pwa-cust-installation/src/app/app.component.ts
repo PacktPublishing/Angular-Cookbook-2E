@@ -5,11 +5,10 @@ import { RouterModule } from '@angular/router';
 import { InstallablePromptService } from './services/installable-prompt.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [HeaderComponent, CommonModule, RouterModule],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [HeaderComponent, CommonModule, RouterModule]
 })
 export class AppComponent {
   promptService = inject(InstallablePromptService);

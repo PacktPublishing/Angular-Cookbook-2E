@@ -5,11 +5,10 @@ import { WatchTimeComponent } from '../watch-time/watch-time.component';
 declare let window: any;
 
 @Component({
-  selector: 'app-watch',
-  templateUrl: './watch.component.html',
-  styleUrls: ['./watch.component.scss'],
-  standalone: true,
-  imports: [CommonModule, WatchTimeComponent]
+    selector: 'app-watch',
+    templateUrl: './watch.component.html',
+    styleUrls: ['./watch.component.scss'],
+    imports: [CommonModule, WatchTimeComponent]
 })
 export class WatchComponent implements OnInit {
   @Input() name = '';

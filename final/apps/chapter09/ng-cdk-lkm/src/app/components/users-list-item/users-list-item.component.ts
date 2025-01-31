@@ -5,12 +5,11 @@ import { AppUserCard } from '../../interfaces/app-user-card.interface';
 import { FocusableOption } from '@angular/cdk/a11y'; 
 
 @Component({
-  selector: 'app-users-list-item',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './users-list-item.component.html',
-  styleUrls: ['./users-list-item.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-users-list-item',
+    imports: [CommonModule],
+    templateUrl: './users-list-item.component.html',
+    styleUrls: ['./users-list-item.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class UsersListItemComponent implements FocusableOption {
   @Input() item!: Partial<AppUserCard>; 

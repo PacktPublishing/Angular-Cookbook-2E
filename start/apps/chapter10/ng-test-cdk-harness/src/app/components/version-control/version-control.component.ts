@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-version-control',
-  templateUrl: './version-control.component.html',
-  styleUrls: ['./version-control.component.scss'],
+    selector: 'app-version-control',
+    templateUrl: './version-control.component.html',
+    styleUrls: ['./version-control.component.scss'],
+    standalone: false
 })
 export class VersionControlComponent  {
   versionInput = '';

@@ -6,16 +6,15 @@ import { TwitterCardComponent } from './components/twitter-card/twitter-card.com
 import { SocialCardType } from './types/social-card-type';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [
-    HeaderComponent,
-    CommonModule,
-    FbCardComponent,
-    TwitterCardComponent,
-  ],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [
+        HeaderComponent,
+        CommonModule,
+        FbCardComponent,
+        TwitterCardComponent,
+    ]
 })
 export class AppComponent {
   selectedCardType: SocialCardType = 'facebook';

@@ -4,11 +4,10 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { RatingComponent } from '../components/rating/rating.component';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RatingComponent]
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
+    imports: [CommonModule, ReactiveFormsModule, RatingComponent]
 })
 export class HomeComponent implements OnInit {
   reviewForm = new FormGroup({

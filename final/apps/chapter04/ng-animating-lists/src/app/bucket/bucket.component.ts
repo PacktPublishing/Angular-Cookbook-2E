@@ -9,12 +9,11 @@ import { BucketService } from './bucket.service';
 import { ANIMATIONS } from '../animations';
 
 @Component({
-  selector: 'app-bucket',
-  templateUrl: './bucket.component.html',
-  styleUrls: ['./bucket.component.scss'],
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  animations: [ANIMATIONS.LIST_ITEM_ANIMATION]
+    selector: 'app-bucket',
+    templateUrl: './bucket.component.html',
+    styleUrls: ['./bucket.component.scss'],
+    imports: [CommonModule, FormsModule],
+    animations: [ANIMATIONS.LIST_ITEM_ANIMATION]
 })
 export class BucketComponent implements OnInit {
   bucketService = inject(BucketService);

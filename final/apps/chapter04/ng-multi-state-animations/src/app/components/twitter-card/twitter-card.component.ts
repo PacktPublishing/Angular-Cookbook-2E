@@ -3,12 +3,11 @@ import { CommonModule } from '@angular/common';
 import { cardAnimation } from '../../animations';
 
 @Component({
-  selector: 'app-twitter-card',
-  standalone: true,
-  imports: [CommonModule],
-  animations: [cardAnimation],
-  templateUrl: './twitter-card.component.html',
-  styleUrls: ['./twitter-card.component.scss'],
+    selector: 'app-twitter-card',
+    imports: [CommonModule],
+    animations: [cardAnimation],
+    templateUrl: './twitter-card.component.html',
+    styleUrls: ['./twitter-card.component.scss']
 })
 export class TwitterCardComponent {
   cardState: 'active' | 'hovered' = 'active';

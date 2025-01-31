@@ -7,11 +7,10 @@ import { IFruit } from '../interfaces/fruit.interface';
 import { BucketService } from './bucket.service';
 
 @Component({
-  selector: 'app-bucket',
-  templateUrl: './bucket.component.html',
-  styleUrls: ['./bucket.component.scss'],
-  standalone: true,
-  imports: [CommonModule, FormsModule],
+    selector: 'app-bucket',
+    templateUrl: './bucket.component.html',
+    styleUrls: ['./bucket.component.scss'],
+    imports: [CommonModule, FormsModule]
 })
 export class BucketComponent implements OnInit {
   bucketService = inject(BucketService);

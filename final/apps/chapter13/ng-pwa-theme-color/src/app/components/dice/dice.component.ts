@@ -9,11 +9,10 @@ import { RollTransitions } from '../../constants/roll-transitions';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-dice',
-  templateUrl: './dice.component.html',
-  styleUrls: ['./dice.component.scss'],
-  standalone: true,
-  imports: [CommonModule]
+    selector: 'app-dice',
+    templateUrl: './dice.component.html',
+    styleUrls: ['./dice.component.scss'],
+    imports: [CommonModule]
 })
 export class DiceComponent {
   dice: IDice = {

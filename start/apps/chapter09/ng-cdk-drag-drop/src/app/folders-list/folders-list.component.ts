@@ -7,11 +7,10 @@ import { FileComponent } from '../components/file/file.component';
 import { FolderComponent } from '../components/folder/folder.component';
 
 @Component({
-  selector: 'app-folders-list',
-  templateUrl: './folders-list.component.html',
-  styleUrls: ['./folders-list.component.scss'],
-  imports: [CommonModule, FileComponent, FolderComponent],
-  standalone: true
+    selector: 'app-folders-list',
+    templateUrl: './folders-list.component.html',
+    styleUrls: ['./folders-list.component.scss'],
+    imports: [CommonModule, FileComponent, FolderComponent]
 })
 export class FoldersListComponent {
   folders = APP_DATA;

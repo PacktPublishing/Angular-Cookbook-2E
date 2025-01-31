@@ -6,10 +6,9 @@ import { SwCharacterComponent } from '../components/sw-character/sw-character.co
 import { LoaderComponent } from '../components/loader/loader.component';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, UsersComponent, FoldersListComponent, SwCharacterComponent, LoaderComponent],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+    selector: 'app-home',
+    imports: [CommonModule, UsersComponent, FoldersListComponent, SwCharacterComponent, LoaderComponent],
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {}

@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 import { interval, merge, Observable, scan, takeWhile, tap } from 'rxjs';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+    selector: 'app-home',
+    imports: [CommonModule],
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
   inputStreamData = ['john wick', 'inception', 'interstellar'];

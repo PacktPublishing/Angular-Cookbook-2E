@@ -5,15 +5,14 @@ import { RouterModule } from '@angular/router';
 import { PortfolioFormComponent } from './portfolio-form/portfolio-form.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [
-    HeaderComponent,
-    CommonModule,
-    RouterModule,
-    PortfolioFormComponent,
-  ],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [
+        HeaderComponent,
+        CommonModule,
+        RouterModule,
+        PortfolioFormComponent,
+    ]
 })
 export class AppComponent {}

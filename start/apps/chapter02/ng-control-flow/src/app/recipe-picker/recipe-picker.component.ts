@@ -6,11 +6,10 @@ import { RECIPES } from '../data/recipes';
 import { Recipe } from '../interfaces';
 
 @Component({
-  selector: 'app-recipe-picker',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './recipe-picker.component.html',
-  styleUrls: ['./recipe-picker.component.scss'],
+    selector: 'app-recipe-picker',
+    imports: [CommonModule, FormsModule],
+    templateUrl: './recipe-picker.component.html',
+    styleUrls: ['./recipe-picker.component.scss']
 })
 export class RecipePickerComponent {
   skillLevel = signal<SkillLevel | ''>('');

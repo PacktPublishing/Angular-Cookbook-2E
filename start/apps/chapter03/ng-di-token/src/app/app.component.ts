@@ -3,9 +3,10 @@ import Jokes from './classes/jokes.class';
 import { IJoke } from './interfaces/joke.interface';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent implements OnInit {
   joke!: IJoke;

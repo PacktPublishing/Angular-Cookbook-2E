@@ -5,11 +5,10 @@ import { filter, map, Observable } from 'rxjs';
 import { User, USERS } from '../data';
 
 @Component({
-  selector: 'app-user-details',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './user-details.component.html',
-  styleUrls: ['./user-details.component.scss'],
+    selector: 'app-user-details',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './user-details.component.html',
+    styleUrls: ['./user-details.component.scss']
 })
 export class UserDetailsComponent {
   route = inject(ActivatedRoute);

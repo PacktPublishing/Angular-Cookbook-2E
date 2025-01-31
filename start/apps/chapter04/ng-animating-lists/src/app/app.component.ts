@@ -6,19 +6,18 @@ import { APP_CONFIG } from './app-config';
 import { AuthService } from './auth/auth.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [HeaderComponent, RouterModule, CommonModule],
-  providers: [
-    {
-      provide: APP_CONFIG,
-      useValue: {
-        canDeleteItems: true,
-      },
-    },
-  ],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [HeaderComponent, RouterModule, CommonModule],
+    providers: [
+        {
+            provide: APP_CONFIG,
+            useValue: {
+                canDeleteItems: true,
+            },
+        },
+    ]
 })
 export class AppComponent {
   // DO NOT USE THE CODE BELOW IN PRODUCTION

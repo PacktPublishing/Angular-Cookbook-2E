@@ -8,9 +8,10 @@ import {
 import { LoggerService } from '../../services/logger.service';
 
 @Component({
-  selector: 'app-vc-logs',
-  templateUrl: './vc-logs.component.html',
-  styleUrls: ['./vc-logs.component.scss'],
+    selector: 'app-vc-logs',
+    templateUrl: './vc-logs.component.html',
+    styleUrls: ['./vc-logs.component.scss'],
+    standalone: false
 })
 export class VcLogsComponent implements OnChanges {
   @Input() vName!: string;

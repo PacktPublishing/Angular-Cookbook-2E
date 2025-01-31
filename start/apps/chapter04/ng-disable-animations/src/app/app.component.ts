@@ -5,11 +5,10 @@ import { Router, RouterModule } from '@angular/router';
 import { AuthService } from './auth/auth.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [HeaderComponent, RouterModule, CommonModule],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [HeaderComponent, RouterModule, CommonModule]
 })
 export class AppComponent {
   // DO NOT USE THE CODE BELOW IN PRODUCTION

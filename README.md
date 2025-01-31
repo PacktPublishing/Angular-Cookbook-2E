@@ -4,7 +4,7 @@
 <img width="100" alt="angular logo" src="./docs/angular-logo.svg" />
 </div>
 
-> ### _Updated to Angular v18_
+> ### _Updated to Angular v19_
 
 This is the code repository for the [Angular-Cookbook-2E](https://www.packtpub.com/product/angular-cookbook-second-edition/9781803233444), published by Packt.
 

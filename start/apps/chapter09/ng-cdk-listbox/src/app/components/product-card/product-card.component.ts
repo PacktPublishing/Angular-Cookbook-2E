@@ -2,11 +2,10 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 @Component({
-  selector: 'app-product-card',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './product-card.component.html',
-  styleUrls: ['./product-card.component.scss'],
+    selector: 'app-product-card',
+    imports: [CommonModule, ReactiveFormsModule],
+    templateUrl: './product-card.component.html',
+    styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent implements OnInit {
   @Output() colorChanged = new EventEmitter<string>();

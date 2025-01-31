@@ -6,17 +6,16 @@ import { FormsModule } from '@angular/forms';
 import { MultiplicationTableComponent } from './components/multiplication-table/multiplication-table.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [
-    HeaderComponent,
-    CommonModule,
-    RouterModule,
-    FormsModule,
-    MultiplicationTableComponent,
-  ],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [
+        HeaderComponent,
+        CommonModule,
+        RouterModule,
+        FormsModule,
+        MultiplicationTableComponent,
+    ]
 })
 export class AppComponent {
   digitValue = 1;

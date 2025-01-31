@@ -4,11 +4,10 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { VcLogsComponent } from '../vc-logs/vc-logs.component';
 
 @Component({
-  selector: 'app-version-control-tdf',
-  standalone: true,
-  imports: [CommonModule, FormsModule, VcLogsComponent],
-  templateUrl: './version-control-tdf.component.html',
-  styleUrls: ['./version-control-tdf.component.scss'],
+    selector: 'app-version-control-tdf',
+    imports: [CommonModule, FormsModule, VcLogsComponent],
+    templateUrl: './version-control-tdf.component.html',
+    styleUrls: ['./version-control-tdf.component.scss']
 })
 export class VersionControlTdfComponent {
   @ViewChild('versionForm') versionForm!: NgForm;
