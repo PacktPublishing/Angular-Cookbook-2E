@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1735676756182,
+  "timestamp": 1738348164165,
   "index": "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/index.html",
   "assetGroups": [
     {
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/979.841e2cc19f926757.js",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/668.2eb0e23d5a96357f.js",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/favicon.ico",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/index.html",
-        "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/main.ab1e57bd3be4f2a5.js",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/main.fad52969893c39d5.js",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/manifest.webmanifest",
-        "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/polyfills.aacf7cce1907a1d6.js",
-        "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/runtime.5be9dad4d1dc90b9.js",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/polyfills.39a55026b9a0c93c.js",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/runtime.6fb68669ea7efbab.js",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/styles.dae66a719dc1c2fc.css"
       ],
       "patterns": []
@@ -47,7 +47,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/979.841e2cc19f926757.js": "bd7945d00f4c88fdd134994ee33bd90fc496717a",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/668.2eb0e23d5a96357f.js": "1d1812ccd929ea79a3d4adf1c588f9e61f82e5b7",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/assets/box-model.png": "a6b449f03994a1ee5fd9b4e95b5c6ebf8288b07c",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/assets/cover.jpg": "609ffd1d4eaab96b2df79e14540015bccf4e2ed9",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
@@ -60,11 +60,11 @@
     "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/assets/profile.png": "f09fcf7522ea67374d8b1885e120b0bf032a64f0",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/favicon.ico": "4e23d0f9b6ddaf3c9ddef90dbaed2342941297b5",
-    "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/index.html": "2f10a72228b7d450e55227ebdb173bba22471827",
-    "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/main.ab1e57bd3be4f2a5.js": "441605cbaa403bd65209aa36836879085b00ac82",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/index.html": "711fd48f280676cc4d50adc113467521f6dfcb6e",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/main.fad52969893c39d5.js": "b401491f57c5a5cb2da48a75de144d67cef02189",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/manifest.webmanifest": "3ba44c401a1f585666ec2afa5ff23afd880f4faf",
-    "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/polyfills.aacf7cce1907a1d6.js": "7f35a21beb33b829cf3a14988c684349d354b163",
-    "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/runtime.5be9dad4d1dc90b9.js": "fc384714689b12aa0dba50353d1a3ece91943d15",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/polyfills.39a55026b9a0c93c.js": "42ce02200dfe724ea57f5542afa82fb83255d102",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/runtime.6fb68669ea7efbab.js": "2d5f77c6cd4393b35e89741e4494405cac323d0c",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/styles.dae66a719dc1c2fc.css": "db25d6f760328861f49a7f199c934ff551ecb067"
   },
   "navigationUrls": [
