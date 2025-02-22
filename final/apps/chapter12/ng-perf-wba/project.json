@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter12/ng-perf-wba/final/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

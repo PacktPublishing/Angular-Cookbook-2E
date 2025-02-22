@@ -4,22 +4,22 @@
   "description": "## Generate Projects",
   "main": "index.js",
   "scripts": {
-    "test": "sh scripts/run-tests.sh",
-    "e2e": "sh scripts/run-e2e.sh",
+    "test": "node scripts/run-tests.js",
+    "e2e": "node scripts/run-e2e.js",
     "postinstall": "cd codewithahsan && npm i && cd ../start && npm i && cd ../final && npm i",
-    "serve": "sh scripts/serve-projects.sh",
-    "serve:prod": "sh scripts/serve-projects-prod.sh",
+    "serve": "node scripts/serve-projects.js",
+    "serve:prod": "node scripts/serve-projects-prod.js",
     "serve:fake-be": "cd ./codewithahsan && npx nx serve fake-be",
-    "create": "sh scripts/create-projects.sh",
-    "remove": "sh scripts/remove-projects.sh",
-    "copy": "sh scripts/copy-start-to-final.sh",
-    "copy:styles": "sh scripts/copy-styles.sh",
+    "create": "node scripts/create-projects.js",
+    "remove": "node scripts/remove-projects.js",
+    "copy": "node scripts/copy-start-to-final.js",
+    "copy:styles": "node scripts/copy-styles.js",
     "serve:ng-jest-setup": "cd start/apps/chapter10/ng-jest-setup && npm start -- -o",
     "test:ng-jest-setup": "cd start/apps/chapter10/ng-jest-setup && npm t",
-    "build": "sh scripts/build.sh",
-    "serve:static": "sh scripts/serve-static.sh",
-    "sanity": "sh scripts/sanity.sh",
-    "predeploy": "sh scripts/prepare-dist.sh",
+    "build": "node scripts/build.js",
+    "serve:static": "node scripts/serve-static.js",
+    "sanity": "node scripts/sanity.js",
+    "predeploy": "node scripts/prepare-dist.js",
     "deploy": "gh-pages --dist dist/apps"
   },
   "keywords": [],
@@ -30,5 +30,8 @@
     "cheerio": "^1.0.0-rc.12",
     "concurrently": "^7.6.0",
     "gh-pages": "^6.1.1"
+  },
+  "dependencies": {
+    "minimist": "^1.2.8"
   }
 }

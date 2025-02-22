@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter05/rx-switchmap-operator/final/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

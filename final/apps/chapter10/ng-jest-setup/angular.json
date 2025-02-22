@@ -21,18 +21,11 @@
               "base": "../../../dist/apps/chapter10/ng-jest-setup"
             },
             "index": "src/index.html",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": [],
             "browser": "src/main.ts"
           },
@@ -50,7 +43,7 @@
                   "maximumError": "4kb"
                 }
               ],
-              "baseHref": "/Angular-Cookbook-2E/chapter10/ng-jest-setup/final/",
+              "baseHref": "/",
               "outputHashing": "all"
             },
             "development": {

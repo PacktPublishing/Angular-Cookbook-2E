@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter09/ng-cdk-virtual-scroll/final/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

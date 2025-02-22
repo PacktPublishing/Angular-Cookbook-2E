@@ -37,7 +37,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter02/ng-read-time-directive/start/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

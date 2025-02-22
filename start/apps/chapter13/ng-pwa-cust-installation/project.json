@@ -48,7 +48,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/start/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

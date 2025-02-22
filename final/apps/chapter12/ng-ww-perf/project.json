@@ -46,7 +46,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter12/ng-ww-perf/final/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

@@ -37,7 +37,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter01/cc-standalone-components/final/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

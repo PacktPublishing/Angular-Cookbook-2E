@@ -42,7 +42,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter04/ng-animations-keyframes/final/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

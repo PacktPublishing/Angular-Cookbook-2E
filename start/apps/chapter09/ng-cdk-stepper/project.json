@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter09/ng-cdk-stepper/start/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

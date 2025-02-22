@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter05/rx-multiple-streams/start/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

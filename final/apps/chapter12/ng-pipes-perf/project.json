@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter12/ng-pipes-perf/final/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

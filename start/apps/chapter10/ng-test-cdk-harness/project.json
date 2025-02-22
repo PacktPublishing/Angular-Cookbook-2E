@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter10/ng-test-cdk-harness/start/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

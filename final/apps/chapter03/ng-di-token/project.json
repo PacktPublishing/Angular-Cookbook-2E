@@ -37,7 +37,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter03/ng-di-token/final/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

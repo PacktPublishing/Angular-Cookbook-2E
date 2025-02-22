@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter05/ng-async-pipe/final/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

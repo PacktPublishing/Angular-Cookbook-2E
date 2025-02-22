@@ -37,7 +37,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter03/ng-aliased-class-providers/start/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

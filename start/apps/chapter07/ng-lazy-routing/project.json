@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter07/ng-lazy-routing/start/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

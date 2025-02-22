@@ -45,7 +45,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter11/ng-cy-element-visibility/final/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

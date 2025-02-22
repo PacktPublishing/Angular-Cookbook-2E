@@ -37,7 +37,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter01/cc-setters/start/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,

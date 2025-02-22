@@ -39,7 +39,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter03/ng-singleton-service-forroot/start/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,
