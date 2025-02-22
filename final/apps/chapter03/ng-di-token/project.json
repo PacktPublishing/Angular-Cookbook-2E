@@ -7,19 +7,25 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/chapter03/ng-di-token",
         "index": "apps/chapter03/ng-di-token/src/index.html",
         "main": "apps/chapter03/ng-di-token/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/chapter03/ng-di-token/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/chapter03/ng-di-token/src/favicon.ico",
           "apps/chapter03/ng-di-token/src/assets"
         ],
-        "styles": ["apps/chapter03/ng-di-token/src/styles.scss"],
+        "styles": [
+          "apps/chapter03/ng-di-token/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -70,11 +76,15 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/chapter03/ng-di-token/jest.config.ts"
       }

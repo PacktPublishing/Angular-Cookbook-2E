@@ -8,12 +8,16 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/chapter09/ng-cdk-virtual-scroll",
         "index": "apps/chapter09/ng-cdk-virtual-scroll/src/index.html",
         "main": "apps/chapter09/ng-cdk-virtual-scroll/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/chapter09/ng-cdk-virtual-scroll/tsconfig.app.json",
         "assets": [
           "apps/chapter09/ng-cdk-virtual-scroll/src/favicon.ico",
@@ -78,11 +82,15 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/chapter09/ng-cdk-virtual-scroll/jest.config.ts"
       }

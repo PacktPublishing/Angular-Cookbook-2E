@@ -2,9 +2,135 @@ const { spawnSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+async function findAllProjects() {
+  const projects = [];
+
+  // Process both start and final directories
+  for (const root of ['start', 'final']) {
+    const appsPath = path.join(process.cwd(), root, 'apps');
+    if (!fs.existsSync(appsPath)) continue;
+
+    const chapters = fs
+      .readdirSync(appsPath)
+      .filter((name) => fs.statSync(path.join(appsPath, name)).isDirectory());
+
+    for (const chapter of chapters) {
+      const chapterPath = path.join(appsPath, chapter);
+      const apps = fs
+        .readdirSync(chapterPath)
+        .filter((name) =>
+          fs.statSync(path.join(chapterPath, name)).isDirectory()
+        );
+
+      for (const app of apps) {
+        const appPath = path.join(chapterPath, app);
+        const projectJsonPath = path.join(appPath, 'project.json');
+        const angularJsonPath = path.join(appPath, 'angular.json');
+
+        if (fs.existsSync(projectJsonPath)) {
+          projects.push({
+            configPath: projectJsonPath,
+            chapter,
+            app,
+            type: root,
+          });
+        } else if (fs.existsSync(angularJsonPath)) {
+          projects.push({
+            configPath: angularJsonPath,
+            chapter,
+            app,
+            type: root,
+          });
+        }
+      }
+    }
+  }
+
+  return projects;
+}
+
+function updateBaseHref(project) {
+  const { configPath, chapter, app, type } = project;
+  let originalBaseHref = null;
+
+  try {
+    const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+    const baseHref = `/Angular-Cookbook-2E/${chapter}/${app}/${type}/`;
+
+    if (configPath.endsWith('project.json')) {
+      if (config?.targets?.build?.configurations?.production) {
+        originalBaseHref =
+          config.targets.build.configurations.production.baseHref;
+        config.targets.build.configurations.production.baseHref = baseHref;
+      }
+    } else if (configPath.endsWith('angular.json')) {
+      if (config?.projects) {
+        for (const projectName in config.projects) {
+          const projectConfig = config.projects[projectName];
+          if (projectConfig?.architect?.build?.configurations?.production) {
+            originalBaseHref =
+              projectConfig.architect.build.configurations.production.baseHref;
+            projectConfig.architect.build.configurations.production.baseHref =
+              baseHref;
+            break;
+          }
+        }
+      }
+    }
+
+    fs.writeFileSync(configPath, JSON.stringify(config, null, 2), 'utf8');
+    console.log(`Updated baseHref for ${app} in ${chapter} to ${baseHref}`);
+    return originalBaseHref;
+  } catch (error) {
+    console.error(`Error updating baseHref in ${configPath}:`, error);
+    return null;
+  }
+}
+
+function revertBaseHref(project, originalBaseHref) {
+  const { configPath, app, chapter } = project;
+  if (!originalBaseHref) return;
+
+  try {
+    const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+
+    if (configPath.endsWith('project.json')) {
+      if (config?.targets?.build?.configurations?.production) {
+        config.targets.build.configurations.production.baseHref =
+          originalBaseHref;
+      }
+    } else if (configPath.endsWith('angular.json')) {
+      if (config?.projects) {
+        for (const projectName in config.projects) {
+          const projectConfig = config.projects[projectName];
+          if (projectConfig?.architect?.build?.configurations?.production) {
+            projectConfig.architect.build.configurations.production.baseHref =
+              originalBaseHref;
+            break;
+          }
+        }
+      }
+    }
+
+    fs.writeFileSync(configPath, JSON.stringify(config, null, 2), 'utf8');
+    console.log(`Reverted baseHref for ${app} in ${chapter}`);
+  } catch (error) {
+    console.error(`Error reverting baseHref in ${configPath}:`, error);
+  }
+}
+
 async function runBuilds() {
   try {
-    // Run all builds in parallel
+    // 1. Find all projects and update their baseHrefs first
+    console.log('Updating baseHrefs for all projects...');
+    const projects = await findAllProjects();
+    const projectsWithBaseHrefs = projects.map((project) => ({
+      ...project,
+      originalBaseHref: updateBaseHref(project),
+    }));
+
+    // 2. Run all builds
+    console.log('Running builds...');
     const builds = [
       {
         cmd: 'npx',
@@ -60,6 +186,12 @@ async function runBuilds() {
     copyDistApp();
 
     console.log('Build output organized successfully');
+
+    // 3. Revert all baseHrefs
+    console.log('Reverting baseHrefs...');
+    for (const project of projectsWithBaseHrefs) {
+      revertBaseHref(project, project.originalBaseHref);
+    }
   } catch (error) {
     console.error('Error during build process:', error.message);
     process.exit(1);

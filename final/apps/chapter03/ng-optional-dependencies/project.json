@@ -7,19 +7,25 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/chapter03/ng-optional-dependencies",
         "index": "apps/chapter03/ng-optional-dependencies/src/index.html",
         "main": "apps/chapter03/ng-optional-dependencies/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/chapter03/ng-optional-dependencies/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/chapter03/ng-optional-dependencies/src/favicon.ico",
           "apps/chapter03/ng-optional-dependencies/src/assets"
         ],
-        "styles": ["apps/chapter03/ng-optional-dependencies/src/styles.scss"],
+        "styles": [
+          "apps/chapter03/ng-optional-dependencies/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -70,11 +76,15 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/chapter03/ng-optional-dependencies/jest.config.ts"
       }
