@@ -6,7 +6,7 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "postinstall": "sh ../scripts/post-install.sh final"
+    "postinstall": "node ../scripts/post-install.js final"
   },
   "private": true,
   "devDependencies": {

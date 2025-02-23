@@ -19,9 +19,13 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     }
   },
   "tags": [],
-  "implicitDependencies": ["ng-cy-mock-data"]
+  "implicitDependencies": [
+    "ng-cy-mock-data"
+  ]
 }

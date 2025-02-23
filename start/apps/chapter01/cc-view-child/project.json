@@ -7,19 +7,25 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/chapter01/cc-view-child",
         "index": "apps/chapter01/cc-view-child/src/index.html",
         "main": "apps/chapter01/cc-view-child/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/chapter01/cc-view-child/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/chapter01/cc-view-child/src/favicon.ico",
           "apps/chapter01/cc-view-child/src/assets"
         ],
-        "styles": ["apps/chapter01/cc-view-child/src/styles.scss"],
+        "styles": [
+          "apps/chapter01/cc-view-child/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -37,7 +43,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter01/cc-view-child/start/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,
@@ -70,11 +76,15 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/chapter01/cc-view-child/jest.config.ts"
       }

@@ -7,19 +7,25 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/chapter02/ng-multi-struc-directives",
         "index": "apps/chapter02/ng-multi-struc-directives/src/index.html",
         "main": "apps/chapter02/ng-multi-struc-directives/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/chapter02/ng-multi-struc-directives/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/chapter02/ng-multi-struc-directives/src/favicon.ico",
           "apps/chapter02/ng-multi-struc-directives/src/assets"
         ],
-        "styles": ["apps/chapter02/ng-multi-struc-directives/src/styles.scss"],
+        "styles": [
+          "apps/chapter02/ng-multi-struc-directives/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -37,7 +43,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter02/ng-multi-struc-directives/final/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,
@@ -70,11 +76,15 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/chapter02/ng-multi-struc-directives/jest.config.ts"
       }

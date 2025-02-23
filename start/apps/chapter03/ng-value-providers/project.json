@@ -7,19 +7,25 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/chapter03/ng-value-providers",
         "index": "apps/chapter03/ng-value-providers/src/index.html",
         "main": "apps/chapter03/ng-value-providers/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/chapter03/ng-value-providers/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/chapter03/ng-value-providers/src/favicon.ico",
           "apps/chapter03/ng-value-providers/src/assets"
         ],
-        "styles": ["apps/chapter03/ng-value-providers/src/styles.scss"],
+        "styles": [
+          "apps/chapter03/ng-value-providers/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -37,7 +43,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter03/ng-value-providers/start/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,
@@ -70,11 +76,15 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/chapter03/ng-value-providers/jest.config.ts"
       }

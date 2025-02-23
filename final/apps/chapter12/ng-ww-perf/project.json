@@ -8,12 +8,16 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/chapter12/ng-ww-perf",
         "index": "apps/chapter12/ng-ww-perf/src/index.html",
         "main": "apps/chapter12/ng-ww-perf/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/chapter12/ng-ww-perf/tsconfig.app.json",
         "assets": [
           "apps/chapter12/ng-ww-perf/src/favicon.ico",
@@ -46,7 +50,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter12/ng-ww-perf/final/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,
@@ -79,11 +83,15 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/chapter12/ng-ww-perf/jest.config.ts",
         "webWorkerTsConfig": "apps/chapter12/ng-ww-perf/tsconfig.worker.json"

@@ -8,12 +8,16 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/chapter10/ng-test-http-resp",
         "index": "apps/chapter10/ng-test-http-resp/src/index.html",
         "main": "apps/chapter10/ng-test-http-resp/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/chapter10/ng-test-http-resp/tsconfig.app.json",
         "assets": [
           "apps/chapter10/ng-test-http-resp/src/favicon.ico",
@@ -45,7 +49,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter10/ng-test-http-resp/final/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,
@@ -78,11 +82,15 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/chapter10/ng-test-http-resp/jest.config.ts"
       }

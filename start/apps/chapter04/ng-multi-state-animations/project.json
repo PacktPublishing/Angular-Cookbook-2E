@@ -7,12 +7,16 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/chapter04/ng-multi-state-animations",
         "index": "apps/chapter04/ng-multi-state-animations/src/index.html",
         "main": "apps/chapter04/ng-multi-state-animations/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/chapter04/ng-multi-state-animations/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -24,7 +28,9 @@
             "output": "assets"
           }
         ],
-        "styles": ["apps/chapter04/ng-multi-state-animations/src/styles.scss"],
+        "styles": [
+          "apps/chapter04/ng-multi-state-animations/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -42,7 +48,7 @@
             }
           ],
           "outputHashing": "all",
-          "baseHref": "/Angular-Cookbook-2E/chapter04/ng-multi-state-animations/start/"
+          "baseHref": "/"
         },
         "development": {
           "buildOptimizer": false,
@@ -75,11 +81,15 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/chapter04/ng-multi-state-animations/jest.config.ts"
       }
