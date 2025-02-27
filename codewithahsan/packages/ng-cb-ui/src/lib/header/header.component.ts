@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.reviewLink = this.sanitizer.bypassSecurityTrustResourceUrl(
-      `https://pulsechecker.netlify.app/review-widget?sessionPin=${
+      `https://audiencemeter.pro/review-widget?sessionPin=${
         PULSE_CHECKER_SESSIONS[this.appName].pin
       }`
     );
