@@ -5,12 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Angular Cookbook 2nd Ed. Recipes</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom gradient and transition */
+      .gradient-background {
+        background: linear-gradient(
+          135deg,
+          #6c4ab6,
+          #4780b8,
+          #cc444b
+        ); /* Purple, Blue, Red */
+        background-size: 300% 300%;
+        animation: gradient-animation 10s ease infinite;
+      }
+
+      @keyframes gradient-animation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .hover-effect {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .hover-effect:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      .button-link {
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .button-link:hover {
+        background-color: #ffffff; /* White background on hover */
+        color: #4780b8; /* Blue text on hover */
+      }
+
+      /* Header styles */
+      header {
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Semi-transparent dark background */
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      .header-button {
+        padding: 0.5rem 1rem;
+        margin-left: 1rem; /* Add spacing between buttons */
+        border: 1px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .header-button:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    </style>
   </head>
-  <body class="bg-gray-100">
-    <div id="appContainer" class="container mx-auto px-4 py-8 max-w-md"></div>
+  <body class="gradient-background text-white">
+    <header class="container mx-auto px-4">
+      <h1>Angular Cookbook 2nd Edition</h1>
+      <div>
+        <a
+          href="https://github.com/PacktPublishing/Angular-Cookbook-2E"
+          class="header-button hover-effect"
+          >GitHub Repo</a
+        >
+        <a
+          href="https://www.amazon.com/Angular-Cookbook-actionable-recipes-developers-ebook/dp/B0C3MG5X99/ref=sr_1_2?crid=LESX4FJVT8Y&keywords=Angular+cookbook+second+edition&qid=1703577160&s=books&sprefix=angular+cookbook+second+editio%2Cstripbooks-intl-ship%2C271&sr=1-2"
+          class="header-button hover-effect"
+          >Buy on Amazon</a
+        >
+      </div>
+    </header>
+
+    <div
+      id="appContainer"
+      class="container mx-auto px-4 py-8 max-w-4xl min-h-screen"
+    >
+      <!-- We will dynamically inject content here -->
+    </div>
 
     <script>
-      fetch('apps.json')
+      // SVG icons for links (you can use different icons if needed)
+      const linkIcon = `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+      </svg>`;
+
+      fetch('./apps.json') // Relative path to apps.json
         .then((response) => response.json())
         .then((apps) => {
           const appContainer = document.getElementById('appContainer');
@@ -38,43 +141,68 @@
               return acc;
             }, {});
 
-          // Generate HTML
-          Object.entries(sortedChapters).forEach(([chapterName, apps]) => {
-            const chapterDiv = document.createElement('div');
-            chapterDiv.classList.add('mb-8');
+          const table = document.createElement('table');
+          table.classList.add('w-full', 'border-collapse', 'text-white');
 
-            const chapterTitleDiv = document.createElement('div');
-            chapterTitleDiv.textContent = chapterName;
-            chapterTitleDiv.classList.add('text-lg', 'font-semibold', 'mb-4');
-            chapterDiv.appendChild(chapterTitleDiv);
+          Object.entries(sortedChapters).forEach(([chapterName, apps]) => {
+            const chapterRow = table.insertRow();
+            const chapterCell = chapterRow.insertCell();
+            chapterCell.colSpan = 2; // Span across both columns
+            chapterCell.textContent = chapterName;
+            chapterCell.classList.add(
+              'text-2xl',
+              'font-bold',
+              'p-4',
+              'bg-gray-800',
+              'bg-opacity-40',
+              'rounded-lg',
+              'mt-4',
+              'hover-effect'
+            ); // Add styling
 
             Object.entries(apps).forEach(([appName, { appTitle, paths }]) => {
-              const appDiv = document.createElement('div');
-              appDiv.classList.add('pl-4', 'mb-2');
+              const appRow = table.insertRow();
+              const appTitleCell = appRow.insertCell();
+              appTitleCell.textContent = appTitle;
+              appTitleCell.classList.add(
+                'p-4',
+                'text-xl',
+                'text-gray-100',
+                'font-semibold'
+              );
 
-              const appTitleDiv = document.createElement('div');
-              appTitleDiv.textContent = appTitle;
-              appTitleDiv.classList.add('text-blue-600');
-              appDiv.appendChild(appTitleDiv);
-
-              const appLinksDiv = document.createElement('div');
-              appLinksDiv.classList.add('flex', 'space-x-4', 'pl-4', 'pt-2', 'flex-row-reverse', 'gap-4');
+              const linksCell = appRow.insertCell();
+              const linksDiv = document.createElement('div');
+              linksDiv.classList.add('flex', 'space-x-4', 'p-4');
 
               Object.entries(paths).forEach(([stage, path]) => {
                 const link = document.createElement('a');
                 link.href = path;
                 link.textContent =
                   stage.charAt(0).toUpperCase() + stage.slice(1);
-                link.classList.add('text-green-600', 'hover:underline');
-                appLinksDiv.appendChild(link);
+                link.innerHTML += linkIcon;
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+                link.classList.add(
+                  'button-link',
+                  'inline-flex',
+                  'items-center',
+                  'justify-center',
+                  'px-6',
+                  'py-3',
+                  'border',
+                  'border-white',
+                  'rounded-md',
+                  'font-medium',
+                  'hover-effect'
+                );
+                linksDiv.appendChild(link);
               });
-
-              appDiv.appendChild(appLinksDiv);
-              chapterDiv.appendChild(appDiv);
+              linksCell.appendChild(linksDiv);
             });
-
-            appContainer.appendChild(chapterDiv);
           });
+
+          appContainer.appendChild(table);
         })
         .catch((error) => console.error('Failed to load app data:', error));
     </script>
