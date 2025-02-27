@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1740634770698,
+  "timestamp": 1740640567450,
   "index": "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/index.html",
   "assetGroups": [
     {
@@ -14,7 +14,7 @@
         "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/668.2eb0e23d5a96357f.js",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/favicon.ico",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/index.html",
-        "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/main.fad52969893c39d5.js",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/main.b8aced51c2f7effb.js",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/manifest.webmanifest",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/polyfills.39a55026b9a0c93c.js",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/runtime.6fb68669ea7efbab.js",
@@ -60,8 +60,8 @@
     "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/assets/profile.png": "f09fcf7522ea67374d8b1885e120b0bf032a64f0",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/favicon.ico": "4e23d0f9b6ddaf3c9ddef90dbaed2342941297b5",
-    "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/index.html": "711fd48f280676cc4d50adc113467521f6dfcb6e",
-    "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/main.fad52969893c39d5.js": "b401491f57c5a5cb2da48a75de144d67cef02189",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/index.html": "53292492593d67a261408b464a5142447957498b",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/main.b8aced51c2f7effb.js": "0b2cfd19d78376696ac0e39cf474ffd377a8ced9",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/manifest.webmanifest": "3ba44c401a1f585666ec2afa5ff23afd880f4faf",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/polyfills.39a55026b9a0c93c.js": "42ce02200dfe724ea57f5542afa82fb83255d102",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-cust-installation/final/runtime.6fb68669ea7efbab.js": "2d5f77c6cd4393b35e89741e4494405cac323d0c",

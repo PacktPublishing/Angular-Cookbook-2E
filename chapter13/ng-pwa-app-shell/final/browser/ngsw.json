@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1740635161867,
+  "timestamp": 1740640957432,
   "index": "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/favicon.ico",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/index.html",
-        "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/main.bd6230cb90e58d88.js",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/main.3985fd01665eb5d8.js",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/manifest.webmanifest",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/polyfills.a3cdc779aff0f0ee.js",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/runtime.160d4493c23f2917.js",
@@ -72,8 +72,8 @@
     "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/assets/profile.png": "f09fcf7522ea67374d8b1885e120b0bf032a64f0",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/favicon.ico": "4e23d0f9b6ddaf3c9ddef90dbaed2342941297b5",
-    "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/index.html": "ef75c276b67783317f07879143908772c5bf7f23",
-    "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/main.bd6230cb90e58d88.js": "26106b15ab810b8a744d60363956856e8e5d6fdd",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/index.html": "25521b857a385c75775a5119d372042257c3fc29",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/main.3985fd01665eb5d8.js": "28d95ceb8d02f078a73fec26fa1b8de159f08139",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/manifest.webmanifest": "dc0d649e951f8a48eb82ab7bfaebcae68db12ee3",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/polyfills.a3cdc779aff0f0ee.js": "e27106e623a5ac02f98e7ad386e602064cce9ea4",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-app-shell/final/runtime.160d4493c23f2917.js": "4bfa5d5f10bb05a2a2aee995da06e5e2252ac570",

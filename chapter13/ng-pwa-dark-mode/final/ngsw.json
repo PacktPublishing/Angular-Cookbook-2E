@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1740635183131,
+  "timestamp": 1740640979670,
   "index": "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/index.html",
   "assetGroups": [
     {
@@ -14,7 +14,7 @@
         "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/166.04e309f1ba06475b.js",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/favicon.ico",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/index.html",
-        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/main.785e894bf36a1a1d.js",
+        "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/main.6280f2a8a7dd948c.js",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/manifest.webmanifest",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/polyfills.d2a9e6c948cb90cf.js",
         "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/runtime.96473b48ad55796d.js",
@@ -60,8 +60,8 @@
     "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/assets/profile.png": "f09fcf7522ea67374d8b1885e120b0bf032a64f0",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/favicon.ico": "4e23d0f9b6ddaf3c9ddef90dbaed2342941297b5",
-    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/index.html": "813f4b7df27cb86ca83e7736c2b5f0f7e634062f",
-    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/main.785e894bf36a1a1d.js": "1b2d0bad1288e01f7ceda7d5d960a798f1287881",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/index.html": "3d4a56567d81a18930de8b9d61e585b1ea2b0432",
+    "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/main.6280f2a8a7dd948c.js": "8e3e33840583e080dcfe4eb049772a16fdd4769a",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/manifest.webmanifest": "5dc7a2a8236c90c85e1d23289f50c2c694b0fc16",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/polyfills.d2a9e6c948cb90cf.js": "a196ba915065b2cabdc17f6af519662b9b81b69a",
     "/Angular-Cookbook-2E/chapter13/ng-pwa-dark-mode/final/runtime.96473b48ad55796d.js": "9297ee6e557d7da657041230721be4be555c692c",
